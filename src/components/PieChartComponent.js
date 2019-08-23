@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css';
-import {Pie, PieChart} from "recharts";
+import PieChartElement from "./PieChartElement";
 
 class PieChartComponent extends Component {
 	constructor(props) {
@@ -25,46 +25,8 @@ class PieChartComponent extends Component {
 		const myData = this.state.data;
 
 		return (
-			<div className="App">
-				<PieChart width={730} height={250}>
-					<Pie data={myData}
-					     dataKey="value"
-					     nameKey="nazov"
-					     cx="50%"
-					     cy="50%"
-					     outerRadius={100}
-					     fill="#8884d8"
-					     label={({
-						             cx,
-						             cy,
-						             midAngle,
-						             innerRadius,
-						             outerRadius,
-						             value,
-						             index
-					             }) => {
-						     console.log("handling label?");
-						     const RADIAN = Math.PI / 180;
-						     // eslint-disable-next-line
-						     const radius = 25 + innerRadius + (outerRadius - innerRadius);
-						     // eslint-disable-next-line
-						     const x = cx + radius * Math.cos(-midAngle * RADIAN);
-						     // eslint-disable-next-line
-						     const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-						     return (
-							     <text
-								     x={x}
-								     y={y}
-								     fill="#8884d8"
-								     textAnchor={x > cx ? "start" : "end"}
-								     dominantBaseline="central"
-							     >
-								     {myData[index].nazov} ({value})
-							     </text>
-						     );
-					     }}/>
-				</PieChart>
+			<div className="pieChart">
+				<PieChartElement myData={myData} radius={250}/>
 			</div>
 		);
 	}

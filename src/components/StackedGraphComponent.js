@@ -13,10 +13,11 @@ const StackedGraphComponent = () => {
 		fetch("http://localhost:5000/", {
 			method: "GET"
 		}).then(response => response.json())
-			.then((result) => getAllData(result))
+			.then((result) => setData(result))
 	};
 
 	const getAllData = (result) => {
+		console.log(result);
 		const myData = result.filter(({platnost, predaj}) => {
 			return platnost === "Celkom" && predaj === "Čipová karta";
 		});
@@ -24,7 +25,7 @@ const StackedGraphComponent = () => {
 	};
 
 	return (
-		<div className="App" id={"test"}>
+		<div className="App">
 			<ResponsiveContainer width="100%" height={500}>
 				<AreaChart data={data} margin={{top: 10, right: 30, left: 0, bottom: 0}}>
 					<CartesianGrid strokeDasharray="3 3"/>
@@ -34,6 +35,7 @@ const StackedGraphComponent = () => {
 					<Area type="monotone" dataKey="juniori" stackId="1" stroke="#8884d8" fill="#8884d8"/>
 					<Area type="monotone" dataKey="studenti" stackId="1" stroke="#82ca9d" fill="#82ca9d"/>
 					<Area type="monotone" dataKey="seniori" stackId="1" stroke="#d42121" fill="#d42121"/>
+					<Area type="monotone" dataKey="prenosna" stackId="1" stroke="#e81c6d" fill="#e81c6d"/>
 					<Area type="monotone" dataKey="dospeli" stackId="1" stroke="#e88c6d" fill="#e88c6d"/>
 				</AreaChart>
 			</ResponsiveContainer>

@@ -39,6 +39,11 @@ class LineGraphComponent extends Component {
 							<stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
 						</linearGradient>
 
+						<linearGradient id="colorPrenosna" x1="0" y1="0" x2="0" y2="1">
+							<stop offset="5%" stopColor="#e81c6d" stopOpacity={0.8}/>
+							<stop offset="95%" stopColor="#e81c6d" stopOpacity={0}/>
+						</linearGradient>
+
 						<linearGradient id="colorStudenti" x1="0" y1="0" x2="0" y2="1">
 							<stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
 							<stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
@@ -59,8 +64,8 @@ class LineGraphComponent extends Component {
 					<Tooltip/>
 
 					<Area type="monotone" dataKey="juniori" stroke="#8884d8" fillOpacity={0} fill="url(#colorJuniori)"/>
-					<Area type="monotone" dataKey="studenti" stroke="#82ca9d" fillOpacity={0}
-					      fill="url(#colorStudenti)"/>
+					<Area type="monotone" dataKey="studenti" stroke="#82ca9d" fillOpacity={0} fill="url(#colorStudenti)"/>
+					<Area type="monotone" dataKey="prenosna" stroke="#e81c6d" fillOpacity={0} fill="url(#colorPrenosna)"/>
 					<Area type="monotone" dataKey="seniori" stroke="#d42121" fillOpacity={0} fill="url(#colorSenior)"/>
 					<Area type="monotone" dataKey="dospeli" stroke="#e88c6d" fillOpacity={0} fill="url(#colorDospeli)"/>
 				</AreaChart>

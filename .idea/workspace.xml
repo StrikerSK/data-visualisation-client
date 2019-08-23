@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Adding PieChartComponent">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PieChartComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PieChartElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PieCollection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LineGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PieChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChartComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StackedGraphComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -31,19 +30,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-3847" />
-    <option name="y" value="470" />
-    <option name="width" value="3848" />
-    <option name="height" value="1067" />
-  </component>
   <component name="ProjectId" id="1PawVVag2aEObuGv56we8PmaqWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -103,8 +96,17 @@
       <workItem from="1553348642403" duration="2506000" />
       <workItem from="1553377835027" duration="3473000" />
       <workItem from="1562505406976" duration="3585000" />
-      <workItem from="1566125541820" duration="7190000" />
+      <workItem from="1566125541820" duration="9990000" />
+      <workItem from="1566417994829" duration="7855000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
+      <created>1566166573580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566166573580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,10 +117,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding PieChartComponent to the list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding PieChartComponent to the list" />
   </component>
 </project>

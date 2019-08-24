@@ -3,8 +3,8 @@ import './App.css';
 
 import LineGraphComponent from "./components/LineGraphComponent";
 import StackedGraphComponent from "./components/StackedGraphComponent";
-import PieChartComponent from "./components/PieChartComponent";
-import PieCollection from "./components/PieCollection";
+import PieChartYearly from "./components/PieChartYearly";
+import PieChartMonthly from "./components/PieChartMonthly";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 
@@ -15,8 +15,8 @@ class App extends Component {
 				<Switch>
 					<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>
 					<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>
-					<Route exact strict path="/pie" render={() => <PieChartComponent/>}/>
-					<Route exact strict path="/pie/collection" render={() => <PieCollection/>}/>
+					<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>
+					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

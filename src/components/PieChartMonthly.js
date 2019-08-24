@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import '../App.css';
+import '../css/PieChart.scss';
 import PieChartElement from "./PieChartElement";
 
-const PieCollection = () => {
+const PieChartMonthly = () => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
@@ -15,13 +15,13 @@ const PieCollection = () => {
 
 	return(
 		<div>
-			<h1>Monthly pie charts for year 2017</h1>
+			<h1>Mesačný predaj lístkov PID za rok 2017</h1>
 			<div className={"pieChartsContainer"}>
-				{data.map(({monthData}) =>
-					<PieChartElement myData={monthData} radius={100}/>
+				{data.map(({monthData, month}) =>
+					<PieChartElement myData={monthData} radius={100} name={month}/>
 				)}
 			</div>
 		</div>
 	);
 };
-export default PieCollection;
+export default PieChartMonthly;

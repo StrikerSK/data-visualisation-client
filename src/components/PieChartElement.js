@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import '../App.css';
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 
-const PieChartElement = ({myData, radius}) => {
+const PieChartElement = ({myData, radius,name}) => {
 	const [color, setColor] = useState("");
 
 	useEffect(() => {
@@ -20,6 +20,7 @@ const PieChartElement = ({myData, radius}) => {
 
 	return (
 		<div className="pie-chart">
+			<p>{name}</p>
 			<ResponsiveContainer width="100%" height="100%">
 				<PieChart>
 					<Pie data={myData}

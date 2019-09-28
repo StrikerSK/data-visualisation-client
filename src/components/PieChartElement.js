@@ -18,9 +18,16 @@ const PieChartElement = ({myData, radius,name}) => {
 		setColor(returnColor);
 	};
 
+	const generateName = () => {
+		console.log(name);
+		if (name !== undefined) {
+			return <p>{name}</p>;
+		}
+	};
+
 	return (
 		<div className="pie-chart">
-			<p>{name}</p>
+			{generateName()}
 			<ResponsiveContainer width="100%" height="100%">
 				<PieChart>
 					<Pie data={myData}

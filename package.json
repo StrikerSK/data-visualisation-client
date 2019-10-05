@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/stream": "^0.59.3",
     "nivo": "^0.31.0",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
@@ -25,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@nivo/pie": "^0.59.1"
+  }
 }

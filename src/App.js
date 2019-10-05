@@ -6,6 +6,8 @@ import StackedGraphComponent from "./components/StackedGraphComponent";
 import PieChartYearly from "./components/PieChartYearly";
 import PieChartMonthly from "./components/PieChartMonthly";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import BarComponent from "./components/nivo/BarComponent";
+import NivoContainer from "./components/nivo/NivoContainer";
 
 
 class App extends Component {
@@ -13,10 +15,11 @@ class App extends Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>
-					<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>
-					<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>
-					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
+					<Route exact strict path="/" render={() => <NivoContainer/>}/>
+					{/*<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>*/}
+					{/*<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>*/}
+					{/*<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>*/}
+					{/*<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>*/}
 				</Switch>
 			</BrowserRouter>
 		);

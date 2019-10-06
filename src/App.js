@@ -14,6 +14,8 @@ import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
 import NivoBubbleContainer from "./components/Container/NivoBubbleContainer";
+import AreaChartComponent from "./components/Recharts/AreaChartComponent";
+import BarChartComponent from "./components/Recharts/BarChartComponent";
 
 class App extends Component {
 	render() {
@@ -22,6 +24,8 @@ class App extends Component {
 				<Switch>
 					<Route exact strict path="/" render={() => <NivoBarContainer/>}/>
 					<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>
+					<Route exact strict path="/area" render={() => <AreaChartComponent/>}/>
+					<Route exact strict path="/bar" render={() => <BarChartComponent/>}/>
 					<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>
 					<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>
 					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
@@ -38,4 +42,5 @@ class App extends Component {
 		);
 	}
 }
+
 export default App;

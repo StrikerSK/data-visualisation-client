@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../css/PieChart.scss';
-import PieChartElement from "./PieChartElement";
+import PieChartElement from "./Recharts/PieChartElement";
 
 const PieChartYearly = () => {
 	const [data, setData] = useState([]);

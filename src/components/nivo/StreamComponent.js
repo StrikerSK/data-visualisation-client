@@ -7,7 +7,7 @@ const divStyle = {
 	padding: "50px"
 };
 
-const NivoContainer = () => {
+const StreamComponent = () => {
 	const [data, setData] = useState([{}]);
 
 	useEffect(() => {
@@ -114,4 +114,4 @@ const NivoContainer = () => {
 	)
 };
 
-export default NivoContainer;
+export default StreamComponent;

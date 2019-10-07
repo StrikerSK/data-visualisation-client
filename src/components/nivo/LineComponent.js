@@ -3,8 +3,7 @@ import {ResponsiveLine} from "@nivo/line";
 
 const divStyle = {
 	height: "600px",
-	width: "600px",
-	padding: "50px"
+	width: "80vw"
 };
 
 const LineComponent = () => {
@@ -15,26 +14,23 @@ const LineComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/getData", {method: "GET"})
+		fetch("http://localhost:8080/nivo/line", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};
 
 	const parseData = (result) => {
-		console.log(result);
-		const test = [];
-		test.push(result);
-		setData(test);
-		console.log(data);
+		setData(result);
 	};
 
 	return (
 		<div style={divStyle}>
 			<ResponsiveLine
 				data={data}
-				margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+				margin={{ top: 50, right: 110, bottom: 50, left: 150 }}
 				xScale={{ type: 'point' }}
 				yScale={{ type: 'linear', stacked: true, min: 'auto', max: 'auto' }}
+				curve="linear"
 				axisTop={null}
 				axisRight={null}
 				axisBottom={{
@@ -42,20 +38,20 @@ const LineComponent = () => {
 					tickSize: 5,
 					tickPadding: 5,
 					tickRotation: 0,
-					legend: 'transportation',
+					legend: 'Mesiac',
 					legendOffset: 36,
 					legendPosition: 'middle'
 				}}
 				axisLeft={{
 					orient: 'left',
 					tickSize: 5,
-					tickPadding: 5,
+					tickPadding: 10,
 					tickRotation: 0,
-					legend: 'count',
-					legendOffset: -40,
+					legend: 'Počet predaných lístkov',
+					legendOffset: -70,
 					legendPosition: 'middle'
 				}}
-				colors={{ scheme: 'nivo' }}
+				colors={{ scheme: 'set1' }}
 				pointSize={10}
 				pointColor={{ theme: 'background' }}
 				pointBorderWidth={2}

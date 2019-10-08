@@ -11,6 +11,7 @@ import StreamComponent from "./components/nivo/StreamComponent";
 import LineComponent from "./components/nivo/LineComponent";
 import PieComponent from "./components/nivo/PieComponent";
 import WaffleComponent from "./components/nivo/WaffleComponent";
+import HeatMapComponent from "./components/nivo/HeatMapComponent";
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/stack" render={() => <StreamComponent/>}/>
 					<Route exact strict path="/nivo/pie" render={() => <PieComponent/>}/>
 					<Route exact strict path="/nivo/waffle" render={() => <WaffleComponent/>}/>
+					<Route exact strict path="/nivo/heatmap" render={() => <HeatMapComponent/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

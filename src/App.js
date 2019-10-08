@@ -9,6 +9,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import BarComponent from "./components/nivo/BarComponent";
 import StreamComponent from "./components/nivo/StreamComponent";
 import LineComponent from "./components/nivo/LineComponent";
+import PieComponent from "./components/nivo/PieComponent";
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/line" render={() => <LineComponent/>}/>
 					<Route exact strict path="/nivo/bar" render={() => <BarComponent/>}/>
 					<Route exact strict path="/nivo/stack" render={() => <StreamComponent/>}/>
+					<Route exact strict path="/nivo/pie" render={() => <PieComponent/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

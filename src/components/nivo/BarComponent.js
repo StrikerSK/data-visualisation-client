@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {ResponsivePie} from "nivo";
+import {ResponsiveBar} from "@nivo/bar";
 
 const divStyle = {
-	height: "600px",
-	width: "600px",
-	padding: "50px"
+	height: "80vh",
+	width: "80vw"
 };
 
 const BarComponent = () => {
@@ -15,7 +14,7 @@ const BarComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/getPerson", {method: "GET"})
+		fetch("http://localhost:8080/nivo/bar", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};
@@ -28,46 +27,82 @@ const BarComponent = () => {
 
 	return (
 		<div style={divStyle}>
-			<ResponsivePie
+			<ResponsiveBar
 				data={data}
-				margin={{top: 40, right: 80, bottom: 80, left: 80}}
-				innerRadius={0.5}
-				padAngle={0.7}
-				cornerRadius={3}
-				colors={{scheme: 'nivo'}}
-				borderWidth={1}
-				radialLabelsSkipAngle={10}
-				radialLabelsTextXOffset={6}
-				radialLabelsTextColor="#333333"
-				radialLabelsLinkOffset={0}
-				radialLabelsLinkDiagonalLength={16}
-				radialLabelsLinkHorizontalLength={24}
-				radialLabelsLinkStrokeWidth={1}
-				slicesLabelsSkipAngle={10}
-				slicesLabelsTextColor="#333333"
-				animate={true}
-				motionStiffness={90}
-				motionDamping={15}
+				keys={[ 'adults', 'seniors', 'juniors', 'students', 'portable']}
+				indexBy="month"
+				margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+				padding={0.3}
+				colors={{ scheme: 'nivo' }}
+				defs={[
+					{
+						id: 'dots',
+						type: 'patternDots',
+						background: 'inherit',
+						color: '#38bcb2',
+						size: 4,
+						padding: 1,
+						stagger: true
+					},
+					{
+						id: 'lines',
+						type: 'patternLines',
+						background: 'inherit',
+						color: '#eed312',
+						rotation: -45,
+						lineWidth: 6,
+						spacing: 10
+					}
+				]}
+				borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+				axisTop={null}
+				axisRight={null}
+				axisBottom={{
+					tickSize: 5,
+					tickPadding: 5,
+					tickRotation: 0,
+					legend: 'Month',
+					legendPosition: 'middle',
+					legendOffset: 32
+				}}
+				axisLeft={{
+					tickSize: 5,
+					tickPadding: 5,
+					tickRotation: 0,
+					legend: 'Ticket sell count',
+					legendPosition: 'middle',
+					legendOffset: -40
+				}}
+				labelSkipWidth={12}
+				labelSkipHeight={12}
+				labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
 				legends={[
 					{
-						anchor: 'bottom',
-						direction: 'row',
-						translateY: 56,
+						dataFrom: 'keys',
+						anchor: 'bottom-right',
+						direction: 'column',
+						justify: false,
+						translateX: 120,
+						translateY: 0,
+						itemsSpacing: 2,
 						itemWidth: 100,
-						itemHeight: 18,
-						itemTextColor: '#999',
-						symbolSize: 18,
-						symbolShape: 'circle',
+						itemHeight: 20,
+						itemDirection: 'left-to-right',
+						itemOpacity: 0.85,
+						symbolSize: 20,
 						effects: [
 							{
 								on: 'hover',
 								style: {
-									itemTextColor: '#000'
+									itemOpacity: 1
 								}
 							}
 						]
 					}
 				]}
+				animate={true}
+				motionStiffness={90}
+				motionDamping={15}
 			/>
 		</div>
 	)

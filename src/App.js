@@ -12,6 +12,7 @@ import LineComponent from "./components/nivo/LineComponent";
 import PieComponent from "./components/nivo/PieComponent";
 import WaffleComponent from "./components/nivo/WaffleComponent";
 import HeatMapComponent from "./components/nivo/HeatMapComponent";
+import RadarComponent from "./components/nivo/RadarComponent";
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/pie" render={() => <PieComponent/>}/>
 					<Route exact strict path="/nivo/waffle" render={() => <WaffleComponent/>}/>
 					<Route exact strict path="/nivo/heatmap" render={() => <HeatMapComponent/>}/>
+					<Route exact strict path="/nivo/radar" render={() => <RadarComponent/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

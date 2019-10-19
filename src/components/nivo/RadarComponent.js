@@ -29,7 +29,7 @@ const RadarComponent = () => {
 		<div style={divStyle}>
 			<ResponsiveRadar
 				data={data}
-				keys={['adults', 'seniors', 'juniors', 'students', 'portable' ]}
+				keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
 				indexBy="month"
 				maxValue="auto"
 				margin={{ top: 70, right: 80, bottom: 40, left: 80 }}

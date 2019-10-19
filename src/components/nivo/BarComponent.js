@@ -29,7 +29,7 @@ const BarComponent = () => {
 		<div style={divStyle}>
 			<ResponsiveBar
 				data={data}
-				keys={[ 'adults', 'seniors', 'juniors', 'students', 'portable']}
+				keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
 				indexBy="month"
 				margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
 				padding={0.3}

@@ -14,7 +14,6 @@ import WaffleComponent from "./components/nivo/WaffleComponent";
 import HeatMapComponent from "./components/nivo/HeatMapComponent";
 import RadarComponent from "./components/nivo/RadarComponent";
 
-
 class App extends Component {
 	render() {
 		return (

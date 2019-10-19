@@ -29,13 +29,7 @@ const HeatMapComponent = () => {
 		<div style={divStyle}>
 			<ResponsiveHeatMap
 				data={data}
-				keys={[
-					'adults',
-					'seniors',
-					'juniors',
-					'students',
-					'portable'
-				]}
+				keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
 				indexBy="month"
 				margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
 				forceSquare={true}

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveWaffle} from "@nivo/waffle";
+import {host_url} from "../../App";
 
 const divStyle = {
 	height: "600px",
@@ -15,7 +16,7 @@ const WaffleComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/nivo/waffle", {method: "GET"})
+		fetch(host_url + "/nivo/waffle", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsivePie} from "@nivo/pie";
+import {host_url} from "../../App";
 
 const divStyle = {
-	height: "600px",
+	height: "100%",
 	width: "80vw"
 };
 
@@ -14,7 +15,7 @@ const PieComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/nivo/pie", {method: "GET"})
+		fetch(host_url + "/nivo/pie", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

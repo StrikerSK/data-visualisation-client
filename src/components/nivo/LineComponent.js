@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveLine} from "@nivo/line";
-
-const divStyle = {
-	height: "600px",
-	width: "80vw"
-};
+import {divStyle} from "../../lib/ComponentStyles";
+import {host_url} from "../../App";
 
 const LineComponent = () => {
 	const [data, setData] = useState([]);
@@ -14,7 +11,7 @@ const LineComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/nivo/line", {method: "GET"})
+		fetch(host_url + "/nivo/line", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};
@@ -24,7 +21,7 @@ const LineComponent = () => {
 	};
 
 	return (
-		<div style={divStyle}>
+		<div style={divStyle} className={"graph-component"}>
 			<ResponsiveLine
 				data={data}
 				margin={{ top: 50, right: 110, bottom: 50, left: 150 }}

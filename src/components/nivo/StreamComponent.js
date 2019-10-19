@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveStream} from "@nivo/stream";
+import {host_url} from "../../App";
 
 const divStyle = {
 	height: "600px",
@@ -15,7 +16,7 @@ const StreamComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/getTicketData", {method: "GET"})
+		fetch(host_url + "/getTicketData", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

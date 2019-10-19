@@ -1,0 +1,22 @@
+.graph-container {
+    display: grid;
+    height: 97vh;
+    width: 97vw;
+
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 90%;
+}
+
+.graph-component {
+    grid-column: 1;
+    grid-row: 2;
+    place-self: center;
+}
+
+.graph-headline{
+    grid-column: 1 / 3;
+    grid-row: 1;
+    place-self: center;
+}

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { ResponsiveRadar } from '@nivo/radar'
+import {host_url} from "../../App";
 
 const divStyle = {
 	height: "80vh",
@@ -14,7 +15,7 @@ const RadarComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/nivo/bar", {method: "GET"})
+		fetch( host_url + "/nivo/bar", {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

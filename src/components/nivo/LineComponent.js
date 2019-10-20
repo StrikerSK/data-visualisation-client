@@ -3,17 +3,32 @@ import {ResponsiveLine} from "@nivo/line";
 import {divStyle} from "../../lib/ComponentStyles";
 import {host_url} from "../../App";
 
-const LineComponent = () => {
+const LineComponent = ({color, personParams, validityParams}) => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		getData();
-	}, []);
+	}, [data]);
 
 	const getData = () => {
-		fetch(host_url + "/nivo/line", {method: "GET"})
+		fetch(host_url + "/nivo/line?" + personParams + "&" + validityParams, {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
+	};
+
+	const paramBuilder = () => {
+
+		const finalRequestParams = "";
+
+		if (personParams !== ""){
+			finalRequestParams.concat(personParams);
+		}
+
+		if(finalRequestParams !== ""){
+			finalRequestParams.concat("&" + validityParams);
+		}
+
+		return finalRequestParams;
 	};
 
 	const parseData = (result) => {
@@ -48,7 +63,7 @@ const LineComponent = () => {
 					legendOffset: -70,
 					legendPosition: 'middle'
 				}}
-				colors={{ scheme: 'set1' }}
+				colors={{ scheme: color }}
 				pointSize={10}
 				pointColor={{ theme: 'background' }}
 				pointBorderWidth={2}

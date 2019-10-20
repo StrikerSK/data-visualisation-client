@@ -7,7 +7,6 @@ import PieChartYearly from "./components/PieChartYearly";
 import PieChartMonthly from "./components/PieChartMonthly";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import StreamComponent from "./components/nivo/StreamComponent";
-import PieComponent from "./components/nivo/PieComponent";
 import WaffleComponent from "./components/nivo/WaffleComponent";
 import RadarComponent from "./components/nivo/RadarComponent";
 import NivoBarContainer from "./components/Container/NivoBarContainer";
@@ -15,8 +14,8 @@ import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
 
-export const host_url = "http://localhost:8080";
-// export const host_url = "http://pid-data-server.herokuapp.com/";
+// export const host_url = "http://localhost:8080";
+export const host_url = "http://pid-data-server.herokuapp.com/";
 
 class App extends Component {
 	render() {

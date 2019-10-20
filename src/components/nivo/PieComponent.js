@@ -3,23 +3,21 @@ import {ResponsivePie} from "@nivo/pie";
 import {host_url} from "../../App";
 import {divStyle} from "../../lib/ComponentStyles";
 
-const PieComponent = ({color}) => {
+const PieComponent = ({color, validityParams}) => {
 	const [data, setData] = useState([{}]);
 
 	useEffect(() => {
 		getData();
-	}, []);
+	}, [data]);
 
 	const getData = () => {
-		fetch(host_url + "/nivo/pie", {method: "GET"})
+		fetch(host_url + "/nivo/pie?" + validityParams, {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};
 
 	const parseData = (result) => {
-		console.log(result);
 		setData(result);
-		console.log(data);
 	};
 
 	return (

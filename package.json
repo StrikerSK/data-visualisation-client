@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.1",
+    "@nivo/pie": "^0.59.1",
     "@nivo/bar": "^0.59.2",
     "@nivo/heatmap": "^0.59.2",
     "@nivo/line": "^0.59.3",
@@ -31,8 +32,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "@nivo/pie": "^0.59.1"
-  }
+  ]
 }

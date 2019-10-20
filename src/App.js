@@ -13,6 +13,7 @@ import RadarComponent from "./components/nivo/RadarComponent";
 import NivoBarContainer from "./components/Container/NivoBarContainer";
 import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
+import NivoPieContainer from "./components/Container/NivoPieContainer";
 
 export const host_url = "http://localhost:8080";
 // export const host_url = "http://pid-data-server.herokuapp.com/";
@@ -30,7 +31,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
 					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
 					<Route exact strict path="/nivo/stack" render={() => <StreamComponent/>}/>
-					<Route exact strict path="/nivo/pie" render={() => <PieComponent/>}/>
+					<Route exact strict path="/nivo/pie" render={() => <NivoPieContainer/>}/>
 					<Route exact strict path="/nivo/waffle" render={() => <WaffleComponent/>}/>
 					<Route exact strict path="/nivo/heatmap" render={() => <NivoHeatMapContainer/>}/>
 					<Route exact strict path="/nivo/radar" render={() => <RadarComponent/>}/>

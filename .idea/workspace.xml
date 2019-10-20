@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="Remaping data fetching for few components">
-      <change afterPath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/GraphContainer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/ComponentStyles.js" afterDir="false" />
+    <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +115,7 @@
       <workItem from="1566634697251" duration="8642000" />
       <workItem from="1570573841084" duration="803000" />
       <workItem from="1570995711397" duration="1251000" />
-      <workItem from="1571498728768" duration="4446000" />
+      <workItem from="1571498728768" duration="16558000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -143,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571499057508</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remaping data fetching for few components">
+      <created>1571506560716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571506560716</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +167,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding PieChartComponent to the list" />
     <MESSAGE value="Creating new pie chart model and updating existing models" />
-    <MESSAGE value="Remaping data fetching for few components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remaping data fetching for few components" />
+    <MESSAGE value="Creating containers for every component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating containers for every component" />
   </component>
 </project>

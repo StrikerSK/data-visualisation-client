@@ -1,13 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import {host_url} from "../../App";
+import {divStyle} from "../../lib/ComponentStyles";
 
-const divStyle = {
-	height: "100%",
-	width: "80vw"
-};
-
-const PieComponent = () => {
+const PieComponent = ({color}) => {
 	const [data, setData] = useState([{}]);
 
 	useEffect(() => {
@@ -34,7 +30,7 @@ const PieComponent = () => {
 				innerRadius={0.5}
 				padAngle={0.7}
 				cornerRadius={3}
-				colors={{scheme: 'nivo'}}
+				colors={{scheme: color}}
 				borderWidth={1}
 				borderColor={{from: 'color', modifiers: [['darker', 0.2]]}}
 				radialLabelsSkipAngle={10}
@@ -73,49 +69,31 @@ const PieComponent = () => {
 				fill={[
 					{
 						match: {
-							id: 'ruby'
+							id: 'Prenosná'
 						},
 						id: 'dots'
 					},
 					{
 						match: {
-							id: 'c'
+							id: 'Dospelý'
 						},
 						id: 'dots'
 					},
 					{
 						match: {
-							id: 'go'
+							id: 'Študenti'
 						},
 						id: 'dots'
 					},
 					{
 						match: {
-							id: 'python'
+							id: 'Dôchodcovia'
 						},
 						id: 'dots'
 					},
 					{
 						match: {
-							id: 'scala'
-						},
-						id: 'lines'
-					},
-					{
-						match: {
-							id: 'lisp'
-						},
-						id: 'lines'
-					},
-					{
-						match: {
-							id: 'elixir'
-						},
-						id: 'lines'
-					},
-					{
-						match: {
-							id: 'javascript'
+							id: 'Juniori'
 						},
 						id: 'lines'
 					}

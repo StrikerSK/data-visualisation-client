@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxPerson.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxValidity.js" afterDir="false" />
+    <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="Created new chart options and updated containers">
+      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxMonths.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxSellType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -12,6 +12,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CheckboxPerson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CheckboxValidity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,7 +121,7 @@
       <workItem from="1570573841084" duration="803000" />
       <workItem from="1570995711397" duration="1251000" />
       <workItem from="1571498728768" duration="16825000" />
-      <workItem from="1571563352729" duration="11734000" />
+      <workItem from="1571563352729" duration="22136000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -156,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571563047899</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Created new chart options and updated containers">
+      <created>1571586894896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571586894896</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +189,7 @@
     <MESSAGE value="Creating new pie chart model and updating existing models" />
     <MESSAGE value="Creating containers for every component" />
     <MESSAGE value="Adding container for Pie chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding container for Pie chart" />
+    <MESSAGE value="Created new chart options and updated containers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new chart options and updated containers" />
   </component>
 </project>

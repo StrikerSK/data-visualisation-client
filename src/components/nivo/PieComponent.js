@@ -3,15 +3,17 @@ import {ResponsivePie} from "@nivo/pie";
 import {host_url} from "../../App";
 import {divStyle} from "../../lib/ComponentStyles";
 
-const PieComponent = ({color, validityParams}) => {
+const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 	const [data, setData] = useState([{}]);
 
 	useEffect(() => {
 		getData();
-	}, [data]);
+	}, [validityParams, monthParams, sellTypes]);
 
 	const getData = () => {
-		fetch(host_url + "/nivo/pie?" + validityParams, {method: "GET"})
+		fetch(host_url + "/nivo/pie?" + validityParams
+			+ (validityParams !== "" ? "&" : "") + monthParams
+			+ (validityParams.concat(monthParams) !== "" ? "&" : "") + sellTypes, {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

@@ -3,15 +3,18 @@ import {ResponsiveLine} from "@nivo/line";
 import {divStyle} from "../../lib/ComponentStyles";
 import {host_url} from "../../App";
 
-const LineComponent = ({color, personParams, validityParams}) => {
+const LineComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
 		getData();
-	}, [data]);
+	}, [personParams,validityParams, monthParams, sellTypeParam]);
 
 	const getData = () => {
-		fetch(host_url + "/nivo/line?" + personParams + "&" + validityParams, {method: "GET"})
+		fetch(host_url + "/nivo/line?" + personParams
+			+ (personParams !== '' ? "&" : "") + validityParams
+			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
+			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam , {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

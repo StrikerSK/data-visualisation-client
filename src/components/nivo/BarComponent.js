@@ -3,15 +3,18 @@ import {ResponsiveBar} from "@nivo/bar";
 import '../../css/GraphContainer.scss'
 import {host_url} from "../../App";
 
-const BarComponent = () => {
+const BarComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
 	const [data, setData] = useState([{}]);
 
 	useEffect(() => {
 		getData();
-	}, []);
+	}, [personParams,validityParams, monthParams, sellTypeParam]);
 
 	const getData = () => {
-		fetch( host_url + "/nivo/bar", {method: "GET"})
+		fetch(host_url + "/nivo/bar?" + personParams
+			+ (personParams !== '' ? "&" : "") + validityParams
+			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
+			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam , {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};
@@ -29,7 +32,7 @@ const BarComponent = () => {
 			indexBy="month"
 			margin={{top: 50, right: 130, bottom: 50, left: 60}}
 			padding={0.3}
-			colors={{scheme: 'nivo'}}
+			colors={{scheme: color}}
 			defs={[
 				{
 					id: 'dots',

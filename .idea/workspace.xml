@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="Created new chart options and updated containers">
-      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxMonths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/CheckboxSellType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CheckboxPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CheckboxValidity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
     </list>
+    <list id="f70eef33-0f0f-423c-9dfe-169108fc056e" name="Ignord changes" comment="Deleted lock files" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +99,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="" />
+      <changelist id="f70eef33-0f0f-423c-9dfe-169108fc056e" name="Ignord changes" comment="" />
       <created>1553038356971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -121,7 +114,9 @@
       <workItem from="1570573841084" duration="803000" />
       <workItem from="1570995711397" duration="1251000" />
       <workItem from="1571498728768" duration="16825000" />
-      <workItem from="1571563352729" duration="22136000" />
+      <workItem from="1571563352729" duration="33603000" />
+      <workItem from="1572204966154" duration="1728000" />
+      <workItem from="1572262905758" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -165,7 +160,49 @@
       <option name="project" value="LOCAL" />
       <updated>1571586894896</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created SellType and Months checkboxes">
+      <created>1571605784318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571605784318</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created SellType and Months checkboxes">
+      <created>1571605814681</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571605814681</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Deleted lock files">
+      <created>1571606034245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571606034245</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Deleted lock files">
+      <created>1571606068370</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571606068370</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixing package location of Pie chart component">
+      <created>1571609523094</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571609523094</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Optimized responsiveness of application">
+      <created>1572265199422</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572265199422</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +227,10 @@
     <MESSAGE value="Creating containers for every component" />
     <MESSAGE value="Adding container for Pie chart" />
     <MESSAGE value="Created new chart options and updated containers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new chart options and updated containers" />
+    <MESSAGE value="Created SellType and Months checkboxes" />
+    <MESSAGE value="Deleted lock files" />
+    <MESSAGE value="Fixing package location of Pie chart component" />
+    <MESSAGE value="Optimized responsiveness of application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized responsiveness of application" />
   </component>
 </project>

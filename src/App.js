@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 
 import LineGraphComponent from "./components/LineGraphComponent";
 import StackedGraphComponent from "./components/StackedGraphComponent";
 import PieChartYearly from "./components/PieChartYearly";
 import PieChartMonthly from "./components/PieChartMonthly";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
 import StreamComponent from "./components/nivo/StreamComponent";
 import WaffleComponent from "./components/nivo/WaffleComponent";
 import RadarComponent from "./components/nivo/RadarComponent";

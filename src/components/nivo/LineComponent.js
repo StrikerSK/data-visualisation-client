@@ -42,9 +42,9 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 		<div style={divStyle} className={"graph-component"}>
 			<ResponsiveLine
 				data={data}
-				margin={{ top: 50, right: 110, bottom: 50, left: 150 }}
+				margin={{ top: 10, right: 40, bottom: 80, left: 80 }}
 				xScale={{ type: 'point' }}
-				yScale={{ type: 'linear', stacked: true, min: 'auto', max: 'auto' }}
+				yScale={{ type: 'linear', stacked: false, min: 'auto', max: 'auto' }}
 				curve="linear"
 				axisTop={null}
 				axisRight={null}
@@ -76,15 +76,15 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 				useMesh={true}
 				legends={[
 					{
-						anchor: 'bottom-right',
-						direction: 'column',
+						anchor: 'bottom',
+						direction: 'row',
 						justify: false,
-						translateX: 100,
-						translateY: 0,
+						translateX: 0,
+						translateY: 60,
 						itemsSpacing: 0,
 						itemDirection: 'left-to-right',
 						itemWidth: 80,
-						itemHeight: 20,
+						itemHeight: 10,
 						itemOpacity: 0.75,
 						symbolSize: 12,
 						symbolShape: 'circle',

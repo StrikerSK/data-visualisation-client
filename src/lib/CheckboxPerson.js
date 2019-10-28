@@ -69,7 +69,7 @@ const CheckboxPerson = ({dataSetter}) => {
 					<FormControlLabel
 						control={<Checkbox name={"juniors"} checked={personFilter.juniors}
 						                   onChange={event => checkboxHandler(event)}/>}
-						label={adults}
+						label={juniors}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"seniors"} checked={personFilter.seniors}

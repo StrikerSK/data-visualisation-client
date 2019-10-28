@@ -18,7 +18,7 @@ export const october = "Október";
 export const november = "November";
 export const december = "December";
 
-export const defaultMonthRequestParams = "month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
+export const defaultMonthRequestParams = "month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
 
 const CheckboxMonths = ({dataSetter}) => {
 	const [monthChecks, setMonthChecks] = useState({

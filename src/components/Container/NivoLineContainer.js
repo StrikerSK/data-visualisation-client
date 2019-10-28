@@ -20,7 +20,7 @@ const NivoLineContainer = () => {
 			<div style={divStyle} className={"graph-component"}>
 				<LineComponent color={colorPattern} personParams={personRequest} validityParams={validityRequest} monthParams={monthRequest} sellTypeParam={sellTypeRequest}/>
 			</div>
-			<div>
+			<div className={"options-component"}>
 				<label>
 					Pick your color scheme:
 					<select onChange={e => setColorPattern(e.target.value)}>

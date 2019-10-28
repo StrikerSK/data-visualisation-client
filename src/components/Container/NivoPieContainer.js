@@ -18,7 +18,7 @@ const NivoPieContainer = () => {
 			<div style={divStyle} className={"graph-component"}>
 				<PieComponent color={colorPattern} validityParams={validityRequest} monthParams={monthRequest} sellTypes={sellTypeRequest}/>
 			</div>
-			<div>
+			<div className={"options-component"}>
 				<label>
 					Pick your color scheme:
 					<select onChange={e => setColorPattern(e.target.value)}>

@@ -6,17 +6,43 @@
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 10% 90%;
-}
+    grid-template-rows: 100px 90%;
 
-.graph-component {
-    grid-column: 1;
-    grid-row: 2;
-    place-self: center;
+    @media screen and (max-width: 770px) {
+        height: 125vh;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 45% 35%;
+    }
 }
 
 .graph-headline{
     grid-column: 1 / 3;
     grid-row: 1;
     place-self: center;
+
+    @media screen and (max-width: 770px) {
+        grid-row: 1;
+    }
+}
+
+.graph-component {
+    grid-column: 1;
+    grid-row: 2;
+    place-self: center;
+
+    @media screen and (max-width: 770px) {
+        grid-row: 2;
+    }
+}
+
+.options-component{
+    grid-column: 2;
+    grid-row: 2;
+    place-self: center;
+
+    @media screen and (max-width: 770px) {
+        grid-column: 1;
+        grid-row: 3;
+    }
 }

@@ -15,7 +15,7 @@ import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
 
 // export const host_url = "http://localhost:8080";
-export const host_url = "http://pid-data-server.herokuapp.com/";
+export const host_url = "https://pid-data-server.herokuapp.com/";
 
 class App extends Component {
 	render() {

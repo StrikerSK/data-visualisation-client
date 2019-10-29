@@ -5,6 +5,7 @@ import {host_url} from "../../App";
 
 const LineComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
 	const [data, setData] = useState([]);
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
 	useEffect(() => {
 		getData();
@@ -48,7 +49,7 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 				curve="linear"
 				axisTop={null}
 				axisRight={null}
-				axisBottom={{
+				axisBottom={(screenWidth < 770 ? null :{
 					orient: 'bottom',
 					tickSize: 5,
 					tickPadding: 5,
@@ -56,7 +57,7 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 					legend: 'Mesiac',
 					legendOffset: 36,
 					legendPosition: 'middle'
-				}}
+				})}
 				axisLeft={{
 					orient: 'left',
 					tickSize: 5,

@@ -30,7 +30,7 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 			data={data}
 			keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
 			indexBy="month"
-			margin={{top: 50, right: 130, bottom: 50, left: 60}}
+			margin={{top: 30, right: 30, bottom: 80, left: 80}}
 			padding={0.3}
 			colors={{scheme: color}}
 			defs={[
@@ -56,33 +56,34 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 			borderColor={{from: 'color', modifiers: [['darker', 1.6]]}}
 			axisTop={null}
 			axisRight={null}
-			axisBottom={{
+			axisBottom={(window.innerWidth < 770 ? null : {
 				tickSize: 5,
 				tickPadding: 5,
 				tickRotation: 0,
 				legend: 'Month',
 				legendPosition: 'middle',
 				legendOffset: 32
-			}}
+			})}
 			axisLeft={{
 				tickSize: 5,
 				tickPadding: 5,
 				tickRotation: 0,
 				legend: 'Ticket sell count',
 				legendPosition: 'middle',
-				legendOffset: -40
+				legendOffset: -60
 			}}
+			enableLabel={(window.innerWidth >= 770)}
 			labelSkipWidth={12}
 			labelSkipHeight={12}
 			labelTextColor={{from: 'color', modifiers: [['darker', 1.6]]}}
 			legends={[
 				{
 					dataFrom: 'keys',
-					anchor: 'bottom-right',
-					direction: 'column',
+					anchor: 'bottom',
+					direction: 'row',
 					justify: false,
-					translateX: 120,
-					translateY: 0,
+					translateX: 0,
+					translateY: 40,
 					itemsSpacing: 2,
 					itemWidth: 100,
 					itemHeight: 20,

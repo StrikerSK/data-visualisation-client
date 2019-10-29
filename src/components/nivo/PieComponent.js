@@ -33,6 +33,7 @@ const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 				colors={{scheme: color}}
 				borderWidth={1}
 				borderColor={{from: 'color', modifiers: [['darker', 0.2]]}}
+				enableRadialLabels={(window.innerWidth >= 770)}
 				radialLabelsSkipAngle={10}
 				radialLabelsTextXOffset={6}
 				radialLabelsTextColor="#333333"

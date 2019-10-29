@@ -9,10 +9,15 @@
     grid-template-rows: 100px 90%;
 
     @media screen and (max-width: 770px) {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        width: 95vw;
         height: 125vh;
 
+        grid-row-gap: 20px;
         grid-template-columns: 100%;
-        grid-template-rows: 100px 45% 35%;
+        grid-template-rows: 100px 45% 45%;
     }
 }
 
@@ -44,5 +49,8 @@
     @media screen and (max-width: 770px) {
         grid-column: 1;
         grid-row: 3;
+
+        width: 90%;
+        margin: 0 auto;
     }
 }

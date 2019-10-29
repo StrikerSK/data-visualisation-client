@@ -14,7 +14,7 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 		fetch(host_url + "/nivo/bar?" + personParams
 			+ (personParams !== '' ? "&" : "") + validityParams
 			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
-			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam , {method: "GET"})
+			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
 			.then(response => response.json())
 			.then((result) => parseData(result))
 	};

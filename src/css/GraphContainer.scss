@@ -44,7 +44,7 @@
 .options-component{
     grid-column: 2;
     grid-row: 2;
-    place-self: center;
+    justify-self: center;
 
     @media screen and (max-width: 770px) {
         grid-column: 1;

@@ -12,7 +12,7 @@ const NivoHeatMapContainer = () => {
 
 	return (
 		<div className={"graph-container"}>
-			<h1 className={"graph-headline"}>Predajnosť lístkov PID za rok 2017</h1>
+			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
 			<div style={divStyle} className={"graph-component"}>
 				<HeatMapComponent color={colorPattern} sellTypeParam={sellTypeRequest} validityParams={validityRequest}/>
 			</div>

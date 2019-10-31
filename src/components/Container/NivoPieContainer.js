@@ -5,6 +5,7 @@ import PieComponent from "../nivo/PieComponent";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
+import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
 
 const NivoPieContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -14,21 +15,12 @@ const NivoPieContainer = () => {
 
 	return (
 		<div className={"graph-container"}>
-			<h1 className={"graph-headline"}>Predajnosť lístkov PID za rok 2017</h1>
+			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
 			<div style={divStyle} className={"graph-component"}>
 				<PieComponent color={colorPattern} validityParams={validityRequest} monthParams={monthRequest} sellTypes={sellTypeRequest}/>
 			</div>
 			<div className={"options-component"}>
-				<label>
-					Pick your color scheme:
-					<select onChange={e => setColorPattern(e.target.value)}>
-						<option value={"nivo"}>Nivo</option>
-						<option value={"set1"}>Set 1</option>
-						<option value={"set2"}>Set 2</option>
-						<option value={"set3"}>Set 3</option>
-						<option value={"paired"}>Paired</option>
-					</select>
-				</label>
+				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>
 				<CheckboxMonths dataSetter={setMonthRequest}/>
 				<CheckboxSellType dataSetter={setSellTypeRequest}/>

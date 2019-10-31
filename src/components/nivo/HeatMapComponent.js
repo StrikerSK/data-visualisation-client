@@ -13,7 +13,7 @@ const HeatMapComponent = ({color, validityParams, sellTypeParam}) => {
 		fetch(host_url + "/nivo/bar?"  + validityParams
 			+ (validityParams !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
 			.then(response => response.json())
-			.then((result) => parseData(result))
+			.then(result => parseData(result))
 	};
 
 	const parseData = (result) => {

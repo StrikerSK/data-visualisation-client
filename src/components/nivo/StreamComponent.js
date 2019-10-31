@@ -18,7 +18,7 @@ const StreamComponent = () => {
 	const getData = () => {
 		fetch(host_url + "/getTicketData", {method: "GET"})
 			.then(response => response.json())
-			.then((result) => parseData(result))
+			.then(result => parseData(result))
 	};
 
 	const parseData = (result) => {

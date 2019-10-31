@@ -18,7 +18,7 @@ const WaffleComponent = () => {
 	const getData = () => {
 		fetch(host_url + "/nivo/waffle", {method: "GET"})
 			.then(response => response.json())
-			.then((result) => parseData(result))
+			.then(result => parseData(result))
 	};
 
 	const parseData = (result) => {

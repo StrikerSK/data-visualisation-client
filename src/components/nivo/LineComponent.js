@@ -5,7 +5,6 @@ import {host_url} from "../../App";
 
 const LineComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
 	const [data, setData] = useState([]);
-	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
 	useEffect(() => {
 		getData();
@@ -17,22 +16,7 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
 			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam , {method: "GET"})
 			.then(response => response.json())
-			.then((result) => parseData(result))
-	};
-
-	const paramBuilder = () => {
-
-		const finalRequestParams = "";
-
-		if (personParams !== ""){
-			finalRequestParams.concat(personParams);
-		}
-
-		if(finalRequestParams !== ""){
-			finalRequestParams.concat("&" + validityParams);
-		}
-
-		return finalRequestParams;
+			.then(result => parseData(result))
 	};
 
 	const parseData = (result) => {
@@ -45,11 +29,11 @@ const LineComponent = ({color, personParams, validityParams, monthParams, sellTy
 				data={data}
 				margin={{ top: 10, right: 40, bottom: 80, left: 80 }}
 				xScale={{ type: 'point' }}
-				yScale={{ type: 'linear', stacked: false, min: 'auto', max: 'auto' }}
+				yScale={{ type: 'linear', stacked: true, min: 'auto', max: 'auto' }}
 				curve="linear"
 				axisTop={null}
 				axisRight={null}
-				axisBottom={(screenWidth < 770 ? null :{
+				axisBottom={(window.innerWidth < 770 ? null :{
 					orient: 'bottom',
 					tickSize: 5,
 					tickPadding: 5,

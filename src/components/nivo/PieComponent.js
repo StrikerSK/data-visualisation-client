@@ -15,7 +15,7 @@ const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 			+ (validityParams !== "" ? "&" : "") + monthParams
 			+ (validityParams.concat(monthParams) !== "" ? "&" : "") + sellTypes, {method: "GET"})
 			.then(response => response.json())
-			.then((result) => parseData(result))
+			.then(result => parseData(result))
 	};
 
 	const parseData = (result) => {

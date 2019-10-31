@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="Created new chart options and updated containers">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/GraphContainer.scss" afterDir="false" />
     </list>
-    <list id="f70eef33-0f0f-423c-9dfe-169108fc056e" name="Ignord changes" comment="Deleted lock files" />
+    <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implementing-nivo" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -119,7 +116,7 @@
       <workItem from="1571563352729" duration="33603000" />
       <workItem from="1572204966154" duration="1728000" />
       <workItem from="1572262905758" duration="4635000" />
-      <workItem from="1572379992909" duration="4242000" />
+      <workItem from="1572379992909" duration="12348000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -226,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572383588121</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update responsiveness of bar, line and pie charts">
+      <created>1572384466862</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572384466862</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added and applied color select options to component list">
+      <created>1572596233058</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572596233058</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +268,7 @@
     <MESSAGE value="Optimized responsiveness of application" />
     <MESSAGE value="Created new chart options and updated containers" />
     <MESSAGE value="Update responsiveness of bar, line and pie charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update responsiveness of bar, line and pie charts" />
+    <MESSAGE value="Added and applied color select options to component list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and applied color select options to component list" />
   </component>
 </project>

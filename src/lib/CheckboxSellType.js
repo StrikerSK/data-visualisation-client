@@ -46,13 +46,11 @@ const CheckboxSellType = ({dataSetter}) => {
 				<FormLabel component="legend">Filter podľa platnosti</FormLabel>
 				<FormGroup row>
 					<FormControlLabel
-						control={<Checkbox name={"coupon"} checked={sellTypeFilter.coupon}
-						                   onChange={event => checkboxHandler(event)}/>}
+						control={<Checkbox name={"coupon"} checked={sellTypeFilter.coupon} onChange={event => checkboxHandler(event)}/>}
 						label={coupon}
 					/>
 					<FormControlLabel
-						control={<Checkbox name={"card"} checked={sellTypeFilter.card}
-						                   onChange={event => checkboxHandler(event)}/>}
+						control={<Checkbox name={"card"} checked={sellTypeFilter.card} onChange={event => checkboxHandler(event)}/>}
 						label={card}
 					/>
 				</FormGroup>

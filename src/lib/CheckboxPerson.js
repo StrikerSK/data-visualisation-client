@@ -30,27 +30,27 @@ const CheckboxPerson = ({dataSetter}) => {
 		setRequestedPersons(inputFilter);
 	};
 
-	const setRequestedPersons = (inputObjec) => {
+	const setRequestedPersons = (inputObject) => {
 		const outputArray = [];
 		const prefix = "person=";
 
-		if (inputObjec.adults) {
+		if (inputObject.adults) {
 			outputArray.push(prefix + adults);
 		}
 
-		if (inputObjec.seniors) {
+		if (inputObject.seniors) {
 			outputArray.push(prefix + seniors);
 		}
 
-		if (inputObjec.students) {
+		if (inputObject.students) {
 			outputArray.push(prefix + students);
 		}
 
-		if (inputObjec.portable) {
+		if (inputObject.portable) {
 			outputArray.push(prefix + portable);
 		}
 
-		if (inputObjec.juniors) {
+		if (inputObject.juniors) {
 			outputArray.push(prefix + juniors);
 		}
 		dataSetter(outputArray.join("&"));

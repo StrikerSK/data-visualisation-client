@@ -5,7 +5,6 @@ import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/Checkbox
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
 import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
-import GraphWrapper from "../../lib/GraphWrapper";
 
 const NivoPieContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -16,9 +15,7 @@ const NivoPieContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<GraphWrapper>
-				<PieComponent color={colorPattern} validityParams={validityRequest} monthParams={monthRequest} sellTypes={sellTypeRequest}/>
-			</GraphWrapper>
+			<PieComponent color={colorPattern} validityParams={validityRequest} monthParams={monthRequest} sellTypes={sellTypeRequest}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>

@@ -6,7 +6,6 @@ import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/Checkbox
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
 import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
-import GraphWrapper from "../../lib/GraphWrapper";
 
 const NivoLineContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -18,9 +17,7 @@ const NivoLineContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<GraphWrapper>
-				<LineComponent color={colorPattern} personParams={personRequest} validityParams={validityRequest} monthParams={monthRequest} sellTypeParam={sellTypeRequest}/>
-			</GraphWrapper>
+			<LineComponent color={colorPattern} personParams={personRequest} validityParams={validityRequest} monthParams={monthRequest} sellTypeParam={sellTypeRequest}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxPerson dataSetter={setPersonRequest}/>

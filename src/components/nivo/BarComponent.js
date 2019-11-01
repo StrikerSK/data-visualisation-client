@@ -2,13 +2,15 @@ import React, {useState, useEffect} from 'react';
 import {ResponsiveBar} from "@nivo/bar";
 import '../../css/GraphContainer.scss'
 import {host_url} from "../../App";
+import SpinnerComponent from "../../lib/SpinnerComponent";
 
 const BarComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
 	const [data, setData] = useState([{}]);
+	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
 		getData();
-	}, [personParams,validityParams, monthParams, sellTypeParam]);
+	}, [personParams, validityParams, monthParams, sellTypeParam]);
 
 	const getData = () => {
 		fetch(host_url + "/nivo/bar?" + personParams
@@ -16,16 +18,21 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
 			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
 			.then(response => response.json())
-			.then(result => setData(result))
+			.then(result => finaliseTransaction(result))
 	};
 
-	return (
+	const finaliseTransaction = (result) => {
+		setData(result);
+		changeLoadedState(true);
+	};
+
+	const barGraph = (
 		<ResponsiveBar
 			data={data}
 			keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
 			indexBy="month"
 			margin={{top: 30, right: 30, bottom: 80, left: 80}}
-			padding={0.3}
+			padding={0.4}
 			colors={{scheme: color}}
 			defs={[
 				{
@@ -77,9 +84,9 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 					direction: 'row',
 					justify: false,
 					translateX: 0,
-					translateY: 40,
+					translateY: 80,
 					itemsSpacing: 2,
-					itemWidth: 100,
+					itemWidth: 80,
 					itemHeight: 20,
 					itemDirection: 'left-to-right',
 					itemOpacity: 0.85,
@@ -98,7 +105,10 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 			motionStiffness={90}
 			motionDamping={15}
 		/>
+	);
+
+	return (
+		<SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
 	)
 };
-
 export default BarComponent;

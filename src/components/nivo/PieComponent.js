@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import {host_url} from "../../App";
+import SpinnerComponent from "../../lib/SpinnerComponent";
 
 const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 	const [data, setData] = useState([{}]);
+	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
 		getData();
@@ -14,13 +16,18 @@ const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 			+ (validityParams !== "" ? "&" : "") + monthParams
 			+ (validityParams.concat(monthParams) !== "" ? "&" : "") + sellTypes, {method: "GET"})
 			.then(response => response.json())
-			.then(result => setData(result))
+			.then(result => finaliseTransaction(result))
 	};
 
-	return (
+	const finaliseTransaction = (result) => {
+		setData(result);
+		changeLoadedState(true);
+	};
+
+	const pieChart = (
 		<ResponsivePie
 			data={data}
-			margin={{top: 40, right: 80, bottom: 80, left: 80}}
+			margin={{top: 20, right: 40, bottom: 70, left: 40}}
 			innerRadius={0.5}
 			padAngle={0.7}
 			cornerRadius={3}
@@ -114,6 +121,10 @@ const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
 				}
 			]}
 		/>
+	);
+
+	return (
+		<SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>
 	);
 };
 export default PieComponent;

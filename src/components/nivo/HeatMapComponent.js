@@ -1,22 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveHeatMap} from "@nivo/heatmap";
 import {host_url} from "../../App";
+import SpinnerComponent from "../../lib/SpinnerComponent";
 
 const HeatMapComponent = ({color, validityParams, sellTypeParam}) => {
 	const [data, setData] = useState([{}]);
+	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
 		getData();
 	}, [validityParams, sellTypeParam]);
 
 	const getData = () => {
-		fetch(host_url + "/nivo/bar?"  + validityParams
+		fetch(host_url + "/nivo/bar?" + validityParams
 			+ (validityParams !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
 			.then(response => response.json())
-			.then(result => setData(result))
+			.then(result => finaliseTransaction(result))
 	};
 
-	return (
+	const finaliseTransaction = (result) => {
+		setData(result);
+		changeLoadedState(true);
+	};
+
+	const graphHeatMap = (
 		<ResponsiveHeatMap
 			data={data}
 			keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
@@ -57,7 +64,10 @@ const HeatMapComponent = ({color, validityParams, sellTypeParam}) => {
 			hoverTarget="cell"
 			cellHoverOthersOpacity={0.25}
 		/>
+	);
+
+	return (
+		<SpinnerComponent isDataLoaded={isLoaded} children={graphHeatMap}/>
 	)
 };
-
 export default HeatMapComponent;

@@ -36,7 +36,6 @@ const CheckboxSellType = ({dataSetter}) => {
 			outputArray.push(prefix + card.replace(' ', '%20'));
 		}
 
-		console.log(outputArray.join("&"));
 		dataSetter(outputArray.join("&"));
 	};
 

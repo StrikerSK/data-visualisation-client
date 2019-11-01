@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Created spinner component for the graphs">
+      <change afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChartElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/GraphWrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/CheckboxSellType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/CheckboxSellType.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
@@ -108,8 +113,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1b602bf5-4988-4b31-88e2-53db0b4b8463" name="Default Changelist" comment="" />
-      <changelist id="f70eef33-0f0f-423c-9dfe-169108fc056e" name="Ignord changes" comment="" />
+      <changelist id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="" />
       <created>1553038356971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -128,6 +132,7 @@
       <workItem from="1572204966154" duration="1728000" />
       <workItem from="1572262905758" duration="4635000" />
       <workItem from="1572379992909" duration="12348000" />
+      <workItem from="1572682423683" duration="6986000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>

@@ -1,25 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveBar} from "@nivo/bar";
 import '../../css/GraphContainer.scss'
-import {host_url} from "../../App";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {barDataGetter} from "../../lib/DataFetcher";
 
-const BarComponent = ({color, personParams, validityParams, monthParams, sellTypeParam}) => {
+const BarComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
-		getData();
-	}, [personParams, validityParams, monthParams, sellTypeParam]);
-
-	const getData = () => {
-		fetch(host_url + "/nivo/bar?" + personParams
-			+ (personParams !== '' ? "&" : "") + validityParams
-			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
-			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
-			.then(response => response.json())
-			.then(result => finaliseTransaction(result))
-	};
+		barDataGetter(parametersList, finaliseTransaction);
+	}, [parametersList]);
 
 	const finaliseTransaction = (result) => {
 		setData(result);

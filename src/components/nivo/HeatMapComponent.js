@@ -1,22 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsiveHeatMap} from "@nivo/heatmap";
-import {host_url} from "../../App";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {barDataGetter} from "../../lib/DataFetcher";
 
-const HeatMapComponent = ({color, validityParams, sellTypeParam}) => {
+const HeatMapComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
-		getData();
-	}, [validityParams, sellTypeParam]);
-
-	const getData = () => {
-		fetch(host_url + "/nivo/bar?" + validityParams
-			+ (validityParams !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
-			.then(response => response.json())
-			.then(result => finaliseTransaction(result))
-	};
+		barDataGetter(parametersList, finaliseTransaction);
+	}, [parametersList]);
 
 	const finaliseTransaction = (result) => {
 		setData(result);

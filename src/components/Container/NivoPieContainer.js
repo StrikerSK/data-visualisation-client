@@ -12,10 +12,28 @@ const NivoPieContainer = () => {
 	const [monthRequest, setMonthRequest] = useState(defaultMonthRequestParams);
 	const [sellTypeRequest, setSellTypeRequest] = useState(defaultSellTypeRequestParams);
 
+	const generateArr = () => {
+		const paramsList = [];
+
+		if(validityRequest !== ""){
+			paramsList.push(validityRequest);
+		}
+
+		if(monthRequest !== ""){
+			paramsList.push(monthRequest);
+		}
+
+		if(sellTypeRequest !== ""){
+			paramsList.push(sellTypeRequest);
+		}
+
+		return paramsList;
+	};
+
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<PieComponent color={colorPattern} validityParams={validityRequest} monthParams={monthRequest} sellTypes={sellTypeRequest}/>
+			<PieComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>

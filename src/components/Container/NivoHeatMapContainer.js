@@ -9,10 +9,24 @@ const NivoHeatMapContainer = () => {
 	const [validityRequest, setValidityRequest] = useState(defaultValidityRequestParams);
 	const [sellTypeRequest, setSellTypeRequest] = useState(defaultSellTypeRequestParams);
 
+	const generateArr = () => {
+		const paramsList = [];
+
+		if(validityRequest !== ""){
+			paramsList.push(validityRequest);
+		}
+
+		if(sellTypeRequest !== ""){
+			paramsList.push(sellTypeRequest);
+		}
+
+		return paramsList;
+	};
+
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<HeatMapComponent color={colorPattern} sellTypeParam={sellTypeRequest} validityParams={validityRequest}/>
+			<HeatMapComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<label>
 					Pick your color scheme:

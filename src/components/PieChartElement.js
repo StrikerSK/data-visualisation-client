@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import '../App.css';
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 
-const PieChartElement = ({myData, radius,name}) => {
+const PieChartElement = ({myData, radius, name}) => {
 	const [color, setColor] = useState("");
 
 	useEffect(() => {
@@ -19,7 +19,6 @@ const PieChartElement = ({myData, radius,name}) => {
 	};
 
 	const generateName = () => {
-		console.log(name);
 		if (name !== undefined) {
 			return <p>{name}</p>;
 		}
@@ -38,7 +37,6 @@ const PieChartElement = ({myData, radius,name}) => {
 					     outerRadius={radius}
 					     fill={color}
 					     label={({cx, cy, midAngle, innerRadius, outerRadius, value, index}) => {
-						     console.log("handling label?");
 						     const RADIAN = Math.PI / 180;
 						     // eslint-disable-next-line
 						     const radius = 25 + innerRadius + (outerRadius - innerRadius);

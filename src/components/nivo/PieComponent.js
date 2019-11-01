@@ -1,23 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {ResponsivePie} from "@nivo/pie";
-import {host_url} from "../../App";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {pieDataGetter} from "../../lib/DataFetcher";
 
-const PieComponent = ({color, validityParams, monthParams, sellTypes}) => {
+const PieComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
-		getData();
-	}, [validityParams, monthParams, sellTypes]);
-
-	const getData = () => {
-		fetch(host_url + "/nivo/pie?" + validityParams
-			+ (validityParams !== "" ? "&" : "") + monthParams
-			+ (validityParams.concat(monthParams) !== "" ? "&" : "") + sellTypes, {method: "GET"})
-			.then(response => response.json())
-			.then(result => finaliseTransaction(result))
-	};
+		pieDataGetter(parametersList, finaliseTransaction);
+	}, [parametersList]);
 
 	const finaliseTransaction = (result) => {
 		setData(result);

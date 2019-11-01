@@ -17,13 +17,7 @@ const RadarComponent = () => {
 	const getData = () => {
 		fetch( host_url + "/nivo/bar", {method: "GET"})
 			.then(response => response.json())
-			.then(result => parseData(result))
-	};
-
-	const parseData = (result) => {
-		console.log(result);
-		setData(result);
-		console.log(data);
+			.then(result => setData(result))
 	};
 
 	return (

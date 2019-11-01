@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Added and applied color select options to component list">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572596233058</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added and applied color select options to component list">
+      <created>1572597258204</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572597258204</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Introduced HOC to the graph components">
+      <created>1572598710154</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572598710154</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +282,7 @@
     <MESSAGE value="Created new chart options and updated containers" />
     <MESSAGE value="Update responsiveness of bar, line and pie charts" />
     <MESSAGE value="Added and applied color select options to component list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added and applied color select options to component list" />
+    <MESSAGE value="Introduced HOC to the graph components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced HOC to the graph components" />
   </component>
 </project>

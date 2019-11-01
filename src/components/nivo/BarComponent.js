@@ -16,13 +16,7 @@ const BarComponent = ({color, personParams, validityParams, monthParams, sellTyp
 			+ (personParams.concat(validityParams) !== "" ? "&" : "") + monthParams
 			+ (personParams.concat(validityParams, monthParams) !== "" ? "&" : "") + sellTypeParam, {method: "GET"})
 			.then(response => response.json())
-			.then(result => parseData(result))
-	};
-
-	const parseData = (result) => {
-		console.log(result);
-		setData(result);
-		console.log(data);
+			.then(result => setData(result))
 	};
 
 	return (

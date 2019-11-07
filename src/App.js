@@ -13,6 +13,7 @@ import NivoBarContainer from "./components/Container/NivoBarContainer";
 import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
+import NivoBubbleContainer from "./components/Container/NivoBubbleContainer";
 
 class App extends Component {
 	render() {
@@ -31,6 +32,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/waffle" render={() => <WaffleComponent/>}/>
 					<Route exact strict path="/nivo/heatmap" render={() => <NivoHeatMapContainer/>}/>
 					<Route exact strict path="/nivo/radar" render={() => <RadarComponent/>}/>
+					<Route exact strict path="/nivo/bubble" render={() => <NivoBubbleContainer/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

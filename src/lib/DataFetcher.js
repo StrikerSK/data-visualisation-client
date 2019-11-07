@@ -23,6 +23,11 @@ export const streamDataGetter = (parameters, callbackFunction) => {
 		.then(({data}) => callbackFunction(data));
 };
 
+export const bubbleDataGetter = (parameters, callbackFunction) => {
+	axios.get(host_url + "/nivo/bubble?" + generateParamsQuery(parameters))
+		.then(({data}) => callbackFunction(data));
+};
+
 const generateParamsQuery = (parametersList) => {
 	return parametersList.join("&");
 };

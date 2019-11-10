@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ResponsiveLine} from "@nivo/line";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {lineDataGetter} from "../../lib/DataFetcher";

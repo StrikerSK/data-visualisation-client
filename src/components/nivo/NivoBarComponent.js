@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ResponsiveBar} from "@nivo/bar";
 import '../../css/GraphContainer.scss'
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 
-const NivoBarComponent = ({color, parametersList}) => {
+const NivoBarComponent = ({color, parametersList, barGrouping, barLayout}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -24,7 +24,8 @@ const NivoBarComponent = ({color, parametersList}) => {
 			indexBy="month"
 			margin={{top: 30, right: 30, bottom: 80, left: 80}}
 			padding={0.4}
-			groupMode="grouped"
+			groupMode={barGrouping}
+			layout={barLayout}
 			colors={{scheme: color}}
 			defs={[
 				{

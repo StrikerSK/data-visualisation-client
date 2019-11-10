@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { ResponsiveBubble } from '@nivo/circle-packing'
+import React, {useEffect, useState} from 'react';
+import {ResponsiveBubble} from '@nivo/circle-packing'
 import '../../css/GraphContainer.scss'
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {bubbleDataGetter} from "../../lib/DataFetcher";
@@ -20,14 +20,14 @@ const NivoBubbleComponent = ({color, parametersList}) => {
 	const bubbleGraph = (
 		<ResponsiveBubble
 			root={data}
-			margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+			margin={{top: 20, right: 20, bottom: 20, left: 20}}
 			identity="name"
 			value="value"
-			colors={{ scheme: color }}
+			colors={{scheme: color}}
 			padding={6}
-			labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 0.8 ] ] }}
+			labelTextColor={{from: 'color', modifiers: [['darker', 0.8]]}}
 			borderWidth={2}
-			borderColor={{ from: 'color' }}
+			borderColor={{from: 'color'}}
 			defs={[
 				{
 					id: 'lines',
@@ -39,7 +39,7 @@ const NivoBubbleComponent = ({color, parametersList}) => {
 					spacing: 8
 				}
 			]}
-			fill={[ { match: { depth: 1 }, id: 'lines' } ]}
+			fill={[{match: {depth: 1}, id: 'lines'}]}
 			animate={true}
 			motionStiffness={90}
 			motionDamping={12}

@@ -4,7 +4,7 @@ import NivoPieComponent from "../nivo/NivoPieComponent";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
-import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
+import ColorSchemeSelector from "../../lib/Selects/ColorSchemeSelector";
 
 const NivoPieContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -15,15 +15,15 @@ const NivoPieContainer = () => {
 	const generateArr = () => {
 		const paramsList = [];
 
-		if(validityRequest !== ""){
+		if (validityRequest !== "") {
 			paramsList.push(validityRequest);
 		}
 
-		if(monthRequest !== ""){
+		if (monthRequest !== "") {
 			paramsList.push(monthRequest);
 		}
 
-		if(sellTypeRequest !== ""){
+		if (sellTypeRequest !== "") {
 			paramsList.push(sellTypeRequest);
 		}
 

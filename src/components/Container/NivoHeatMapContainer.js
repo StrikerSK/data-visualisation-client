@@ -12,11 +12,11 @@ const NivoHeatMapContainer = () => {
 	const generateArr = () => {
 		const paramsList = [];
 
-		if(validityRequest !== ""){
+		if (validityRequest !== "") {
 			paramsList.push(validityRequest);
 		}
 
-		if(sellTypeRequest !== ""){
+		if (sellTypeRequest !== "") {
 			paramsList.push(sellTypeRequest);
 		}
 

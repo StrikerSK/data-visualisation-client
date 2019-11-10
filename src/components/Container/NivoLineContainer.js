@@ -5,7 +5,7 @@ import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/CheckboxPers
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
-import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
+import ColorSchemeSelector from "../../lib/Selects/ColorSchemeSelector";
 
 const NivoLineContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -17,19 +17,19 @@ const NivoLineContainer = () => {
 	const generateArr = () => {
 		const paramsList = [];
 
-		if(validityRequest !== ""){
+		if (validityRequest !== "") {
 			paramsList.push(validityRequest);
 		}
 
-		if(monthRequest !== ""){
+		if (monthRequest !== "") {
 			paramsList.push(monthRequest);
 		}
 
-		if(sellTypeRequest !== ""){
+		if (sellTypeRequest !== "") {
 			paramsList.push(sellTypeRequest);
 		}
 
-		if(personRequest !== ""){
+		if (personRequest !== "") {
 			paramsList.push(personRequest);
 		}
 

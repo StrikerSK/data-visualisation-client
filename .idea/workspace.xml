@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/Selects/LayoutSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/BubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572603172386</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactoring of code">
+      <created>1573406245924</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573406245924</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactoring of code">
+      <created>1573406381358</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573406381358</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +309,7 @@
     <MESSAGE value="Introduced HOC to the graph components" />
     <MESSAGE value="Pie chart spinner application" />
     <MESSAGE value="Implementing Webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing Webpack" />
+    <MESSAGE value="Refactoring of code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of code" />
   </component>
 </project>

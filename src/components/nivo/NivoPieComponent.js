@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";

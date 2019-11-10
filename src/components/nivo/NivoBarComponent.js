@@ -4,7 +4,7 @@ import '../../css/GraphContainer.scss'
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 
-const BarComponent = ({color, parametersList}) => {
+const NivoBarComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -24,6 +24,7 @@ const BarComponent = ({color, parametersList}) => {
 			indexBy="month"
 			margin={{top: 30, right: 30, bottom: 80, left: 80}}
 			padding={0.4}
+			groupMode="grouped"
 			colors={{scheme: color}}
 			defs={[
 				{
@@ -98,8 +99,6 @@ const BarComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
-	)
+	return <SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
 };
-export default BarComponent;
+export default NivoBarComponent;

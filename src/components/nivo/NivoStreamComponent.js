@@ -3,7 +3,7 @@ import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 
-const StreamComponent = () => {
+const NivoStreamComponent = () => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -101,9 +101,6 @@ const StreamComponent = () => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent children={streamGraph} isDataLoaded={isLoaded}/>
-	);
+	return <SpinnerComponent children={streamGraph} isDataLoaded={isLoaded}/>
 };
-
-export default StreamComponent;
+export default NivoStreamComponent;

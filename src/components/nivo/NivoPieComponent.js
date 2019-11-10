@@ -3,7 +3,7 @@ import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
 
-const PieComponent = ({color, parametersList}) => {
+const NivoPieComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -115,8 +115,6 @@ const PieComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>
-	);
+	return <SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>
 };
-export default PieComponent;
+export default NivoPieComponent;

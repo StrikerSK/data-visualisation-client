@@ -4,7 +4,7 @@ import '../../css/GraphContainer.scss'
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {bubbleDataGetter} from "../../lib/DataFetcher";
 
-const BubbleComponent = ({color, parametersList}) => {
+const NivoBubbleComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -46,8 +46,6 @@ const BubbleComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph}/>
-	)
+	return <SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph}/>
 };
-export default BubbleComponent;
+export default NivoBubbleComponent;

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../css/GraphContainer.scss'
-import PieComponent from "../nivo/PieComponent";
+import NivoPieComponent from "../nivo/NivoPieComponent";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
@@ -33,7 +33,7 @@ const NivoPieContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<PieComponent color={colorPattern} parametersList={generateArr()}/>
+			<NivoPieComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>

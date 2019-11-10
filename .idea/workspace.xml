@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Created spinner component for the graphs">
-      <change afterPath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/nivo/BubbleComponent.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/BubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/BubbleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/HeatMapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/LineComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/PieComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/RadarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/StreamComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/WaffleComponent.js" afterDir="false" />
     </list>
-    <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
-    <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

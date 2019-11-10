@@ -6,9 +6,9 @@ import LineGraphComponent from "./components/LineGraphComponent";
 import StackedGraphComponent from "./components/StackedGraphComponent";
 import PieChartYearly from "./components/PieChartYearly";
 import PieChartMonthly from "./components/PieChartMonthly";
-import StreamComponent from "./components/nivo/StreamComponent";
-import WaffleComponent from "./components/nivo/WaffleComponent";
-import RadarComponent from "./components/nivo/RadarComponent";
+import NivoStreamComponent from "./components/nivo/NivoStreamComponent";
+import NivoWaffleComponent from "./components/nivo/NivoWaffleComponent";
+import NivoRadarComponent from "./components/nivo/NivoRadarComponent";
 import NivoBarContainer from "./components/Container/NivoBarContainer";
 import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
@@ -27,11 +27,11 @@ class App extends Component {
 					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
 					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
 					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
-					<Route exact strict path="/nivo/stack" render={() => <StreamComponent/>}/>
+					<Route exact strict path="/nivo/stack" render={() => <NivoStreamComponent/>}/>
 					<Route exact strict path="/nivo/pie" render={() => <NivoPieContainer/>}/>
-					<Route exact strict path="/nivo/waffle" render={() => <WaffleComponent/>}/>
+					<Route exact strict path="/nivo/waffle" render={() => <NivoWaffleComponent/>}/>
 					<Route exact strict path="/nivo/heatmap" render={() => <NivoHeatMapContainer/>}/>
-					<Route exact strict path="/nivo/radar" render={() => <RadarComponent/>}/>
+					<Route exact strict path="/nivo/radar" render={() => <NivoRadarComponent/>}/>
 					<Route exact strict path="/nivo/bubble" render={() => <NivoBubbleContainer/>}/>
 				</Switch>
 			</BrowserRouter>

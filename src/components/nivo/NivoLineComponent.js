@@ -3,7 +3,7 @@ import {ResponsiveLine} from "@nivo/line";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {lineDataGetter} from "../../lib/DataFetcher";
 
-const LineComponent = ({color, parametersList}) => {
+const NivoLineComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -80,9 +80,6 @@ const LineComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent children={LineGraph} isDataLoaded={isLoaded}/>
-	)
+	return <SpinnerComponent children={LineGraph} isDataLoaded={isLoaded}/>
 };
-
-export default LineComponent;
+export default NivoLineComponent;

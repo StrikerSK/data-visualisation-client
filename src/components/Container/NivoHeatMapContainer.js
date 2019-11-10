@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../css/GraphContainer.scss'
-import HeatMapComponent from "../nivo/HeatMapComponent";
+import NivoHeatMapComponent from "../nivo/NivoHeatMapComponent";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
 
@@ -26,7 +26,7 @@ const NivoHeatMapContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<HeatMapComponent color={colorPattern} parametersList={generateArr()}/>
+			<NivoHeatMapComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<label>
 					Pick your color scheme:

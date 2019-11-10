@@ -3,7 +3,7 @@ import {ResponsiveRadar} from '@nivo/radar'
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 
-const RadarComponent = () => {
+const NivoRadarComponent = () => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -68,9 +68,6 @@ const RadarComponent = () => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent children={radarGraph} isDataLoaded={isLoaded}/>
-	)
+	return <SpinnerComponent children={radarGraph} isDataLoaded={isLoaded}/>
 };
-
-export default RadarComponent;
+export default NivoRadarComponent;

@@ -3,7 +3,7 @@ import {ResponsiveHeatMap} from "@nivo/heatmap";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 
-const HeatMapComponent = ({color, parametersList}) => {
+const NivoHeatMapComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -59,8 +59,6 @@ const HeatMapComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent isDataLoaded={isLoaded} children={graphHeatMap}/>
-	)
+	return <SpinnerComponent isDataLoaded={isLoaded} children={graphHeatMap}/>
 };
-export default HeatMapComponent;
+export default NivoHeatMapComponent;

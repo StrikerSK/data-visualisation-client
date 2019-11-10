@@ -3,7 +3,7 @@ import {ResponsiveWaffle} from "@nivo/waffle";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 
-const WaffleComponent = () => {
+const NivoWaffleComponent = () => {
 	const [data, setData] = useState([{}]);
 	const [maxValue, setMaxValue] = useState(0);
 	const [isLoaded, changeLoadedState] = useState(false);
@@ -66,8 +66,6 @@ const WaffleComponent = () => {
 		/>
 	);
 
-	return (
-		<SpinnerComponent children={waffleGraph} isDataLoaded={isLoaded}/>
-	);
+	return <SpinnerComponent children={waffleGraph} isDataLoaded={isLoaded}/>
 };
-export default WaffleComponent;
+export default NivoWaffleComponent;

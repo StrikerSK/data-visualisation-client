@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BarComponent from "../nivo/BarComponent";
+import NivoBarComponent from "../nivo/NivoBarComponent";
 import '../../css/GraphContainer.scss'
 import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/CheckboxPerson";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
@@ -39,7 +39,7 @@ const NivoBarContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<BarComponent color={colorPattern} parametersList={generateArr()}/>
+			<NivoBarComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxPerson dataSetter={setPersonRequest}/>

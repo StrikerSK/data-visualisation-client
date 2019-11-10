@@ -5,7 +5,7 @@ import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/Checkbox
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
 import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
 import ColorSchemeSelector from "../../lib/ColorSchemeSelector";
-import BubbleComponent from "../nivo/BubbleComponent";
+import NivoBubbleComponent from "../nivo/NivoBubbleComponent";
 
 const NivoBubbleContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -39,7 +39,7 @@ const NivoBubbleContainer = () => {
 	return (
 		<div className={"graph-container"}>
 			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<BubbleComponent color={colorPattern} parametersList={generateArr()}/>
+			<NivoBubbleComponent color={colorPattern} parametersList={generateArr()}/>
 			<div className={"options-component"}>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<CheckboxPerson dataSetter={setPersonRequest}/>

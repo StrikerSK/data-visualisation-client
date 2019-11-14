@@ -4,7 +4,7 @@ import '../../css/GraphContainer.scss'
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 
-const NivoBarComponent = ({color, parametersList, barGrouping, barLayout}) => {
+const NivoBarComponent = ({color, parametersList, barGrouping, barLayout, barOrder}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -20,7 +20,7 @@ const NivoBarComponent = ({color, parametersList, barGrouping, barLayout}) => {
 	const barGraph = (
 		<ResponsiveBar
 			data={data}
-			keys={['Dospelý', 'Dôchodcovia', 'Juniori', 'Študenti', 'Prenosné']}
+			keys={barOrder}
 			indexBy="month"
 			margin={{top: 30, right: 30, bottom: 80, left: 80}}
 			padding={0.4}

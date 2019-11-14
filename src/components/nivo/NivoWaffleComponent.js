@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {ResponsiveWaffle} from "@nivo/waffle";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {GraphContainer} from "../../lib/LayoutContainers";
 
 const NivoWaffleComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -66,6 +67,10 @@ const NivoWaffleComponent = () => {
 		/>
 	);
 
-	return <SpinnerComponent children={waffleGraph} isDataLoaded={isLoaded}/>
+	return (
+		<GraphContainer>
+			<SpinnerComponent children={waffleGraph} isDataLoaded={isLoaded}/>
+		</GraphContainer>
+	)
 };
 export default NivoWaffleComponent;

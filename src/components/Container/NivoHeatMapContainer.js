@@ -1,33 +1,19 @@
 import React, {useState} from 'react';
 import '../../css/GraphContainer.scss'
 import NivoHeatMapComponent from "../nivo/NivoHeatMapComponent";
-import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
-import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
+import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/checkboxes/CheckboxValidity";
+import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/checkboxes/CheckboxSellType";
+import {GraphContainer, OptionComponent} from "../../lib/LayoutContainers";
 
 const NivoHeatMapContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
 	const [validityRequest, setValidityRequest] = useState(defaultValidityRequestParams);
 	const [sellTypeRequest, setSellTypeRequest] = useState(defaultSellTypeRequestParams);
 
-	const generateArr = () => {
-		const paramsList = [];
-
-		if (validityRequest !== "") {
-			paramsList.push(validityRequest);
-		}
-
-		if (sellTypeRequest !== "") {
-			paramsList.push(sellTypeRequest);
-		}
-
-		return paramsList;
-	};
-
 	return (
-		<div className={"graph-container"}>
-			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<NivoHeatMapComponent color={colorPattern} parametersList={generateArr()}/>
-			<div className={"options-component"}>
+		<GraphContainer>
+			<NivoHeatMapComponent color={colorPattern} parametersList={[validityRequest, sellTypeRequest]}/>
+			<OptionComponent>
 				<label>
 					Pick your color scheme:
 					<select onChange={e => setColorPattern(e.target.value)}>
@@ -40,8 +26,8 @@ const NivoHeatMapContainer = () => {
 				</label>
 				<CheckboxValidity dataSetter={setValidityRequest}/>
 				<CheckboxSellType dataSetter={setSellTypeRequest}/>
-			</div>
-		</div>
+			</OptionComponent>
+		</GraphContainer>
 	)
 };
 

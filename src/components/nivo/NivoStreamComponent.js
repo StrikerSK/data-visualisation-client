@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {GraphContainer} from "../../lib/LayoutContainers";
 
 const NivoStreamComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -101,6 +102,10 @@ const NivoStreamComponent = () => {
 		/>
 	);
 
-	return <SpinnerComponent children={streamGraph} isDataLoaded={isLoaded}/>
+	return (
+		<GraphContainer>
+			<SpinnerComponent children={streamGraph} isDataLoaded={isLoaded}/>
+		</GraphContainer>
+	)
 };
 export default NivoStreamComponent;

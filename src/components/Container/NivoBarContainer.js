@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import NivoBarComponent from "../nivo/NivoBarComponent";
 import '../../css/GraphContainer.scss'
-import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/CheckboxPerson";
-import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/CheckboxValidity";
-import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/CheckboxMonths";
-import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/CheckboxSellType";
-import ColorSchemeSelector from "../../lib/Selects/ColorSchemeSelector";
-import {GroupModeSelect, LayoutSelect} from "../../lib/Selects/LayoutSelect";
+import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/checkboxes/CheckboxPerson";
+import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/checkboxes/CheckboxValidity";
+import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/checkboxes/CheckboxMonths";
+import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/checkboxes/CheckboxSellType";
+import ColorSchemeSelector from "../../lib/selects/ColorSchemeSelector";
+import {GroupModeSelect, LayoutSelect} from "../../lib/selects/LayoutSelect";
+import {GraphContainer, OptionComponent} from "../../lib/LayoutContainers";
+import BarGeneratorButton, {defaultBarOrder} from "../../lib/BarGeneratorButton";
 
 const NivoBarContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
@@ -16,35 +18,15 @@ const NivoBarContainer = () => {
 	const [sellTypeRequest, setSellTypeRequest] = useState(defaultSellTypeRequestParams);
 	const [layout, setLayout] = useState("vertical");
 	const [grouping, setGrouping] = useState("stacked");
-
-	const generateArr = () => {
-		const paramsList = [];
-
-		if (validityRequest !== "") {
-			paramsList.push(validityRequest);
-		}
-
-		if (monthRequest !== "") {
-			paramsList.push(monthRequest);
-		}
-
-		if (sellTypeRequest !== "") {
-			paramsList.push(sellTypeRequest);
-		}
-
-		if (personRequest !== "") {
-			paramsList.push(personRequest);
-		}
-
-		return paramsList;
-	};
+	const [barOrdering, setBarOrdering] = useState(defaultBarOrder);
 
 	return (
-		<div className={"graph-container"}>
-			<h1 className={"graph-headline"}>Predajnosť lístkov PID</h1>
-			<NivoBarComponent color={colorPattern} parametersList={generateArr()} barLayout={layout}
-			                  barGrouping={grouping}/>
-			<div className={"options-component"}>
+		<GraphContainer>
+			<NivoBarComponent color={colorPattern}
+			                  parametersList={[personRequest, validityRequest, monthRequest, sellTypeRequest]}
+			                  barLayout={layout}
+			                  barGrouping={grouping} barOrder={barOrdering}/>
+			<OptionComponent>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<GroupModeSelect current={grouping} dataSetter={setGrouping}/>
 				<LayoutSelect current={layout} dataSetter={setLayout}/>
@@ -52,8 +34,9 @@ const NivoBarContainer = () => {
 				<CheckboxValidity dataSetter={setValidityRequest}/>
 				<CheckboxMonths dataSetter={setMonthRequest}/>
 				<CheckboxSellType dataSetter={setSellTypeRequest}/>
-			</div>
-		</div>
+				<BarGeneratorButton dataSetter={setBarOrdering}/>
+			</OptionComponent>
+		</GraphContainer>
 	)
 };
 export default NivoBarContainer;

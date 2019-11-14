@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {ResponsiveRadar} from '@nivo/radar'
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
+import {GraphContainer} from "../../lib/LayoutContainers";
 
 const NivoRadarComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -68,6 +69,10 @@ const NivoRadarComponent = () => {
 		/>
 	);
 
-	return <SpinnerComponent children={radarGraph} isDataLoaded={isLoaded}/>
+	return (
+		<GraphContainer>
+			<SpinnerComponent children={radarGraph} isDataLoaded={isLoaded}/>
+		</GraphContainer>
+	)
 };
 export default NivoRadarComponent;

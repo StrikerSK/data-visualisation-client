@@ -51,7 +51,7 @@ const PieChartYearly = () => {
 					</tr>
 				</table>
 			</div>
-			< PieChartElement myData={data} radius={250}/>
+			<PieChartElement myData={data} radius={250}/>
 		</div>
 	);
 };

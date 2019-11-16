@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {ResponsiveBubble} from '@nivo/circle-packing'
-import '../../css/GraphContainer.scss'
+import React, {useEffect, useState} from "react";
+import {ResponsiveBubble} from "@nivo/circle-packing";
+import "../../css/GraphContainer.scss";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {bubbleDataGetter} from "../../lib/DataFetcher";
 
@@ -25,27 +25,27 @@ const NivoBubbleComponent = ({color, parametersList}) => {
 			value="value"
 			colors={{scheme: color}}
 			padding={6}
-			labelTextColor={{from: 'color', modifiers: [['darker', 0.8]]}}
+			labelTextColor={{from: "color", modifiers: [["darker", 0.8]]}}
 			borderWidth={2}
-			borderColor={{from: 'color'}}
+			borderColor={{from: "color"}}
 			defs={[
 				{
-					id: 'lines',
-					type: 'patternLines',
-					background: 'none',
-					color: 'inherit',
+					id: "lines",
+					type: "patternLines",
+					background: "none",
+					color: "inherit",
 					rotation: -45,
 					lineWidth: 5,
 					spacing: 8
 				}
 			]}
-			fill={[{match: {depth: 1}, id: 'lines'}]}
+			fill={[{match: {depth: 1}, id: "lines"}]}
 			animate={true}
 			motionStiffness={90}
 			motionDamping={12}
 		/>
 	);
 
-	return <SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph}/>
+	return <SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph}/>;
 };
 export default NivoBubbleComponent;

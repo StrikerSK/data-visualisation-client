@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import NivoLineComponent from "../nivo/NivoLineComponent";
-import '../../css/GraphContainer.scss'
+import "../../css/GraphContainer.scss"
 import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/checkboxes/CheckboxPerson";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/checkboxes/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/checkboxes/CheckboxMonths";

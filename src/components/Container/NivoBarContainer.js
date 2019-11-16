@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import NivoBarComponent from "../nivo/NivoBarComponent";
-import '../../css/GraphContainer.scss'
+import "../../css/GraphContainer.scss";
 import CheckboxPerson, {defaultPersonRequestParams} from "../../lib/checkboxes/CheckboxPerson";
 import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/checkboxes/CheckboxValidity";
 import CheckboxMonths, {defaultMonthRequestParams} from "../../lib/checkboxes/CheckboxMonths";
@@ -24,8 +24,7 @@ const NivoBarContainer = () => {
 		<GraphContainer>
 			<NivoBarComponent color={colorPattern}
 			                  parametersList={[personRequest, validityRequest, monthRequest, sellTypeRequest]}
-			                  barLayout={layout}
-			                  barGrouping={grouping} barOrder={barOrdering}/>
+			                  barLayout={layout} barGrouping={grouping} barOrder={barOrdering}/>
 			<OptionComponent>
 				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
 				<GroupModeSelect current={grouping} dataSetter={setGrouping}/>
@@ -37,6 +36,6 @@ const NivoBarContainer = () => {
 				<BarGeneratorButton dataSetter={setBarOrdering}/>
 			</OptionComponent>
 		</GraphContainer>
-	)
+	);
 };
 export default NivoBarContainer;

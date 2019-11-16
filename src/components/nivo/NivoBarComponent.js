@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from "react";
 import {ResponsiveBar} from "@nivo/bar";
-import '../../css/GraphContainer.scss'
+import "../../css/GraphContainer.scss"
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 
@@ -29,64 +29,64 @@ const NivoBarComponent = ({color, parametersList, barGrouping, barLayout, barOrd
 			colors={{scheme: color}}
 			defs={[
 				{
-					id: 'dots',
-					type: 'patternDots',
-					background: 'inherit',
-					color: '#38bcb2',
+					id: "dots",
+					type: "patternDots",
+					background: "inherit",
+					color: "#38bcb2",
 					size: 4,
 					padding: 1,
 					stagger: true
 				},
 				{
-					id: 'lines',
-					type: 'patternLines',
-					background: 'inherit',
-					color: '#eed312',
+					id: "lines",
+					type: "patternLines",
+					background: "inherit",
+					color: "#eed312",
 					rotation: -45,
 					lineWidth: 6,
 					spacing: 10
 				}
 			]}
-			borderColor={{from: 'color', modifiers: [['darker', 1.6]]}}
+			borderColor={{from: "color", modifiers: [["darker", 1.6]]}}
 			axisTop={null}
 			axisRight={null}
 			axisBottom={(window.innerWidth < 770 ? null : {
 				tickSize: 5,
 				tickPadding: 5,
 				tickRotation: 0,
-				legend: 'Month',
-				legendPosition: 'middle',
+				legend: "Month",
+				legendPosition: "middle",
 				legendOffset: 32
 			})}
 			axisLeft={{
 				tickSize: 5,
 				tickPadding: 5,
 				tickRotation: 0,
-				legend: 'Ticket sell count',
-				legendPosition: 'middle',
+				legend: "Ticket sell count",
+				legendPosition: "middle",
 				legendOffset: -60
 			}}
 			enableLabel={(window.innerWidth >= 770)}
 			labelSkipWidth={12}
 			labelSkipHeight={12}
-			labelTextColor={{from: 'color', modifiers: [['darker', 1.6]]}}
+			labelTextColor={{from: "color", modifiers: [["darker", 1.6]]}}
 			legends={[
 				{
-					dataFrom: 'keys',
-					anchor: 'bottom',
-					direction: 'row',
+					dataFrom: "keys",
+					anchor: "bottom",
+					direction: "row",
 					justify: false,
 					translateX: 0,
 					translateY: 80,
 					itemsSpacing: 2,
 					itemWidth: 80,
 					itemHeight: 20,
-					itemDirection: 'left-to-right',
+					itemDirection: "left-to-right",
 					itemOpacity: 0.85,
 					symbolSize: 20,
 					effects: [
 						{
-							on: 'hover',
+							on: "hover",
 							style: {
 								itemOpacity: 1
 							}

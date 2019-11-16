@@ -21,7 +21,8 @@ export const LayoutSelect = ({current, dataSetter}) => {
 		dataSetter(event.target.value);
 	};
 
-	return (<FormControl className={useStyles().formControl}>
+	return (
+		<FormControl className={useStyles().formControl}>
 			<InputLabel id="color-selector">Rozloženie</InputLabel>
 			<Select
 				labelId="color-selector"
@@ -43,7 +44,8 @@ export const GroupModeSelect = ({current, dataSetter}) => {
 		dataSetter(event.target.value);
 	};
 
-	return (<FormControl className={useStyles().formControl}>
+	return (
+		<FormControl className={useStyles().formControl}>
 			<InputLabel id="color-selector">Zobrazenie</InputLabel>
 			<Select
 				labelId="color-selector"

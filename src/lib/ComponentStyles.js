@@ -1,4 +1,4 @@
-export const graph_box = {
+export const graphBox = {
 	height: "100%",
 	width: "100%"
 };

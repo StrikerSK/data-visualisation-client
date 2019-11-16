@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormLabel from "@material-ui/core/FormLabel";
@@ -32,28 +32,31 @@ const CheckboxPerson = ({dataSetter}) => {
 
 	const setRequestedPersons = (inputObject) => {
 		const outputArray = [];
-		const prefix = "person=";
 
 		if (inputObject.adults) {
-			outputArray.push(prefix + adults);
+			addWithPrefix(adults);
 		}
 
 		if (inputObject.seniors) {
-			outputArray.push(prefix + seniors);
+			addWithPrefix(seniors);
 		}
 
 		if (inputObject.students) {
-			outputArray.push(prefix + students);
+			addWithPrefix(students);
 		}
 
 		if (inputObject.portable) {
-			outputArray.push(prefix + portable);
+			addWithPrefix(portable);
 		}
 
 		if (inputObject.juniors) {
-			outputArray.push(prefix + juniors);
+			addWithPrefix(juniors);
 		}
 		dataSetter(outputArray.join("&"));
+
+		function addWithPrefix(person) {
+			outputArray.push("person=" + person);
+		}
 	};
 
 	return (
@@ -89,6 +92,6 @@ const CheckboxPerson = ({dataSetter}) => {
 				</FormGroup>
 			</FormControl>
 		</div>
-	)
+	);
 };
 export default CheckboxPerson;

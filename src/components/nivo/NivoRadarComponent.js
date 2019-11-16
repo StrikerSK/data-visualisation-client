@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ResponsiveRadar} from '@nivo/radar'
+import {ResponsiveRadar} from '@nivo/radar';
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {GraphContainer} from "../../lib/LayoutContainers";
@@ -8,14 +8,14 @@ const NivoRadarComponent = () => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	useEffect(() => {
-		barDataGetter([], finaliseTransaction)
-	}, []);
-
 	const finaliseTransaction = (result) => {
 		setData(result);
 		changeLoadedState(true);
 	};
+
+	useEffect(() => {
+		barDataGetter([], finaliseTransaction)
+	}, []);
 
 	const radarGraph = (
 		<ResponsiveRadar

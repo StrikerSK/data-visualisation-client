@@ -1,7 +1,7 @@
-import React from 'react';
-import { css } from '@emotion/core';
+import React from "react";
+import {css} from "@emotion/core";
 import {ClipLoader} from "react-spinners";
-import {graph_box} from "./ComponentStyles";
+import {graphBox} from "./ComponentStyles";
 
 const override = css`
     display: block;
@@ -11,9 +11,9 @@ const override = css`
 
 export const SpinnerComponent = ({children, isDataLoaded}) => {
 	return (
-		<div style={graph_box} className={"graph-component"}>
-			{isDataLoaded ? (children) : (<ClipLoader css={override} sizeUnit={"px"} size={150} color={'#123abc'}/>)}
+		<div style={graphBox} className={"graph-component"}>
+			{isDataLoaded ? (children) : (<ClipLoader css={override} sizeUnit={"px"} size={150} color={"#123abc"}/>)}
 		</div>
-	)
+	);
 };
 export default SpinnerComponent;

@@ -16,6 +16,24 @@ const CheckboxSellType = ({dataSetter}) => {
 		card: true
 	});
 
+	const setRequestedPersons = (inputObject) => {
+		const outputArray = [];
+
+		if (inputObject.coupon) {
+			addWithPrefix(coupon.replace(' ', '%20'));
+		}
+
+		if (inputObject.card) {
+			addWithPrefix(card.replace(' ', '%20'));
+		}
+
+		dataSetter(outputArray.join("&"));
+
+		function addWithPrefix(sellType) {
+			outputArray.push("type=" + sellType);
+		}
+	};
+
 	const checkboxHandler = ({target}) => {
 		const {name} = target;
 		const inputFilter = {...sellTypeFilter, [name]: target.checked};
@@ -24,37 +42,30 @@ const CheckboxSellType = ({dataSetter}) => {
 		setRequestedPersons(inputFilter);
 	};
 
-	const setRequestedPersons = (inputObject) => {
-		const outputArray = [];
-		const prefix = "type=";
-
-		if (inputObject.coupon) {
-			outputArray.push(prefix + coupon.replace(' ', '%20'));
-		}
-
-		if (inputObject.card) {
-			outputArray.push(prefix + card.replace(' ', '%20'));
-		}
-
-		dataSetter(outputArray.join("&"));
-	};
-
 	return (
 		<div>
 			<FormControl component={"fieldset"}>
 				<FormLabel component="legend">Filter podľa platnosti</FormLabel>
 				<FormGroup row>
 					<FormControlLabel
-						control={<Checkbox name={"coupon"} checked={sellTypeFilter.coupon} onChange={event => checkboxHandler(event)}/>}
+						control={
+							<Checkbox name={"coupon"}
+							          checked={sellTypeFilter.coupon}
+							          onChange={(event) => checkboxHandler(event)}/>
+						}
 						label={coupon}
 					/>
 					<FormControlLabel
-						control={<Checkbox name={"card"} checked={sellTypeFilter.card} onChange={event => checkboxHandler(event)}/>}
+						control={
+							<Checkbox name={"card"}
+							          checked={sellTypeFilter.card}
+							          onChange={(event) => checkboxHandler(event)}/>
+						}
 						label={card}
 					/>
 				</FormGroup>
 			</FormControl>
 		</div>
-	)
+	);
 };
 export default CheckboxSellType;

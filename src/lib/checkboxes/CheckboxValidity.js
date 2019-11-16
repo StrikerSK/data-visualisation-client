@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 
-export const three_month = "3 Mesačná";
-export const month = "Mesačná";
-export const five_month = "5 Mesačná";
-export const yearly = "Ročná";
+const three_month = "3 Mesačná";
+const month = "Mesačná";
+const five_month = "5 Mesačná";
+const yearly = "Ročná";
 
 export const defaultValidityRequestParams = "validity=Mesačná&validity=3%20Mesačná&validity=5%20Mesačná&validity=Ročná";
 
@@ -37,11 +37,11 @@ const CheckboxValidity = ({dataSetter}) => {
 		}
 
 		if (inputObject.three_month) {
-			outputArray.push(prefix + three_month.replace(' ', '%20'));
+			outputArray.push(prefix + three_month.replace(" ", "%20"));
 		}
 
 		if (inputObject.five_month) {
-			outputArray.push(prefix + five_month.replace(' ', '%20'));
+			outputArray.push(prefix + five_month.replace(" ", "%20"));
 		}
 
 		if (inputObject.yearly) {
@@ -73,7 +73,7 @@ const CheckboxValidity = ({dataSetter}) => {
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"yearly"} checked={validityFilter.yearly}
-						                   onChange={event => checkboxHandler(event)}/>}
+							          onChange={event => checkboxHandler(event)}/>}
 						label={yearly}
 					/>
 				</FormGroup>

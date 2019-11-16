@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from "react";
 import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
@@ -7,14 +7,14 @@ const NivoPieComponent = ({color, parametersList}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	useEffect(() => {
-		pieDataGetter(parametersList, finaliseTransaction);
-	}, [parametersList]);
-
 	const finaliseTransaction = (result) => {
 		setData(result);
 		changeLoadedState(true);
 	};
+
+	useEffect(() => {
+		pieDataGetter(parametersList, finaliseTransaction);
+	}, [parametersList]);
 
 	const pieChart = (
 		<ResponsivePie
@@ -25,7 +25,7 @@ const NivoPieComponent = ({color, parametersList}) => {
 			cornerRadius={3}
 			colors={{scheme: color}}
 			borderWidth={1}
-			borderColor={{from: 'color', modifiers: [['darker', 0.2]]}}
+			borderColor={{from: "color", modifiers: [["darker", 0.2]]}}
 			enableRadialLabels={(window.innerWidth >= 770)}
 			radialLabelsSkipAngle={10}
 			radialLabelsTextXOffset={6}
@@ -34,7 +34,7 @@ const NivoPieComponent = ({color, parametersList}) => {
 			radialLabelsLinkDiagonalLength={16}
 			radialLabelsLinkHorizontalLength={24}
 			radialLabelsLinkStrokeWidth={1}
-			radialLabelsLinkColor={{from: 'color'}}
+			radialLabelsLinkColor={{from: "color"}}
 			slicesLabelsSkipAngle={10}
 			slicesLabelsTextColor="#333333"
 			animate={true}
@@ -42,19 +42,19 @@ const NivoPieComponent = ({color, parametersList}) => {
 			motionDamping={15}
 			defs={[
 				{
-					id: 'dots',
-					type: 'patternDots',
-					background: 'inherit',
-					color: 'rgba(255, 255, 255, 0.3)',
+					id: "dots",
+					type: "patternDots",
+					background: "inherit",
+					color: "rgba(255, 255, 255, 0.3)",
 					size: 4,
 					padding: 1,
 					stagger: true
 				},
 				{
-					id: 'lines',
-					type: 'patternLines',
-					background: 'inherit',
-					color: 'rgba(255, 255, 255, 0.3)',
+					id: "lines",
+					type: "patternLines",
+					background: "inherit",
+					color: "rgba(255, 255, 255, 0.3)",
 					rotation: -45,
 					lineWidth: 6,
 					spacing: 10
@@ -63,50 +63,50 @@ const NivoPieComponent = ({color, parametersList}) => {
 			fill={[
 				{
 					match: {
-						id: 'Prenosná'
+						id: "Prenosná"
 					},
-					id: 'dots'
+					id: "dots"
 				},
 				{
 					match: {
-						id: 'Dospelý'
+						id: "Dospelý"
 					},
-					id: 'dots'
+					id: "dots"
 				},
 				{
 					match: {
-						id: 'Študenti'
+						id: "Študenti"
 					},
-					id: 'dots'
+					id: "dots"
 				},
 				{
 					match: {
-						id: 'Dôchodcovia'
+						id: "Dôchodcovia"
 					},
-					id: 'dots'
+					id: "dots"
 				},
 				{
 					match: {
-						id: 'Juniori'
+						id: "Juniori"
 					},
-					id: 'lines'
+					id: "lines"
 				}
 			]}
 			legends={[
 				{
-					anchor: 'bottom',
-					direction: 'row',
+					anchor: "bottom",
+					direction: "row",
 					translateY: 56,
 					itemWidth: 100,
 					itemHeight: 18,
-					itemTextColor: '#999',
+					itemTextColor: "#999",
 					symbolSize: 18,
-					symbolShape: 'circle',
+					symbolShape: "circle",
 					effects: [
 						{
-							on: 'hover',
+							on: "hover",
 							style: {
-								itemTextColor: '#000'
+								itemTextColor: "#000"
 							}
 						}
 					]

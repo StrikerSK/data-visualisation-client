@@ -46,57 +46,60 @@ const CheckboxMonths = ({dataSetter}) => {
 
 	const setRequestedMonths = (inputObject) => {
 		const outputArray = [];
-		const prefix = "month=";
 
 		if (inputObject.january) {
-			outputArray.push(prefix + january);
+			addWithPrefix(january);
 		}
 
 		if (inputObject.february) {
-			outputArray.push(prefix + february);
+			addWithPrefix(february)
 		}
 
 		if (inputObject.march) {
-			outputArray.push(prefix + march);
+			addWithPrefix(march);
 		}
 
 		if (inputObject.april) {
-			outputArray.push(prefix + april);
+			addWithPrefix(april);
 		}
 
 		if (inputObject.may) {
-			outputArray.push(prefix + may);
+			addWithPrefix(may);
 		}
 
 		if (inputObject.june) {
-			outputArray.push(prefix + june);
+			addWithPrefix(june);
 		}
 
 		if (inputObject.july) {
-			outputArray.push(prefix + july);
+			addWithPrefix(july);
 		}
 
 		if (inputObject.august) {
-			outputArray.push(prefix + august);
+			addWithPrefix(august);
 		}
 
 		if (inputObject.september) {
-			outputArray.push(prefix + september);
+			addWithPrefix(september);
 		}
 
 		if (inputObject.october) {
-			outputArray.push(prefix + october);
+			addWithPrefix(october);
 		}
 
 		if (inputObject.november) {
-			outputArray.push(prefix + november);
+			addWithPrefix(november);
 		}
 
 		if (inputObject.december) {
-			outputArray.push(prefix + december);
+			addWithPrefix(december);
 		}
 
 		dataSetter(outputArray.join("&"));
+
+		function addWithPrefix(month) {
+			outputArray.push("month=" + month);
+		}
 	};
 
 	return (
@@ -106,62 +109,62 @@ const CheckboxMonths = ({dataSetter}) => {
 				<FormGroup row>
 					<FormControlLabel
 						control={<Checkbox name={"january"} checked={monthChecks.january}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={january}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"february"} checked={monthChecks.february}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={february}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"march"} checked={monthChecks.march}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={march}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"april"} checked={monthChecks.april}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={april}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"may"} checked={monthChecks.may}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={may}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"june"} checked={monthChecks.june}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={june}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"july"} checked={monthChecks.july}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={july}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"august"} checked={monthChecks.august}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={august}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"september"} checked={monthChecks.september}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={september}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"october"} checked={monthChecks.october}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={october}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"november"} checked={monthChecks.november}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={november}
 					/>
 					<FormControlLabel
 						control={<Checkbox name={"december"} checked={monthChecks.december}
-						                   onChange={event => checkboxHandler(event)}/>}
+						                   onChange={(event) => checkboxHandler(event)}/>}
 						label={december}
 					/>
 				</FormGroup>

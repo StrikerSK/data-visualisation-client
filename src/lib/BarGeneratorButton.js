@@ -1,24 +1,20 @@
-import React from 'react';
+import React from "react";
 import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 	button: {
 		margin: theme.spacing(1),
 	}
 }));
 
-export const defaultBarOrder = ['Dospelý', 'Študenti', 'Dôchodcovia', 'Juniori',  'Prenosné'];
+export const defaultBarOrder = ["Dospelý", "Študenti", "Dôchodcovia", "Juniori",  "Prenosné"];
 
 const BarGeneratorButton = ({dataSetter}) => {
 	const classes = useStyles();
 
-	const shuffle = () => {
-		dataSetter(generateBarOrder());
-	};
-
 	const generateBarOrder = () => {
-		const array = ['Dospelý', 'Študenti', 'Dôchodcovia', 'Juniori', 'Prenosné'];
+		const array = ["Dospelý", "Študenti", "Dôchodcovia", "Juniori", "Prenosné"];
 		let counter = array.length;
 
 		// While there are elements in the array
@@ -34,6 +30,10 @@ const BarGeneratorButton = ({dataSetter}) => {
 		}
 
 		return array;
+	};
+
+	const shuffle = () => {
+		dataSetter(generateBarOrder());
 	};
 
 	return (

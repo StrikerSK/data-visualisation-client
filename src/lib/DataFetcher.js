@@ -1,33 +1,33 @@
-import axios from 'axios'
+import axios from "axios"
 
-// export const host_url = "http://localhost:8080";
-export const host_url = "https://pid-data-server.herokuapp.com/";
+// const hostUrl = "http://localhost:8080";
+const hostUrl = "https://pid-data-server.herokuapp.com/";
+
+const generateParamsQuery = (parametersList) => {
+	return parametersList.join("&");
+};
 
 export const pieDataGetter = (parameters, callbackFunction) => {
-	axios.get(host_url + "/nivo/pie?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/nivo/pie?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
 
 export const barDataGetter = (parameters, callbackFunction) => {
-	axios.get(host_url + "/nivo/bar?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/nivo/bar?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
 
 export const lineDataGetter = (parameters, callbackFunction) => {
-	axios.get(host_url + "/nivo/line?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/nivo/line?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
 
 export const streamDataGetter = (parameters, callbackFunction) => {
-	axios.get(host_url + "/nivo/getTicketData?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/nivo/getTicketData?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
 
 export const bubbleDataGetter = (parameters, callbackFunction) => {
-	axios.get(host_url + "/nivo/bubble?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/nivo/bubble?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
-};
-
-const generateParamsQuery = (parametersList) => {
-	return parametersList.join("&");
 };

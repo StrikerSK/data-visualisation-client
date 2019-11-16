@@ -4,6 +4,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
+import {useDispatch} from "react-redux";
+import {updateValidity} from "../actions";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";
@@ -13,6 +15,7 @@ const yearly = "Ročná";
 export const defaultValidityRequestParams = "validity=Mesačná&validity=3%20Mesačná&validity=5%20Mesačná&validity=Ročná";
 
 const CheckboxValidity = ({dataSetter}) => {
+	const dispatch = useDispatch();
 	const [validityFilter, setValidityFilter] = useState({
 		three_month: true,
 		month: true,
@@ -30,25 +33,29 @@ const CheckboxValidity = ({dataSetter}) => {
 
 	const setRequestedPersons = (inputObject) => {
 		const outputArray = [];
-		const prefix = "validity=";
 
 		if (inputObject.month) {
-			outputArray.push(prefix + month);
+			addWithPrefix(month);
 		}
 
 		if (inputObject.three_month) {
-			outputArray.push(prefix + three_month.replace(" ", "%20"));
+			addWithPrefix(three_month.replace(" ", "%20"));
 		}
 
 		if (inputObject.five_month) {
-			outputArray.push(prefix + five_month.replace(" ", "%20"));
+			addWithPrefix(five_month.replace(" ", "%20"));
 		}
 
 		if (inputObject.yearly) {
-			outputArray.push(prefix + yearly);
+			addWithPrefix(yearly);
 		}
 
 		dataSetter(outputArray.join("&"));
+		dispatch(updateValidity(outputArray.join("&")));
+
+		function addWithPrefix(validity) {
+			outputArray.push("validity=" + validity);
+		}
 	};
 
 	return (

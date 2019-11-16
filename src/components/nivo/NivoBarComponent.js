@@ -3,19 +3,24 @@ import {ResponsiveBar} from "@nivo/bar";
 import "../../css/GraphContainer.scss"
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
+import {useSelector} from "react-redux";
 
-const NivoBarComponent = ({color, parametersList, barGrouping, barLayout, barOrder}) => {
+const NivoBarComponent = ({barGrouping, barLayout, barOrder}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	useEffect(() => {
-		barDataGetter(parametersList, finaliseTransaction);
-	}, [parametersList]);
+	const test = useSelector(stat => stat.generalReducer);
+	const color = test.color;
+	const outputData = [test.person, test.months, test.sellType, test.validity];
 
 	const finaliseTransaction = (result) => {
 		setData(result);
 		changeLoadedState(true);
 	};
+
+	useEffect(() => {
+		barDataGetter(outputData, finaliseTransaction);
+	}, [outputData, test.color]);
 
 	const barGraph = (
 		<ResponsiveBar

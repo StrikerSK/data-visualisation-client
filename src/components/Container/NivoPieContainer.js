@@ -17,7 +17,7 @@ const NivoPieContainer = () => {
 		<GraphContainer>
 			<NivoPieComponent color={colorPattern} parametersList={[validityRequest, monthRequest, sellTypeRequest]}/>
 			<OptionComponent>
-				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
+				<ColorSchemeSelector/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>
 				<CheckboxMonths dataSetter={setMonthRequest}/>
 				<CheckboxSellType dataSetter={setSellTypeRequest}/>

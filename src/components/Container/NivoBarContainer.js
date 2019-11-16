@@ -26,7 +26,7 @@ const NivoBarContainer = () => {
 			                  parametersList={[personRequest, validityRequest, monthRequest, sellTypeRequest]}
 			                  barLayout={layout} barGrouping={grouping} barOrder={barOrdering}/>
 			<OptionComponent>
-				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
+				<ColorSchemeSelector/>
 				<GroupModeSelect current={grouping} dataSetter={setGrouping}/>
 				<LayoutSelect current={layout} dataSetter={setLayout}/>
 				<CheckboxPerson dataSetter={setPersonRequest}/>

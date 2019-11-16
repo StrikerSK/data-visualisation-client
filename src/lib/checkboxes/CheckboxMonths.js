@@ -4,6 +4,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
+import {useDispatch} from "react-redux";
+import {updateMonths} from "../actions";
 
 export const january = "Január";
 export const february = "Február";
@@ -21,6 +23,7 @@ export const december = "December";
 export const defaultMonthRequestParams = "month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
 
 const CheckboxMonths = ({dataSetter}) => {
+	const dispatch = useDispatch();
 	const [monthChecks, setMonthChecks] = useState({
 		january: true,
 		february: true,
@@ -95,7 +98,9 @@ const CheckboxMonths = ({dataSetter}) => {
 			addWithPrefix(december);
 		}
 
+		
 		dataSetter(outputArray.join("&"));
+		dispatch(updateMonths(outputArray.join("&")));
 
 		function addWithPrefix(month) {
 			outputArray.push("month=" + month);

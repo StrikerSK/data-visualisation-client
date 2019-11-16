@@ -4,6 +4,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {useDispatch} from "react-redux";
+import {updateColor} from "../actions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
@@ -15,11 +17,15 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-const ColorSchemeSelector = ({currentValue, dataSetter}) => {
+const ColorSchemeSelector = () => {
+	const [color, setColor] = React.useState("nivo");
 	const classes = useStyles();
+	const dispatch = useDispatch();
 
 	const handleChange = event => {
-		dataSetter(event.target.value);
+		const colorName = event.target.value;
+		setColor(colorName);
+		dispatch(updateColor(colorName))
 	};
 
 	return (
@@ -28,7 +34,7 @@ const ColorSchemeSelector = ({currentValue, dataSetter}) => {
 			<Select
 				labelId="color-selector"
 				id="color-selector"
-				value={currentValue}
+				value={color}
 				onChange={handleChange}
 				autoWidth
 			>

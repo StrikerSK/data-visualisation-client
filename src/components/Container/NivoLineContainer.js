@@ -20,7 +20,7 @@ const NivoLineContainer = () => {
 			<NivoLineComponent color={colorPattern}
 			                   parametersList={[validityRequest, monthRequest, sellTypeRequest, personRequest]}/>
 			<OptionComponent>
-				<ColorSchemeSelector dataSetter={setColorPattern} currentValue={colorPattern}/>
+				<ColorSchemeSelector/>
 				<CheckboxPerson dataSetter={setPersonRequest}/>
 				<CheckboxValidity dataSetter={setValidityRequest}/>
 				<CheckboxMonths dataSetter={setMonthRequest}/>

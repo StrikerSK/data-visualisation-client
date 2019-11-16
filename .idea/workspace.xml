@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Created bar organization and added layout system">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoLineContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoPieContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/BarGeneratorButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ComponentStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ComponentStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/LayoutContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxMonths.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxSellType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxSellType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxValidity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/selects/LayoutSelect.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +120,7 @@
       <workItem from="1573165662248" duration="803000" />
       <workItem from="1573767921694" duration="7068000" />
       <workItem from="1573817679771" duration="34000" />
-      <workItem from="1573830562906" duration="12928000" />
+      <workItem from="1573830562906" duration="13321000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -321,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573774625230</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Code review changes vol.1">
+      <created>1573924204703</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1573924204703</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +342,8 @@
     <MESSAGE value="Refactoring of code" />
     <MESSAGE value="Data sorter by values" />
     <MESSAGE value="Created bar organization and added layout system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created bar organization and added layout system" />
+    <MESSAGE value="Code review changes vol.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code review changes vol.1" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

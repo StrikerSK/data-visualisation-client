@@ -12,7 +12,7 @@ export const coupon = "Papierový kupón";
 
 export const defaultSellTypeRequestParams = "type=Čipová%20karta&type=Papierový%20kupón";
 
-const CheckboxSellType = ({dataSetter}) => {
+const CheckboxSellType = () => {
 	const dispatch = useDispatch();
 	const [sellTypeFilter, setSellTypeFilter] = useState({
 		coupon: true,
@@ -30,7 +30,6 @@ const CheckboxSellType = ({dataSetter}) => {
 			addWithPrefix(card.replace(' ', '%20'));
 		}
 
-		dataSetter(outputArray.join("&"));
 		dispatch(updateSellTypes(outputArray.join("&")));
 
 		function addWithPrefix(sellType) {

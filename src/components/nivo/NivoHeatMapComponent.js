@@ -2,10 +2,12 @@ import React, {useEffect, useState} from "react";
 import {ResponsiveHeatMap} from "@nivo/heatmap";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
+import {connect} from "react-redux";
 
-const NivoHeatMapComponent = ({color, parametersList}) => {
+const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
+
 
 	const finaliseTransaction = (result) => {
 		setData(result);
@@ -13,8 +15,8 @@ const NivoHeatMapComponent = ({color, parametersList}) => {
 	};
 
 	useEffect(() => {
-		barDataGetter(parametersList, finaliseTransaction);
-	}, [parametersList]);
+		barDataGetter([validity, sellType], finaliseTransaction);
+	}, [validity, sellType]);
 
 	const graphHeatMap = (
 		<ResponsiveHeatMap
@@ -61,4 +63,10 @@ const NivoHeatMapComponent = ({color, parametersList}) => {
 
 	return <SpinnerComponent isDataLoaded={isLoaded} children={graphHeatMap}/>
 };
-export default NivoHeatMapComponent;
+
+const mapStateToProps = state => ({
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType
+});
+
+export default connect(mapStateToProps)(NivoHeatMapComponent);

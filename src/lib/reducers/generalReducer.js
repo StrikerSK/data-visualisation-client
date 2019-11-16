@@ -2,6 +2,7 @@ import {defaultMonthRequestParams} from "../checkboxes/CheckboxMonths";
 import {defaultPersonRequestParams} from "../checkboxes/CheckboxPerson";
 import {defaultSellTypeRequestParams} from "../checkboxes/CheckboxSellType";
 import {defaultValidityRequestParams} from "../checkboxes/CheckboxValidity";
+import {defaultColorName} from "../selects/ColorSchemeSelector";
 
 const generalReducer = (data = {}, action) => {
 	if(action.type === 'UPDATE_MONTHS') {
@@ -34,7 +35,7 @@ const generalReducer = (data = {}, action) => {
 	data.person = defaultPersonRequestParams;
 	data.sellType = defaultSellTypeRequestParams;
 	data.validity = defaultValidityRequestParams;
-	data.color = "nivo";
+	data.color = defaultColorName;
 
 	return data;
 };

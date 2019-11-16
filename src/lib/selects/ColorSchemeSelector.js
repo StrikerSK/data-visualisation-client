@@ -7,6 +7,8 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
 import {updateColor} from "../actions";
 
+export const defaultColorName = "nivo";
+
 const useStyles = makeStyles(theme => ({
 	formControl: {
 		margin: theme.spacing(1),
@@ -18,9 +20,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ColorSchemeSelector = () => {
+	const dispatch = useDispatch();
 	const [color, setColor] = React.useState("nivo");
 	const classes = useStyles();
-	const dispatch = useDispatch();
 
 	const handleChange = event => {
 		const colorName = event.target.value;

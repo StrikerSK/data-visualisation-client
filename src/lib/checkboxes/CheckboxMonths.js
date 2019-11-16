@@ -22,7 +22,7 @@ export const december = "December";
 
 export const defaultMonthRequestParams = "month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
 
-const CheckboxMonths = ({dataSetter}) => {
+const CheckboxMonths = () => {
 	const dispatch = useDispatch();
 	const [monthChecks, setMonthChecks] = useState({
 		january: true,
@@ -98,8 +98,6 @@ const CheckboxMonths = ({dataSetter}) => {
 			addWithPrefix(december);
 		}
 
-		
-		dataSetter(outputArray.join("&"));
 		dispatch(updateMonths(outputArray.join("&")));
 
 		function addWithPrefix(month) {

@@ -3,19 +3,20 @@ import {ResponsiveBubble} from "@nivo/circle-packing";
 import "../../css/GraphContainer.scss";
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {bubbleDataGetter} from "../../lib/DataFetcher";
+import {connect} from "react-redux";
 
-const NivoBubbleComponent = ({color, parametersList}) => {
+const NivoBubbleComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
-
-	useEffect(() => {
-		bubbleDataGetter(parametersList, finaliseTransaction);
-	}, [parametersList]);
 
 	const finaliseTransaction = (result) => {
 		setData(result);
 		changeLoadedState(true);
 	};
+
+	useEffect(() => {
+		bubbleDataGetter([months, person, validity, sellType, color], finaliseTransaction);
+	}, [months, person, validity, sellType, color]);
 
 	const bubbleGraph = (
 		<ResponsiveBubble
@@ -48,4 +49,13 @@ const NivoBubbleComponent = ({color, parametersList}) => {
 
 	return <SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph}/>;
 };
-export default NivoBubbleComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+	color: state.colorReducer
+});
+
+export default connect(mapStateToProps)(NivoBubbleComponent);

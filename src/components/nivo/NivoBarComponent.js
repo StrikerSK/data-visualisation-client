@@ -3,15 +3,12 @@ import {ResponsiveBar} from "@nivo/bar";
 import "../../css/GraphContainer.scss"
 import SpinnerComponent from "../../lib/SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
-import {useSelector} from "react-redux";
+import {connect} from "react-redux";
+import colorReducer from "../../lib/reducers/colorReducer"
 
-const NivoBarComponent = ({barGrouping, barLayout, barOrder}) => {
+const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
-
-	const test = useSelector(stat => stat.generalReducer);
-	const color = test.color;
-	const outputData = [test.person, test.months, test.sellType, test.validity];
 
 	const finaliseTransaction = (result) => {
 		setData(result);
@@ -19,8 +16,8 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder}) => {
 	};
 
 	useEffect(() => {
-		barDataGetter(outputData, finaliseTransaction);
-	}, [outputData, test.color]);
+		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+	}, [person, months, sellType, validity, color]);
 
 	const barGraph = (
 		<ResponsiveBar
@@ -107,4 +104,13 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder}) => {
 
 	return <SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
 };
-export default NivoBarComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+	color: state.colorReducer
+});
+
+export default connect(mapStateToProps)(NivoBarComponent);

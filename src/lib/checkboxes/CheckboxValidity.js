@@ -14,7 +14,7 @@ const yearly = "Ročná";
 
 export const defaultValidityRequestParams = "validity=Mesačná&validity=3%20Mesačná&validity=5%20Mesačná&validity=Ročná";
 
-const CheckboxValidity = ({dataSetter}) => {
+const CheckboxValidity = () => {
 	const dispatch = useDispatch();
 	const [validityFilter, setValidityFilter] = useState({
 		three_month: true,
@@ -50,7 +50,6 @@ const CheckboxValidity = ({dataSetter}) => {
 			addWithPrefix(yearly);
 		}
 
-		dataSetter(outputArray.join("&"));
 		dispatch(updateValidity(outputArray.join("&")));
 
 		function addWithPrefix(validity) {

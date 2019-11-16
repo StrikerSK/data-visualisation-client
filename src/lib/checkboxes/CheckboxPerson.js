@@ -16,7 +16,7 @@ export const portableData = "Prenosné";
 
 export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori";
 
-const CheckboxPerson = ({dataSetter}) => {
+const CheckboxPerson = () => {
 	const dispatch = useDispatch();
 
 	const [personFilter, setPersonFilter] = useState({
@@ -58,7 +58,6 @@ const CheckboxPerson = ({dataSetter}) => {
 			addWithPrefix(juniors);
 		}
 
-		dataSetter(outputArray.join("&"));
 		dispatch(actions(outputArray.join("&")));
 
 		function addWithPrefix(person) {

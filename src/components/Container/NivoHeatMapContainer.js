@@ -1,18 +1,16 @@
 import React, {useState} from "react";
 import "../../css/GraphContainer.scss"
 import NivoHeatMapComponent from "../nivo/NivoHeatMapComponent";
-import CheckboxValidity, {defaultValidityRequestParams} from "../../lib/checkboxes/CheckboxValidity";
-import CheckboxSellType, {defaultSellTypeRequestParams} from "../../lib/checkboxes/CheckboxSellType";
+import CheckboxValidity from "../../lib/checkboxes/CheckboxValidity";
+import CheckboxSellType from "../../lib/checkboxes/CheckboxSellType";
 import {GraphContainer, OptionComponent} from "../../lib/LayoutContainers";
 
 const NivoHeatMapContainer = () => {
 	const [colorPattern, setColorPattern] = useState("nivo");
-	const [validityRequest, setValidityRequest] = useState(defaultValidityRequestParams);
-	const [sellTypeRequest, setSellTypeRequest] = useState(defaultSellTypeRequestParams);
 
 	return (
 		<GraphContainer>
-			<NivoHeatMapComponent color={colorPattern} parametersList={[validityRequest, sellTypeRequest]}/>
+			<NivoHeatMapComponent color={colorPattern}/>
 			<OptionComponent>
 				<label>
 					Pick your color scheme:
@@ -24,8 +22,8 @@ const NivoHeatMapContainer = () => {
 						<option value={"PuOr"}>PuOr</option>
 					</select>
 				</label>
-				<CheckboxValidity dataSetter={setValidityRequest}/>
-				<CheckboxSellType dataSetter={setSellTypeRequest}/>
+				<CheckboxValidity/>
+				<CheckboxSellType/>
 			</OptionComponent>
 		</GraphContainer>
 	)

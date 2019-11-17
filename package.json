@@ -26,8 +26,8 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
-	"start": "webpack-dev-server --open --hot --mode development",
-	"build": "webpack --mode production",
+	"start": "node server.js",
+	"build": "webpack -p",
 	"heroku-postbuild": "webpack -p"
   },
   "eslintConfig": {

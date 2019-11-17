@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 
-import LineGraphComponent from "./components/LineGraphComponent";
 import StackedGraphComponent from "./components/StackedGraphComponent";
 import PieChartYearly from "./components/PieChartYearly";
-import PieChartMonthly from "./components/PieChartMonthly";
 import NivoStreamComponent from "./components/nivo/NivoStreamComponent";
 import NivoWaffleComponent from "./components/nivo/NivoWaffleComponent";
 import NivoRadarComponent from "./components/nivo/NivoRadarComponent";
@@ -16,6 +14,8 @@ import NivoPieContainer from "./components/Container/NivoPieContainer";
 import NivoBubbleContainer from "./components/Container/NivoBubbleContainer";
 import AreaChartComponent from "./components/Recharts/AreaChartComponent";
 import BarChartComponent from "./components/Recharts/BarChartComponent";
+import LineGraphComponent from "./components/Recharts/LineGraphComponent";
+import PieChartMonthly from "./components/Recharts/PieChartMonthly";
 
 class App extends Component {
 	render() {

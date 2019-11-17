@@ -9,7 +9,7 @@ const AreaChartComponent = () => {
 	}, []);
 
 	const getData = () => {
-		fetch("http://localhost:8080/recharts/area", {method: "GET"}).then(response => response.json()).then((result) => setData(result))
+		fetch("https://pid-data-server.herokuapp.com/recharts/area", {method: "GET"}).then(response => response.json()).then((result) => setData(result))
 	};
 
 	return (

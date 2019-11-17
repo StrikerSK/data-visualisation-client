@@ -21,13 +21,14 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.8",
     "react-spinners": "latest",
-    "recharts": "^1.8.5",
     "redux": "^4.0.4",
+    "recharts": "^1.8.5",
     "styled-components": "^4.4.1"
   },
   "scripts": {
 	"start": "webpack-dev-server --open --hot --mode development",
-	"build": "webpack --mode production"
+	"build": "webpack --mode production",
+	"heroku-postbuild": "webpack -p"
   },
   "eslintConfig": {
 	"extends": "react-app"
@@ -53,6 +54,7 @@
 	"webpack": "^4.41.2",
 	"webpack-cli": "^3.3.10",
 	"webpack-dev-server": "^3.9.0",
-    "prettier": "1.19.1"
+	"express": "latest",
+	"prettier": "1.19.1"
   }
 }

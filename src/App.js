@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 
-import StackedGraphComponent from "./components/StackedGraphComponent";
-import PieChartYearly from "./components/PieChartYearly";
+import StackedGraphComponent from "./components/recharts/StackedGraphComponent";
+import PieChartYearly from "./components/recharts/PieChartYearly";
 import NivoStreamComponent from "./components/nivo/NivoStreamComponent";
 import NivoWaffleComponent from "./components/nivo/NivoWaffleComponent";
 import NivoRadarComponent from "./components/nivo/NivoRadarComponent";
@@ -12,10 +12,10 @@ import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
 import NivoBubbleContainer from "./components/Container/NivoBubbleContainer";
-import AreaChartComponent from "./components/Recharts/AreaChartComponent";
-import BarChartComponent from "./components/Recharts/BarChartComponent";
-import LineGraphComponent from "./components/Recharts/LineGraphComponent";
-import PieChartMonthly from "./components/Recharts/PieChartMonthly";
+import AreaChartComponent from "./components/recharts/AreaChartComponent";
+import BarChartComponent from "./components/recharts/BarChartComponent";
+import LineGraphComponent from "./components/recharts/LineGraphComponent";
+import PieChartMonthly from "./components/recharts/PieChartMonthly";
 
 class App extends Component {
 	render() {

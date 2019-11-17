@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-const ColorSchemeSelector = () => {
+export const ColorSchemeSelector = () => {
 	const dispatch = useDispatch();
 	const [color, setColor] = React.useState("nivo");
 	const classes = useStyles();
@@ -53,4 +53,5 @@ const ColorSchemeSelector = () => {
 		</FormControl>
 	)
 };
+
 export default ColorSchemeSelector;

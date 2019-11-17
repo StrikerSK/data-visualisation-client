@@ -1,6 +1,9 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {useDispatch} from "react-redux";
+import {updateBarDataKeys} from "./actions";
+import {adults, juniors, seniors, students} from "./checkboxes/CheckboxPerson";
 
 const useStyles = makeStyles((theme) => ({
 	button: {
@@ -8,13 +11,15 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export const defaultBarOrder = ["Dospelý", "Študenti", "Dôchodcovia", "Juniori",  "Prenosné"];
+const portable = "Prenosné";
+export const defaultBarOrder = [adults, students, seniors, juniors, portable];
 
-const BarGeneratorButton = ({dataSetter}) => {
+const BarGeneratorButton = () => {
 	const classes = useStyles();
+	const dispatch = useDispatch();
 
 	const generateBarOrder = () => {
-		const array = ["Dospelý", "Študenti", "Dôchodcovia", "Juniori", "Prenosné"];
+		const array = [adults, students, seniors, juniors, portable];
 		let counter = array.length;
 
 		// While there are elements in the array
@@ -33,7 +38,8 @@ const BarGeneratorButton = ({dataSetter}) => {
 	};
 
 	const shuffle = () => {
-		dataSetter(generateBarOrder());
+		const barOrder = generateBarOrder();
+		dispatch(updateBarDataKeys(barOrder));
 	};
 
 	return (

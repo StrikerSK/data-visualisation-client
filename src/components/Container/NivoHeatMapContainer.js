@@ -1,32 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
 import "../../css/GraphContainer.scss"
 import NivoHeatMapComponent from "../nivo/NivoHeatMapComponent";
 import CheckboxValidity from "../../lib/checkboxes/CheckboxValidity";
 import CheckboxSellType from "../../lib/checkboxes/CheckboxSellType";
 import {GraphContainer, OptionComponent} from "../../lib/LayoutContainers";
+import ColorSchemeSelectorHeatmap from "../../lib/selects/ColorSchemeSelectorHeatmap";
 
 const NivoHeatMapContainer = () => {
-	const [colorPattern, setColorPattern] = useState("nivo");
-
 	return (
 		<GraphContainer>
-			<NivoHeatMapComponent color={colorPattern}/>
+			<NivoHeatMapComponent/>
 			<OptionComponent>
-				<label>
-					Pick your color scheme:
-					<select onChange={(e) => setColorPattern(e.target.value)}>
-						<option value={"nivo"}>Nivo</option>
-						<option value={"BrBG"}>BrBG</option>
-						<option value={"PRGn"}>PRGn</option>
-						<option value={"PuOr"}>PuOr</option>
-						<option value={"PuOr"}>PuOr</option>
-					</select>
-				</label>
+				<ColorSchemeSelectorHeatmap/>
 				<CheckboxValidity/>
 				<CheckboxSellType/>
 			</OptionComponent>
 		</GraphContainer>
-	)
+	);
 };
 
 export default NivoHeatMapContainer;

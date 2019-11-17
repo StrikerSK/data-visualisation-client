@@ -2,8 +2,10 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import React from "react";
+import React, {useState} from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {useDispatch} from "react-redux";
+import {updateBarGrouping, updateBarLayout} from "../actions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
@@ -15,10 +17,17 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export const LayoutSelect = ({current, dataSetter}) => {
+export const defaultLayoutValue = "vertical";
+export const defaultGroupingValue = "stacked";
+
+export const LayoutSelect = () => {
+	const dispatch = useDispatch();
+	const [layout, setLayout] = useState(defaultLayoutValue);
 
 	const handleChange = event => {
-		dataSetter(event.target.value);
+		const {value} = event.target;
+		setLayout(value);
+		dispatch(updateBarLayout(value));
 	};
 
 	return (
@@ -27,7 +36,7 @@ export const LayoutSelect = ({current, dataSetter}) => {
 			<Select
 				labelId="color-selector"
 				id="color-selector"
-				value={current}
+				value={layout}
 				onChange={handleChange}
 				autoWidth
 			>
@@ -38,10 +47,14 @@ export const LayoutSelect = ({current, dataSetter}) => {
 	);
 };
 
-export const GroupModeSelect = ({current, dataSetter}) => {
+export const GroupModeSelect = () => {
+	const dispatch = useDispatch();
+	const [grouping, setGrouping] = useState(defaultGroupingValue);
 
 	const handleChange = event => {
-		dataSetter(event.target.value);
+		const {value} = event.target;
+		setGrouping(value);
+		dispatch(updateBarGrouping(value));
 	};
 
 	return (
@@ -50,7 +63,7 @@ export const GroupModeSelect = ({current, dataSetter}) => {
 			<Select
 				labelId="color-selector"
 				id="color-selector"
-				value={current}
+				value={grouping}
 				onChange={handleChange}
 				autoWidth
 			>

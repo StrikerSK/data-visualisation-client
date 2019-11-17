@@ -32,3 +32,24 @@ export const updateColor = (color) => {
 		payload: color
 	}
 };
+
+export const updateBarLayout = (layoutOption) => {
+	return {
+		type: 'UPDATE_BAR_LAYOUT',
+		payload: layoutOption
+	}
+};
+
+export const updateBarGrouping = (groupingOption) => {
+	return {
+		type: 'UPDATE_BAR_GROUPING',
+		payload: groupingOption
+	}
+};
+
+export const updateBarDataKeys = (barDataKeys) => {
+	return {
+		type: 'UPDATE_BAR_DATA_KEYS',
+		payload: barDataKeys
+	}
+};

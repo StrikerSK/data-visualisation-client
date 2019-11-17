@@ -124,7 +124,7 @@ const mapStateToProps = state => ({
 	person: state.generalReducer.person,
 	validity: state.generalReducer.validity,
 	sellType: state.generalReducer.sellType,
-	color: state.monthsReducer
+	color: state.generalReducer.color
 });
 
 export default connect(mapStateToProps)(NivoPieComponent);

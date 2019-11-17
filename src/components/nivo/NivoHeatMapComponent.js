@@ -8,7 +8,6 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-
 	const finaliseTransaction = (result) => {
 		setData(result);
 		changeLoadedState(true);
@@ -16,7 +15,7 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 
 	useEffect(() => {
 		barDataGetter([validity, sellType], finaliseTransaction);
-	}, [validity, sellType]);
+	}, [validity, sellType, color]);
 
 	const graphHeatMap = (
 		<ResponsiveHeatMap
@@ -66,7 +65,8 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 
 const mapStateToProps = state => ({
 	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType
+	sellType: state.generalReducer.sellType,
+	color: state.generalReducer.color
 });
 
 export default connect(mapStateToProps)(NivoHeatMapComponent);

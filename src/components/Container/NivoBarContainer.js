@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import NivoBarComponent from "../nivo/NivoBarComponent";
 import "../../css/GraphContainer.scss";
 import CheckboxPerson from "../../lib/checkboxes/CheckboxPerson";
@@ -8,25 +8,21 @@ import CheckboxSellType from "../../lib/checkboxes/CheckboxSellType";
 import ColorSchemeSelector from "../../lib/selects/ColorSchemeSelector";
 import {GroupModeSelect, LayoutSelect} from "../../lib/selects/LayoutSelect";
 import {GraphContainer, OptionComponent} from "../../lib/LayoutContainers";
-import BarGeneratorButton, {defaultBarOrder} from "../../lib/BarGeneratorButton";
+import BarGeneratorButton from "../../lib/BarGeneratorButton";
 
 const NivoBarContainer = () => {
-	const [layout, setLayout] = useState("vertical");
-	const [grouping, setGrouping] = useState("stacked");
-	const [barOrdering, setBarOrdering] = useState(defaultBarOrder);
-
 	return (
 		<GraphContainer>
-			<NivoBarComponent barLayout={layout} barGrouping={grouping} barOrder={barOrdering}/>
+			<NivoBarComponent/>
 			<OptionComponent>
 				<ColorSchemeSelector/>
-				<GroupModeSelect current={grouping} dataSetter={setGrouping}/>
-				<LayoutSelect current={layout} dataSetter={setLayout}/>
+				<GroupModeSelect/>
+				<LayoutSelect/>
 				<CheckboxPerson/>
 				<CheckboxValidity/>
 				<CheckboxMonths/>
 				<CheckboxSellType/>
-				<BarGeneratorButton dataSetter={setBarOrdering}/>
+				<BarGeneratorButton/>
 			</OptionComponent>
 		</GraphContainer>
 	);

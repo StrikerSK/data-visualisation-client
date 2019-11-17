@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Created bar organization and added layout system">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
     </list>
+    <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
+    <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,15 +58,17 @@
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.6817.13\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573924204703</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Updates after rebase">
+      <created>1573991030453</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1573991030453</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Updates recharts graphs to newer version">
+      <created>1574003491868</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1574003491868</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +363,9 @@
     <MESSAGE value="Data sorter by values" />
     <MESSAGE value="Created bar organization and added layout system" />
     <MESSAGE value="Code review changes vol.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code review changes vol.1" />
+    <MESSAGE value="Updates after rebase" />
+    <MESSAGE value="Updates recharts graphs to newer version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates recharts graphs to newer version" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

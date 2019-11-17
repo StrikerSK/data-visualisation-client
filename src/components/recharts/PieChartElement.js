@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import '../App.css';
+import React, {useState, useEffect} from "react";
+import "../../App.css";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 
 const PieChartElement = ({myData, radius, name}) => {
@@ -10,8 +10,8 @@ const PieChartElement = ({myData, radius, name}) => {
 	}, []);
 
 	const generateColor = () => {
-		const letters = '0123456789ABCDEF';
-		let returnColor = '#';
+		const letters = "0123456789ABCDEF";
+		let returnColor = "#";
 		for (let i = 0; i < 6; i++) {
 			returnColor += letters[Math.floor(Math.random() * 16)];
 		}

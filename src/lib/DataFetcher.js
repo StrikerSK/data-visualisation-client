@@ -31,3 +31,8 @@ export const bubbleDataGetter = (parameters, callbackFunction) => {
 	axios.get(hostUrl + "/nivo/bubble?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
+
+export const rechartsBarDataGetter = (parameters, callbackFunction) => {
+	axios.get(hostUrl + "/recharts/bar?" + generateParamsQuery(parameters))
+		.then(({data}) => callbackFunction(data));
+};

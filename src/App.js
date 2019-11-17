@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 
-import LineGraphComponent from "./components/LineGraphComponent";
-import StackedGraphComponent from "./components/StackedGraphComponent";
-import PieChartYearly from "./components/PieChartYearly";
-import PieChartMonthly from "./components/PieChartMonthly";
+import StackedGraphComponent from "./components/recharts/StackedGraphComponent";
+import PieChartYearly from "./components/recharts/PieChartYearly";
 import NivoStreamComponent from "./components/nivo/NivoStreamComponent";
 import NivoWaffleComponent from "./components/nivo/NivoWaffleComponent";
 import NivoRadarComponent from "./components/nivo/NivoRadarComponent";
@@ -14,6 +12,10 @@ import NivoLineContainer from "./components/Container/NivoLineContainer";
 import NivoHeatMapContainer from "./components/Container/NivoHeatMapContainer";
 import NivoPieContainer from "./components/Container/NivoPieContainer";
 import NivoBubbleContainer from "./components/Container/NivoBubbleContainer";
+import AreaChartComponent from "./components/recharts/AreaChartComponent";
+import BarChartComponent from "./components/recharts/BarChartComponent";
+import LineGraphComponent from "./components/recharts/LineGraphComponent";
+import PieChartMonthly from "./components/recharts/PieChartMonthly";
 
 class App extends Component {
 	render() {
@@ -21,10 +23,12 @@ class App extends Component {
 			<BrowserRouter>
 				<Switch>
 					<Route exact strict path="/" render={() => <NivoBarContainer/>}/>
-					<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>
-					<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>
-					<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>
-					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
+					<Route exact strict path="/recharts/line" render={() => <LineGraphComponent/>}/>
+					<Route exact strict path="/recharts/area" render={() => <AreaChartComponent/>}/>
+					<Route exact strict path="/recharts/bar" render={() => <BarChartComponent/>}/>
+					<Route exact strict path="/recharts/stacked" render={() => <StackedGraphComponent/>}/>
+					<Route exact strict path="/recharts/pie" render={() => <PieChartYearly/>}/>
+					<Route exact strict path="/recharts/pie/collection" render={() => <PieChartMonthly/>}/>
 					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
 					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
 					<Route exact strict path="/nivo/stack" render={() => <NivoStreamComponent/>}/>

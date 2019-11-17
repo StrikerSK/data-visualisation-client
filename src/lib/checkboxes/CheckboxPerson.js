@@ -10,6 +10,7 @@ export const juniors = "Juniori";
 export const seniors = "Dôchodcovia";
 export const students = "Študenti";
 export const portable = "Prenosná";
+export const portableData = "Prenosné";
 
 export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori";
 

@@ -1,26 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import '../css/PieChart.scss';
+import React, {useEffect, useState} from "react";
+import "../../css/PieChart.scss";
 import PieChartElement from "./PieChartElement";
+import {rechartsBarDataGetter} from "../../lib/DataFetcher";
+
 
 const PieChartYearly = () => {
 	const [data, setData] = useState([]);
 	const [sum, setSum] = useState(0);
-
-	useEffect(() => {
-		getData();
-	}, []);
-
-	const getData = () => {
-		fetch("http://localhost:5000/yearly", {
-			method: "GET"
-		}).then(response => response.json())
-			.then((result) => processData(result))
-	};
-
-	const processData = (result) => {
-		getSum(result);
-		setData(result);
-	};
 
 	const getSum = (myArray) => {
 		let functionSum = 0;
@@ -29,6 +15,15 @@ const PieChartYearly = () => {
 		});
 		setSum(functionSum);
 	};
+
+	const processData = (result) => {
+		getSum(result);
+		setData(result);
+	};
+
+	useEffect(() => {
+		rechartsBarDataGetter([], processData);
+	}, []);
 
 	return (
 		<div className="pieChartContainer">

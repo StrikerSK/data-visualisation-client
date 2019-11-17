@@ -1,6 +1,6 @@
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import React, {useEffect, useState} from "react";
-import '../../App.css';
+import "../../App.css";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {adults, juniors, portableData, seniors, students} from "../../lib/checkboxes/CheckboxPerson";
 import {GraphContainer} from "../../lib/LayoutContainers";

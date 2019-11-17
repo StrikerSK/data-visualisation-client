@@ -1,21 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import '../../App.css';
-import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts";
+import React, {useEffect, useState} from "react";
+import "../../App.css";
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {barDataGetter} from "../../lib/DataFetcher";
+import {adults, juniors, portableData, seniors, students} from "../../lib/checkboxes/CheckboxPerson";
+import SpinnerComponent from "../../lib/SpinnerComponent";
+import {GraphContainer} from "../../lib/LayoutContainers";
 
 const LineGraphComponent = () => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		getData();
+		barDataGetter([], setData);
 	}, []);
 
-	const getData = () => {
-		fetch("http://localhost:8080/recharts/area", {method: "GET"}).then(response => response.json()).then((result) => setData(result))
-	};
-
-	return (
-		<div className="App">
-			<LineChart width={1000} height={600} data={data} margin={{top: 10, right: 30, left: 0, bottom: 0}}>
+	const lineGraph = (
+		<ResponsiveContainer>
+			<LineChart data={data} margin={{top: 5, right: 0, left: 40, bottom: 0}}>
 				<defs>
 
 					<linearGradient id="colorSenior" x1="0" y1="0" x2="0" y2="1">
@@ -52,13 +52,19 @@ const LineGraphComponent = () => {
 
 				<Tooltip/>
 
-				<Line type="monotone" dataKey="juniors" stroke="#8884d8"/>
-				<Line type="monotone" dataKey="students" stroke="#82ca9d"/>
-				<Line type="monotone" dataKey="portable" stroke="#e81c6d"/>
-				<Line type="monotone" dataKey="seniors" stroke="#d42121"/>
-				<Line type="monotone" dataKey="adults" stroke="#e88c6d"/>
+				<Line type="monotone" dataKey={juniors} stroke="#8884d8"/>
+				<Line type="monotone" dataKey={students} stroke="#82ca9d"/>
+				<Line type="monotone" dataKey={portableData} stroke="#e81c6d"/>
+				<Line type="monotone" dataKey={seniors} stroke="#d42121"/>
+				<Line type="monotone" dataKey={adults} stroke="#e88c6d"/>
 			</LineChart>
-		</div>
+		</ResponsiveContainer>
+	);
+
+	return (
+		<GraphContainer>
+			<SpinnerComponent children={lineGraph} isDataLoaded={true}/>
+		</GraphContainer>
 	);
 };
 

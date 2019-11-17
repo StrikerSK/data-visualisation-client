@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Updates after rebase">
-      <change afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recharts/PieChartYearly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recharts/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recharts/PieChartMonthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StackedGraphComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
@@ -326,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573991030453</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updates recharts graphs to newer version">
+      <created>1574003491868</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1574003491868</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +364,8 @@
     <MESSAGE value="Created bar organization and added layout system" />
     <MESSAGE value="Code review changes vol.1" />
     <MESSAGE value="Updates after rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates after rebase" />
+    <MESSAGE value="Updates recharts graphs to newer version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates recharts graphs to newer version" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

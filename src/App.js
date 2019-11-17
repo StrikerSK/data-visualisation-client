@@ -23,12 +23,12 @@ class App extends Component {
 			<BrowserRouter>
 				<Switch>
 					<Route exact strict path="/" render={() => <NivoBarContainer/>}/>
-					<Route exact strict path="/line" render={() => <LineGraphComponent/>}/>
-					<Route exact strict path="/area" render={() => <AreaChartComponent/>}/>
-					<Route exact strict path="/bar" render={() => <BarChartComponent/>}/>
-					<Route exact strict path="/stacked" render={() => <StackedGraphComponent/>}/>
-					<Route exact strict path="/pie" render={() => <PieChartYearly/>}/>
-					<Route exact strict path="/pie/collection" render={() => <PieChartMonthly/>}/>
+					<Route exact strict path="/recharts/line" render={() => <LineGraphComponent/>}/>
+					<Route exact strict path="/recharts/area" render={() => <AreaChartComponent/>}/>
+					<Route exact strict path="/recharts/bar" render={() => <BarChartComponent/>}/>
+					<Route exact strict path="/recharts/stacked" render={() => <StackedGraphComponent/>}/>
+					<Route exact strict path="/recharts/pie" render={() => <PieChartYearly/>}/>
+					<Route exact strict path="/recharts/pie/collection" render={() => <PieChartMonthly/>}/>
 					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
 					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
 					<Route exact strict path="/nivo/stack" render={() => <NivoStreamComponent/>}/>

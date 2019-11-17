@@ -7,11 +7,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-	entry: "./src/index.js",
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js"
-	},
+	entry: './src/index.js',
 	module: {
 		rules: [
 			{
@@ -30,6 +26,7 @@ module.exports = {
 	},
 	devServer: {
 		historyApiFallback: true,
+		contentBase: './dist'
 	},
 	plugins: [htmlPlugin]
 };

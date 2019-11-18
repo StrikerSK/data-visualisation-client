@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
@@ -26,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implementing-redux" />
+        <entry key="$PROJECT_DIR$" value="implement-webpack" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,17 +56,17 @@
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.6817.13\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
     </key>
   </component>
   <component name="RunDashboard">

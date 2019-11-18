@@ -3,7 +3,8 @@ const path = require("path");
 
 const htmlPlugin = new HtmlWebPackPlugin({
 	template: "./public/index.html",
-	filename: "./index.html"
+	filename: "./index.html",
+	favicon: "./public/favicon.ico"
 });
 
 module.exports = {
@@ -23,8 +24,8 @@ module.exports = {
 				use: ['babel-loader']
 			},
 			{
-				test:/\.(s*)css$/,
-				use:['style-loader','css-loader', 'sass-loader']
+				test: /\.(s*)css$/,
+				use: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]
 	},

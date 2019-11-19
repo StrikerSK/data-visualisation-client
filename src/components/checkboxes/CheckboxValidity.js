@@ -5,7 +5,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import {useDispatch} from "react-redux";
-import {updateValidity} from "../actions";
+import {updateValidity} from "../../lib/actions";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";

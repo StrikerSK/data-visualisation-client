@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {ResponsiveHeatMap} from "@nivo/heatmap";
-import SpinnerComponent from "../../lib/SpinnerComponent";
+import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 

@@ -5,7 +5,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
-import {updateColor} from "../actions";
+import {updateColor} from "../../lib/actions";
 
 export const defaultColorName = "nivo";
 

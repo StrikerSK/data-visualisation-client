@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import {barDataGetter} from "../../lib/DataFetcher";
-import SpinnerComponent from "../../lib/SpinnerComponent";
-import {GraphContainer} from "../../lib/LayoutContainers";
-import {adults, juniors, portableData, seniors, students} from "../../lib/checkboxes/CheckboxPerson";
+import SpinnerComponent from "../SpinnerComponent";
+import {GraphContainer} from "../LayoutContainers";
+import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
 
 const AreaChartComponent = () => {
 	const [data, setData] = useState([]);

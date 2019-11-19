@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
-import {updateBarDataKeys} from "./actions";
+import {updateBarDataKeys} from "../lib/actions";
 import {adults, juniors, seniors, students} from "./checkboxes/CheckboxPerson";
 
 const useStyles = makeStyles((theme) => ({

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {ResponsiveBar} from "@nivo/bar";
-import "../../css/GraphContainer.scss"
-import SpinnerComponent from "../../lib/SpinnerComponent";
+import "../../stylesheet/GraphContainer.scss"
+import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 

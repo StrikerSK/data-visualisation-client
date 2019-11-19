@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {ResponsivePie} from "@nivo/pie";
-import SpinnerComponent from "../../lib/SpinnerComponent";
+import SpinnerComponent from "../SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 

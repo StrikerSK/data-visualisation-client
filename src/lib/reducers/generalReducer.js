@@ -1,10 +1,10 @@
-import {defaultMonthRequestParams} from "../checkboxes/CheckboxMonths";
-import {defaultPersonRequestParams} from "../checkboxes/CheckboxPerson";
-import {defaultSellTypeRequestParams} from "../checkboxes/CheckboxSellType";
-import {defaultValidityRequestParams} from "../checkboxes/CheckboxValidity";
-import {defaultColorName} from "../selects/ColorSchemeSelector";
-import {defaultGroupingValue, defaultLayoutValue} from "../selects/LayoutSelect";
-import {defaultBarOrder} from "../BarGeneratorButton";
+import {defaultMonthRequestParams} from "../../components/checkboxes/CheckboxMonths";
+import {defaultPersonRequestParams} from "../../components/checkboxes/CheckboxPerson";
+import {defaultSellTypeRequestParams} from "../../components/checkboxes/CheckboxSellType";
+import {defaultValidityRequestParams} from "../../components/checkboxes/CheckboxValidity";
+import {defaultColorName} from "../../components/selects/ColorSchemeSelector";
+import {defaultGroupingValue, defaultLayoutValue} from "../../components/selects/LayoutSelect";
+import {defaultBarOrder} from "../../components/BarGeneratorButton";
 
 const generalReducer = (data = {}, action) => {
 	if(action.type === 'UPDATE_MONTHS') {

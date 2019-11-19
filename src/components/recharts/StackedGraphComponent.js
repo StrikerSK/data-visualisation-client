@@ -2,9 +2,9 @@ import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAx
 import React, {useEffect, useState} from "react";
 import "../../App.css";
 import {barDataGetter} from "../../lib/DataFetcher";
-import {adults, juniors, portableData, seniors, students} from "../../lib/checkboxes/CheckboxPerson";
-import {GraphContainer} from "../../lib/LayoutContainers";
-import SpinnerComponent from "../../lib/SpinnerComponent";
+import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
+import {GraphContainer} from "../LayoutContainers";
+import SpinnerComponent from "../SpinnerComponent";
 
 
 const StackedGraphComponent = () => {

@@ -5,7 +5,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import {useDispatch} from "react-redux";
-import {updateSellTypes} from "../actions";
+import {updateSellTypes} from "../../lib/actions";
 
 export const card = "Čipová karta";
 export const coupon = "Papierový kupón";

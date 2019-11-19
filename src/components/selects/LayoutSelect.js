@@ -5,7 +5,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import React, {useState} from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
-import {updateBarGrouping, updateBarLayout} from "../actions";
+import {updateBarGrouping, updateBarLayout} from "../../lib/actions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {

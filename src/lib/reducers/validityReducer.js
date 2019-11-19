@@ -1,4 +1,4 @@
-import {defaultSellTypeRequestParams} from "../checkboxes/CheckboxSellType";
+import {defaultSellTypeRequestParams} from "../../components/checkboxes/CheckboxSellType";
 
 const validityReducer = (sellTypes = {}, action) => {
 	if(action.type === 'UPDATE_VALIDITY') {

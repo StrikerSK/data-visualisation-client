@@ -2,8 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/NivoLineContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/NivoPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/PieChart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/PieChart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ComponentStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ComponentStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxMonths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxPerson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxSellType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxSellType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxValidity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelectorHeatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
@@ -56,17 +94,17 @@
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.6817.13\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
     </key>
   </component>
   <component name="RunDashboard">

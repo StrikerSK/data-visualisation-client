@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
-import SpinnerComponent from "../../lib/SpinnerComponent";
-import {GraphContainer} from "../../lib/LayoutContainers";
+import SpinnerComponent from "../SpinnerComponent";
+import {GraphContainer} from "../LayoutContainers";
 
 const NivoStreamComponent = () => {
 	const [data, setData] = useState([{}]);

@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {ResponsivePie} from "@nivo/pie";
-import SpinnerComponent from "../../lib/SpinnerComponent";
+import SpinnerComponent from "../SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
+import {connect} from "react-redux";
 
-const NivoPieComponent = ({color, parametersList}) => {
+const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -13,8 +14,8 @@ const NivoPieComponent = ({color, parametersList}) => {
 	};
 
 	useEffect(() => {
-		pieDataGetter(parametersList, finaliseTransaction);
-	}, [parametersList]);
+		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
+	}, [months, person, validity, sellType, color]);
 
 	const pieChart = (
 		<ResponsivePie
@@ -115,6 +116,15 @@ const NivoPieComponent = ({color, parametersList}) => {
 		/>
 	);
 
-	return <SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>
+	return <SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>;
 };
-export default NivoPieComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+	color: state.generalReducer.color
+});
+
+export default connect(mapStateToProps)(NivoPieComponent);

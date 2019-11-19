@@ -4,13 +4,16 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
+import {useDispatch} from "react-redux";
+import {updateSellTypes} from "../../lib/actions";
 
 export const card = "Čipová karta";
 export const coupon = "Papierový kupón";
 
 export const defaultSellTypeRequestParams = "type=Čipová%20karta&type=Papierový%20kupón";
 
-const CheckboxSellType = ({dataSetter}) => {
+const CheckboxSellType = () => {
+	const dispatch = useDispatch();
 	const [sellTypeFilter, setSellTypeFilter] = useState({
 		coupon: true,
 		card: true
@@ -27,7 +30,7 @@ const CheckboxSellType = ({dataSetter}) => {
 			addWithPrefix(card.replace(' ', '%20'));
 		}
 
-		dataSetter(outputArray.join("&"));
+		dispatch(updateSellTypes(outputArray.join("&")));
 
 		function addWithPrefix(sellType) {
 			outputArray.push("type=" + sellType);

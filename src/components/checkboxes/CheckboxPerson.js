@@ -4,6 +4,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
+import {useDispatch} from "react-redux";
+import {actions} from "../../lib/actions";
 
 export const adults = "Dospelý";
 export const juniors = "Juniori";
@@ -14,7 +16,9 @@ export const portableData = "Prenosné";
 
 export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori";
 
-const CheckboxPerson = ({dataSetter}) => {
+const CheckboxPerson = () => {
+	const dispatch = useDispatch();
+
 	const [personFilter, setPersonFilter] = useState({
 		adults: true,
 		juniors: true,
@@ -53,7 +57,8 @@ const CheckboxPerson = ({dataSetter}) => {
 		if (inputObject.juniors) {
 			addWithPrefix(juniors);
 		}
-		dataSetter(outputArray.join("&"));
+
+		dispatch(actions(outputArray.join("&")));
 
 		function addWithPrefix(person) {
 			outputArray.push("person=" + person);

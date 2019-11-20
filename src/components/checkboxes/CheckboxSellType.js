@@ -9,14 +9,16 @@ import {updateSellTypes} from "../../lib/actions";
 
 export const card = "Čipová karta";
 export const coupon = "Papierový kupón";
+export const eshop = "EShop";
 
-export const defaultSellTypeRequestParams = "type=Čipová%20karta&type=Papierový%20kupón";
+export const defaultSellTypeRequestParams = "type=Čipová%20karta&type=Papierový%20kupón&type=EShop";
 
 const CheckboxSellType = () => {
 	const dispatch = useDispatch();
 	const [sellTypeFilter, setSellTypeFilter] = useState({
 		coupon: true,
-		card: true
+		card: true,
+		eshop: true
 	});
 
 	const setRequestedPersons = (inputObject) => {
@@ -28,6 +30,10 @@ const CheckboxSellType = () => {
 
 		if (inputObject.card) {
 			addWithPrefix(card.replace(' ', '%20'));
+		}
+
+		if (inputObject.eshop) {
+			addWithPrefix(eshop);
 		}
 
 		dispatch(updateSellTypes(outputArray.join("&")));
@@ -65,6 +71,14 @@ const CheckboxSellType = () => {
 							          onChange={(event) => checkboxHandler(event)}/>
 						}
 						label={card}
+					/>
+					<FormControlLabel
+						control={
+							<Checkbox name={"eshop"}
+							          checked={sellTypeFilter.eshop}
+							          onChange={(event) => checkboxHandler(event)}/>
+						}
+						label={eshop}
 					/>
 				</FormGroup>
 			</FormControl>

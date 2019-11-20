@@ -13,8 +13,10 @@ export const seniors = "Dôchodcovia";
 export const students = "Študenti";
 export const portable = "Prenosná";
 export const portableData = "Prenosné";
+export const children = "Deti";
 
-export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori";
+export const dataKeys = [adults, seniors, juniors, students, portableData, children];
+export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori&person=Deti";
 
 const CheckboxPerson = () => {
 	const dispatch = useDispatch();
@@ -24,7 +26,8 @@ const CheckboxPerson = () => {
 		juniors: true,
 		seniors: true,
 		portable: true,
-		students: true
+		students: true,
+		children: true
 	});
 
 	const checkboxHandler = ({target}) => {
@@ -56,6 +59,10 @@ const CheckboxPerson = () => {
 
 		if (inputObject.juniors) {
 			addWithPrefix(juniors);
+		}
+
+		if (inputObject.children) {
+			addWithPrefix(children);
 		}
 
 		dispatch(actions(outputArray.join("&")));
@@ -94,6 +101,11 @@ const CheckboxPerson = () => {
 						control={<Checkbox name={"students"} checked={personFilter.students}
 						                   onChange={event => checkboxHandler(event)}/>}
 						label={students}
+					/>
+					<FormControlLabel
+						control={<Checkbox name={"children"} checked={personFilter.children}
+						                   onChange={event => checkboxHandler(event)}/>}
+						label={children}
 					/>
 				</FormGroup>
 			</FormControl>

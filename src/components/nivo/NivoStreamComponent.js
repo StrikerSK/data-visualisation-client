@@ -3,6 +3,7 @@ import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {GraphContainer} from "../LayoutContainers";
+import {dataKeys} from "../checkboxes/CheckboxPerson";
 
 const NivoStreamComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -20,7 +21,7 @@ const NivoStreamComponent = () => {
 	const streamGraph = (
 		<ResponsiveStream
 			data={data}
-			keys={["adults", "students", "portable", "seniors", "juniors"]}
+			keys={dataKeys}
 			margin={{top: 50, right: 110, bottom: 50, left: 60}}
 			axisTop={"Test"}
 			axisRight={null}

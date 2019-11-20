@@ -3,6 +3,7 @@ import {ResponsiveRadar} from "@nivo/radar";
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {GraphContainer} from "../LayoutContainers";
+import {dataKeys} from "../checkboxes/CheckboxPerson";
 
 const NivoRadarComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -20,7 +21,7 @@ const NivoRadarComponent = () => {
 	const radarGraph = (
 		<ResponsiveRadar
 			data={data}
-			keys={["Dospelý", "Dôchodcovia", "Juniori", "Študenti", "Prenosné"]}
+			keys={dataKeys}
 			indexBy="month"
 			maxValue="auto"
 			margin={{top: 70, right: 80, bottom: 40, left: 80}}

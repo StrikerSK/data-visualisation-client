@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
 import {updateBarDataKeys} from "../lib/actions";
-import {adults, juniors, seniors, students} from "./checkboxes/CheckboxPerson";
+import {adults, children, dataKeys, juniors, seniors, students} from "./checkboxes/CheckboxPerson";
 
 const useStyles = makeStyles((theme) => ({
 	button: {
@@ -12,14 +12,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const portable = "Prenosné";
-export const defaultBarOrder = [adults, students, seniors, juniors, portable];
+export const defaultBarOrder = dataKeys;
 
 const BarGeneratorButton = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
 
 	const generateBarOrder = () => {
-		const array = [adults, students, seniors, juniors, portable];
+		const array = [adults, students, seniors, juniors, portable, children];
 		let counter = array.length;
 
 		// While there are elements in the array

@@ -77,21 +77,14 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 					direction: "row",
 					justify: false,
 					translateX: 0,
-					translateY: 80,
-					itemsSpacing: 2,
+					translateY: 50,
+					itemsSpacing: 1,
 					itemWidth: 80,
-					itemHeight: 20,
-					itemDirection: "left-to-right",
-					itemOpacity: 0.85,
-					symbolSize: 20,
-					effects: [
-						{
-							on: "hover",
-							style: {
-								itemOpacity: 1
-							}
-						}
-					]
+					itemHeight: 10,
+					itemDirection: "top-to-bottom",
+					itemOpacity: 1,
+					symbolSize: 18,
+					symbolShape: "circle"
 				}
 			]}
 			animate={true}

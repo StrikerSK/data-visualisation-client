@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "../../App.css";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 
-const PieChartElement = ({myData, radius, name}) => {
+const PieChartElement = ({myData, radius}) => {
 	const [color, setColor] = useState("");
 
 	useEffect(() => {
@@ -19,8 +19,9 @@ const PieChartElement = ({myData, radius, name}) => {
 	};
 
 	const generateName = () => {
-		if (name !== undefined) {
-			return <p>{name}</p>;
+		const monthName = myData[0].month;
+		if (monthName !== undefined) {
+			return <h3>{monthName}</h3>;
 		}
 	};
 
@@ -53,7 +54,7 @@ const PieChartElement = ({myData, radius, name}) => {
 								     textAnchor={x > cx ? "start" : "end"}
 								     dominantBaseline="central"
 							     >
-								     {myData[index].nazov} ({value})
+								     {myData[index].name} ({value})
 							     </text>
 						     );
 					     }}/>

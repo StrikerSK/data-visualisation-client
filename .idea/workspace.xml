@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stylesheet/PieChart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/PieChart.scss" afterDir="false" />
     </list>
-    <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
-    <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -342,7 +343,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575635835096</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Implementing styled components">
+      <created>1575636260428</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575636260428</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Implementing styled components">
+      <created>1575636354891</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1575636354891</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Recharts styling">
+      <created>1575637011087</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1575637011087</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,14 +407,15 @@
     <MESSAGE value="Updates recharts graphs to newer version" />
     <MESSAGE value="Init bump chart component" />
     <MESSAGE value="Implementing styled components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing styled components" />
+    <MESSAGE value="Recharts styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recharts styling" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1575636259737">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1575637011101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636259737" />
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575637011101" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -421,13 +444,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="646" y="241" width="627" height="558" key="find.popup" timestamp="1575635761814">
+    <state x="646" y="241" width="627" height="558" key="find.popup" timestamp="1575638097761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635761814" />
+    <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1575636493278">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575634779843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575637116750" />
   </component>
 </project>

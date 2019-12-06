@@ -1,7 +1,23 @@
 import React, {useEffect, useState} from "react";
-import "../../stylesheet/PieChart.scss";
+// import "../../stylesheet/PieChart.scss";
 import PieChartElement from "./PieChartElement";
-import {rechartsBarDataGetter} from "../../lib/DataFetcher";
+import {pieDataGetter} from "../../lib/DataFetcher";
+import styled from "styled-components";
+
+const DataTableLayout = styled.div`
+	grid-column: 1;
+	grid-row: 2;
+	place-self: center;
+`;
+
+const PieChartContainer = styled.div`
+	width: 100%;
+	height: 100vh;
+	display: grid;
+
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 150px 1fr;
+`;
 
 const PieChartYearly = () => {
 	const [data, setData] = useState([]);
@@ -21,13 +37,13 @@ const PieChartYearly = () => {
 	};
 
 	useEffect(() => {
-		rechartsBarDataGetter([], processData);
+		pieDataGetter([], processData);
 	}, []);
 
 	return (
-		<div className="pieChartContainer">
+		<PieChartContainer>
 			<h1>Celkový predaj lístkov PID za rok 2017</h1>
-			<div className={"dataTable"}>
+			<DataTableLayout>
 				<table className={"rwd-table"}>
 					<tr>
 						<th>Kategorie</th>
@@ -44,9 +60,9 @@ const PieChartYearly = () => {
 						<td>{sum}</td>
 					</tr>
 				</table>
-			</div>
-			<PieChartElement myData={data} radius={250}/>
-		</div>
+			</DataTableLayout>
+			<PieChartElement myData={pieDataGetter([], processData)} radius={250}/>
+		</PieChartContainer>
 	);
 };
 

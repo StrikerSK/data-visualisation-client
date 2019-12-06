@@ -2,50 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoLineContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoPieContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/PieChart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/PieChart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ComponentStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ComponentStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxMonths.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxSellType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxSellType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxValidity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelectorHeatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
     </list>
     <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
     <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implement-webpack" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,18 +68,6 @@
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -133,6 +82,18 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -360,7 +321,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574003491868</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Init bump chart component">
+      <created>1575632093196</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1575632093196</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Implementing styled components">
+      <created>1575635741695</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1575635741695</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Implementing styled components">
+      <created>1575635835096</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1575635835096</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +383,51 @@
     <MESSAGE value="Code review changes vol.1" />
     <MESSAGE value="Updates after rebase" />
     <MESSAGE value="Updates recharts graphs to newer version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates recharts graphs to newer version" />
+    <MESSAGE value="Init bump chart component" />
+    <MESSAGE value="Implementing styled components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing styled components" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1575636259737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636259737" />
+    <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
+    <state width="1899" height="211" key="GridCell.Tab.0.bottom" timestamp="1575635503525">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635503525" />
+    <state width="1899" height="211" key="GridCell.Tab.0.center" timestamp="1575635503525">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635503525" />
+    <state width="1899" height="211" key="GridCell.Tab.0.left" timestamp="1575635503524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635503524" />
+    <state width="1899" height="211" key="GridCell.Tab.0.right" timestamp="1575635503525">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635503525" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1575632100794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575632100794" />
+    <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
+    <state x="646" y="241" width="627" height="558" key="find.popup" timestamp="1575635761814">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635761814" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575634779843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
   </component>
 </project>

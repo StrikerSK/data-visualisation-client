@@ -3,7 +3,6 @@ import "../../stylesheet/PieChart.scss";
 import PieChartElement from "./PieChartElement";
 import {rechartsBarDataGetter} from "../../lib/DataFetcher";
 
-
 const PieChartYearly = () => {
 	const [data, setData] = useState([]);
 	const [sum, setSum] = useState(0);

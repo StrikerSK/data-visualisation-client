@@ -16,13 +16,14 @@ import AreaChartComponent from "./components/recharts/AreaChartComponent";
 import BarChartComponent from "./components/recharts/BarChartComponent";
 import LineGraphComponent from "./components/recharts/LineGraphComponent";
 import PieChartMonthly from "./components/recharts/PieChartMonthly";
+import NivoBumpComponent from "./components/nivo/NivoBumpComponent";
 
 class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Route exact strict path="/" render={() => <NivoBarContainer/>}/>
+					<Route exact strict path="/" render={() => <NivoBumpComponent/>}/>
 					<Route exact strict path="/recharts/line" render={() => <LineGraphComponent/>}/>
 					<Route exact strict path="/recharts/area" render={() => <AreaChartComponent/>}/>
 					<Route exact strict path="/recharts/bar" render={() => <BarChartComponent/>}/>

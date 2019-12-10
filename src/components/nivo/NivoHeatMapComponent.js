@@ -3,6 +3,7 @@ import {ResponsiveHeatMap} from "@nivo/heatmap";
 import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {dataKeys} from "../checkboxes/CheckboxPerson";
 
 const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -20,7 +21,7 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const graphHeatMap = (
 		<ResponsiveHeatMap
 			data={data}
-			keys={["Dospelý", "Dôchodcovia", "Juniori", "Študenti", "Prenosné"]}
+			keys={dataKeys}
 			indexBy="month"
 			margin={{top: 100, right: 0, bottom: 0, left: 75}}
 			forceSquare={(window.innerWidth >= 770)}

@@ -58,24 +58,15 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 					direction: "row",
 					justify: false,
 					translateX: 0,
-					translateY: 60,
+					translateY: 50,
 					itemsSpacing: 0,
-					itemDirection: "left-to-right",
+					itemDirection: "top-to-bottom",
 					itemWidth: 80,
 					itemHeight: 10,
 					itemOpacity: 0.75,
 					symbolSize: 12,
 					symbolShape: "circle",
-					symbolBorderColor: "rgba(0, 0, 0, .5)",
-					effects: [
-						{
-							on: "hover",
-							style: {
-								itemBackground: "rgba(0, 0, 0, .03)",
-								itemOpacity: 1
-							}
-						}
-					]
+					symbolBorderColor: "rgba(0, 0, 0, .5)"
 				}
 			]}
 		/>

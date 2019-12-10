@@ -17,6 +17,7 @@ import BarChartComponent from "./components/recharts/BarChartComponent";
 import LineGraphComponent from "./components/recharts/LineGraphComponent";
 import PieChartMonthly from "./components/recharts/PieChartMonthly";
 import {GlobalStyles} from "./components/StyledComponents";
+import DashboardContainer from "./container/DashboardContainer";
 
 class App extends Component {
 	render() {
@@ -24,7 +25,7 @@ class App extends Component {
 			<BrowserRouter>
 				<GlobalStyles/>
 				<Switch>
-					<Route exact strict path="/" render={() => <NivoBarContainer/>}/>
+					<Route exact strict path="/" render={() => <DashboardContainer/>}/>
 					<Route exact strict path="/recharts/line" render={() => <LineGraphComponent/>}/>
 					<Route exact strict path="/recharts/area" render={() => <AreaChartComponent/>}/>
 					<Route exact strict path="/recharts/bar" render={() => <BarChartComponent/>}/>

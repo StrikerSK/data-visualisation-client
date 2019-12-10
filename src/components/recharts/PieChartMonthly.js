@@ -6,14 +6,25 @@ import styled from "styled-components";
 
 const PieChartsBox = styled.div`
 	width: 100%;
-	height: 200vh;
+	height: 150vh;
 	display: grid;
 
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 33.33%);
+	grid-template-rows: repeat(4, 25%);
+	
+	@media screen and (max-width: 770px) {
+		margin-left: 5px;
+		margin-right: 5px;
 
-	grid-column-gap: 10px;
-	grid-row-gap: 20px;
+		height: 200vh;
+
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(12, 400px);
+	}
+`;
+
+const Headline = styled.h1`
+	text-align: center;
 `;
 
 const PieChartMonthly = () => {
@@ -25,7 +36,7 @@ const PieChartMonthly = () => {
 
 	return (
 		<div>
-			<h1>Mesačná predajnosť lístkov PID</h1>
+			<Headline>Mesačná predajnosť lístkov PID</Headline>
 			<PieChartsBox>
 				{data.map((monthData) =>
 					<PieChartElement myData={monthData} radius={100}/>

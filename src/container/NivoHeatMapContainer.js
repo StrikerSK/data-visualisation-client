@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheet/GraphContainer.scss"
 
 import NivoHeatMapComponent from "../components/nivo/NivoHeatMapComponent";
 import {GraphContainer, OptionComponent} from "../components/LayoutContainers";

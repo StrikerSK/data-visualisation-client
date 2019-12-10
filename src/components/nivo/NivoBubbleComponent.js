@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {ResponsiveBubble} from "@nivo/circle-packing";
-import "../../stylesheet/GraphContainer.scss";
 import SpinnerComponent from "../SpinnerComponent";
 import {bubbleDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";

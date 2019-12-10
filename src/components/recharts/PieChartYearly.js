@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import "../../stylesheet/PieChart.scss";
 import PieChartElement from "./PieChartElement";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import styled from "styled-components";

@@ -1,6 +1,16 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "../../App.css";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
+import styled from "styled-components";
+
+const PieBox = styled.div`
+	width: 100%;
+	height: 100%;
+`;
+
+const Headline = styled.h3`
+	text-align: center;
+`;
 
 const PieChartElement = ({myData, radius}) => {
 	const [color, setColor] = useState("");
@@ -21,12 +31,12 @@ const PieChartElement = ({myData, radius}) => {
 	const generateName = () => {
 		const monthName = myData[0].month;
 		if (monthName !== undefined) {
-			return <h3>{monthName}</h3>;
+			return <Headline>{monthName}</Headline>;
 		}
 	};
 
 	return (
-		<div className="pie-chart">
+		<PieBox>
 			{generateName()}
 			<ResponsiveContainer width="100%" height="100%">
 				<PieChart>
@@ -60,7 +70,7 @@ const PieChartElement = ({myData, radius}) => {
 					     }}/>
 				</PieChart>
 			</ResponsiveContainer>
-		</div>
+		</PieBox>
 	);
 };
 export default PieChartElement;

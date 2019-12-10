@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheet/GraphContainer.scss"
 
 import NivoPieComponent from "../components/nivo/NivoPieComponent";
 import {GraphContainer, OptionComponent} from "../components/LayoutContainers";

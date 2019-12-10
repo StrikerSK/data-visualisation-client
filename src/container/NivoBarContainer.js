@@ -1,6 +1,5 @@
 import React from "react";
 import NivoBarComponent from "../components/nivo/NivoBarComponent";
-import "../stylesheet/GraphContainer.scss";
 
 import {GraphContainer, OptionComponent} from "../components/LayoutContainers";
 import {GroupModeSelect, LayoutSelect} from "../components/selects/LayoutSelect";

@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheet/GraphContainer.scss"
 
 import NivoLineComponent from "../components/nivo/NivoLineComponent";
 import {GraphContainer, OptionComponent} from "../components/LayoutContainers";

@@ -34,7 +34,9 @@ module.exports = {
 	},
 	devServer: {
 		historyApiFallback: true,
-		contentBase: './dist'
+		contentBase: './dist',
+		hot: true,
+		port: 3000
 	},
 	plugins: [htmlPlugin]
 };

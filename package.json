@@ -28,7 +28,8 @@
   },
   "scripts": {
 	"start": "node server.js",
-	"build": "webpack -p"
+	"build": "webpack -p",
+	"start:dev": "webpack-dev-server"
   },
   "eslintConfig": {
 	"extends": "react-app"

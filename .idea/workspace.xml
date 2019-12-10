@@ -2,50 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoLineContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/NivoPieContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBarContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoBubbleContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/NivoHeatMapContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/PieChart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/PieChart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ComponentStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ComponentStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxMonths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxMonths.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxPerson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxPerson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxSellType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxSellType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/checkboxes/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxValidity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/personReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/sellTypeReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/validityReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/ColorSchemeSelectorHeatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoLineContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoPieContainer.js" afterDir="false" />
     </list>
-    <list id="fc4dc519-7a70-4ec7-a52b-290cde049fe8" name="NeverUpdate" comment="" />
-    <list id="8203a88d-f553-4374-a283-bbaa488a70c3" name="Pie chart spinner application" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,13 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implement-webpack" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PawVVag2aEObuGv56we8PmaqWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -91,7 +64,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.6817.13\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.5233.80\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -107,18 +80,6 @@
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -133,6 +94,18 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -163,6 +136,8 @@
       <workItem from="1573767921694" duration="7068000" />
       <workItem from="1573817679771" duration="34000" />
       <workItem from="1573830562906" duration="13321000" />
+      <workItem from="1575661728047" duration="610000" />
+      <workItem from="1575729006441" duration="1144000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -360,7 +335,63 @@
       <option name="project" value="LOCAL" />
       <updated>1574003491868</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Init bump chart component">
+      <created>1575632093196</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1575632093196</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Implementing styled components">
+      <created>1575635741695</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1575635741695</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Implementing styled components">
+      <created>1575635835096</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1575635835096</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Implementing styled components">
+      <created>1575636260428</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575636260428</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Implementing styled components">
+      <created>1575636354891</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1575636354891</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Recharts styling">
+      <created>1575637011087</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1575637011087</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Update styling for recharts components">
+      <created>1575642956000</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1575642956001</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Created dashboard for React">
+      <created>1576013801203</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1576013801203</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +412,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Adding PieChartComponent to the list" />
     <MESSAGE value="Creating new pie chart model and updating existing models" />
     <MESSAGE value="Creating containers for every component" />
     <MESSAGE value="Adding container for Pie chart" />
@@ -401,7 +431,74 @@
     <MESSAGE value="Code review changes vol.1" />
     <MESSAGE value="Updates after rebase" />
     <MESSAGE value="Updates recharts graphs to newer version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates recharts graphs to newer version" />
+    <MESSAGE value="Init bump chart component" />
+    <MESSAGE value="Implementing styled components" />
+    <MESSAGE value="Recharts styling" />
+    <MESSAGE value="Update styling for recharts components" />
+    <MESSAGE value="Created dashboard" />
+    <MESSAGE value="Created dashboard for React" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created dashboard for React" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576015445463">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576015445463" />
+    <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
+    <state width="3815" height="216" key="GridCell.Tab.0.bottom" timestamp="1576014202556">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
+    <state width="3815" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014202556" />
+    <state width="3815" height="216" key="GridCell.Tab.0.center" timestamp="1576014202556">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
+    <state width="3815" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014202556" />
+    <state width="3815" height="216" key="GridCell.Tab.0.left" timestamp="1576014202556">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
+    <state width="3815" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014202556" />
+    <state width="3815" height="216" key="GridCell.Tab.0.right" timestamp="1576014202556">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
+    <state width="3815" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014202556" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1575656545380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
+    <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1576014964592">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014964592" />
+    <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1575662381723">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1575636493278">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576010366064">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576010366064" />
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575637116750" />
   </component>
 </project>

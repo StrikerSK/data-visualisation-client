@@ -21,8 +21,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.8",
     "react-spinners": "latest",
+    "recharts": "^1.8.5",
     "redux": "^4.0.4",
-    "recharts": "^1.8.5"
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

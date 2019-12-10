@@ -38,6 +38,6 @@ export const rechartsBarDataGetter = (parameters, callbackFunction) => {
 };
 
 export const apexDataFetcher = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/apex/area?" + generateParamsQuery(parameters))
+	axios.get(hostUrl + "/apex/data?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoHeatMapContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoLineContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoPieContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="implement-prettier" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +53,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\kristian.hanus\Programming\React\react-charts\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.5233.80\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -441,11 +433,11 @@
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576015445463">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576017285752">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576015445463" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576017285752" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

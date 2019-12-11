@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Setting up development server">
+      <change afterPath="$PROJECT_DIR$/src/container/RechartsDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/RechartsGraphContainters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/DashboardContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/DashboardContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implement-prettier" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,17 +70,20 @@
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.5233.80\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/StrikerSK/FitnessPage.git" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -147,7 +159,9 @@
       <workItem from="1573830562906" duration="13321000" />
       <workItem from="1575661728047" duration="610000" />
       <workItem from="1575729006441" duration="1144000" />
-      <workItem from="1576018751781" duration="1433000" />
+      <workItem from="1576018751781" duration="1468000" />
+      <workItem from="1576087090939" duration="1123000" />
+      <workItem from="1576091909477" duration="2814000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -401,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576013801203</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Setting up development server">
+      <created>1576020200625</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1576020200625</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +443,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Creating new pie chart model and updating existing models" />
     <MESSAGE value="Creating containers for every component" />
     <MESSAGE value="Adding container for Pie chart" />
     <MESSAGE value="Created SellType and Months checkboxes" />
@@ -447,7 +467,8 @@
     <MESSAGE value="Update styling for recharts components" />
     <MESSAGE value="Created dashboard" />
     <MESSAGE value="Created dashboard for React" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created dashboard for React" />
+    <MESSAGE value="Setting up development server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up development server" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -455,61 +476,71 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576019772649" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576017285752">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576094769245">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576017285752" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094769245" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
-    <state width="3802" height="216" key="GridCell.Tab.0.bottom" timestamp="1576020093781">
+    <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576088210750">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="-2140" y="758" key="FileChooserDialogImpl/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576088210750" />
+    <state width="3802" height="216" key="GridCell.Tab.0.bottom" timestamp="1576094779561">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.center" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094779561" />
+    <state width="3802" height="216" key="GridCell.Tab.0.center" timestamp="1576094779561">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.left" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094779561" />
+    <state width="3802" height="216" key="GridCell.Tab.0.left" timestamp="1576094779561">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3802" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.right" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094779561" />
+    <state width="3802" height="216" key="GridCell.Tab.0.right" timestamp="1576094779561">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1575656545380">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094779561" />
+    <state x="-2073" y="910" key="VCS.ChangelistChooser" timestamp="1576094786545">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094786545" />
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1576094777341">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094777341" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1576014964592">
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1576093542717">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014964592" />
-    <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1575662381723">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576093542717" />
+    <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576087288163">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
+    <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1575636493278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
-    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576010366064">
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576092586854">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
-    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576010366064" />
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576092586854" />
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

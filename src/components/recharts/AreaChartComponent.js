@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react";
+import {connect} from "react-redux";
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
-import {GraphContainer} from "../LayoutContainers";
 import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
 
-const AreaChartComponent = () => {
+const AreaChartComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -15,8 +16,8 @@ const AreaChartComponent = () => {
 	};
 
 	useEffect(() => {
-		barDataGetter([], finaliseTransaction);
-	}, []);
+		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+	}, [person, months, sellType, validity]);
 
 	const areaChart = (
 		<ResponsiveContainer width="100%" height="100%">
@@ -65,9 +66,15 @@ const AreaChartComponent = () => {
 	);
 
 	return (
-		<GraphContainer>
-			<SpinnerComponent children={areaChart} isDataLoaded={isLoaded}/>
-		</GraphContainer>
+		<SpinnerComponent children={areaChart} isDataLoaded={isLoaded}/>
 	);
 };
-export default AreaChartComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType
+});
+
+export default connect(mapStateToProps)(AreaChartComponent);

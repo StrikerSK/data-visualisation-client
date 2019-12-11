@@ -91,15 +91,14 @@ const PieChartYearly = () => {
 	const [sum, setSum] = useState(0);
 
 	const getSum = (myArray) => {
-		let functionSum = 0;
+		let totalValue = 0;
 		myArray.forEach(({value}) => {
-			functionSum += value;
+			totalValue += value;
 		});
-		setSum(functionSum);
+		setSum(totalValue);
 	};
 
 	const processData = (result) => {
-		console.log(result);
 		getSum(result);
 		setData(result);
 	};

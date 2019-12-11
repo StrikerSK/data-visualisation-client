@@ -1,17 +1,19 @@
 import React, {useEffect, useState} from "react";
-import "../../App.css";
-import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
-import {barDataGetter} from "../../lib/DataFetcher";
-import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
-import SpinnerComponent from "../SpinnerComponent";
-import {GraphContainer} from "../LayoutContainers";
 
-const LineGraphComponent = () => {
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {connect} from "react-redux";
+
+import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
+
+import {barDataGetter} from "../../lib/DataFetcher";
+import SpinnerComponent from "../SpinnerComponent";
+
+const LineGraphComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		barDataGetter([], setData);
-	}, []);
+		barDataGetter([months, person, validity, sellType], setData);
+	}, [months, person, validity, sellType]);
 
 	const lineGraph = (
 		<ResponsiveContainer>
@@ -62,10 +64,15 @@ const LineGraphComponent = () => {
 	);
 
 	return (
-		<GraphContainer>
-			<SpinnerComponent children={lineGraph} isDataLoaded={true}/>
-		</GraphContainer>
+		<SpinnerComponent children={lineGraph} isDataLoaded={true}/>
 	);
 };
 
-export default LineGraphComponent;
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+});
+
+export default connect(mapStateToProps)(LineGraphComponent);

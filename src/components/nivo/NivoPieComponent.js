@@ -3,7 +3,6 @@ import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
-import {ResponsiveBar} from "@nivo/bar";
 
 const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -98,12 +97,12 @@ const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 				{
 					anchor: "bottom",
 					direction: "row",
-					translateY: 30,
-					itemWidth: 100,
-					itemHeight: 10,
+					translateY: 55,
+					itemWidth: 70,
+					itemHeight: 20,
 					itemDirection: "top-to-bottom",
 					itemTextColor: "#999",
-					symbolSize: 18,
+					symbolSize: 12,
 					symbolShape: "circle"
 				}
 			]}

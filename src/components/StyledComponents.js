@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 
 export const DashboardBox = styled.div`
 	display: grid;
-	height: 120vh;
+	height: 125vh;
 	width: 99%;
 
 	grid-row-gap: 5px;

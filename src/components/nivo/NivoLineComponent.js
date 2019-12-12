@@ -41,7 +41,7 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 				tickRotation: 0,
 				legend: "Predaj lístkov",
 				legendOffset: -60,
-				legendPosition: "top"
+				legendPosition: "middle"
 			}}
 			colors={{scheme: color}}
 			pointSize={10}

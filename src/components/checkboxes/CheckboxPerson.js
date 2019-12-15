@@ -13,15 +13,17 @@ export const children = "Deti";
 export const dataKeys = [adults, seniors, juniors, students, portableData, children];
 export const defaultPersonRequestParams = "person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori&person=Deti";
 
-const persons = [
-	{itemName: adults, isChecked: true},
-	{itemName: juniors, isChecked: true},
-	{itemName: seniors, isChecked: true},
-	{itemName: students, isChecked: true},
-	{itemName: portable, isChecked: true},
-	{itemName: children, isChecked: true},
-];
 const CheckboxPerson = () => {
+
+	const persons = [
+		{itemName: adults, isChecked: true},
+		{itemName: juniors, isChecked: true},
+		{itemName: seniors, isChecked: true},
+		{itemName: students, isChecked: true},
+		{itemName: portable, isChecked: true},
+		{itemName: children, isChecked: true},
+	];
+
 	return <CheckboxTemplate checkItems={persons} dispatchFunction={updatePersons} context={"person"}/>
 };
 export default CheckboxPerson;

@@ -16,6 +16,8 @@ const CheckboxSellType = () => {
 		{itemName: eshop, isChecked: true}
 	];
 
-	return <CheckboxTemplate checkItems={sellTypes} dispatchFunction={updateSellTypes} context={"type"}/>
+	const filterHeader = "Filter podľa typu predaja";
+
+	return <CheckboxTemplate checkItems={sellTypes} dispatchFunction={updateSellTypes} context={"type"} filterHeader={filterHeader}/>
 };
 export default CheckboxSellType;

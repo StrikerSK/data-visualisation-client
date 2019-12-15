@@ -24,6 +24,8 @@ const CheckboxPerson = () => {
 		{itemName: children, isChecked: true},
 	];
 
-	return <CheckboxTemplate checkItems={persons} dispatchFunction={updatePersons} context={"person"}/>
+	const filterHeader = "Filter podľa typy osoby";
+
+	return <CheckboxTemplate checkItems={persons} dispatchFunction={updatePersons} context={"person"} filterHeader={filterHeader}/>
 };
 export default CheckboxPerson;

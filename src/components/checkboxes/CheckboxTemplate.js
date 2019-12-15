@@ -5,9 +5,21 @@ import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import {useDispatch} from "react-redux";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
-const CheckboxTemplate = ({checkItems, context, dispatchFunction}) => {
+const useStyles = makeStyles(theme => ({
+	formControl: {
+		margin: theme.spacing(2),
+		minWidth: '100%',
+	},
+	formLabel: {
+		minWidth: '30%',
+	}
+}));
+
+const CheckboxTemplate = ({checkItems, context, dispatchFunction, filterHeader}) => {
 	const dispatch = useDispatch();
+	const classes = useStyles();
 	const [itemObjects, setItemObjects] = useState(checkItems);
 
 	const checkboxHandler = ({target}) => {
@@ -44,11 +56,11 @@ const CheckboxTemplate = ({checkItems, context, dispatchFunction}) => {
 	};
 
 	return (
-		<FormControl component={"fieldset"}>
-			<FormLabel component="legend">Filter podľa mesiacov</FormLabel>
+		<FormControl component={"fieldset"} className={classes.formControl}>
+			<FormLabel component="legend">{filterHeader}</FormLabel>
 			<FormGroup row>
 				{checkItems.map(({itemName}) => {
-					return <FormControlLabel control={getCheckbox(itemName)} label={itemName}/>
+					return <FormControlLabel control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
 				})}
 			</FormGroup>
 		</FormControl>

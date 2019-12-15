@@ -18,7 +18,9 @@ const CheckboxValidity = () => {
 		{itemName: yearly, isChecked: true}
 	];
 
-	return <CheckboxTemplate checkItems={validities} dispatchFunction={updateValidity} context={"validity"}/>
+	const filterHeader = "Filter podľa dĺžky platnosti";
+
+	return <CheckboxTemplate checkItems={validities} dispatchFunction={updateValidity} context={"validity"} filterHeader={filterHeader}/>
 
 };
 export default CheckboxValidity;

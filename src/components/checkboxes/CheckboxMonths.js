@@ -17,22 +17,24 @@ export const december = "December";
 
 export const defaultMonthRequestParams = "month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
 
-const months = [
-	{itemName: january, isChecked: true},
-	{itemName: february, isChecked: true},
-	{itemName: march, isChecked: true},
-	{itemName: april, isChecked: true},
-	{itemName: may, isChecked: true},
-	{itemName: june, isChecked: true},
-	{itemName: july, isChecked: true},
-	{itemName: august, isChecked: true},
-	{itemName: september, isChecked: true},
-	{itemName: october, isChecked: true},
-	{itemName: november, isChecked: true},
-	{itemName: december, isChecked: true}
-];
-
 const CheckboxMonths = () => {
-	return <CheckboxTemplate checkItems={months} dispatchFunction={updateMonths} context={"month"}/>
+	const months = [
+		{itemName: january, isChecked: true},
+		{itemName: february, isChecked: true},
+		{itemName: march, isChecked: true},
+		{itemName: april, isChecked: true},
+		{itemName: may, isChecked: true},
+		{itemName: june, isChecked: true},
+		{itemName: july, isChecked: true},
+		{itemName: august, isChecked: true},
+		{itemName: september, isChecked: true},
+		{itemName: october, isChecked: true},
+		{itemName: november, isChecked: true},
+		{itemName: december, isChecked: true}
+	];
+
+	const filterHeader = "Filter podľa mesiacov";
+
+	return <CheckboxTemplate checkItems={months} dispatchFunction={updateMonths} context={"month"} filterHeader={filterHeader}/>
 };
 export default CheckboxMonths;

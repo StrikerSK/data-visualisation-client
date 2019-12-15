@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import {GlobalStyles} from "./components/StyledComponents";
-import PieChartYearly from "./components/recharts/PieChartYearly";
 import NivoBarContainer from "./container/NivoBarContainer";
 import NivoLineContainer from "./container/NivoLineContainer";
 import NivoPieContainer from "./container/NivoPieContainer";
@@ -15,6 +14,7 @@ import {
 	RechartsAreaContainer,
 	RechartsBarContainer,
 	RechartsLineContainer,
+	RechartsPieContainer,
 	RechartsStackedContainer
 } from "./container/RechartsGraphCollection";
 
@@ -38,7 +38,7 @@ class App extends Component {
 					<Route exact strict path="/recharts/area" render={() => <RechartsAreaContainer/>}/>
 					<Route exact strict path="/recharts/bar" render={() => <RechartsBarContainer/>}/>
 					<Route exact strict path="/recharts/stacked" render={() => <RechartsStackedContainer/>}/>
-					<Route exact strict path="/recharts/pie" render={() => <PieChartYearly/>}/>
+					<Route exact strict path="/recharts/pie" render={() => <RechartsPieContainer/>}/>
 					<Route exact strict path="/recharts/pie/collection" render={() => <PieChartMonthly/>}/>
 					<Route exact strict path="/nivo" render={() => <DashboardContainer/>}/>
 					<Route exact strict path="/nivo/random" render={() => <DashboardContainerRandom/>}/>

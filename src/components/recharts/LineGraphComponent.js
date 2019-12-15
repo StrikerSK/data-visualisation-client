@@ -10,9 +10,15 @@ import SpinnerComponent from "../SpinnerComponent";
 
 const LineGraphComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
+	const [isLoaded, changeLoadedState] = useState(false);
+
+	const processData = (result) => {
+		setData(result);
+		changeLoadedState(true);
+	};
 
 	useEffect(() => {
-		barDataGetter([months, person, validity, sellType], setData);
+		barDataGetter([months, person, validity, sellType], processData);
 	}, [months, person, validity, sellType]);
 
 	const lineGraph = (
@@ -64,7 +70,7 @@ const LineGraphComponent = ({months, person, validity, sellType}) => {
 	);
 
 	return (
-		<SpinnerComponent children={lineGraph} isDataLoaded={true}/>
+		<SpinnerComponent children={lineGraph} isDataLoaded={isLoaded}/>
 	);
 };
 

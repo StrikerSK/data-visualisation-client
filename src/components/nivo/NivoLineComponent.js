@@ -20,28 +20,27 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const LineGraph = (
 		<ResponsiveLine
 			data={data}
-			margin={{top: 10, right: 40, bottom: 80, left: 80}}
+			margin={{top: 5, right: 15, bottom: 80, left: 65}}
 			xScale={{type: "point"}}
 			yScale={{type: "linear", stacked: true, min: "auto", max: "auto"}}
 			curve="linear"
 			axisTop={null}
 			axisRight={null}
-			axisBottom={(window.innerWidth < 770 ? null : {
+			axisBottom={{
 				orient: "bottom",
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: 0,
-				legend: "Mesiac",
-				legendOffset: 36,
+				tickRotation: window.innerWidth < 770 ? -20 : 0,
+				legendOffset: 26,
 				legendPosition: "middle"
-			})}
+			}}
 			axisLeft={{
 				orient: "left",
-				tickSize: 5,
-				tickPadding: 10,
+				tickSize: 6,
+				tickPadding: 3,
 				tickRotation: 0,
-				legend: "Počet predaných lístkov",
-				legendOffset: -70,
+				legend: "Predaj lístkov",
+				legendOffset: -60,
 				legendPosition: "middle"
 			}}
 			colors={{scheme: color}}
@@ -57,13 +56,13 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 					anchor: "bottom",
 					direction: "row",
 					justify: false,
-					translateX: 0,
-					translateY: 50,
+					translateX: -40,
+					translateY: 55,
 					itemsSpacing: 0,
 					itemDirection: "top-to-bottom",
 					itemWidth: 80,
 					itemHeight: 10,
-					itemOpacity: 0.75,
+					itemOpacity: 1,
 					symbolSize: 12,
 					symbolShape: "circle",
 					symbolBorderColor: "rgba(0, 0, 0, .5)"

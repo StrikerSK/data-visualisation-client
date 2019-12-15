@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react";
+import {connect} from "react-redux";
 import {Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+
+import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
-import {GraphContainer} from "../LayoutContainers";
-import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
 
-const BarChartComponent = () => {
+
+const BarChartComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -15,12 +17,12 @@ const BarChartComponent = () => {
 	};
 
 	useEffect(() => {
-		barDataGetter([], finaliseTransaction);
-	}, []);
+		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+	}, [person, months, sellType, validity]);
 
 	const barChart = (
 		<ResponsiveContainer width="100%" height="100%">
-			<BarChart data={data} margin={{top: 5, right: 0, left: 40, bottom: 0}}>
+			<BarChart data={data} margin={{top: 0, right: 5, left: 10, bottom: 0}}>
 				<XAxis dataKey="name"/>
 				<YAxis/>
 				<CartesianGrid strokeDasharray="3 3"/>
@@ -36,9 +38,15 @@ const BarChartComponent = () => {
 	);
 
 	return (
-		<GraphContainer>
-			<SpinnerComponent children={barChart} isDataLoaded={isLoaded}/>
-		</GraphContainer>
+		<SpinnerComponent children={barChart} isDataLoaded={isLoaded}/>
 	);
 };
-export default BarChartComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+});
+
+export default connect(mapStateToProps)(BarChartComponent);

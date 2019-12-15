@@ -1,13 +1,13 @@
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import React, {useEffect, useState} from "react";
-import "../../App.css";
+
 import {barDataGetter} from "../../lib/DataFetcher";
 import {adults, juniors, portableData, seniors, students} from "../checkboxes/CheckboxPerson";
-import {GraphContainer} from "../LayoutContainers";
 import SpinnerComponent from "../SpinnerComponent";
+import {connect} from "react-redux";
 
 
-const StackedGraphComponent = () => {
+const StackedGraphComponent = ({person, months, sellType, validity}) => {
 	const [data, setData] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -17,12 +17,12 @@ const StackedGraphComponent = () => {
 	};
 
 	useEffect(() => {
-		barDataGetter([], finaliseTransaction);
-	}, []);
+		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+	}, [person, months, sellType, validity]);
 
 	const stackedGraph = (
 		<ResponsiveContainer width="100%" height="100%">
-			<AreaChart data={data} margin={{top: 5, right: 0, left: 40, bottom: 0}}>
+			<AreaChart data={data} margin={{top: 0, right: 5, left: 10, bottom: 0}}>
 				<CartesianGrid strokeDasharray="3 3"/>
 				<XAxis dataKey="mesiac"/>
 				<YAxis/>
@@ -37,9 +37,15 @@ const StackedGraphComponent = () => {
 	);
 
 	return (
-		<GraphContainer>
-			<SpinnerComponent children={stackedGraph} isDataLoaded={isLoaded}/>
-		</GraphContainer>
+		<SpinnerComponent children={stackedGraph} isDataLoaded={isLoaded}/>
 	);
 };
-export default StackedGraphComponent;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+});
+
+export default connect(mapStateToProps)(StackedGraphComponent);

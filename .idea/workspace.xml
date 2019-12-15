@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/RechartsDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/RechartsDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/RechartsGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/RechartsGraphCollection.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +28,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="implement-prettier" />
+        <entry key="$PROJECT_DIR$" value="update-checkbox-layout" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1PawVVag2aEObuGv56we8PmaqWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/container" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -61,10 +65,8 @@
     <property name="ts.external.directory.path" value="C:\Users\kristian.hanus\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.5233.80\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/StrikerSK/FitnessPage.git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
@@ -72,6 +74,12 @@
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib\Checkboxes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -100,6 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
       </list>
     </recent_temporary>
@@ -147,7 +157,12 @@
       <workItem from="1573830562906" duration="13321000" />
       <workItem from="1575661728047" duration="610000" />
       <workItem from="1575729006441" duration="1144000" />
-      <workItem from="1576018751781" duration="1433000" />
+      <workItem from="1576018751781" duration="1468000" />
+      <workItem from="1576087090939" duration="1123000" />
+      <workItem from="1576091909477" duration="2814000" />
+      <workItem from="1576095399760" duration="8289000" />
+      <workItem from="1576345514198" duration="1910000" />
+      <workItem from="1576397112183" duration="3907000" />
     </task>
     <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
       <created>1566166573580</created>
@@ -401,7 +416,98 @@
       <option name="project" value="LOCAL" />
       <updated>1576013801203</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Setting up development server">
+      <created>1576020200625</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1576020200625</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Creating shelves and updating part 1">
+      <created>1576094876527</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1576094876527</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Creating dashboards and updating part 2">
+      <created>1576101106222</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1576101106222</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Creating dashboards and updating part 2">
+      <created>1576101827126</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1576101827126</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Creating dashboards and updating part 2">
+      <created>1576103480746</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1576103480746</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Creating dashboards and updating part 2">
+      <created>1576104502149</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1576104502149</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Creating dashboards and updating part 3">
+      <created>1576180296129</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1576180296129</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Creating dashboards and updating part 3">
+      <created>1576180408815</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1576180408815</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Creating dashboards and updating part 3">
+      <created>1576180438422</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1576180438422</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Creating dashboards and updating part 3">
+      <created>1576180452734</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1576180452734</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Creating dashboards and updating part 3">
+      <created>1576254056994</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1576254056994</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Update dependencies">
+      <created>1576399859883</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1576399859883</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Creating dashboards and updating part 4">
+      <created>1576424585223</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1576424585223</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,13 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Creating new pie chart model and updating existing models" />
-    <MESSAGE value="Creating containers for every component" />
-    <MESSAGE value="Adding container for Pie chart" />
-    <MESSAGE value="Created SellType and Months checkboxes" />
-    <MESSAGE value="Deleted lock files" />
-    <MESSAGE value="Fixing package location of Pie chart component" />
-    <MESSAGE value="Optimized responsiveness of application" />
     <MESSAGE value="Created new chart options and updated containers" />
     <MESSAGE value="Update responsiveness of bar, line and pie charts" />
     <MESSAGE value="Added and applied color select options to component list" />
@@ -447,69 +546,90 @@
     <MESSAGE value="Update styling for recharts components" />
     <MESSAGE value="Created dashboard" />
     <MESSAGE value="Created dashboard for React" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created dashboard for React" />
+    <MESSAGE value="Setting up development server" />
+    <MESSAGE value="Creating shelves and updating part 1" />
+    <MESSAGE value="Creating dashboards and updating part 2" />
+    <MESSAGE value="Randomized dashboards" />
+    <MESSAGE value="Creating dashboards and updating part 3" />
+    <MESSAGE value="Update dependencies" />
+    <MESSAGE value="Creating dashboards and updating part 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating dashboards and updating part 4" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576019772649">
+    <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576397240492">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
-    <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576019772649" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576017285752">
+    <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1576424584595">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576017285752" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
-    <state width="3802" height="216" key="GridCell.Tab.0.bottom" timestamp="1576020093781">
+    <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576088210750">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="-2140" y="758" key="FileChooserDialogImpl/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576088210750" />
+    <state x="-2097" y="903" key="GitRewordDialog" timestamp="1576401041330">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
+    <state width="3802" height="216" key="GridCell.Tab.0.bottom" timestamp="1576401029390">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.center" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401029390" />
+    <state width="3802" height="216" key="GridCell.Tab.0.center" timestamp="1576401029390">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.left" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401029390" />
+    <state width="3802" height="216" key="GridCell.Tab.0.left" timestamp="1576401029389">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3802" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state width="3802" height="216" key="GridCell.Tab.0.right" timestamp="1576020093781">
+    <state width="3802" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401029389" />
+    <state width="3802" height="216" key="GridCell.Tab.0.right" timestamp="1576401029390">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576020093781" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1575656545380">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401029390" />
+    <state x="-2073" y="910" key="VCS.ChangelistChooser" timestamp="1576255166325">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
+    </state>
+    <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1576094889468">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576094889468" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1576014964592">
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1576093542717">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576014964592" />
-    <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog" timestamp="1575662381723">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576093542717" />
+    <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576087288163">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
+    <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1575636493278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
-    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576010366064">
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576425619978">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
-    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576010366064" />
+    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576425619978" />
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

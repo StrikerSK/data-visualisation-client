@@ -14,6 +14,7 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 	};
 
 	useEffect(() => {
+		// console.log(box2.offsetWidth);
 		barDataGetter([person, months, sellType, validity], finaliseTransaction);
 	}, [person, months, sellType, validity]);
 
@@ -22,8 +23,8 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 			data={data}
 			keys={barOrder}
 			indexBy="month"
-			margin={{top: 30, right: 30, bottom: 80, left: 80}}
-			padding={0.4}
+			margin={(window.innerWidth < 770 ? {top: 10, right: 5, bottom: 80, left: 70} : {top: 20, right: 30, bottom: 80, left: 80})}
+			padding={0.3}
 			groupMode={barGrouping}
 			layout={barLayout}
 			colors={{scheme: color}}
@@ -50,19 +51,18 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 			borderColor={{from: "color", modifiers: [["darker", 1.6]]}}
 			axisTop={null}
 			axisRight={null}
-			axisBottom={(window.innerWidth < 770 ? null : {
+			axisBottom={{
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: 0,
-				legend: "Month",
+				tickRotation: window.innerWidth < 770 ? -25 : 0,
 				legendPosition: "middle",
-				legendOffset: 32
-			})}
+				legendOffset: 36
+			}}
 			axisLeft={{
 				tickSize: 5,
 				tickPadding: 5,
 				tickRotation: 0,
-				legend: "Ticket sell count",
+				legend: "Predaj lístkov",
 				legendPosition: "middle",
 				legendOffset: -60
 			}}
@@ -76,14 +76,12 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 					anchor: "bottom",
 					direction: "row",
 					justify: false,
-					translateX: 0,
-					translateY: 50,
-					itemsSpacing: 1,
-					itemWidth: 80,
-					itemHeight: 10,
+					translateX: -40,
+					translateY: 60,
+					itemWidth: 70,
+					itemHeight: 15,
 					itemDirection: "top-to-bottom",
-					itemOpacity: 1,
-					symbolSize: 18,
+					symbolSize: 12,
 					symbolShape: "circle"
 				}
 			]}

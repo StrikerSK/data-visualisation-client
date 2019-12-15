@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif !important;
   }
   
+  h1 {
+  	text-align: center;
+  }
+  
   body {
 	 -webkit-font-smoothing: antialiased;
 	 text-rendering: optimizeLegibility;

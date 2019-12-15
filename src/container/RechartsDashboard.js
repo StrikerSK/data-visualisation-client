@@ -6,14 +6,27 @@ import LineGraphComponent from "../components/recharts/LineGraphComponent";
 import StackedGraphComponent from "../components/recharts/StackedGraphComponent";
 import AreaChartComponent from "../components/recharts/AreaChartComponent";
 
-const RechartsDashboard = () => {
+const componentsArray = [
+	<BarChartComponent/>,
+	<LineGraphComponent/>,
+	<StackedGraphComponent/>,
+	<AreaChartComponent/>
+];
+
+export const RechartsDashboard = () => {
 	return (
 		<DashboardTemplate>
-			<BarChartComponent/>
-			<LineGraphComponent/>
-			<StackedGraphComponent/>
-			<AreaChartComponent/>
+			{componentsArray}
 		</DashboardTemplate>
 	);
 };
-export default RechartsDashboard;
+
+export const RechartsDashboardRandom = () => {
+	return (
+		<DashboardTemplate>
+			{componentsArray.sort(() => Math.random() - 0.5)}
+		</DashboardTemplate>
+	);
+};
+
+export default {RechartsDashboard, RechartsDashboardRandom};

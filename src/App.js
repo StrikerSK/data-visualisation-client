@@ -8,9 +8,8 @@ import NivoLineContainer from "./container/NivoLineContainer";
 import NivoPieContainer from "./container/NivoPieContainer";
 import NivoBubbleContainer from "./container/NivoBubbleContainer";
 import PieChartMonthly from "./components/recharts/PieChartMonthly";
-import DashboardContainer from "./container/DashboardContainer";
-import RechartsDashboard from "./container/RechartsDashboard";
-import DashboardContainerRandom from "./container/DashboardContainerRandom";
+import {DashboardContainer, DashboardContainerRandom} from "./container/DashboardContainer";
+import {RechartsDashboard, RechartsDashboardRandom} from "./container/RechartsDashboard";
 
 import {
 	RechartsAreaContainer,
@@ -34,6 +33,7 @@ class App extends Component {
 				<Switch>
 					<Route exact strict path="/" render={() => <DashboardContainer/>}/>
 					<Route exact strict path="/recharts" render={() => <RechartsDashboard/>}/>
+					<Route exact strict path="/recharts/random" render={() => <RechartsDashboardRandom/>}/>
 					<Route exact strict path="/recharts/line" render={() => <RechartsLineContainer/>}/>
 					<Route exact strict path="/recharts/area" render={() => <RechartsAreaContainer/>}/>
 					<Route exact strict path="/recharts/bar" render={() => <RechartsBarContainer/>}/>

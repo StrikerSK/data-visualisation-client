@@ -23,7 +23,7 @@ const NivoRadarComponent = () => {
 			keys={dataKeys}
 			indexBy="month"
 			maxValue="auto"
-			margin={{top: 70, right: 80, bottom: 40, left: 80}}
+			margin={{top: 70, right: 70, bottom: 40, left: 85}}
 			curve="linearClosed"
 			borderWidth={2}
 			borderColor={{from: "color"}}
@@ -47,8 +47,8 @@ const NivoRadarComponent = () => {
 			isInteractive={true}
 			legends={[
 				{
-					anchor: "top-left",
-					direction: "column",
+					anchor: "bottom",
+					direction: "row",
 					translateX: -50,
 					translateY: -40,
 					itemWidth: 80,

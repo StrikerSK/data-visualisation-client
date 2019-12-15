@@ -17,7 +17,7 @@ const LineGraphComponent = ({months, person, validity, sellType}) => {
 
 	const lineGraph = (
 		<ResponsiveContainer>
-			<LineChart data={data} margin={{top: 5, right: 0, left: 40, bottom: 0}}>
+			<LineChart data={data} margin={{top: 0, right: 5, left: 10, bottom: 0}}>
 				<defs>
 
 					<linearGradient id="colorSenior" x1="0" y1="0" x2="0" y2="1">

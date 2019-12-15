@@ -22,7 +22,7 @@ const StackedGraphComponent = ({person, months, sellType, validity}) => {
 
 	const stackedGraph = (
 		<ResponsiveContainer width="100%" height="100%">
-			<AreaChart data={data} margin={{top: 5, right: 0, left: 40, bottom: 0}}>
+			<AreaChart data={data} margin={{top: 0, right: 5, left: 10, bottom: 0}}>
 				<CartesianGrid strokeDasharray="3 3"/>
 				<XAxis dataKey="mesiac"/>
 				<YAxis/>

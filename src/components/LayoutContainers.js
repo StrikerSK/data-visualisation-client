@@ -70,4 +70,3 @@ export const GraphContainer = ({children}) => {
 		</GraphBox>
 	);
 };
-export default {OptionComponent, GraphContainer}

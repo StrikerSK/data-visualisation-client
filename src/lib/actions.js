@@ -1,4 +1,4 @@
-export const actions = (personArray) => {
+export const updatePersons = (personArray) => {
 	return {
 		type: 'UPDATE_PERSON',
 		payload: personArray

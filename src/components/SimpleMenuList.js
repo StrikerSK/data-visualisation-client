@@ -5,6 +5,17 @@ import Button from "@material-ui/core/Button";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import styled from "styled-components";
+import {makeStyles} from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+	button: {
+		width: "100%",
+		height: "100%",
+
+		display: "flex",
+		justifySelf: "center"
+	}
+}));
 
 const TestOne = styled.div`
 	width: 100%;
@@ -15,6 +26,7 @@ const TestOne = styled.div`
 
 const MenuListComposition = ({name, items}) => {
 	const history = useHistory();
+	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
 	const handleClick = event => {
@@ -32,7 +44,7 @@ const MenuListComposition = ({name, items}) => {
 
 	return (
 		<TestOne>
-			<Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>{name}</Button>
+			<Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} classes={{root: classes.button}}>{name}</Button>
 			<Menu
 				id="simple-menu"
 				anchorEl={anchorEl}

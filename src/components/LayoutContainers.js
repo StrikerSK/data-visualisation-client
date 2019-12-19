@@ -4,7 +4,7 @@ import {LinkMenuBox} from "./LinkMenuBox";
 
 const Header = styled.h1`
 	text-align: center;
-	font-weight: normal;
+	font-weight: bold;
 	letter-spacing: -1px;
 	color: #34495E;
 	
@@ -30,6 +30,27 @@ const OptionsComponent = styled.div`
 	}
 `;
 
+const HeaderAndNav = styled.div`
+  	grid-column: 1 / 3;
+	grid-row: 1;
+	justify-self: center;
+	
+	width: 100%;
+	height: 100%;
+	
+	display: grid;
+	grid-template-columns: 80% 20%;
+
+	@media screen and (max-width: 770px) {
+		grid-template-columns: 100%;
+		
+		grid-column: 1;
+		grid-row: 1;
+		
+		grid-template-rows: repeat(50% 50%);
+	}
+`;
+
 const GraphBox = styled.div`
 	display: grid;
 	height: 95vh;
@@ -46,15 +67,20 @@ const GraphBox = styled.div`
 
 		width: 95vw;
 		height: 125vh;
-
+		
 		grid-row-gap: 20px;
 		grid-template-columns: 100%;
-		grid-template-rows: 100px 45% 45%;
+		grid-template-rows: 120px 45% 45%;
 	}
 `;
 
 export const HeaderComponent = () => {
-	return <Header>Predajnosť lístkov PID</Header>
+	return (
+		<HeaderAndNav>
+			<Header>Predajnosť lístkov PID</Header>
+			<LinkMenuBox/>
+		</HeaderAndNav>
+	)
 };
 
 export const OptionComponent = ({children}) => {
@@ -66,7 +92,6 @@ export const OptionComponent = ({children}) => {
 export const GraphContainer = ({children}) => {
 	return (
 		<GraphBox>
-			<LinkMenuBox/>
 			<HeaderComponent/>
 			{children}
 		</GraphBox>

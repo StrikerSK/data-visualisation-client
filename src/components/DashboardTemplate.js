@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import {HeaderComponent} from "./LayoutContainers";
 
@@ -19,7 +20,7 @@ const DashboardBox = styled.div`
 		height: 180vh;
 
 		grid-template-columns: 100%;
-		grid-template-rows: 100px repeat(4, 25%);
+		grid-template-rows: 120px repeat(4, 25%);
 	}
 `;
 

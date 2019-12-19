@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import {LinkMenuBox} from "./LinkMenuBox";
 
 const Header = styled.h1`
 	text-align: center;
@@ -65,6 +66,7 @@ export const OptionComponent = ({children}) => {
 export const GraphContainer = ({children}) => {
 	return (
 		<GraphBox>
+			<LinkMenuBox/>
 			<HeaderComponent/>
 			{children}
 		</GraphBox>

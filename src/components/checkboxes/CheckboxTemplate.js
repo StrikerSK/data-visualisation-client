@@ -60,7 +60,7 @@ const CheckboxTemplate = ({checkItems, context, dispatchFunction, filterHeader})
 			<FormLabel component="legend">{filterHeader}</FormLabel>
 			<FormGroup row>
 				{checkItems.map(({itemName}) => {
-					return <FormControlLabel control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
+					return <FormControlLabel key={itemName} control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
 				})}
 			</FormGroup>
 		</FormControl>

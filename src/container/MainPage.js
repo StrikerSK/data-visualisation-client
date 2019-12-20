@@ -11,7 +11,7 @@ const MainContainer = styled.div`
 	display: grid;
 	
 	grid-template-columns: 10px 1fr 10px;
-	grid-template-rows: 60% 40%;
+	grid-template-rows: 0.6fr 0.4fr;
 `;
 
 const BreadcrumbBox = styled.div`
@@ -26,6 +26,15 @@ const BreadcrumbBox = styled.div`
 	
 	display: grid;
 	grid-template-rows: repeat(2, max-content);
+	
+	@media screen and (max-width: 770px) {
+		margin-left: 5px;
+		margin-right: 5px;
+		
+		grid-row-gap: 20px;
+
+		grid-template-columns: 100%;
+	}
 `;
 
 const MainPage = () => {

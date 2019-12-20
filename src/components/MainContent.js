@@ -13,6 +13,13 @@ const ContentBox = styled.div`
 	height: max-content;
 	
 	grid-template-rows: max-content 1fr;
+	
+	@media screen and (max-width: 770px) {
+		width: 100%;
+		height: 100%;
+
+		grid-template-columns: 100%;
+	}
 `;
 
 const HeaderBox = styled.h1`
@@ -25,10 +32,17 @@ const HeaderBox = styled.h1`
 `;
 
 const TextBox = styled.p`
+	grid-row: 2;
+
 	width: 100%;
 	height: max-content;
 	
 	justify-self: start;
+	text-align: justify;
+	
+	@media screen and (max-width: 770px) {
+		height: 100%;
+	}
 `;
 
 const MainContent = () => {

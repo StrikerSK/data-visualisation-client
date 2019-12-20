@@ -13,6 +13,14 @@ const InlineBlock = styled.div`
 	
 	display: grid;
 	grid-template-columns: 10% 90%;
+	@media screen and (max-width: 770px) {
+		width: 100%;
+		margin-left: 5px;
+		margin-right: 5px;
+
+		grid-template-columns: 100%;
+		grid-template-rows: max-content max-content;
+	}
 `;
 
 const BreadcrumbLink = ({name, itemList}) => {

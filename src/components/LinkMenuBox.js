@@ -23,7 +23,7 @@ const MenuBox = styled.div`
 	}
 `;
 
-const rechartsItems = [
+export const rechartsItems = [
 	{name: "Stĺpcový graf", link: "/recharts/bar"},
 	{name: "Koláčový graf", link: "/recharts/pie"},
 	// {name: "Koláčové grafy", link: "/recharts/pie/collection"},
@@ -32,7 +32,7 @@ const rechartsItems = [
 	{name: "Dashboard", link: "/recharts"}
 ];
 
-const nivoItems = [
+export const nivoItems = [
 	{name: "Stĺpcový graf", link: "/nivo/bar"},
 	{name: "Koláčový graf", link: "/nivo/pie"},
 	{name: "Línový graf", link: "/nivo/line"},

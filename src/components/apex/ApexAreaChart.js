@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from "react";
-import Chart from 'react-apexcharts'
+import ReactApexChart from 'react-apexcharts';
 
 import {apexDataFetcher} from "../../lib/DataFetcher";
-import {GraphContainer} from "../LayoutContainers";
 import SpinnerComponent from "../SpinnerComponent";
 import {monthArray} from "../checkboxes/CheckboxMonths";
+import {connect} from "react-redux";
 
-const ApexAreaChart = () => {
+const ApexAreaChart = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	const options =  {
+	const options = {
 		dataLabels: {
 			enabled: false
 		},
@@ -19,10 +19,6 @@ const ApexAreaChart = () => {
 		},
 		xaxis: {
 			categories: monthArray,
-		},
-		yaxis: {
-			min: 0,
-			max: 200000
 		}
 	};
 
@@ -32,15 +28,22 @@ const ApexAreaChart = () => {
 	};
 
 	useEffect(() => {
-		apexDataFetcher([], finaliseTransaction);
-	}, []);
+		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
+	}, [months, person, validity, sellType]);
 
-	const chart = <Chart options={options} series={data} type="area" />;
+	const chart = <ReactApexChart options={options} series={data} type="area"/>;
 
 	return (
-		<GraphContainer>
-			<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
-		</GraphContainer>
+		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
 	);
 };
-export default ApexAreaChart;
+
+const mapStateToProps = state => ({
+	months: state.generalReducer.months,
+	person: state.generalReducer.person,
+	validity: state.generalReducer.validity,
+	sellType: state.generalReducer.sellType,
+	color: state.generalReducer.color
+});
+
+export default connect(mapStateToProps)(ApexAreaChart);

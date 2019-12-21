@@ -5,9 +5,10 @@ import CheckboxMonths from "../components/checkboxes/CheckboxMonths";
 import CheckboxSellType from "../components/checkboxes/CheckboxSellType";
 import React from "react";
 import ApexPieChart from "../components/apex/ApexPieChart";
+import ApexAreaChart from "../components/apex/ApexAreaChart";
+import ApexHeatmapChart from "../components/apex/ApexHeatmapChart";
 
-
-const ApexChartContainers = () => {
+export const ApexChartContainers = () => {
 	return (
 		<GraphContainer>
 			<ApexPieChart/>
@@ -21,4 +22,30 @@ const ApexChartContainers = () => {
 	);
 };
 
-export default ApexChartContainers;
+export const ApexAreaContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexAreaChart/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};
+
+export const ApexHeatmapContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexHeatmapChart/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};

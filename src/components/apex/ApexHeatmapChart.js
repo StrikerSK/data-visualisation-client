@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
 import ReactApexChart from 'react-apexcharts'
 
-import {pieDataGetter} from "../../lib/DataFetcher";
+import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import styled from "styled-components";
 import {connect} from "react-redux";
+import {monthArray} from "../checkboxes/CheckboxMonths";
 
 const OptionsComponent = styled.div`
   	grid-column: 1;
@@ -14,37 +15,35 @@ const OptionsComponent = styled.div`
   	height: 75%;
 `;
 
+const colors = ["#F3B415", "#F27036", "#663F59", "#6A6E94", "#4E88B4", "#00A7C6", "#18D8D8", '#A9D794', '#46AF78',
+	'#A93F55', '#8C5E58', '#2176FF', '#33A1FD', '#7A918D', '#BAFF29'
+];
+
 const ApexPieChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
-	const [labels, setLabels] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const finaliseTransaction = (result) => {
-		const outData = result.map(({value}) => value);
-		const resultLabels = result.map(({label}) => label);
-
-		setLabels(resultLabels);
-		setSeries(outData);
+		setSeries(result);
 		changeLoadedState(true);
 	};
 
 	useEffect(() => {
-		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
+		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
 	const options = {
-		labels: labels,
-		responsive: [{
-			options: {
-				chart: {
-					width: "100%",
-					height: "100%"
-				}
-			}
-		}]
+		dataLabels: {
+			enabled: false
+		},
+		colors: colors,
+		xaxis: {
+			type: 'category',
+			categories: monthArray
+		}
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="pie"/>;
+	const chart = <ReactApexChart options={options} series={series} type="heatmap"/>;
 
 	return (
 		<OptionsComponent>

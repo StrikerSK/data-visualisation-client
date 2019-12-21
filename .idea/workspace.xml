@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/apex/ApexPieChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/apex" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -69,19 +68,19 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/StrikerSK/FitnessPage.git" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
+      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start:dev">
@@ -171,21 +170,7 @@
       <workItem from="1576615786955" duration="16000" />
       <workItem from="1576620850470" duration="1049000" />
       <workItem from="1576707184477" duration="24000" />
-      <workItem from="1576934190278" duration="6859000" />
-    </task>
-    <task id="LOCAL-00001" summary="Adding PieChartComponent to the list">
-      <created>1566166573580</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1566166573580</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creating new pie chart model and updating existing models">
-      <created>1566602161319</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1566602161319</updated>
+      <workItem from="1576934190278" duration="8183000" />
     </task>
     <task id="LOCAL-00003" summary="Remaping data fetching for few components">
       <created>1571499057508</created>
@@ -516,7 +501,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576424585223</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Updating BarComponent Nivo">
+      <created>1576942860309</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1576942860309</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Adding Apex Pie Chart">
+      <created>1576942934424</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1576942934425</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,8 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Created new chart options and updated containers" />
-    <MESSAGE value="Update responsiveness of bar, line and pie charts" />
     <MESSAGE value="Added and applied color select options to component list" />
     <MESSAGE value="Introduced HOC to the graph components" />
     <MESSAGE value="Pie chart spinner application" />
@@ -562,7 +559,9 @@
     <MESSAGE value="Creating dashboards and updating part 3" />
     <MESSAGE value="Update dependencies" />
     <MESSAGE value="Creating dashboards and updating part 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating dashboards and updating part 4" />
+    <MESSAGE value="Updating BarComponent Nivo" />
+    <MESSAGE value="Adding Apex Pie Chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Apex Pie Chart" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -570,12 +569,12 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1576942860325">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1576942933456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
-    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576942860325" />
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576942933456" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

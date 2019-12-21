@@ -20,7 +20,7 @@ const componentArray = [
 
 const shuffleArray = () => componentArray.sort(() => Math.random() - 0.5);
 
-export const DashboardContainer = () => {
+export const NivoDashboards = () => {
 	return (
 		<DashboardTemplate>
 			<NivoLineComponent/>
@@ -31,7 +31,7 @@ export const DashboardContainer = () => {
 	);
 };
 
-export const DashboardContainerRandom = () => {
+export const NivoDashboardsRandom = () => {
 	return (
 		<DashboardTemplate>
 			{shuffleArray()}
@@ -39,4 +39,4 @@ export const DashboardContainerRandom = () => {
 	);
 };
 
-export default {DashboardContainer, DashboardContainerRandom};
+export default {NivoDashboards, NivoDashboardsRandom};

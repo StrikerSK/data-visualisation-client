@@ -6,11 +6,7 @@ import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {monthArray} from "../checkboxes/CheckboxMonths";
 
-const colors = ["#F3B415", "#F27036", "#663F59", "#6A6E94", "#4E88B4", "#00A7C6", "#18D8D8", '#A9D794', '#46AF78',
-	'#A93F55', '#8C5E58', '#2176FF', '#33A1FD', '#7A918D', '#BAFF29'
-];
-
-const ApexHeatmapChart = ({months, person, validity, sellType}) => {
+const ApexRadarChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
@@ -24,17 +20,23 @@ const ApexHeatmapChart = ({months, person, validity, sellType}) => {
 	}, [months, person, validity, sellType]);
 
 	const options = {
-		dataLabels: {
-			enabled: false
+		chart: {
+			height: 350,
+			type: 'radar',
+			dropShadow: {
+				enabled: true,
+				blur: 1,
+				left: 1,
+				top: 1
+			}
 		},
-		colors: colors,
-		xaxis: {
-			type: 'category',
-			categories: monthArray
-		}
+		fill: {
+			opacity: 0.4
+		},
+		labels: monthArray
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="heatmap"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radar"/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
@@ -49,4 +51,4 @@ const mapStateToProps = state => ({
 	color: state.generalReducer.color
 });
 
-export default connect(mapStateToProps)(ApexHeatmapChart);
+export default connect(mapStateToProps)(ApexRadarChart);

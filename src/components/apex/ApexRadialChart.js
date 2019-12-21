@@ -1,42 +1,50 @@
 import React, {useEffect, useState} from "react";
-import ReactApexChart from 'react-apexcharts'
+import ReactApexChart from 'react-apexcharts';
 
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {ApexRoundShapes} from "../StyledComponents";
 
-const ApexPieChart = ({months, person, validity, sellType}) => {
+const ApexRadialChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
 	const [labels, setLabels] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
+	const options = {
+		labels: labels,
+		radialBar: {
+			dataLabels: {
+				name: {
+					fontSize: '22px',
+				},
+				value: {
+					fontSize: '16px',
+				}
+			}
+		}
+	};
+
 	const finaliseTransaction = (result) => {
-		const outData = result.map(({value}) => value);
+		const outData = result.map(({value}) => Math.round(value / getSum() * 100));
 		const resultLabels = result.map(({label}) => label);
 
 		setLabels(resultLabels);
 		setSeries(outData);
 		changeLoadedState(true);
+
+		function getSum() {
+			return result
+				.map(({value}) => value)
+				.reduce((total, sum) => total + sum);
+		}
 	};
 
 	useEffect(() => {
 		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const options = {
-		labels: labels,
-		responsive: [{
-			options: {
-				chart: {
-					width: "100%",
-					height: "100%"
-				}
-			}
-		}]
-	};
-
-	const chart = <ReactApexChart options={options} series={series} type="pie"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radialBar"/>;
 
 	return (
 		<ApexRoundShapes>
@@ -53,4 +61,4 @@ const mapStateToProps = state => ({
 	color: state.generalReducer.color
 });
 
-export default connect(mapStateToProps)(ApexPieChart);
+export default connect(mapStateToProps)(ApexRadialChart);

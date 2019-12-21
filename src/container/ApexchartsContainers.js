@@ -7,6 +7,11 @@ import React from "react";
 import ApexPieChart from "../components/apex/ApexPieChart";
 import ApexAreaChart from "../components/apex/ApexAreaChart";
 import ApexHeatmapChart from "../components/apex/ApexHeatmapChart";
+import ApexRadarChart from "../components/apex/ApexRadarChart";
+import ApexLineChart from "../components/apex/ApexLineChart";
+import ApexBarChart from "../components/apex/ApexBarChart";
+import {LayoutSelect} from "../components/selects/LayoutSelect";
+import ApexRadialChart from "../components/apex/ApexRadialChart";
 
 export const ApexChartContainers = () => {
 	return (
@@ -40,6 +45,63 @@ export const ApexHeatmapContainer = () => {
 	return (
 		<GraphContainer>
 			<ApexHeatmapChart/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};
+
+export const ApexRadarContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexRadarChart/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};
+
+export const ApexLineContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexLineChart/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};
+
+export const ApexBarContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexBarChart/>
+			<OptionComponent>
+				<LayoutSelect/>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
+		</GraphContainer>
+	)
+};
+
+export const ApexRadialContainer = () => {
+	return (
+		<GraphContainer>
+			<ApexRadialChart/>
 			<OptionComponent>
 				<CheckboxPerson/>
 				<CheckboxValidity/>

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheet/GraphContainer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,56 +166,7 @@
       <workItem from="1576615786955" duration="16000" />
       <workItem from="1576620850470" duration="1049000" />
       <workItem from="1576707184477" duration="24000" />
-      <workItem from="1576934190278" duration="8183000" />
-    </task>
-    <task id="LOCAL-00003" summary="Remaping data fetching for few components">
-      <created>1571499057508</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1571499057508</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Remaping data fetching for few components">
-      <created>1571506560716</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1571506560716</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Adding container for Pie chart">
-      <created>1571563047899</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571563047899</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Created new chart options and updated containers">
-      <created>1571586894896</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1571586894896</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Created SellType and Months checkboxes">
-      <created>1571605784318</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1571605784318</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Created SellType and Months checkboxes">
-      <created>1571605814681</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1571605814681</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Deleted lock files">
-      <created>1571606034245</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1571606034245</updated>
+      <workItem from="1576934190278" duration="17532000" />
     </task>
     <task id="LOCAL-00010" summary="Deleted lock files">
       <created>1571606068370</created>
@@ -515,7 +462,56 @@
       <option name="project" value="LOCAL" />
       <updated>1576942934425</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Adding Apex Heatmap Chart">
+      <created>1576944398642</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1576944398642</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Adding Multiple Chart">
+      <created>1576945653072</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1576945653073</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Adding Multiple Chart">
+      <created>1576945683386</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1576945683387</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Adding Multiple Chart">
+      <created>1576960303980</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1576960303980</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Adding Multiple Chart">
+      <created>1576967649788</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1576967649788</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Adding Multiple Chart">
+      <created>1576968506642</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1576968506642</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Adding Multiple Chart">
+      <created>1576968817540</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1576968817540</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,8 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Added and applied color select options to component list" />
-    <MESSAGE value="Introduced HOC to the graph components" />
     <MESSAGE value="Pie chart spinner application" />
     <MESSAGE value="Implementing Webpack" />
     <MESSAGE value="Refactoring of code" />
@@ -561,7 +555,9 @@
     <MESSAGE value="Creating dashboards and updating part 4" />
     <MESSAGE value="Updating BarComponent Nivo" />
     <MESSAGE value="Adding Apex Pie Chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Apex Pie Chart" />
+    <MESSAGE value="Adding Apex Heatmap Chart" />
+    <MESSAGE value="Adding Multiple Chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Multiple Chart" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -569,16 +565,17 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1576942933456">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1576968816872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
-    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576942933456" />
-    <state x="184" y="85" key="DiffContextDialog" timestamp="1575635737776">
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576968816872" />
+    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog" timestamp="1576968547197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
+    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576968547197" />
     <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576437502041">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
@@ -611,10 +608,15 @@
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
     <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576452239712" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576942834849" />
-    <state x="-2073" y="910" key="VCS.ChangelistChooser" timestamp="1576255166325">
-      <screen x="-3840" y="-590" width="3840" height="2120" />
+    <state x="692" y="146" key="RollbackChangesDialog" timestamp="1576945687811">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="692" y="146" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576945687811" />
+    <state x="884" y="736" key="VCS.ChangelistChooser" timestamp="1576945664906">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
+    <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
     <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1576427975940">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
@@ -634,16 +636,17 @@
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1576936266145">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1576946913871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576936266145" />
-    <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup" timestamp="1576425619978">
-      <screen x="-3840" y="-590" width="3840" height="2120" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576946913871" />
+    <state x="623" y="225" width="672" height="679" key="search.everywhere.popup" timestamp="1576968013533">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
     <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576425619978" />
+    <state x="623" y="225" width="672" height="679" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576968013533" />
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

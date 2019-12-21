@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Chart from 'react-apexcharts'
 
-import {apexDataFetcher} from "../lib/DataFetcher";
-import {GraphContainer} from "./LayoutContainers";
-import SpinnerComponent from "./SpinnerComponent";
-import {monthArray} from "./checkboxes/CheckboxMonths";
+import {apexDataFetcher} from "../../lib/DataFetcher";
+import {GraphContainer} from "../LayoutContainers";
+import SpinnerComponent from "../SpinnerComponent";
+import {monthArray} from "../checkboxes/CheckboxMonths";
 
 const ApexAreaChart = () => {
 	const [data, setData] = useState([{}]);

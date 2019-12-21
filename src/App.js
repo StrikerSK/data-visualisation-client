@@ -9,7 +9,7 @@ import NivoBubbleContainer from "./container/NivoBubbleContainer";
 import PieChartMonthly from "./components/recharts/PieChartMonthly";
 import {DashboardContainer, DashboardContainerRandom} from "./container/DashboardContainer";
 import {RechartsDashboard, RechartsDashboardRandom} from "./container/RechartsDashboard";
-import ApexAreaChart from "./components/ApexAreaChart";
+import ApexAreaChart from "./components/apex/ApexAreaChart";
 
 import {
 	RechartsAreaContainer,
@@ -25,6 +25,7 @@ import {
 	NivoStreamContainer,
 	NivoWaffleContainer
 } from "./container/NivoGraphCollection";
+import ApexChartContainers from "./container/ApexchartsContainers";
 
 class App extends Component {
 	render() {
@@ -52,6 +53,7 @@ class App extends Component {
 					<Route exact strict path="/nivo/radar" render={() => <NivoRadarContainer/>}/>
 					<Route exact strict path="/nivo/bubble" render={() => <NivoBubbleContainer/>}/>
 					<Route exact strict path="/apex/area" render={() => <ApexAreaChart/>}/>
+					<Route exact strict path="/apex/pie" render={() => <ApexChartContainers/>}/>
 				</Switch>
 			</BrowserRouter>
 		);

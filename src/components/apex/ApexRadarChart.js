@@ -20,6 +20,10 @@ const ApexRadarChart = ({months, person, validity, sellType}) => {
 	}, [months, person, validity, sellType]);
 
 	const options = {
+		legend: {
+			position: 'top',
+			horizontalAlign: 'center'
+		},
 		chart: {
 			height: 350,
 			type: 'radar',

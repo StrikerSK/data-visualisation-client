@@ -10,7 +10,7 @@ import ApexHeatmapChart from "../components/apex/ApexHeatmapChart";
 import ApexRadarChart from "../components/apex/ApexRadarChart";
 import ApexLineChart from "../components/apex/ApexLineChart";
 import ApexBarChart from "../components/apex/ApexBarChart";
-import {LayoutSelect} from "../components/selects/LayoutSelect";
+import {GroupModeSelect, LayoutSelect} from "../components/selects/LayoutSelect";
 import ApexRadialChart from "../components/apex/ApexRadialChart";
 
 export const ApexChartContainers = () => {
@@ -88,6 +88,7 @@ export const ApexBarContainer = () => {
 		<GraphContainer>
 			<ApexBarChart/>
 			<OptionComponent>
+				<GroupModeSelect/>
 				<LayoutSelect/>
 				<CheckboxPerson/>
 				<CheckboxValidity/>

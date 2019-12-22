@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,21 +167,8 @@
       <workItem from="1576615786955" duration="16000" />
       <workItem from="1576620850470" duration="1049000" />
       <workItem from="1576707184477" duration="24000" />
-      <workItem from="1576934190278" duration="17532000" />
-    </task>
-    <task id="LOCAL-00010" summary="Deleted lock files">
-      <created>1571606068370</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1571606068370</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Fixing package location of Pie chart component">
-      <created>1571609523094</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1571609523094</updated>
+      <workItem from="1576934190278" duration="17615000" />
+      <workItem from="1577012398320" duration="8100000" />
     </task>
     <task id="LOCAL-00012" summary="Optimized responsiveness of application">
       <created>1572265199422</created>
@@ -511,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576968817540</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Adding Multiple Chart">
+      <created>1576969169602</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1576969169602</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Updating Multiple Chart part 2">
+      <created>1577018836147</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1577018836147</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Pie chart spinner application" />
     <MESSAGE value="Implementing Webpack" />
     <MESSAGE value="Refactoring of code" />
     <MESSAGE value="Data sorter by values" />
@@ -557,7 +558,8 @@
     <MESSAGE value="Adding Apex Pie Chart" />
     <MESSAGE value="Adding Apex Heatmap Chart" />
     <MESSAGE value="Adding Multiple Chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Multiple Chart" />
+    <MESSAGE value="Updating Multiple Chart part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating Multiple Chart part 2" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -565,12 +567,12 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1576968816872">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1577018835282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
-    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576968816872" />
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577018835282" />
     <state x="184" y="85" width="1536" height="861" key="DiffContextDialog" timestamp="1576968547197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -584,30 +586,30 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
-    <state width="1899" height="210" key="GridCell.Tab.0.bottom" timestamp="1576942834849">
+    <state width="1899" height="210" key="GridCell.Tab.0.bottom" timestamp="1577036145984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
     <state width="3802" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576452239712" />
-    <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576942834849" />
-    <state width="1899" height="210" key="GridCell.Tab.0.center" timestamp="1576942834848">
+    <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577036145984" />
+    <state width="1899" height="210" key="GridCell.Tab.0.center" timestamp="1577036145984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
     <state width="3802" height="216" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576452239712" />
-    <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576942834848" />
-    <state width="1899" height="210" key="GridCell.Tab.0.left" timestamp="1576942834848">
+    <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577036145984" />
+    <state width="1899" height="210" key="GridCell.Tab.0.left" timestamp="1577036145983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
     <state width="3802" height="216" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576452239711" />
-    <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576942834848" />
-    <state width="1899" height="210" key="GridCell.Tab.0.right" timestamp="1576942834849">
+    <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577036145983" />
+    <state width="1899" height="210" key="GridCell.Tab.0.right" timestamp="1577036145984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
     <state width="3802" height="216" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576452239712" />
-    <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576942834849" />
+    <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577036145984" />
     <state x="692" y="146" key="RollbackChangesDialog" timestamp="1576945687811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -617,11 +619,12 @@
     </state>
     <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
     <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
-    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1576427975940">
-      <screen x="-3840" y="-590" width="3840" height="2120" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1576969177654">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
     <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576427975940" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576969177654" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -636,11 +639,11 @@
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1576946913871">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577013315481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576946913871" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577013315481" />
     <state x="623" y="225" width="672" height="679" key="search.everywhere.popup" timestamp="1576968013533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -32,6 +32,11 @@ const ApexLineChart = ({months, person, validity, sellType}) => {
 		},
 		xaxis: {
 			categories: monthArray,
+		},
+		legend: {
+			position: 'top',
+			horizontalAlign: 'center',
+			offsetX: 40
 		}
 	};
 
@@ -44,7 +49,7 @@ const ApexLineChart = ({months, person, validity, sellType}) => {
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const chart = <ReactApexChart options={options} series={data} type="line"/>;
+	const chart = <ReactApexChart options={options} series={data} type="line" height={"100%"} width={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

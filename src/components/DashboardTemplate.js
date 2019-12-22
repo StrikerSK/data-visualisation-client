@@ -3,10 +3,10 @@ import styled from "styled-components";
 import {HeaderComponent} from "./LayoutContainers";
 
 const DashboardBox = styled.div`
-	display: grid;
-	height: 125vh;
 	width: 99%;
-
+	height: 125vh;
+	
+	display: grid;
 	grid-row-gap: 5px;
 	
 	grid-template-columns: 10px repeat(2, 50%) 10px;
@@ -24,6 +24,9 @@ const DashboardBox = styled.div`
 `;
 
 const DashboardItem = styled.div`
+	width: 100%;
+	height: 100%;
+
 	grid-column: ${props => props.column};
 	grid-row: ${props => props.row};
 	

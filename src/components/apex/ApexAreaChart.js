@@ -11,6 +11,9 @@ const ApexAreaChart = ({months, person, validity, sellType}) => {
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const options = {
+		chart: {
+			stacked: true
+		},
 		dataLabels: {
 			enabled: false
 		},
@@ -19,6 +22,11 @@ const ApexAreaChart = ({months, person, validity, sellType}) => {
 		},
 		xaxis: {
 			categories: monthArray,
+		},
+		legend: {
+			position: 'top',
+			horizontalAlign: 'center',
+			offsetX: 40
 		}
 	};
 

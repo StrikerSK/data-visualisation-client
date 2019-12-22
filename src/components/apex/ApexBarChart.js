@@ -6,20 +6,21 @@ import SpinnerComponent from "../SpinnerComponent";
 import {monthArray} from "../checkboxes/CheckboxMonths";
 import {connect} from "react-redux";
 
-const ApexBarChart = ({months, person, validity, sellType, barLayout}) => {
+const ApexBarChart = ({months, person, validity, sellType, barLayout, barGrouping}) => {
 	const [data, setData] = useState([{}]);
-	const [isVertical, setVertical] = useState(false);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const options = {
 		chart: {
-			height: 350,
 			type: 'bar',
-			stacked: true,
+			stacked: barGrouping === "stacked"
+		},
+		dataLabels: {
+			enabled: window.innerWidth > 770 && barGrouping === "stacked"
 		},
 		plotOptions: {
 			bar: {
-				horizontal: isVertical,
+				horizontal: barLayout === "horizontal",
 			},
 		},
 		stroke: {
@@ -35,7 +36,7 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout}) => {
 		},
 		legend: {
 			position: 'top',
-			horizontalAlign: 'left',
+			horizontalAlign: 'center',
 			offsetX: 40
 		}
 	};
@@ -45,16 +46,11 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout}) => {
 		changeLoadedState(true);
 	};
 
-	const getLayout = () => {
-		setVertical(barLayout === "horizontal");
-	};
-
 	useEffect(() => {
-		getLayout();
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
-	}, [months, person, barLayout, validity, sellType]);
+	}, [months, person, barLayout, barGrouping, validity, sellType]);
 
-	const chart = <ReactApexChart options={options} series={data} type="bar"/>;
+	const chart = <ReactApexChart options={options} series={data} type="bar" height={"100%"} width={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
@@ -67,7 +63,8 @@ const mapStateToProps = state => ({
 	validity: state.generalReducer.validity,
 	sellType: state.generalReducer.sellType,
 	color: state.generalReducer.color,
-	barLayout: state.generalReducer.barLayoutValue
+	barLayout: state.generalReducer.barLayoutValue,
+	barGrouping: state.generalReducer.barGroupingValue,
 });
 
 export default connect(mapStateToProps)(ApexBarChart);

@@ -21,6 +21,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 					delete obj[property]
 				}
 			});
+			return Object.keys(obj);
 		}
 	};
 

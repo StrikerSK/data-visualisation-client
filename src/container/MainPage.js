@@ -1,5 +1,5 @@
 import React from "react";
-import {nivoItems, rechartsItems} from "../components/LinkMenuBox";
+import {apexItems, nivoItems, rechartsItems} from "../components/LinkMenuBox";
 import styled from 'styled-components'
 import BreadcrumbLink from "../components/BreadcrumLink";
 import MainContent from "../components/MainContent";
@@ -25,7 +25,7 @@ const BreadcrumbBox = styled.div`
 	align-self: start;
 	
 	display: grid;
-	grid-template-rows: repeat(2, max-content);
+	grid-template-rows: repeat(3, max-content);
 	
 	@media screen and (max-width: 770px) {
 		margin-left: 5px;
@@ -45,6 +45,7 @@ const MainPage = () => {
 			<BreadcrumbBox>
 				<BreadcrumbLink name={"Nivo:"} itemList={nivoItems}/>
 				<BreadcrumbLink name={"Recharts:"} itemList={rechartsItems}/>
+				<BreadcrumbLink name={"Apex:"} itemList={apexItems}/>
 			</BreadcrumbBox>
 		</MainContainer>
 	)

@@ -4,13 +4,24 @@ import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 
-const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, validity, sellType, color}) => {
+const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
+	const [labels, setLabels] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const finaliseTransaction = (result) => {
+		setLabels(getLabels(result));
 		setData(result);
 		changeLoadedState(true);
+
+		function getLabels(inputObject) {
+			const obj = inputObject[0];
+			Object.keys(obj).forEach((property) => {
+				if (obj[property] === 0 || property === "month") {
+					delete obj[property]
+				}
+			});
+		}
 	};
 
 	useEffect(() => {
@@ -21,9 +32,14 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 	const barGraph = (
 		<ResponsiveBar
 			data={data}
-			keys={barOrder}
+			keys={labels}
 			indexBy="month"
-			margin={(window.innerWidth < 770 ? {top: 10, right: 5, bottom: 80, left: 70} : {top: 20, right: 30, bottom: 80, left: 80})}
+			margin={(window.innerWidth < 770 ? {top: 10, right: 5, bottom: 80, left: 70} : {
+				top: 20,
+				right: 30,
+				bottom: 80,
+				left: 80
+			})}
 			padding={0.3}
 			groupMode={barGrouping}
 			layout={barLayout}
@@ -101,8 +117,7 @@ const mapStateToProps = state => ({
 	sellType: state.generalReducer.sellType,
 	color: state.generalReducer.color,
 	barGrouping: state.generalReducer.barGroupingValue,
-	barLayout: state.generalReducer.barLayoutValue,
-	barOrder: state.generalReducer.barDataKeys
+	barLayout: state.generalReducer.barLayoutValue
 });
 
 export default connect(mapStateToProps)(NivoBarComponent);

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Updating Multiple Chart part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LinkMenuBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LinkMenuBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
@@ -573,11 +577,11 @@
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577018835282" />
-    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog" timestamp="1576968547197">
+    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog" timestamp="1577039111648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
-    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576968547197" />
+    <state x="184" y="85" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577039111648" />
     <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576437502041">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
@@ -619,12 +623,12 @@
     </state>
     <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
     <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1576969177654">
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1577038623982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
     <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576427975940" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576969177654" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577038623982" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -639,20 +643,21 @@
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1577013315481">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577038642358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577013315481" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577038642358" />
     <state x="623" y="225" width="672" height="679" key="search.everywhere.popup" timestamp="1576968013533">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
     <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576425619978" />
     <state x="623" y="225" width="672" height="679" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576968013533" />
-    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1575637116750">
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1577039092030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575637116750" />
+    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577039092030" />
   </component>
 </project>

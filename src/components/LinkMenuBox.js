@@ -8,9 +8,9 @@ const MenuBox = styled.div`
   	grid-column: 2;
 	grid-row: 1;
 	
-	width: 300px;	
+	width: 400px;	
 	display: grid;
-	grid-template-columns: repeat(3, 33%);
+	grid-template-columns: repeat(4, 25%);
 	
 	justify-self: right;
 	align-self: center;
@@ -41,6 +41,17 @@ export const nivoItems = [
 	{name: "Dashboard", link: "/nivo"}
 ];
 
+export const apexItems = [
+	{name: "Stĺpcový graf", link: "/apex/bar"},
+	{name: "Koláčový graf", link: "/apex/pie"},
+	{name: "Línový graf", link: "/apex/line"},
+	{name: "Radarový graf", link: "/apex/radar"},
+	{name: "Plošný graf", link: "/apex/area"},
+	{name: "Radiálny graf", link: "/apex/radial"},
+	{name: "Heatmap", link: "/apex/heatmap"},
+	{name: "Dashboard", link: "/apex"}
+];
+
 export const LinkMenuBox = () => {
 	const history = useHistory();
 
@@ -52,6 +63,7 @@ export const LinkMenuBox = () => {
 		<MenuBox>
 			<MenuListComposition name={"Recharts"} items={rechartsItems}/>
 			<MenuListComposition name={"Nivo"} items={nivoItems}/>
+			<MenuListComposition name={"Apex"} items={apexItems}/>
 			<Button aria-controls="simple-menu" onClick={handleClick} disabled={window.location.pathname === "/"}>Úvod</Button>
 		</MenuBox>
 	);

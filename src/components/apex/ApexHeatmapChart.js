@@ -34,7 +34,7 @@ const ApexHeatmapChart = ({months, person, validity, sellType}) => {
 		}
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="heatmap"/>;
+	const chart = <ReactApexChart options={options} series={series} type="heatmap" height={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

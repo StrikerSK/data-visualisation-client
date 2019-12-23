@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StyledComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StyledComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexPieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexPieChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,20 +169,6 @@
       <workItem from="1576707184477" duration="24000" />
       <workItem from="1576934190278" duration="17615000" />
       <workItem from="1577012398320" duration="8100000" />
-    </task>
-    <task id="LOCAL-00013" summary="Optimized responsiveness of application">
-      <created>1572265629366</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1572265629366</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Update responsiveness of bar, line and pie charts">
-      <created>1572383149539</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1572383149539</updated>
     </task>
     <task id="LOCAL-00015" summary="Update responsiveness of bar, line and pie charts">
       <created>1572383588121</created>
@@ -515,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577039213698</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Bug fixing of update">
+      <created>1577040125102</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1577040125102</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Bug fixing of update">
+      <created>1577132165722</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1577132165722</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Refactoring of code" />
     <MESSAGE value="Data sorter by values" />
     <MESSAGE value="Created bar organization and added layout system" />
     <MESSAGE value="Code review changes vol.1" />
@@ -561,7 +558,8 @@
     <MESSAGE value="Adding Multiple Chart" />
     <MESSAGE value="Updating Multiple Chart part 2" />
     <MESSAGE value="Updating after rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating after rebase" />
+    <MESSAGE value="Bug fixing of update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing of update" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -569,12 +567,12 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1577039211873">
+    <state x="559" y="28" key="CommitChangelistDialog2" timestamp="1577132165099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576424584595" />
-    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577039211873" />
+    <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577132165099" />
     <state x="184" y="85" width="1536" height="861" key="DiffContextDialog" timestamp="1577039991027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -621,12 +619,12 @@
     </state>
     <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
     <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1577039220703">
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1577040129404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
     <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576427975940" />
-    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577039220703" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577040129404" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

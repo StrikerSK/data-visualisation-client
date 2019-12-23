@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: '100%',
 	},
 	formLabel: {
-		minWidth: '30%',
+		minWidth: window.innerWidth > 770 ? '30%' : '45%'
 	}
 }));
 

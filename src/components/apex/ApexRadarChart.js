@@ -40,7 +40,7 @@ const ApexRadarChart = ({months, person, validity, sellType}) => {
 		labels: monthArray
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="radar"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radar" width={"100%"} height={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

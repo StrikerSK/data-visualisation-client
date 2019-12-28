@@ -16,6 +16,12 @@ export const RechartsAreaContainer = () => {
 	return (
 		<GraphContainer>
 			<AreaChartComponent/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
 		</GraphContainer>
 	);
 };
@@ -38,6 +44,12 @@ export const RechartsLineContainer = () => {
 	return (
 		<GraphContainer>
 			<LineGraphComponent/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
 		</GraphContainer>
 	);
 };
@@ -46,6 +58,12 @@ export const RechartsStackedContainer = () => {
 	return (
 		<GraphContainer>
 			<StackedGraphComponent/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
 		</GraphContainer>
 	);
 };
@@ -54,6 +72,12 @@ export const RechartsPieContainer = () => {
 	return (
 		<GraphContainer>
 			<PieChartYearly/>
+			<OptionComponent>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
 		</GraphContainer>
 	);
 };

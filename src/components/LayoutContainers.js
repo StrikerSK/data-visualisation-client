@@ -47,7 +47,7 @@ const HeaderAndNav = styled.div`
 		grid-column: 1;
 		grid-row: 1;
 		
-		grid-template-rows: repeat(50% 50%);
+		grid-template-rows: repeat(2, 50%);
 	}
 `;
 

@@ -15,6 +15,7 @@ export const generateColorArray = (colorNumber) => {
 	return colorArray;
 };
 
+//Get labels for received data
 export const getLabels = (inputObject) => {
 	const obj = inputObject[0];
 	Object.keys(obj).forEach((property) => {
@@ -23,4 +24,16 @@ export const getLabels = (inputObject) => {
 		}
 	});
 	return Object.keys(obj);
+};
+
+//Validates if current verifiedArray is checked
+export const validateComponentChecks = (verifiedArray, inputArray) => {
+	const storedMonths = inputArray.split("&").map(item => item.split("=")[1].replace("%20", " "));
+	return verifiedArray.map(item => {
+		if (storedMonths.includes(item.itemName)) {
+			return item;
+		} else {
+			return {...item, isChecked: false}
+		}
+	});
 };

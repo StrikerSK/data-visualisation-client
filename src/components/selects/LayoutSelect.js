@@ -2,9 +2,9 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
-import React, {useState} from "react";
+import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {useDispatch} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import {updateBarGrouping, updateBarLayout} from "../../lib/actions";
 
 const useStyles = makeStyles(theme => ({
@@ -20,13 +20,11 @@ const useStyles = makeStyles(theme => ({
 export const defaultLayoutValue = "vertical";
 export const defaultGroupingValue = "stacked";
 
-export const LayoutSelect = () => {
+const LayoutSelect = ({layout}) => {
 	const dispatch = useDispatch();
-	const [layout, setLayout] = useState(defaultLayoutValue);
 
 	const handleChange = event => {
 		const {value} = event.target;
-		setLayout(value);
 		dispatch(updateBarLayout(value));
 	};
 
@@ -47,13 +45,11 @@ export const LayoutSelect = () => {
 	);
 };
 
-export const GroupModeSelect = () => {
+const GroupModeSelect = ({grouping}) => {
 	const dispatch = useDispatch();
-	const [grouping, setGrouping] = useState(defaultGroupingValue);
 
 	const handleChange = event => {
 		const {value} = event.target;
-		setGrouping(value);
 		dispatch(updateBarGrouping(value));
 	};
 
@@ -73,4 +69,11 @@ export const GroupModeSelect = () => {
 		</FormControl>
 	);
 };
-export default {LayoutSelect, GroupModeSelect};
+
+const mapStateToProps = state => ({
+	grouping: state.generalReducer.barGroupingValue,
+	layout: state.generalReducer.barLayoutValue
+});
+
+export const ConnectedLayoutSelect = connect(mapStateToProps)(LayoutSelect);
+export const ConnectedGroupModeSelect = connect(mapStateToProps)(GroupModeSelect);

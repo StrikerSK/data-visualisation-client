@@ -4,7 +4,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {useDispatch} from "react-redux";
+import {connect, useDispatch} from "react-redux";
 import {updateColor} from "../../lib/actions";
 
 export const defaultColorName = "nivo";
@@ -19,14 +19,12 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export const ColorSchemeSelector = () => {
+export const ColorSchemeSelector = ({color}) => {
 	const dispatch = useDispatch();
-	const [color, setColor] = React.useState("nivo");
 	const classes = useStyles();
 
 	const handleChange = event => {
 		const colorName = event.target.value;
-		setColor(colorName);
 		dispatch(updateColor(colorName))
 	};
 
@@ -54,4 +52,8 @@ export const ColorSchemeSelector = () => {
 	)
 };
 
-export default ColorSchemeSelector;
+const mapStateToProps = state => ({
+	color: state.generalReducer.color,
+});
+
+export default connect(mapStateToProps)(ColorSchemeSelector);

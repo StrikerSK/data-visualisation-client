@@ -2,7 +2,10 @@ import React from "react";
 import NivoBarComponent from "../components/nivo/NivoBarComponent";
 
 import {GraphContainer, OptionComponent} from "../components/LayoutContainers";
-import {GroupModeSelect, LayoutSelect} from "../components/selects/LayoutSelect";
+import {
+	ConnectedGroupModeSelect as GroupModeSelect,
+	ConnectedLayoutSelect as LayoutSelect
+} from "../components/selects/LayoutSelect";
 import ColorSchemeSelector from "../components/selects/ColorSchemeSelector";
 import CheckboxPerson from "../components/checkboxes/CheckboxPerson";
 import CheckboxValidity from "../components/checkboxes/CheckboxValidity";

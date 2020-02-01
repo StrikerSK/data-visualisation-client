@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/ReduceAccessor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexHeatmapChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexLineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexLineChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexPieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexPieChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadarChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxValidity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxValidity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBubbleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoLineComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoRadarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/AreaChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/BarChartComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/LineGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/StackedGraphComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoGraphCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DashboardTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -603,11 +580,11 @@
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
     <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580232099815" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577133032709" />
-    <state x="-3472" y="-417" width="1536" height="861" key="DiffContextDialog" timestamp="1580232077403">
+    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1580516172213">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
-    <state x="-3472" y="-417" key="DiffContextDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580232077403" />
+    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580516172212" />
     <state x="184" y="85" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577369853964" />
     <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576437502041">
       <screen x="-3840" y="-590" width="3840" height="2120" />
@@ -674,10 +651,11 @@
     </state>
     <state x="-1195" y="151" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1575662381723" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576087288163" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1577368544082">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-2608" y="-101" key="run.anything.popup" timestamp="1580516224962">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575636493278" />
+    <state x="-2608" y="-101" key="run.anything.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580516224962" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577368544082" />
     <state x="623" y="225" width="672" height="679" key="search.everywhere.popup" timestamp="1577368733293">
       <screen x="0" y="0" width="1920" height="1040" />

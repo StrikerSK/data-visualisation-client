@@ -2,7 +2,7 @@ import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Modal from "@material-ui/core/Modal";
 import Button from "@material-ui/core/Button";
-import {GroupModeSelect, LayoutSelect} from "./selects/LayoutSelect";
+import {ConnectedLayoutSelect, ConnectedGroupModeSelect} from "./selects/LayoutSelect";
 import CheckboxPerson from "./checkboxes/CheckboxPerson";
 import CheckboxValidity from "./checkboxes/CheckboxValidity";
 import CheckboxMonths from "./checkboxes/CheckboxMonths";
@@ -64,8 +64,8 @@ const ModalWindow = () => {
 			>
 
 				<div style={modalStyle} className={classes.paper}>
-					<GroupModeSelect/>
-					<LayoutSelect/>
+					<ConnectedLayoutSelect/>
+					<ConnectedGroupModeSelect/>
 					<CheckboxPerson/>
 					<CheckboxValidity/>
 					<CheckboxMonths/>
@@ -77,4 +77,5 @@ const ModalWindow = () => {
 		</ModalBox>
 	)
 };
+
 export default ModalWindow;

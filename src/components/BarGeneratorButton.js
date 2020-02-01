@@ -46,4 +46,5 @@ const BarGeneratorButton = () => {
 		<Button variant="contained" onClick={() => shuffle()} color="primary" className={classes.button}>Zmeň poradie</Button>
 	)
 };
+
 export default BarGeneratorButton;

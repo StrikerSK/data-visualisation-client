@@ -3,6 +3,7 @@ import {ResponsiveBar} from "@nivo/bar";
 import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -111,14 +112,4 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	return <SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color,
-	barGrouping: state.generalReducer.barGroupingValue,
-	barLayout: state.generalReducer.barLayoutValue
-});
-
-export default connect(mapStateToProps)(NivoBarComponent);
+export default connect(accessAll)(NivoBarComponent);

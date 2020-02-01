@@ -5,6 +5,7 @@ import {Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor, getLabels} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 
 const BarChartComponent = ({months, person, validity, sellType}) => {
@@ -17,7 +18,7 @@ const BarChartComponent = ({months, person, validity, sellType}) => {
 		createBars();
 		changeLoadedState(true);
 
-		function createBars(){
+		function createBars() {
 			setBars(getLabels(result).map(label => {
 				return <Bar type="monotone" dataKey={label} fill={generateColor()}/>
 			}))
@@ -46,11 +47,4 @@ const BarChartComponent = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-});
-
-export default connect(mapStateToProps)(BarChartComponent);
+export default connect(accessAll)(BarChartComponent);

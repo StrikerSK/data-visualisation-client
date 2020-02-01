@@ -4,8 +4,8 @@ import ReactApexChart from 'react-apexcharts';
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
-import {ApexRoundShapes} from "../StyledComponents";
 import styled from "styled-components";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 export const RadialBox = styled.div`
   	grid-column: 1;
@@ -64,12 +64,4 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexRadialChart);
+export default connect(accessAll)(ApexRadialChart);

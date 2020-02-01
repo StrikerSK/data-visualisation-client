@@ -3,6 +3,7 @@ import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../SpinnerComponent";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -112,12 +113,4 @@ const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 	return <SpinnerComponent children={pieChart} isDataLoaded={isLoaded}/>;
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(NivoPieComponent);
+export default connect(accessAll)(NivoPieComponent);

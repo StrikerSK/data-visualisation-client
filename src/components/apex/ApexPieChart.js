@@ -4,6 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexPieChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
@@ -46,12 +47,4 @@ const ApexPieChart = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexPieChart);
+export default connect(accessAll)(ApexPieChart);

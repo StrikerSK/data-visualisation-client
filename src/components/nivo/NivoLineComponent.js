@@ -3,6 +3,7 @@ import {ResponsiveLine} from "@nivo/line";
 import SpinnerComponent from "../SpinnerComponent";
 import {lineDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([]);
@@ -71,12 +72,4 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	return <SpinnerComponent children={LineGraph} isDataLoaded={isLoaded}/>
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(NivoLineComponent);
+export default connect(accessAll)(NivoLineComponent);

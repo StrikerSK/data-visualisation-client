@@ -6,6 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {connect, useDispatch} from "react-redux";
 import {updateColor} from "../../lib/actions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 export const defaultColorName = "nivo";
 
@@ -52,8 +53,4 @@ export const ColorSchemeSelector = ({color}) => {
 	)
 };
 
-const mapStateToProps = state => ({
-	color: state.generalReducer.color,
-});
-
-export default connect(mapStateToProps)(ColorSchemeSelector);
+export default connect(accessAll)(ColorSchemeSelector);

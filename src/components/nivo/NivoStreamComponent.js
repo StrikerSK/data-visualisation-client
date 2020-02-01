@@ -3,6 +3,8 @@ import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {dataKeys} from "../checkboxes/CheckboxPerson";
+import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoStreamComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -106,4 +108,5 @@ const NivoStreamComponent = () => {
 		<SpinnerComponent children={streamGraph} isDataLoaded={isLoaded}/>
 	);
 };
-export default NivoStreamComponent;
+
+export default connect(accessAll)(NivoStreamComponent);

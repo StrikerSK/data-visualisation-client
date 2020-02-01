@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor, getLabels} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const LineGraphComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
@@ -66,11 +67,4 @@ const LineGraphComponent = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-});
-
-export default connect(mapStateToProps)(LineGraphComponent);
+export default connect(accessAll)(LineGraphComponent);

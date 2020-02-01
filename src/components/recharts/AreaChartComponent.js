@@ -5,6 +5,7 @@ import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAx
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor, getLabels} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const AreaChartComponent = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
@@ -18,7 +19,7 @@ const AreaChartComponent = ({months, person, validity, sellType}) => {
 		changeLoadedState(true);
 
 		function createGraphElements() {
-			if(area.length !== 0 && line.length !== 0){
+			if (area.length !== 0 && line.length !== 0) {
 				setArea([]);
 				setLine([]);
 			}
@@ -69,11 +70,4 @@ const AreaChartComponent = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType
-});
-
-export default connect(mapStateToProps)(AreaChartComponent);
+export default connect(accessAll)(AreaChartComponent);

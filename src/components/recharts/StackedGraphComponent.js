@@ -5,6 +5,7 @@ import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {generateColor, getLabels} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 
 const StackedGraphComponent = ({person, months, sellType, validity}) => {
@@ -46,11 +47,4 @@ const StackedGraphComponent = ({person, months, sellType, validity}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-});
-
-export default connect(mapStateToProps)(StackedGraphComponent);
+export default connect(accessAll)(StackedGraphComponent);

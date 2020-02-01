@@ -46,5 +46,6 @@ export const ColorSchemeSelectorHeatmap = () => {
 			</Select>
 		</FormControl>
 	)
-}
+};
+
 export default ColorSchemeSelectorHeatmap;

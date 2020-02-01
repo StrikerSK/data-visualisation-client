@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const PieChartYearly = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
@@ -61,11 +62,4 @@ const PieChartYearly = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-});
-
-export default connect(mapStateToProps)(PieChartYearly);
+export default connect(accessAll)(PieChartYearly);

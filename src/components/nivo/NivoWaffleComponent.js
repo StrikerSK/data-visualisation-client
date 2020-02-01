@@ -2,8 +2,10 @@ import React, {useEffect, useState} from "react";
 import {ResponsiveWaffle} from "@nivo/waffle";
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
+import {accessAll} from "../../lib/ReduceAccessor";
+import {connect} from "react-redux";
 
-const NivoWaffleComponent = () => {
+const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [maxValue, setMaxValue] = useState(0);
 	const [isLoaded, changeLoadedState] = useState(false);
@@ -15,8 +17,8 @@ const NivoWaffleComponent = () => {
 	};
 
 	useEffect(() => {
-		pieDataGetter([], finaliseTransaction);
-	}, []);
+		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
+	}, [months, person, validity, sellType, color]);
 
 	const countTotal = (inputArray) => {
 		let sum = 0;
@@ -30,10 +32,10 @@ const NivoWaffleComponent = () => {
 		<ResponsiveWaffle
 			data={data}
 			total={maxValue}
-			rows={12}
-			columns={12}
+			rows={25}
+			columns={25}
 			margin={{top: 10, right: 10, bottom: 10, left: 120}}
-			colors={{scheme: "nivo"}}
+			colors={{scheme: color}}
 			borderColor={{from: "color", modifiers: [["darker", 0.3]]}}
 			animate={true}
 			motionStiffness={90}
@@ -70,4 +72,5 @@ const NivoWaffleComponent = () => {
 		<SpinnerComponent children={waffleGraph} isDataLoaded={isLoaded}/>
 	);
 };
-export default NivoWaffleComponent;
+
+export default connect(accessAll)(NivoWaffleComponent);

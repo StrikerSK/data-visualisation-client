@@ -1,6 +1,8 @@
 import React from "react";
+import {connect} from "react-redux";
 import {updateValidity} from "../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
+import {accessValidity} from "../../lib/ReduceAccessor";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";
@@ -20,7 +22,13 @@ const CheckboxValidity = () => {
 
 	const filterHeader = "Filter podľa dĺžky platnosti";
 
-	return <CheckboxTemplate checkItems={validities} dispatchFunction={updateValidity} context={"validity"} filterHeader={filterHeader}/>
+	return <CheckboxTemplate checkItems={validities} dispatchFunction={updateValidity} context={"validity"}
+	                         filterHeader={filterHeader}/>
 
 };
-export default CheckboxValidity;
+
+const mapStateToProps = state => ({
+	validity: accessValidity(state)
+});
+
+export default connect(mapStateToProps)(CheckboxValidity);

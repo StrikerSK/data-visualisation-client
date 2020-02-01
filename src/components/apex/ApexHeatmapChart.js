@@ -5,6 +5,7 @@ import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {monthArray} from "../checkboxes/CheckboxMonths";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const colors = ["#F3B415", "#F27036", "#663F59", "#6A6E94", "#4E88B4", "#00A7C6", "#18D8D8", '#A9D794', '#46AF78',
 	'#A93F55', '#8C5E58', '#2176FF', '#33A1FD', '#7A918D', '#BAFF29'
@@ -41,12 +42,4 @@ const ApexHeatmapChart = ({months, person, validity, sellType}) => {
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexHeatmapChart);
+export default connect(accessAll)(ApexHeatmapChart);

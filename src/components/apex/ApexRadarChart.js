@@ -5,6 +5,7 @@ import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {monthArray} from "../checkboxes/CheckboxMonths";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexRadarChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
@@ -40,19 +41,11 @@ const ApexRadarChart = ({months, person, validity, sellType}) => {
 		labels: monthArray
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="radar"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radar" width={"100%"} height={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexRadarChart);
+export default connect(accessAll)(ApexRadarChart);

@@ -3,6 +3,8 @@ import {ResponsiveRadar} from "@nivo/radar";
 import {barDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {dataKeys} from "../checkboxes/CheckboxPerson";
+import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoRadarComponent = () => {
 	const [data, setData] = useState([{}]);
@@ -73,4 +75,5 @@ const NivoRadarComponent = () => {
 		<SpinnerComponent children={radarGraph} isDataLoaded={isLoaded}/>
 	)
 };
-export default NivoRadarComponent;
+
+export default connect(accessAll)(NivoRadarComponent);

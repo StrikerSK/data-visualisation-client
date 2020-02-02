@@ -5,6 +5,7 @@ import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {monthArray} from "../checkboxes/CheckboxMonths";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexAreaChart = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([{}]);
@@ -39,19 +40,11 @@ const ApexAreaChart = ({months, person, validity, sellType}) => {
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const chart = <ReactApexChart options={options} series={data} type="area"/>;
+	const chart = <ReactApexChart options={options} series={data} type="area" height={"100%"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexAreaChart);
+export default connect(accessAll)(ApexAreaChart);

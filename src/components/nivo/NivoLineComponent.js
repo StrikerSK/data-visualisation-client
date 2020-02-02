@@ -3,6 +3,8 @@ import {ResponsiveLine} from "@nivo/line";
 import SpinnerComponent from "../SpinnerComponent";
 import {lineDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
+import {adaptToWidth} from "../../lib/Functions";
 
 const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([]);
@@ -30,7 +32,7 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 				orient: "bottom",
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: window.innerWidth < 770 ? -20 : 0,
+				tickRotation: adaptToWidth(0, -20),
 				legendOffset: 26,
 				legendPosition: "middle"
 			}}
@@ -57,15 +59,12 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 					direction: "row",
 					justify: false,
 					translateX: -40,
-					translateY: 55,
-					itemsSpacing: 0,
+					translateY: 60,
+					itemWidth: 70,
+					itemHeight: 15,
 					itemDirection: "top-to-bottom",
-					itemWidth: 80,
-					itemHeight: 10,
-					itemOpacity: 1,
 					symbolSize: 12,
-					symbolShape: "circle",
-					symbolBorderColor: "rgba(0, 0, 0, .5)"
+					symbolShape: "circle"
 				}
 			]}
 		/>
@@ -74,12 +73,4 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	return <SpinnerComponent children={LineGraph} isDataLoaded={isLoaded}/>
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(NivoLineComponent);
+export default connect(accessAll)(NivoLineComponent);

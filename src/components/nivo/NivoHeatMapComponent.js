@@ -4,6 +4,8 @@ import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {dataKeys} from "../checkboxes/CheckboxPerson";
+import {accessAll} from "../../lib/ReduceAccessor";
+import {isDesktop} from "../../lib/Functions";
 
 const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -24,7 +26,7 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 			keys={dataKeys}
 			indexBy="month"
 			margin={{top: 100, right: 0, bottom: 0, left: 75}}
-			forceSquare={(window.innerWidth >= 770)}
+			forceSquare={isDesktop()}
 			colors={color}
 			axisTop={{orient: "top", tickSize: 5, tickPadding: 5, tickRotation: -90, legend: "", legendOffset: 36}}
 			axisRight={null}
@@ -64,10 +66,4 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	return <SpinnerComponent isDataLoaded={isLoaded} children={graphHeatMap}/>
 };
 
-const mapStateToProps = state => ({
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(NivoHeatMapComponent);
+export default connect(accessAll)(NivoHeatMapComponent);

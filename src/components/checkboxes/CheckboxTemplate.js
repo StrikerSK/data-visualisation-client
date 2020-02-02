@@ -6,14 +6,15 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import {useDispatch} from "react-redux";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {adaptToWidth} from "../../lib/Functions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
-		margin: theme.spacing(2),
+		margin: theme.spacing(1),
 		minWidth: '100%',
 	},
 	formLabel: {
-		minWidth: '30%',
+		minWidth: adaptToWidth('30%', '45%')
 	}
 }));
 
@@ -60,7 +61,7 @@ const CheckboxTemplate = ({checkItems, context, dispatchFunction, filterHeader})
 			<FormLabel component="legend">{filterHeader}</FormLabel>
 			<FormGroup row>
 				{checkItems.map(({itemName}) => {
-					return <FormControlLabel control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
+					return <FormControlLabel key={itemName} control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
 				})}
 			</FormGroup>
 		</FormControl>

@@ -8,11 +8,21 @@ import NivoHeatMapComponent from "../components/nivo/NivoHeatMapComponent";
 import ColorSchemeSelectorHeatmap from "../components/selects/ColorSchemeSelectorHeatmap";
 import CheckboxValidity from "../components/checkboxes/CheckboxValidity";
 import CheckboxSellType from "../components/checkboxes/CheckboxSellType";
+import ColorSchemeSelector from "../components/selects/ColorSchemeSelector";
+import CheckboxPerson from "../components/checkboxes/CheckboxPerson";
+import CheckboxMonths from "../components/checkboxes/CheckboxMonths";
 
 export const NivoWaffleContainer = () => {
 	return (
 		<GraphContainer>
 			<NivoWaffleComponent/>
+			<OptionComponent>
+				<ColorSchemeSelector/>
+				<CheckboxPerson/>
+				<CheckboxValidity/>
+				<CheckboxMonths/>
+				<CheckboxSellType/>
+			</OptionComponent>
 		</GraphContainer>
 	);
 };

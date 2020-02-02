@@ -4,7 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 import {pieDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
-import {ApexRoundShapes} from "../StyledComponents";
+import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexPieChart = ({months, person, validity, sellType}) => {
 	const [series, setSeries] = useState([]);
@@ -26,6 +26,10 @@ const ApexPieChart = ({months, person, validity, sellType}) => {
 
 	const options = {
 		labels: labels,
+		legend: {
+			position: 'top',
+			horizontalAlign: 'center'
+		},
 		responsive: [{
 			options: {
 				chart: {
@@ -36,21 +40,11 @@ const ApexPieChart = ({months, person, validity, sellType}) => {
 		}]
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="pie"/>;
+	const chart = <ReactApexChart options={options} series={series} type="pie" height={"100%"} width={"100%"}/>;
 
 	return (
-		<ApexRoundShapes>
-			<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
-		</ApexRoundShapes>
+		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>
 	);
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color
-});
-
-export default connect(mapStateToProps)(ApexPieChart);
+export default connect(accessAll)(ApexPieChart);

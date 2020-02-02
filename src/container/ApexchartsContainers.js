@@ -10,7 +10,7 @@ import ApexHeatmapChart from "../components/apex/ApexHeatmapChart";
 import ApexRadarChart from "../components/apex/ApexRadarChart";
 import ApexLineChart from "../components/apex/ApexLineChart";
 import ApexBarChart from "../components/apex/ApexBarChart";
-import {GroupModeSelect, LayoutSelect} from "../components/selects/LayoutSelect";
+import {ConnectedGroupModeSelect as GroupModeSelect, ConnectedLayoutSelect as LayoutSelect} from "../components/selects/LayoutSelect";
 import ApexRadialChart from "../components/apex/ApexRadialChart";
 
 export const ApexChartContainers = () => {

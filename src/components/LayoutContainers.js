@@ -1,9 +1,11 @@
 import React from "react";
 import styled from 'styled-components'
+import {LinkMenuBox} from "./LinkMenuBox";
+import ModalWindow from "./ModalWindow";
 
 const Header = styled.h1`
 	text-align: center;
-	font-weight: normal;
+	font-weight: bold;
 	letter-spacing: -1px;
 	color: #34495E;
 	
@@ -29,6 +31,27 @@ const OptionsComponent = styled.div`
 	}
 `;
 
+const HeaderAndNav = styled.div`
+  	grid-column: 1 / 3;
+	grid-row: 1;
+	justify-self: center;
+	
+	width: 100%;
+	height: 100%;
+	
+	display: grid;
+	grid-template-columns: 80% 20%;
+
+	@media screen and (max-width: 770px) {
+		grid-template-columns: 100%;
+		
+		grid-column: 1;
+		grid-row: 1;
+		
+		grid-template-rows: repeat(${props => props.rowNum}, calc(100% / ${props => props.rowNum}));
+	}
+`;
+
 const GraphBox = styled.div`
 	display: grid;
 	height: 95vh;
@@ -45,20 +68,37 @@ const GraphBox = styled.div`
 
 		width: 95vw;
 		height: 125vh;
-
+		
 		grid-row-gap: 20px;
 		grid-template-columns: 100%;
-		grid-template-rows: 100px 45% 45%;
+		grid-template-rows: 120px 45% 45%;
 	}
 `;
 
 export const HeaderComponent = () => {
-	return <Header>Predajnosť lístkov PID</Header>
+	return (
+		<HeaderAndNav rowNum={2}>
+			<Header>Predajnosť lístkov PID</Header>
+			<LinkMenuBox/>
+		</HeaderAndNav>
+	)
+};
+
+export const HeaderComponentDashboards = () => {
+	return (
+		<HeaderAndNav rowNum={3}>
+			<ModalWindow/>
+			<Header>Predajnosť lístkov PID</Header>
+			<LinkMenuBox/>
+		</HeaderAndNav>
+	)
 };
 
 export const OptionComponent = ({children}) => {
 	return (
-		<OptionsComponent>{children}</OptionsComponent>
+		<OptionsComponent>
+			{children}
+		</OptionsComponent>
 	);
 };
 

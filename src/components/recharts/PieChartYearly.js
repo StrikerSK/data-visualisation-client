@@ -1,21 +1,16 @@
 import React, {useEffect, useState} from "react";
-import {pieDataGetter} from "../../lib/DataFetcher";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
-import SpinnerComponent from "../SpinnerComponent";
+import {connect} from "react-redux";
 
-const PieChartYearly = () => {
+import {pieDataGetter} from "../../lib/DataFetcher";
+import SpinnerComponent from "../SpinnerComponent";
+import {generateColor} from "../../lib/Functions";
+import {accessAll} from "../../lib/ReduceAccessor";
+
+const PieChartYearly = ({months, person, validity, sellType}) => {
 	const [data, setData] = useState([]);
 	const [color, setColor] = useState("");
 	const [isLoaded, changeLoadedState] = useState(false);
-
-	const generateColor = () => {
-		const letters = "0123456789ABCDEF";
-		let returnColor = "#";
-		for (let i = 0; i < 6; i++) {
-			returnColor += letters[Math.floor(Math.random() * 16)];
-		}
-		setColor(returnColor);
-	};
 
 	const processData = (result) => {
 		setData(result);
@@ -23,9 +18,9 @@ const PieChartYearly = () => {
 	};
 
 	useEffect(() => {
-		generateColor();
-		pieDataGetter([], processData);
-	}, []);
+		setColor(generateColor());
+		pieDataGetter([months, person, validity, sellType], processData);
+	}, [months, person, validity, sellType]);
 
 	const pieChart = (
 		<ResponsiveContainer width="100%" height="100%">
@@ -36,7 +31,7 @@ const PieChartYearly = () => {
 				     cx="50%"
 				     cy="50%"
 					// outerRadius={radius}
-					fill={color}
+					 fill={color}
 					 label={({cx, cy, midAngle, innerRadius, outerRadius, value, index}) => {
 						 const RADIAN = Math.PI / 180;
 						 // eslint-disable-next-line
@@ -67,4 +62,4 @@ const PieChartYearly = () => {
 	);
 };
 
-export default PieChartYearly;
+export default connect(accessAll)(PieChartYearly);

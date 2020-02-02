@@ -3,14 +3,28 @@ import {ResponsiveBar} from "@nivo/bar";
 import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
+import {accessAll} from "../../lib/ReduceAccessor";
+import {adaptToWidth, isDesktop} from "../../lib/Functions";
 
-const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, validity, sellType, color}) => {
+const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
+	const [labels, setLabels] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const finaliseTransaction = (result) => {
 		setData(result);
+		setLabels(getLabels(result));
 		changeLoadedState(true);
+
+		function getLabels(inputObject) {
+			const obj = {...inputObject[0]};
+			Object.keys(obj).forEach((property) => {
+				if (obj[property] === 0 || property === "month") {
+					delete obj[property]
+				}
+			});
+			return Object.keys(obj);
+		}
 	};
 
 	useEffect(() => {
@@ -21,9 +35,14 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 	const barGraph = (
 		<ResponsiveBar
 			data={data}
-			keys={barOrder}
+			keys={labels}
 			indexBy="month"
-			margin={(window.innerWidth < 770 ? {top: 10, right: 5, bottom: 80, left: 70} : {top: 20, right: 30, bottom: 80, left: 80})}
+			margin={
+				adaptToWidth(
+					{top: 20, right: 30, bottom: 80, left: 80},
+					{top: 10, right: 5, bottom: 80, left: 70}
+				)
+			}
 			padding={0.3}
 			groupMode={barGrouping}
 			layout={barLayout}
@@ -54,7 +73,7 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 			axisBottom={{
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: window.innerWidth < 770 ? -25 : 0,
+				tickRotation: adaptToWidth(0, -25),
 				legendPosition: "middle",
 				legendOffset: 36
 			}}
@@ -66,7 +85,7 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 				legendPosition: "middle",
 				legendOffset: -60
 			}}
-			enableLabel={(window.innerWidth >= 770)}
+			enableLabel={isDesktop()}
 			labelSkipWidth={12}
 			labelSkipHeight={12}
 			labelTextColor={{from: "color", modifiers: [["darker", 1.6]]}}
@@ -94,15 +113,4 @@ const NivoBarComponent = ({barGrouping, barLayout, barOrder, months, person, val
 	return <SpinnerComponent isDataLoaded={isLoaded} children={barGraph}/>
 };
 
-const mapStateToProps = state => ({
-	months: state.generalReducer.months,
-	person: state.generalReducer.person,
-	validity: state.generalReducer.validity,
-	sellType: state.generalReducer.sellType,
-	color: state.generalReducer.color,
-	barGrouping: state.generalReducer.barGroupingValue,
-	barLayout: state.generalReducer.barLayoutValue,
-	barOrder: state.generalReducer.barDataKeys
-});
-
-export default connect(mapStateToProps)(NivoBarComponent);
+export default connect(accessAll)(NivoBarComponent);

@@ -24,6 +24,7 @@ import {
 	NivoStreamContainer,
 	NivoWaffleContainer
 } from "./container/NivoGraphCollection";
+import MainPage from "./container/MainPage";
 
 import {
 	ApexAreaContainer,
@@ -42,7 +43,7 @@ class App extends Component {
 			<BrowserRouter>
 				<GlobalStyles/>
 				<Switch>
-					<Route exact strict path="/" render={() => <NivoDashboards/>}/>
+					<Route exact strict path="/" render={() => <MainPage/>}/>
 					<Route exact strict path="/recharts" render={() => <RechartsDashboard/>}/>
 					<Route exact strict path="/recharts/random" render={() => <RechartsDashboardRandom/>}/>
 					<Route exact strict path="/recharts/line" render={() => <RechartsLineContainer/>}/>

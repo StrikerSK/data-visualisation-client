@@ -45,4 +45,5 @@ const PieChartMonthly = () => {
 		</div>
 	);
 };
+
 export default PieChartMonthly;

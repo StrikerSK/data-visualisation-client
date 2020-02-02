@@ -38,8 +38,10 @@ export const validateComponentChecks = (verifiedArray, inputArray) => {
 	});
 };
 
+const desktopThreshold = 770;
+
 export const adaptToWidth = (desktopValue, responsiveValue) => {
-	if(window.innerWidth > 770) {
+	if(window.innerWidth > desktopThreshold) {
 		return desktopValue;
 	} else {
 		return responsiveValue;
@@ -47,5 +49,5 @@ export const adaptToWidth = (desktopValue, responsiveValue) => {
 };
 
 export const isDesktop = () => {
-	return window.innerWidth > 770
+	return window.innerWidth > desktopThreshold;
 };

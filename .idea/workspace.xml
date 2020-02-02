@@ -582,11 +582,11 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580516550553">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580645790213">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580516550553" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580645790213" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577133032709" />
     <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1580516172213">
       <screen x="-3840" y="-590" width="3840" height="2120" />
@@ -671,10 +671,11 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575634779843" />
     <state x="-2594" y="-131" width="1344" height="1383" key="search.everywhere.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576425619978" />
     <state x="623" y="225" width="672" height="679" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577368733293" />
-    <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1577039092030">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-3118" y="-72" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1580645637994">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575637116750" />
+    <state x="-3118" y="-72" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580645637994" />
     <state x="361" y="254" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577039092030" />
   </component>
 </project>

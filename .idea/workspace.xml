@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Add modal option to dashboards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DashboardTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -582,11 +573,11 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580645790213">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580647313767">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580645790213" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580647313767" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577133032709" />
     <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1580516172213">
       <screen x="-3840" y="-590" width="3840" height="2120" />

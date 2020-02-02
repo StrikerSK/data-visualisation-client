@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(2, 4, 3)
 	},
+	modalWindow: {
+		overflow: 'scroll'
+	},
 	button: {
 		margin: theme.spacing(1)
 	}
@@ -69,6 +72,7 @@ const ModalWindow = () => {
 				aria-describedby="simple-modal-description"
 				open={open}
 				onClose={handleClose}
+				className={classes.modalWindow}
 			>
 
 				<div style={modalStyle} className={classes.paper}>

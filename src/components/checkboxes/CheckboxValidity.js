@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {updateValidity} from "../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {accessValidity} from "../../lib/ReduceAccessor";
+import {validateComponentChecks} from "../../lib/Functions";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";
@@ -11,7 +12,7 @@ const yearly = "Ročná";
 
 export const defaultValidityRequestParams = "validity=Mesačná&validity=3%20Mesačná&validity=5%20Mesačná&validity=Ročná";
 
-const CheckboxValidity = () => {
+const CheckboxValidity = ({validity}) => {
 
 	const validities = [
 		{itemName: month, isChecked: true},
@@ -22,8 +23,7 @@ const CheckboxValidity = () => {
 
 	const filterHeader = "Filter podľa dĺžky platnosti";
 
-	return <CheckboxTemplate checkItems={validities} dispatchFunction={updateValidity} context={"validity"}
-	                         filterHeader={filterHeader}/>
+	return <CheckboxTemplate checkItems={validateComponentChecks(validities, validity)} dispatchFunction={updateValidity} context={"validity"} filterHeader={filterHeader}/>
 
 };
 

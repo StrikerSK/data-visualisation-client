@@ -4,6 +4,7 @@ import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
+import {adaptToWidth, isDesktop} from "../../lib/Functions";
 
 const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
@@ -11,12 +12,12 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	const finaliseTransaction = (result) => {
-		setLabels(getLabels(result));
 		setData(result);
+		setLabels(getLabels(result));
 		changeLoadedState(true);
 
 		function getLabels(inputObject) {
-			const obj = inputObject[0];
+			const obj = {...inputObject[0]};
 			Object.keys(obj).forEach((property) => {
 				if (obj[property] === 0 || property === "month") {
 					delete obj[property]
@@ -36,12 +37,12 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 			data={data}
 			keys={labels}
 			indexBy="month"
-			margin={(window.innerWidth < 770 ? {top: 10, right: 5, bottom: 80, left: 70} : {
-				top: 20,
-				right: 30,
-				bottom: 80,
-				left: 80
-			})}
+			margin={
+				adaptToWidth(
+					{top: 20, right: 30, bottom: 80, left: 80},
+					{top: 10, right: 5, bottom: 80, left: 70}
+				)
+			}
 			padding={0.3}
 			groupMode={barGrouping}
 			layout={barLayout}
@@ -72,7 +73,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 			axisBottom={{
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: window.innerWidth < 770 ? -25 : 0,
+				tickRotation: adaptToWidth(0, -25),
 				legendPosition: "middle",
 				legendOffset: 36
 			}}
@@ -84,7 +85,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 				legendPosition: "middle",
 				legendOffset: -60
 			}}
-			enableLabel={(window.innerWidth >= 770)}
+			enableLabel={isDesktop()}
 			labelSkipWidth={12}
 			labelSkipHeight={12}
 			labelTextColor={{from: "color", modifiers: [["darker", 1.6]]}}

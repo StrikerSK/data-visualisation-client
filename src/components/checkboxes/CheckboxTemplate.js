@@ -6,6 +6,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import {useDispatch} from "react-redux";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {adaptToWidth} from "../../lib/Functions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: '100%',
 	},
 	formLabel: {
-		minWidth: window.innerWidth > 770 ? '30%' : '45%'
+		minWidth: adaptToWidth('30%', '45%')
 	}
 }));
 

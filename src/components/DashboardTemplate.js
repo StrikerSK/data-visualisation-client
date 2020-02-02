@@ -1,7 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import {HeaderComponent} from "./LayoutContainers";
+import {HeaderComponentDashboards} from "./LayoutContainers";
 
 const DashboardBox = styled.div`
 	width: 99%;
@@ -20,7 +19,7 @@ const DashboardBox = styled.div`
 		height: 180vh;
 
 		grid-template-columns: 100%;
-		grid-template-rows: 120px repeat(4, 25%);
+		grid-template-rows: 140px repeat(4, 25%);
 	}
 `;
 
@@ -41,7 +40,7 @@ const DashboardTemplate = ({children}) => {
 	return (
 		<DashboardBox>
 			<DashboardItem row={1} mrow={1} column={"2/4"}>
-				<HeaderComponent/>
+				<HeaderComponentDashboards/>
 			</DashboardItem>
 			<DashboardItem row={2} mrow={2} column={2}>
 				{children[0]}

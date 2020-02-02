@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DashboardTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/LayoutSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoHeatMapComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +184,7 @@
       <workItem from="1577366895829" duration="5113000" />
       <workItem from="1577548466403" duration="4706000" />
       <workItem from="1580227943662" duration="11415000" />
-    </task>
-    <task id="LOCAL-00017" summary="Added and applied color select options to component list">
-      <created>1572596233058</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1572596233058</updated>
+      <workItem from="1580561728834" duration="8901000" />
     </task>
     <task id="LOCAL-00018" summary="Added and applied color select options to component list">
       <created>1572597258204</created>
@@ -521,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580232101249</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Add modal option to dashboards">
+      <created>1580516551275</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1580516551275</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created bar organization and added layout system" />
     <MESSAGE value="Code review changes vol.1" />
     <MESSAGE value="Updates after rebase" />
     <MESSAGE value="Updates recharts graphs to newer version" />
@@ -566,7 +573,8 @@
     <MESSAGE value="Updating after rebase" />
     <MESSAGE value="Bug fixing of update" />
     <MESSAGE value="Updating checkboxes elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating checkboxes elements" />
+    <MESSAGE value="Add modal option to dashboards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add modal option to dashboards" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -574,11 +582,11 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580232099815">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1580516550553">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580232099815" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580516550553" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577133032709" />
     <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1580516172213">
       <screen x="-3840" y="-590" width="3840" height="2120" />
@@ -594,32 +602,32 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
-    <state width="3815" height="215" key="GridCell.Tab.0.bottom" timestamp="1580229081327">
+    <state width="3802" height="215" key="GridCell.Tab.0.bottom" timestamp="1580604918642">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3815" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580229081327" />
+    <state width="3802" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
     <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
     <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
-    <state width="3815" height="215" key="GridCell.Tab.0.center" timestamp="1580229081327">
+    <state width="3802" height="215" key="GridCell.Tab.0.center" timestamp="1580604918642">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3815" height="215" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580229081327" />
+    <state width="3802" height="215" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
     <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
     <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3815" height="215" key="GridCell.Tab.0.left" timestamp="1580229081326">
+    <state width="3802" height="215" key="GridCell.Tab.0.left" timestamp="1580604918642">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3815" height="215" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580229081326" />
+    <state width="3802" height="215" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
     <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057792" />
     <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3815" height="215" key="GridCell.Tab.0.right" timestamp="1580229081327">
+    <state width="3802" height="215" key="GridCell.Tab.0.right" timestamp="1580604918642">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3815" height="215" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580229081327" />
+    <state width="3802" height="215" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
     <state x="692" y="146" key="RollbackChangesDialog" timestamp="1576945687811">
@@ -641,11 +649,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup" timestamp="1580232296666">
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup" timestamp="1580642822480">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
-    <state x="-2548" y="-99" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580232296666" />
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580642822480" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576087288163">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>

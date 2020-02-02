@@ -48,7 +48,7 @@ const HeaderAndNav = styled.div`
 		grid-column: 1;
 		grid-row: 1;
 		
-		grid-template-rows: repeat(2, 50%);
+		grid-template-rows: repeat(${props => props.rowNum}, calc(100% / ${props => props.rowNum}));
 	}
 `;
 
@@ -77,7 +77,7 @@ const GraphBox = styled.div`
 
 export const HeaderComponent = () => {
 	return (
-		<HeaderAndNav>
+		<HeaderAndNav rowNum={2}>
 			<Header>Predajnosť lístkov PID</Header>
 			<LinkMenuBox/>
 		</HeaderAndNav>
@@ -86,7 +86,7 @@ export const HeaderComponent = () => {
 
 export const HeaderComponentDashboards = () => {
 	return (
-		<HeaderAndNav>
+		<HeaderAndNav rowNum={3}>
 			<ModalWindow/>
 			<Header>Predajnosť lístkov PID</Header>
 			<LinkMenuBox/>
@@ -96,7 +96,9 @@ export const HeaderComponentDashboards = () => {
 
 export const OptionComponent = ({children}) => {
 	return (
-		<OptionsComponent>{children}</OptionsComponent>
+		<OptionsComponent>
+			{children}
+		</OptionsComponent>
 	);
 };
 

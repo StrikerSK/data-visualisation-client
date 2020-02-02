@@ -19,7 +19,7 @@ const DashboardBox = styled.div`
 		height: 180vh;
 
 		grid-template-columns: 100%;
-		grid-template-rows: 120px repeat(4, 25%);
+		grid-template-rows: 140px repeat(4, 25%);
 	}
 `;
 

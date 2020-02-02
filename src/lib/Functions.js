@@ -37,3 +37,15 @@ export const validateComponentChecks = (verifiedArray, inputArray) => {
 		}
 	});
 };
+
+export const adaptToWidth = (desktopValue, responsiveValue) => {
+	if(window.innerWidth > 770) {
+		return desktopValue;
+	} else {
+		return responsiveValue;
+	}
+};
+
+export const isDesktop = () => {
+	return window.innerWidth > 770
+};

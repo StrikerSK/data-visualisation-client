@@ -4,6 +4,7 @@ import SpinnerComponent from "../SpinnerComponent";
 import {lineDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
+import {adaptToWidth} from "../../lib/Functions";
 
 const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 				orient: "bottom",
 				tickSize: 5,
 				tickPadding: 5,
-				tickRotation: window.innerWidth < 770 ? -20 : 0,
+				tickRotation: adaptToWidth(0, -20),
 				legendOffset: 26,
 				legendPosition: "middle"
 			}}

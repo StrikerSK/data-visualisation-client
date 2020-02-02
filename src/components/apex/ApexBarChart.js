@@ -6,6 +6,7 @@ import SpinnerComponent from "../SpinnerComponent";
 import {monthArray} from "../checkboxes/CheckboxMonths";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
+import {isDesktop} from "../../lib/Functions";
 
 const ApexBarChart = ({months, person, validity, sellType, barLayout, barGrouping}) => {
 	const [data, setData] = useState([{}]);
@@ -17,7 +18,7 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout, barGroupin
 			stacked: barGrouping === "stacked"
 		},
 		dataLabels: {
-			enabled: window.innerWidth > 770 && barGrouping === "stacked"
+			enabled: isDesktop() && barGrouping === "stacked"
 		},
 		plotOptions: {
 			bar: {

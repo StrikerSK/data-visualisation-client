@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Add modal option to dashboards">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SimpleMenuList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleMenuList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ReduceAccessor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ReduceAccessor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
@@ -176,6 +182,8 @@
       <workItem from="1577548466403" duration="4706000" />
       <workItem from="1580227943662" duration="11415000" />
       <workItem from="1580561728834" duration="8901000" />
+      <workItem from="1580648181666" duration="31000" />
+      <workItem from="1580648447766" duration="7697000" />
     </task>
     <task id="LOCAL-00018" summary="Added and applied color select options to component list">
       <created>1572597258204</created>
@@ -593,33 +601,33 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
-    <state width="3802" height="215" key="GridCell.Tab.0.bottom" timestamp="1580604918642">
+    <state width="3816" height="209" key="GridCell.Tab.0.bottom" timestamp="1580764483045">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
-    <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
+    <state width="3816" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="1899" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
-    <state width="3802" height="215" key="GridCell.Tab.0.center" timestamp="1580604918642">
+    <state width="3816" height="209" key="GridCell.Tab.0.center" timestamp="1580764483045">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="215" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
-    <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
+    <state width="3816" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="1899" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3802" height="215" key="GridCell.Tab.0.left" timestamp="1580604918642">
+    <state width="3816" height="209" key="GridCell.Tab.0.left" timestamp="1580764483045">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3802" height="215" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
-    <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057792" />
+    <state width="3816" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="1899" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242062" />
     <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3802" height="215" key="GridCell.Tab.0.right" timestamp="1580604918642">
+    <state width="3816" height="209" key="GridCell.Tab.0.right" timestamp="1580764483045">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="215" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580604918642" />
-    <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1579777057793" />
+    <state width="3816" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="1899" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
     <state x="692" y="146" key="RollbackChangesDialog" timestamp="1576945687811">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -640,11 +648,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup" timestamp="1580642822480">
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup" timestamp="1580763925109">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
-    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580642822480" />
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580763925109" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576087288163">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>

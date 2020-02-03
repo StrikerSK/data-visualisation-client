@@ -28,14 +28,18 @@ export const getLabels = (inputObject) => {
 
 //Validates if current verifiedArray is checked
 export const validateComponentChecks = (verifiedArray, inputArray) => {
-	const storedMonths = inputArray.split("&").map(item => item.split("=")[1].replace("%20", " "));
-	return verifiedArray.map(item => {
-		if (storedMonths.includes(item.itemName)) {
-			return item;
-		} else {
-			return {...item, isChecked: false}
-		}
-	});
+	if(inputArray.length > 0) {
+		const storedMonths = inputArray.split("&").map(item => item.split("=")[1].replace("%20", " "));
+		return verifiedArray.map(item => {
+			if (storedMonths.includes(item.itemName)) {
+				return item;
+			} else {
+				return {...item, isChecked: false}
+			}
+		});
+	} else {
+		return verifiedArray;
+	}
 };
 
 const desktopThreshold = 770;

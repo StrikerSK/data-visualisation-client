@@ -30,7 +30,6 @@ const MenuListComposition = ({name, items}) => {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
 	const handleClick = event => {
-		console.log(window.location.pathname);
 		setAnchorEl(event.currentTarget);
 	};
 

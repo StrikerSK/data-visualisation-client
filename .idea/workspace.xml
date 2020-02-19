@@ -4,12 +4,8 @@
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SimpleMenuList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleMenuList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoBarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ReduceAccessor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ReduceAccessor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/reducers/generalReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -601,42 +597,43 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
-    <state width="3816" height="209" key="GridCell.Tab.0.bottom" timestamp="1580764483045">
+    <state width="3802" height="209" key="GridCell.Tab.0.bottom" timestamp="1582153369120">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3816" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="3802" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582153369120" />
     <state width="1899" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
-    <state width="3816" height="209" key="GridCell.Tab.0.center" timestamp="1580764483045">
+    <state width="3802" height="209" key="GridCell.Tab.0.center" timestamp="1582153369119">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3816" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="3802" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582153369119" />
     <state width="1899" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3816" height="209" key="GridCell.Tab.0.left" timestamp="1580764483045">
+    <state width="3802" height="209" key="GridCell.Tab.0.left" timestamp="1582153369119">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3816" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="3802" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582153369119" />
     <state width="1899" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242062" />
     <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3816" height="209" key="GridCell.Tab.0.right" timestamp="1580764483045">
+    <state width="3802" height="209" key="GridCell.Tab.0.right" timestamp="1582153369120">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3816" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580764483045" />
+    <state width="3802" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582153369120" />
     <state width="1899" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
-    <state x="692" y="146" key="RollbackChangesDialog" timestamp="1576945687811">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-2456" y="-292" key="RollbackChangesDialog" timestamp="1582152675338">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
+    <state x="-2456" y="-292" key="RollbackChangesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582152675338" />
     <state x="692" y="146" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576945687811" />
-    <state x="884" y="736" key="VCS.ChangelistChooser" timestamp="1576945664906">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-2073" y="910" key="VCS.ChangelistChooser" timestamp="1582152211574">
+      <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
-    <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576255166325" />
+    <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582152211574" />
     <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
     <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1577195139542">
       <screen x="0" y="0" width="1920" height="1040" />

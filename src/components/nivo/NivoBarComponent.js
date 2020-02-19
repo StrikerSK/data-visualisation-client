@@ -97,8 +97,8 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 					justify: false,
 					translateX: -40,
 					translateY: 60,
-					itemWidth: 70,
-					itemHeight: 15,
+					itemWidth: 60,
+					itemHeight: 10,
 					itemDirection: "top-to-bottom",
 					symbolSize: 12,
 					symbolShape: "circle"

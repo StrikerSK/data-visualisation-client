@@ -35,7 +35,7 @@ const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
 			total={maxValue}
 			rows={25}
 			columns={25}
-			margin={{top: 10, right: 10, bottom: 10, left: 120}}
+			margin={adaptToWidth({top: 10, right: 10, bottom: 10, left: 120},{top: 10, right: 10, bottom: 40, left: 10})}
 			colors={{scheme: color}}
 			borderColor={{from: "color", modifiers: [["darker", 0.3]]}}
 			animate={true}
@@ -43,18 +43,19 @@ const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
 			motionDamping={11}
 			legends={[
 				{
-					anchor: "top-left",
-					direction: "column",
+					anchor: adaptToWidth("top-left", "bottom"),
+					direction: adaptToWidth("column", "row"),
 					justify: false,
-					translateX: adaptToWidth(0, -120),
+					translateX: adaptToWidth(0, 0),
 					translateY: adaptToWidth(0, 30),
-					itemsSpacing: 8,
-					itemWidth: 100,
+					itemsSpacing: adaptToWidth(8, 2),
+					itemWidth: adaptToWidth(100, 65),
 					itemHeight: 20,
-					itemDirection: "left-to-right",
+					itemDirection: adaptToWidth("left-to-right", "top-to-bottom"),
 					itemOpacity: 1,
 					itemTextColor: "#777",
-					symbolSize: 20,
+					symbolSize: adaptToWidth(20, 12),
+					symbolShape: "circle"
 				}
 			]}
 		/>

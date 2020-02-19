@@ -35,7 +35,7 @@ const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
 			total={maxValue}
 			rows={25}
 			columns={25}
-			margin={adaptToWidth({top: 10, right: 10, bottom: 10, left: 120},{top: 10, right: 10, bottom: 40, left: 10})}
+			margin={adaptToWidth({top: 10, right: 10, bottom: 10, left: 120},{top: 10, right: 10, bottom: 50, left: 10})}
 			colors={{scheme: color}}
 			borderColor={{from: "color", modifiers: [["darker", 0.3]]}}
 			animate={true}

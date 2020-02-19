@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +178,7 @@
       <workItem from="1580561728834" duration="8901000" />
       <workItem from="1580648181666" duration="31000" />
       <workItem from="1580648447766" duration="7697000" />
-    </task>
-    <task id="LOCAL-00019" summary="Introduced HOC to the graph components">
-      <created>1572598710154</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1572598710154</updated>
+      <workItem from="1582154935948" duration="830000" />
     </task>
     <task id="LOCAL-00020" summary="Pie chart spinner application">
       <created>1572603172385</created>
@@ -521,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582154639241</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Repair responsiveness in Waffle component - HOTFIX">
+      <created>1582154974523</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1582154974523</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updates after rebase" />
     <MESSAGE value="Updates recharts graphs to newer version" />
     <MESSAGE value="Init bump chart component" />
     <MESSAGE value="Implementing styled components" />
@@ -566,7 +567,8 @@
     <MESSAGE value="Updating checkboxes elements" />
     <MESSAGE value="Add modal option to dashboards" />
     <MESSAGE value="Repair responsiveness in Waffle component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repair responsiveness in Waffle component" />
+    <MESSAGE value="Repair responsiveness in Waffle component - HOTFIX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repair responsiveness in Waffle component - HOTFIX" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -574,17 +576,17 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2190" y="750" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576397240492" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1582154638311">
+    <state x="-2722" y="-533" key="CommitChangelistDialog2" timestamp="1582154973818">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656538655" />
-    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154638311" />
+    <state x="-2722" y="-533" key="CommitChangelistDialog2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154973818" />
     <state x="559" y="28" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577133032709" />
-    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1582154618036">
+    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog" timestamp="1582155293776">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635737776" />
-    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154618036" />
+    <state x="-3472" y="-417" width="1536" height="858" key="DiffContextDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155293776" />
     <state x="184" y="85" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577369853964" />
     <state x="-2140" y="758" key="FileChooserDialogImpl" timestamp="1576437502041">
       <screen x="-3840" y="-590" width="3840" height="2120" />
@@ -594,32 +596,32 @@
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="-2097" y="903" key="GitRewordDialog/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1576401041330" />
-    <state width="3802" height="209" key="GridCell.Tab.0.bottom" timestamp="1582154724153">
+    <state width="3802" height="209" key="GridCell.Tab.0.bottom" timestamp="1582155734624">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154724153" />
+    <state width="3802" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155734624" />
     <state width="1899" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
-    <state width="3802" height="209" key="GridCell.Tab.0.center" timestamp="1582154724153">
+    <state width="3802" height="209" key="GridCell.Tab.0.center" timestamp="1582155734624">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154724153" />
+    <state width="3802" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155734624" />
     <state width="1899" height="209" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3802" height="209" key="GridCell.Tab.0.left" timestamp="1582154724153">
+    <state width="3802" height="209" key="GridCell.Tab.0.left" timestamp="1582155734624">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559401" />
-    <state width="3802" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154724153" />
+    <state width="3802" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155734624" />
     <state width="1899" height="209" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242062" />
     <state width="1899" height="210" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409207" />
-    <state width="3802" height="209" key="GridCell.Tab.0.right" timestamp="1582154724153">
+    <state width="3802" height="209" key="GridCell.Tab.0.right" timestamp="1582155734624">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state width="1899" height="211" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656559402" />
-    <state width="3802" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154724153" />
+    <state width="3802" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155734624" />
     <state width="1899" height="209" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-590.3840.2120@0.0.1920.1040" timestamp="1580650242063" />
     <state width="1899" height="210" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577575409208" />
     <state x="-2456" y="-292" key="RollbackChangesDialog" timestamp="1582152675338">
@@ -632,21 +634,21 @@
     </state>
     <state x="-2073" y="910" key="VCS.ChangelistChooser/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582152211574" />
     <state x="884" y="736" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576945664906" />
-    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1582154954970">
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2" timestamp="1582154976681">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575656545380" />
-    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154954970" />
+    <state x="-2736" y="-84" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582154976681" />
     <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577195139542" />
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575635338850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="617" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575635338850" />
-    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup" timestamp="1580763925109">
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup" timestamp="1582155472016">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>
     <state x="646" y="241" width="627" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1575638097761" />
-    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1580763925109" />
+    <state x="-3042" y="-194" width="1254" height="1138" key="find.popup/0.0.1920.1040/-3840.-590.3840.2120@-3840.-590.3840.2120" timestamp="1582155472016" />
     <state x="-2390" y="-282" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576087288163">
       <screen x="-3840" y="-590" width="3840" height="2120" />
     </state>

@@ -22,7 +22,7 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const LineGraph = (
 		<ResponsiveLine
 			data={data}
-			margin={{top: 5, right: 15, bottom: 80, left: 65}}
+			margin={adaptToWidth({top: 5, right: 15, bottom: 80, left: 65},{top: 5, right: 5, bottom: 85, left: 65})}
 			xScale={{type: "point"}}
 			yScale={{type: "linear", stacked: true, min: "auto", max: "auto"}}
 			curve="linear"
@@ -60,8 +60,8 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 					justify: false,
 					translateX: -40,
 					translateY: 60,
-					itemWidth: 60,
-					itemHeight: 10,
+					itemWidth: 75,
+					itemHeight: 15,
 					itemDirection: "top-to-bottom",
 					symbolSize: 12,
 					symbolShape: "circle"

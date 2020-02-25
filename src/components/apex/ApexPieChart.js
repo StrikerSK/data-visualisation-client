@@ -27,7 +27,7 @@ const ApexPieChart = ({months, person, validity, sellType}) => {
 	const options = {
 		labels: labels,
 		legend: {
-			position: 'top',
+			position: 'bottom',
 			horizontalAlign: 'center'
 		},
 		responsive: [{

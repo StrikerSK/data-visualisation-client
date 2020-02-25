@@ -39,7 +39,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 			indexBy="month"
 			margin={
 				adaptToWidth(
-					{top: 20, right: 30, bottom: 80, left: 80},
+					{top: 10, right: 10, bottom: 70, left: 80},
 					{top: 10, right: 5, bottom: 80, left: 70}
 				)
 			}
@@ -96,9 +96,9 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 					direction: "row",
 					justify: false,
 					translateX: -40,
-					translateY: 60,
-					itemWidth: 60,
-					itemHeight: 10,
+					translateY: 50,
+					itemWidth: 75,
+					itemHeight: 15,
 					itemDirection: "top-to-bottom",
 					symbolSize: 12,
 					symbolShape: "circle"

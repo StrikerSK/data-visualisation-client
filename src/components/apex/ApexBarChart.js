@@ -39,7 +39,7 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout, barGroupin
 		legend: {
 			position: 'top',
 			horizontalAlign: 'center',
-			offsetX: 40
+			offsetX: 30
 		}
 	};
 

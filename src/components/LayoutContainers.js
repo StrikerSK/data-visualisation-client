@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
 import {LinkMenuBox} from "./LinkMenuBox";
-import ModalWindow from "./ModalWindow";
 
 const Header = styled.h1`
 	text-align: center;
@@ -78,16 +77,6 @@ const GraphBox = styled.div`
 export const HeaderComponent = () => {
 	return (
 		<HeaderAndNav rowNum={2}>
-			<Header>Predajnosť lístkov PID</Header>
-			<LinkMenuBox/>
-		</HeaderAndNav>
-	)
-};
-
-export const HeaderComponentDashboards = () => {
-	return (
-		<HeaderAndNav rowNum={3}>
-			<ModalWindow/>
 			<Header>Predajnosť lístkov PID</Header>
 			<LinkMenuBox/>
 		</HeaderAndNav>

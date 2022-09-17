@@ -13,7 +13,7 @@ import CheckboxMonths from "../components/checkboxes/CheckboxMonths";
 import CheckboxSellType from "../components/checkboxes/CheckboxSellType";
 import BarGeneratorButton from "../components/BarGeneratorButton";
 
-const NivoBarContainer = () => {
+export default () => {
 	return (
 		<GraphContainer>
 			<NivoBarComponent/>
@@ -30,5 +30,3 @@ const NivoBarContainer = () => {
 		</GraphContainer>
 	);
 };
-
-export default NivoBarContainer;

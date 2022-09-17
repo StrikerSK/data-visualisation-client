@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import {GlobalStyles} from "./components/StyledComponents";
@@ -11,71 +11,75 @@ import {NivoDashboards, NivoDashboardsRandom} from "./container/NivoDashboards";
 import {RechartsDashboard, RechartsDashboardRandom} from "./container/RechartsDashboard";
 
 import {
-	RechartsAreaContainer,
-	RechartsBarContainer,
-	RechartsLineContainer,
-	RechartsPieContainer,
-	RechartsStackedContainer
+    RechartsAreaContainer,
+    RechartsBarContainer,
+    RechartsLineContainer,
+    RechartsPieContainer,
+    RechartsStackedContainer
 } from "./container/RechartsContainers";
 
 import {
-	NivoHeatMapContainer,
-	NivoRadarContainer,
-	NivoStreamContainer,
-	NivoWaffleContainer
+    NivoHeatMapContainer,
+    NivoRadarContainer,
+    NivoStreamContainer,
+    NivoWaffleContainer
 } from "./container/NivoGraphCollection";
 import MainPage from "./container/MainPage";
 
 import {
-	ApexAreaContainer,
-	ApexBarContainer,
-	ApexChartContainers,
-	ApexHeatmapContainer,
-	ApexLineContainer,
-	ApexRadarContainer,
-	ApexRadialContainer
+    ApexAreaContainer,
+    ApexBarContainer,
+    ApexChartContainers,
+    ApexHeatmapContainer,
+    ApexLineContainer,
+    ApexRadarContainer,
+    ApexRadialContainer
 } from "./container/ApexchartsContainers";
 import {ApexDashboards, ApexDashboardsRandom} from "./container/ApexDashboards";
 
-class App extends Component {
-	render() {
-		return (
-			<BrowserRouter>
-				<GlobalStyles/>
-				<Switch>
-					<Route exact strict path="/" render={() => <MainPage/>}/>
-					<Route exact strict path="/recharts" render={() => <RechartsDashboard/>}/>
-					<Route exact strict path="/recharts/random" render={() => <RechartsDashboardRandom/>}/>
-					<Route exact strict path="/recharts/line" render={() => <RechartsLineContainer/>}/>
-					<Route exact strict path="/recharts/area" render={() => <RechartsAreaContainer/>}/>
-					<Route exact strict path="/recharts/bar" render={() => <RechartsBarContainer/>}/>
-					<Route exact strict path="/recharts/stacked" render={() => <RechartsStackedContainer/>}/>
-					<Route exact strict path="/recharts/pie" render={() => <RechartsPieContainer/>}/>
-					<Route exact strict path="/recharts/pie/collection" render={() => <PieChartMonthly/>}/>
-					<Route exact strict path="/nivo" render={() => <NivoDashboards/>}/>
-					<Route exact strict path="/nivo/random" render={() => <NivoDashboardsRandom/>}/>
-					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
-					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
-					<Route exact strict path="/nivo/stack" render={() => <NivoStreamContainer/>}/>
-					<Route exact strict path="/nivo/pie" render={() => <NivoPieContainer/>}/>
-					<Route exact strict path="/nivo/waffle" render={() => <NivoWaffleContainer/>}/>
-					<Route exact strict path="/nivo/heatmap" render={() => <NivoHeatMapContainer/>}/>
-					<Route exact strict path="/nivo/radar" render={() => <NivoRadarContainer/>}/>
-					<Route exact strict path="/nivo/bubble" render={() => <NivoBubbleContainer/>}/>
-					<Route exact strict path="/apex" render={() => <ApexDashboards/>}/>
-					<Route exact strict path="/apex/random" render={() => <ApexDashboardsRandom/>}/>
-					<Route exact strict path="/apex/area" render={() => <ApexAreaContainer/>}/>
-					<Route exact strict path="/apex/area" render={() => <ApexAreaContainer/>}/>
-					<Route exact strict path="/apex/pie" render={() => <ApexChartContainers/>}/>
-					<Route exact strict path="/apex/heatmap" render={() => <ApexHeatmapContainer/>}/>
-					<Route exact strict path="/apex/radar" render={() => <ApexRadarContainer/>}/>
-					<Route exact strict path="/apex/line" render={() => <ApexLineContainer/>}/>
-					<Route exact strict path="/apex/bar" render={() => <ApexBarContainer/>}/>
-					<Route exact strict path="/apex/radial" render={() => <ApexRadialContainer/>}/>
-				</Switch>
-			</BrowserRouter>
-		);
-	}
+const App = () => {
+    const pathList = [
+        {path: "/", component: <MainPage/>},
+        {path: "/recharts", component: <RechartsDashboard/>},
+        {path: "/recharts/random", component: <RechartsDashboardRandom/>},
+        {path: "/recharts/line", component: <RechartsLineContainer/>},
+        {path: "/recharts/area", component: <RechartsAreaContainer/>},
+        {path: "/recharts/bar", component: <RechartsBarContainer/>},
+        {path: "/recharts/stacked", component: <RechartsStackedContainer/>},
+        {path: "/recharts/pie", component: <RechartsPieContainer/>},
+        {path: "/recharts/pie/collection", component: <PieChartMonthly/>},
+        {path: "/nivo", component: <NivoDashboards/>},
+        {path: "/nivo/random", component: <NivoDashboardsRandom/>},
+        {path: "/nivo/line", component: <NivoLineContainer/>},
+        {path: "/nivo/bar", component: <NivoBarContainer/>},
+        {path: "/nivo/stack", component: <NivoStreamContainer/>},
+        {path: "/nivo/pie", component: <NivoPieContainer/>},
+        {path: "/nivo/waffle", component: <NivoWaffleContainer/>},
+        {path: "/nivo/heatmap", component: <NivoHeatMapContainer/>},
+        {path: "/nivo/radar", component: <NivoRadarContainer/>},
+        {path: "/nivo/bubble", component: <NivoBubbleContainer/>},
+        {path: "/apex", component: <ApexDashboards/>},
+        {path: "/apex/random", component: <ApexDashboardsRandom/>},
+        {path: "/apex/area", component: <ApexAreaContainer/>},
+        {path: "/apex/area", component: <ApexAreaContainer/>},
+        {path: "/apex/pie", component: <ApexChartContainers/>},
+        {path: "/apex/heatmap", component: <ApexHeatmapContainer/>},
+        {path: "/apex/radar", component: <ApexRadarContainer/>},
+        {path: "/apex/line", component: <ApexLineContainer/>},
+        {path: "/apex/bar", component: <ApexBarContainer/>},
+        {path: "/apex/radial", component: <ApexRadialContainer/>}
+    ]
+
+    return (
+        <BrowserRouter>
+            <GlobalStyles/>
+            <Switch>
+                {pathList.map(({path, component}, index) => {
+                    return <Route key={index} exact strict path={path} render={() => component}/>
+                })}
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import "../../App.css";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 import styled from "styled-components";
 

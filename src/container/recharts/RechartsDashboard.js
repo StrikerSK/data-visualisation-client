@@ -1,11 +1,11 @@
 import React from "react";
 
-import DashboardTemplate from "../components/DashboardTemplate";
-import BarChartComponent from "../components/recharts/BarChartComponent";
-import LineGraphComponent from "../components/recharts/LineGraphComponent";
-import StackedGraphComponent from "../components/recharts/StackedGraphComponent";
-import AreaChartComponent from "../components/recharts/AreaChartComponent";
-import PieChartYearly from "../components/recharts/PieChartYearly";
+import DashboardTemplate from "../../components/DashboardTemplate";
+import BarChartComponent from "../../components/recharts/BarChartComponent";
+import LineGraphComponent from "../../components/recharts/LineGraphComponent";
+import StackedGraphComponent from "../../components/recharts/StackedGraphComponent";
+import AreaChartComponent from "../../components/recharts/AreaChartComponent";
+import PieChartYearly from "../../components/recharts/PieChartYearly";
 
 const componentsArray = [
 	<BarChartComponent/>,

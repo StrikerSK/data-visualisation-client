@@ -1,6 +1,6 @@
 import React from "react";
 
-import DashboardTemplate from "../../components/layout/DashboardTemplate";
+import DashboardLayout from "../../components/layout/DashboardLayout";
 import BarChartComponent from "../../components/recharts/BarChartComponent";
 import LineGraphComponent from "../../components/recharts/LineGraphComponent";
 import StackedGraphComponent from "../../components/recharts/StackedGraphComponent";
@@ -17,16 +17,16 @@ const componentsArray = [
 
 export const RechartsDashboard = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			{componentsArray}
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };
 
 export const RechartsDashboardRandom = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			{componentsArray.sort(() => Math.random() - 0.5)}
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };

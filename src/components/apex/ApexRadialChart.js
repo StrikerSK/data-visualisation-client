@@ -32,7 +32,7 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 	const options = {
 		labels: labels,
 		legend: {
-			show: false
+			show: true
 		}
 	};
 

@@ -6,7 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {connect, useDispatch} from "react-redux";
 import {updateColor} from "../../lib/actions";
-import {accessAll} from "../../lib/ReduceAccessor";
+import {accessColor} from "../../lib/ReduceAccessor";
 
 export const defaultColorName = "nivo";
 
@@ -31,16 +31,15 @@ export const ColorSchemeSelector = ({color}) => {
 
 	return (
 		<FormControl className={classes.formControl}>
-			<InputLabel id="color-selector">Výber farby</InputLabel>
+			<InputLabel id="color-selector_label">Výber farby</InputLabel>
 			<Select
-				labelId="color-selector"
+				labelId="color-selector_label"
 				id="color-selector"
 				value={color}
 				onChange={handleChange}
 				autoWidth
 			>
-				<MenuItem value="" disabled><em>Výber farby</em></MenuItem>
-				<MenuItem value={"nivo"}>Nivo</MenuItem>
+				<MenuItem value={"nivo"} defaultChecked={true}>Nivo</MenuItem>
 				<MenuItem value={"dark2"}>Dark</MenuItem>
 				<MenuItem value={"pastel1"}>Pastel</MenuItem>
 				<MenuItem value={"set1"}>Set 1</MenuItem>
@@ -53,4 +52,4 @@ export const ColorSchemeSelector = ({color}) => {
 	)
 };
 
-export default connect(accessAll)(ColorSchemeSelector);
+export default connect(accessColor)(ColorSchemeSelector);

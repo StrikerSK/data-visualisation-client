@@ -1,6 +1,6 @@
 import React from "react";
 import {apexItems, nivoItems, rechartsItems} from "../components/LinkMenuBox";
-import BreadcrumbLink from "../components/BreadcrumLink";
+import BreadcrumbLink from "../components/BreadcrumbLink";
 export default () => {
 
 	return (

@@ -1,8 +1,9 @@
-import Breadcrumbs from "@material-ui/core/Breadcrumbs";
-import Link from "@material-ui/core/Link";
 import React from "react";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import Link from "@material-ui/core/Link"
+import PropTypes from 'prop-types';
 
-export default ({name, itemList}) => {
+const BreadcrumbLink = ({name, itemList}) => {
 	return (
 		<div className="breadcrumb-link-container">
 			<span>{name}</span>
@@ -14,3 +15,10 @@ export default ({name, itemList}) => {
 		</div>
 	)
 };
+
+BreadcrumbLink.propTypes = {
+	name: PropTypes.string,
+	itemList: PropTypes.array,
+}
+
+export default BreadcrumbLink;

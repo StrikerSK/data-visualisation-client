@@ -20,10 +20,33 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+
+    legend, label {
+      font-size: 1.9rem;
+    }
+
+    span, li {
+      font-size: 1.6rem;
+    }
   }
 
   .graph-box {
     width: 70%;
     height: 95%;
   }
+}
+
+.recharts-pie-graph {
+  width: 100%;
+  height: 100%;
+
+  font-size: 40rem;
+}
+
+#color-selector {
+  font-size: 1.6rem;
+}
+
+#color-selector_label {
+  font-size: 1.8rem;
 }

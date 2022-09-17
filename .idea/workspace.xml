@@ -1,100 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Add eslint">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BreadcrumLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BreadcrumbLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Code changes - Rechars pie graph">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelectorHeatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Sass File" />
-        <option value="CSS File" />
-        <option value="SCSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Teh|Striker &lt;kristianhanus@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="implement-navigation" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="1PawVVag2aEObuGv56we8PmaqWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "Project.color": "52511f",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/striker/WebstormProjects/data-visualisation-client/src/styles/component",
-    "list.type.of.created.stylesheet": "SCSS",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+    "ts.external.directory.path": "/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/styles/component" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-    </key>
-    <key name="OPEN_URL_DIALOG">
-      <recent name="https://github.com/StrikerSK/FitnessPage.git" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/layout" />
-      <recent name="$PROJECT_DIR$/src/container/recharts" />
-      <recent name="$PROJECT_DIR$/src/container/nivo" />
-      <recent name="$PROJECT_DIR$/src/container/apex" />
-      <recent name="$PROJECT_DIR$/src/components" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.eslint">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="$PROJECT_DIR$/../../../linuxbrew/.linuxbrew/Cellar/node/18.9.0/bin/node" />
-      <package-manager value="$PROJECT_DIR$/../../../linuxbrew/.linuxbrew/Cellar/node/18.9.0/bin/node" />
-      <envs />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.build:dev">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -105,17 +32,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="eslint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -125,449 +42,23 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.eslint" />
         <item itemvalue="npm.build:dev" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.start:dev" />
-        <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="" />
-      <created>1553038356971</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1553038356971</updated>
-      <workItem from="1553038358641" duration="1379000" />
-      <workItem from="1553348642403" duration="2506000" />
-      <workItem from="1553377835027" duration="3473000" />
-      <workItem from="1562505406976" duration="3585000" />
-      <workItem from="1566125541820" duration="9990000" />
-      <workItem from="1566417994829" duration="7994000" />
-      <workItem from="1566634697251" duration="8642000" />
-      <workItem from="1570573841084" duration="803000" />
-      <workItem from="1570995711397" duration="1251000" />
-      <workItem from="1571498728768" duration="16825000" />
-      <workItem from="1571563352729" duration="33603000" />
-      <workItem from="1572204966154" duration="1728000" />
-      <workItem from="1572262905758" duration="4635000" />
-      <workItem from="1572379992909" duration="12348000" />
-      <workItem from="1572682423683" duration="6986000" />
-      <workItem from="1573165662248" duration="803000" />
-      <workItem from="1573767921694" duration="7068000" />
-      <workItem from="1573817679771" duration="34000" />
-      <workItem from="1573830562906" duration="13321000" />
-      <workItem from="1575661728047" duration="610000" />
-      <workItem from="1575729006441" duration="1144000" />
-      <workItem from="1576018751781" duration="1468000" />
-      <workItem from="1576087090939" duration="1123000" />
-      <workItem from="1576091909477" duration="2814000" />
-      <workItem from="1576095399760" duration="8289000" />
-      <workItem from="1576345514198" duration="1910000" />
-      <workItem from="1576397112183" duration="3907000" />
-      <workItem from="1576428185954" duration="1308000" />
-      <workItem from="1576437746265" duration="3962000" />
-      <workItem from="1576615786955" duration="16000" />
-      <workItem from="1576620850470" duration="1049000" />
-      <workItem from="1576707184477" duration="24000" />
-      <workItem from="1576934190278" duration="17615000" />
-      <workItem from="1577012398320" duration="8100000" />
-      <workItem from="1577175360569" duration="5000" />
-      <workItem from="1577195062791" duration="3604000" />
-      <workItem from="1577366895829" duration="5113000" />
-      <workItem from="1577548466403" duration="4706000" />
-      <workItem from="1580227943662" duration="11415000" />
-      <workItem from="1580561728834" duration="8901000" />
-      <workItem from="1580648181666" duration="31000" />
-      <workItem from="1580648447766" duration="7697000" />
-      <workItem from="1582154935948" duration="1245000" />
-      <workItem from="1582409806252" duration="4448000" />
-      <workItem from="1663171288856" duration="178000" />
-      <workItem from="1663171472680" duration="328000" />
-      <workItem from="1663171805298" duration="1037000" />
-      <workItem from="1663172848596" duration="669000" />
-      <workItem from="1663411510825" duration="88000" />
-      <workItem from="1663411604475" duration="11386000" />
-      <workItem from="1663429511412" duration="13500000" />
-    </task>
-    <task id="LOCAL-00040" summary="Creating dashboards and updating part 2">
-      <created>1576101827126</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+    <task id="LOCAL-00001" summary="Code changes - Rechars pie graph">
+      <created>1663447797093</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1576101827126</updated>
+      <updated>1663447797093</updated>
     </task>
-    <task id="LOCAL-00041" summary="Creating dashboards and updating part 2">
-      <created>1576103480746</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1576103480746</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Creating dashboards and updating part 2">
-      <created>1576104502149</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1576104502149</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Creating dashboards and updating part 3">
-      <created>1576180296129</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1576180296129</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Creating dashboards and updating part 3">
-      <created>1576180408815</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1576180408815</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Creating dashboards and updating part 3">
-      <created>1576180438422</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1576180438422</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Creating dashboards and updating part 3">
-      <created>1576180452734</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1576180452734</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Creating dashboards and updating part 3">
-      <created>1576254056994</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1576254056994</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Update dependencies">
-      <created>1576399859883</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1576399859883</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Creating dashboards and updating part 4">
-      <created>1576424585223</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1576424585223</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Updating BarComponent Nivo">
-      <created>1576942860309</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1576942860309</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Adding Apex Pie Chart">
-      <created>1576942934424</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1576942934425</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Adding Apex Heatmap Chart">
-      <created>1576944398642</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1576944398642</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Adding Multiple Chart">
-      <created>1576945653072</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1576945653073</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Adding Multiple Chart">
-      <created>1576945683386</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1576945683387</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Adding Multiple Chart">
-      <created>1576960303980</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1576960303980</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Adding Multiple Chart">
-      <created>1576967649788</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1576967649788</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Adding Multiple Chart">
-      <created>1576968506642</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1576968506642</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Adding Multiple Chart">
-      <created>1576968817540</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1576968817540</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Adding Multiple Chart">
-      <created>1576969169602</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1576969169602</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Updating Multiple Chart part 2">
-      <created>1577018836147</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1577018836147</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Updating after rebase">
-      <created>1577039213698</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1577039213698</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Bug fixing of update">
-      <created>1577040125102</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1577040125102</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Bug fixing of update">
-      <created>1577132165722</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1577132165722</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Bug fixing of update">
-      <created>1577133033294</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1577133033294</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Updating checkboxes elements">
-      <created>1580232101248</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1580232101249</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Add modal option to dashboards">
-      <created>1580516551275</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1580516551275</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Repair responsiveness in Waffle component">
-      <created>1582154639241</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1582154639241</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Repair responsiveness in Waffle component - HOTFIX">
-      <created>1582154974523</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1582154974523</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Repair responsiveness in Waffle component - HOTFIX">
-      <created>1582155819510</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1582155819510</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Prototype: Graphs from file">
-      <created>1582671545182</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1582671545183</updated>
-    </task>
-    <task id="LOCAL-00071" summary="First attempt to changes">
-      <created>1663413536712</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1663413536713</updated>
-    </task>
-    <task id="LOCAL-00072" summary="First attempt to changes">
-      <created>1663413609516</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1663413609516</updated>
-    </task>
-    <task id="LOCAL-00073" summary="First attempt to changes">
-      <created>1663413619048</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1663413619048</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Restyle components - breadcrumbs">
-      <created>1663415949116</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1663415949116</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Restyle components - breadcrumbs">
-      <created>1663416000450</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1663416000450</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Restyle components - breadcrumbs">
-      <created>1663416020521</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1663416020521</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Restyle components - breadcrumbs">
-      <created>1663417410757</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1663417410757</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Restyle components - breadcrumbs">
-      <created>1663417779031</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1663417779032</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Restyle components - Dashboard and header">
-      <created>1663421570786</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1663421570786</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Restyle components - Graph container">
-      <created>1663431876037</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1663431876037</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Restyle components - Graph container">
-      <created>1663432159344</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1663432159344</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Restyle components - Graph container">
-      <created>1663432844975</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1663432844975</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Restyle components - Apex charts change">
-      <created>1663433819239</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1663433819239</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Restyle components - Recharts charts change">
-      <created>1663439534266</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1663439534266</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Restyle components - Recharts charts change">
-      <created>1663439604171</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1663439604171</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Restyle components - Recharts charts change">
-      <created>1663439620693</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1663439620694</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Restyle components - Additional stuff">
-      <created>1663444660146</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1663444660147</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Add eslint">
-      <created>1663445045857</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1663445045857</updated>
-    </task>
-    <option name="localTasksCounter" value="89" />
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -581,33 +72,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Randomized dashboards" />
-    <MESSAGE value="Creating dashboards and updating part 3" />
-    <MESSAGE value="Update dependencies" />
-    <MESSAGE value="Creating dashboards and updating part 4" />
-    <MESSAGE value="Updating BarComponent Nivo" />
-    <MESSAGE value="Adding Apex Pie Chart" />
-    <MESSAGE value="Adding Apex Heatmap Chart" />
-    <MESSAGE value="Adding Multiple Chart" />
-    <MESSAGE value="Updating Multiple Chart part 2" />
-    <MESSAGE value="Updating after rebase" />
-    <MESSAGE value="Bug fixing of update" />
-    <MESSAGE value="Updating checkboxes elements" />
-    <MESSAGE value="Add modal option to dashboards" />
-    <MESSAGE value="Repair responsiveness in Waffle component" />
-    <MESSAGE value="Repair responsiveness in Waffle component - HOTFIX" />
-    <MESSAGE value="Prototype: Graphs from file" />
-    <MESSAGE value="First attempt to changes" />
-    <MESSAGE value="Restyle components - breadcrumbs" />
-    <MESSAGE value="Restyle components - Dashboard and header" />
-    <MESSAGE value="Restyle components - Graph body a" />
-    <MESSAGE value="Restyle components - Graph container" />
-    <MESSAGE value="Restyle components - Apex charts change" />
-    <MESSAGE value="Restyle components - Recharts charts change" />
-    <MESSAGE value="Restyle components - Additional stuff" />
-    <MESSAGE value="Add eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add eslint" />
-    <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
+    <MESSAGE value="Code changes - Rechars pie graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code changes - Rechars pie graph" />
   </component>
 </project>

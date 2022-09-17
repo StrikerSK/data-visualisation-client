@@ -27,7 +27,6 @@ import RechartsStackedContainer from "./container/recharts/RechartsStackedContai
 import RechartsLineContainer from "./container/recharts/RechartsLineContainer";
 import RechartsBarContainer from "./container/recharts/RechartsBarContainer";
 import RechartsAreaContainer from "./container/recharts/RechartsAreaContainer";
-import PieChartMonthly from "./components/recharts/PieChartMonthly";
 import {RechartsDashboard, RechartsDashboardRandom} from "./container/recharts/RechartsDashboard";
 
 const App = () => {
@@ -40,7 +39,6 @@ const App = () => {
         {path: "/recharts/bar", component: <RechartsBarContainer/>},
         {path: "/recharts/stacked", component: <RechartsStackedContainer/>},
         {path: "/recharts/pie", component: <RechartsPieContainer/>},
-        {path: "/recharts/pie/collection", component: <PieChartMonthly/>},
         {path: "/nivo", component: <NivoDashboards/>},
         {path: "/nivo/random", component: <NivoDashboardsRandom/>},
         {path: "/nivo/line", component: <NivoLineContainer/>},

@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import {GlobalStyles} from "./components/StyledComponents";
 import NivoBarContainer from "./container/NivoBarContainer";
 import NivoLineContainer from "./container/NivoLineContainer";
 import NivoPieContainer from "./container/NivoPieContainer";
@@ -72,7 +71,6 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <GlobalStyles/>
             <Switch>
                 {pathList.map(({path, component}, index) => {
                     return <Route key={index} exact strict path={path} render={() => component}/>

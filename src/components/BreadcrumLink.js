@@ -28,8 +28,8 @@ const BreadcrumbLink = ({name, itemList}) => {
 		<InlineBlock>
 			{name}
 			<Breadcrumbs aria-label="breadcrumb">
-				{itemList.map(({name, link}) => {
-					return <Link color="inherit" href={link}>{name}</Link>
+				{itemList.map(({name, link}, index) => {
+					return <Link key={index} color="inherit" href={link}>{name}</Link>
 				})}
 			</Breadcrumbs>
 		</InlineBlock>

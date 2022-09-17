@@ -30,4 +30,5 @@ const NivoBarContainer = () => {
 		</GraphContainer>
 	);
 };
+
 export default NivoBarContainer;

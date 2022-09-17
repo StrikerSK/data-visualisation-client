@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const CheckboxTemplate = ({checkItems, context, dispatchFunction, filterHeader}) => {
+export default ({checkItems, context, dispatchFunction, filterHeader}) => {
 	const dispatch = useDispatch();
 	const classes = useStyles();
 	const [itemObjects, setItemObjects] = useState(checkItems);
@@ -67,4 +67,3 @@ const CheckboxTemplate = ({checkItems, context, dispatchFunction, filterHeader})
 		</FormControl>
 	)
 };
-export default CheckboxTemplate;

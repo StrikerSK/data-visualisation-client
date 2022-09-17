@@ -6,13 +6,13 @@ import {dataKeys} from "../checkboxes/CheckboxPerson";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 
-const NivoStreamComponent = () => {
+const NivoStreamComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
 	useEffect(() => {
-		streamDataGetter([], finaliseTransaction);
-	}, []);
+		streamDataGetter([months, person, validity, sellType, color], finaliseTransaction);
+	}, [months, person, validity, sellType, color]);
 
 	const finaliseTransaction = (result) => {
 		setData(result);

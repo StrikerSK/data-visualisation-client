@@ -1,4 +1,3 @@
-import OptionComponent from "../OptionComponent";
 import React from "react";
 
 export default ({graph, configs}) => {
@@ -7,9 +6,9 @@ export default ({graph, configs}) => {
             <div className="graph-box">
                 {graph}
             </div>
-            <OptionComponent>
+            <div className="graph-options-container">
                 {configs}
-            </OptionComponent>
+            </div>
         </div>
     )
 }

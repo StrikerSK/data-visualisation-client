@@ -7,7 +7,6 @@ import CheckboxPerson from "./checkboxes/CheckboxPerson";
 import CheckboxValidity from "./checkboxes/CheckboxValidity";
 import CheckboxMonths from "./checkboxes/CheckboxMonths";
 import CheckboxSellType from "./checkboxes/CheckboxSellType";
-import styled from "styled-components";
 import {adaptToWidth} from "../lib/Functions";
 
 const useStyles = makeStyles(theme => ({
@@ -35,21 +34,7 @@ const getModalStyle = () => {
 	}
 };
 
-const ModalBox = styled.div`
-  	grid-column: 1;
-	grid-row: 1;
-	
-	align-self: center;
-	
-	@media screen and (max-width: 770px) {
-		grid-column: 1;
-		grid-row: 3;
-		justify-self: center;
-	}
-	
-`;
-
-const ModalWindow = () => {
+export default () => {
 	const classes = useStyles();
 	const [modalStyle] = React.useState(getModalStyle);
 	const [open, setOpen] = React.useState(false);
@@ -63,9 +48,8 @@ const ModalWindow = () => {
 	};
 
 	return (
-		<ModalBox>
-			<Button variant="contained" onClick={handleOpen} color="primary" className={classes.button}>Panel s
-				filtrami</Button>
+		<div className="modal-button">
+			<Button variant="contained" onClick={handleOpen} color="primary" className={classes.button}>Panel s filtrami</Button>
 
 			<Modal
 				aria-labelledby="simple-modal-title"
@@ -86,8 +70,6 @@ const ModalWindow = () => {
 				</div>
 
 			</Modal>
-		</ModalBox>
+		</div>
 	)
 };
-
-export default ModalWindow;

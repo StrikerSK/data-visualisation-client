@@ -22,10 +22,6 @@ const PieChartsBox = styled.div`
 	}
 `;
 
-const Headline = styled.h1`
-	text-align: center;
-`;
-
 const PieChartMonthly = () => {
 	const [data, setData] = useState([]);
 
@@ -35,7 +31,7 @@ const PieChartMonthly = () => {
 
 	return (
 		<div>
-			<Headline>Mesačná predajnosť lístkov PID</Headline>
+			<h1>Mesačná predajnosť lístkov PID</h1>
 			<PieChartsBox>
 				{data.map((monthData) =>
 					<PieChartElement myData={monthData} radius={100}/>

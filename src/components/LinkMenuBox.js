@@ -1,27 +1,7 @@
 import React from "react";
-import styled from 'styled-components'
-import MenuListComposition from "./SimpleMenuList";
+import MenuListComposition from "./MenuListComposition";
 import Button from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
-
-const MenuBox = styled.div`
-  	grid-column: 2;
-	grid-row: 1;
-	
-	width: 400px;	
-	display: grid;
-	grid-template-columns: repeat(4, 25%);
-	
-	justify-self: right;
-	align-self: center;
-	
-	@media screen and (max-width: 770px) {
-		grid-row: 2;
-		grid-column: 1/3;
-		
-		justify-self: center;
-	}
-`;
 
 export const rechartsItems = [
 	{name: "Stĺpcový graf", link: "/recharts/bar"},
@@ -37,7 +17,8 @@ export const nivoItems = [
 	{name: "Koláčový graf", link: "/nivo/pie"},
 	{name: "Línový graf", link: "/nivo/line"},
 	{name: "Bublinový graf", link: "/nivo/bubble"},
-	{name: "Oblátkový  graf", link: "/nivo/waffle"},
+	{name: "Oblátkový graf", link: "/nivo/waffle"},
+	{name: "Stack graf", link: "/nivo/stack"},
 	{name: "Dashboard", link: "/nivo"}
 ];
 
@@ -60,12 +41,14 @@ export const LinkMenuBox = () => {
 	};
 
 	return (
-		<MenuBox>
+		<div className="link-menu-container">
 			<MenuListComposition name={"Recharts"} items={rechartsItems}/>
 			<MenuListComposition name={"Nivo"} items={nivoItems}/>
 			<MenuListComposition name={"Apex"} items={apexItems}/>
-			<Button aria-controls="simple-menu" onClick={handleClick} disabled={window.location.pathname === "/"}>Úvod</Button>
-		</MenuBox>
+			<div className="menu-list">
+				<Button className="menu-list_button" aria-controls="simple-menu" onClick={handleClick} disabled={window.location.pathname === "/"}>Úvod</Button>
+			</div>
+		</div>
 	);
 
 };

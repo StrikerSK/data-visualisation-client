@@ -1,11 +1,18 @@
 import React from "react";
-import {GraphContainer} from "../../components/LayoutContainers";
+import GraphComponent from "../../components/layout/GraphComponent";
 import NivoStreamComponent from "../../components/nivo/NivoStreamComponent";
+import CheckboxPerson from "../../components/checkboxes/CheckboxPerson";
+import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
+import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
+import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
+import {ColorSchemeSelector} from "../../components/selects/ColorSchemeSelector";
 
-export default () => {
-    return (
-        <GraphContainer>
-            <NivoStreamComponent/>
-        </GraphContainer>
-    );
-};
+const configurations = [
+    <ColorSchemeSelector/>,
+    <CheckboxPerson/>,
+    <CheckboxValidity/>,
+    <CheckboxMonths/>,
+    <CheckboxSellType/>,
+]
+
+export default () => <GraphComponent graph={<NivoStreamComponent/>} configs={configurations}/>;

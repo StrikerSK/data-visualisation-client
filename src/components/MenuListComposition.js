@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import styled from "styled-components";
 import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,14 +16,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const TestOne = styled.div`
-	width: 100%;
-	height: 100%;
-	
-	justify-self: center;
-`;
-
-const MenuListComposition = ({name, items}) => {
+export default ({name, items}) => {
 	const history = useHistory();
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
@@ -42,7 +34,7 @@ const MenuListComposition = ({name, items}) => {
 	};
 
 	return (
-		<TestOne>
+		<div className="menu-list">
 			<Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} classes={{root: classes.button}}>{name}</Button>
 			<Menu
 				id="simple-menu"
@@ -55,7 +47,6 @@ const MenuListComposition = ({name, items}) => {
 					return <MenuItem key={key} onClick={() => handleLinkClick(item.link)} selected={window.location.pathname === item.link}>{item.name}</MenuItem>
 				})}
 			</Menu>
-		</TestOne>
+		</div>
 	);
 };
-export default MenuListComposition;

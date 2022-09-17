@@ -1,6 +1,6 @@
 import React from "react";
 
-import DashboardTemplate from "../../components/DashboardTemplate";
+import DashboardTemplate from "../../components/layout/DashboardTemplate";
 import BarChartComponent from "../../components/recharts/BarChartComponent";
 import LineGraphComponent from "../../components/recharts/LineGraphComponent";
 import StackedGraphComponent from "../../components/recharts/StackedGraphComponent";

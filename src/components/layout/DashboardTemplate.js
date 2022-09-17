@@ -1,7 +1,7 @@
 import React from "react";
-import ModalWindow from "./ModalWindow";
-import {LinkMenuBox} from "./LinkMenuBox";
-import GeneralHeader from "./layout/GeneralHeader";
+import ModalWindow from "../ModalWindow";
+import {LinkMenuBox} from "../LinkMenuBox";
+import GeneralHeader from "./GeneralHeader";
 
 export default ({children}) => {
     return (

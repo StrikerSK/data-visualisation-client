@@ -1,6 +1,6 @@
 import React from "react";
 
-import DashboardTemplate from "../../components/DashboardTemplate";
+import DashboardTemplate from "../../components/layout/DashboardTemplate";
 import ApexBarChart from "../../components/apex/ApexBarChart";
 import ApexLineChart from "../../components/apex/ApexLineChart";
 import ApexRadialChart from "../../components/apex/ApexRadialChart";

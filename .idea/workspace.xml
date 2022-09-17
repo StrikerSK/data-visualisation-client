@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Graph container">
-      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoWaffleChartContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexBarChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexHeatmapChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexLineChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexPieChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexRadialChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ApexDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/RechartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/RechartsDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_PieChart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,14 +216,7 @@
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
       <workItem from="1663411604475" duration="11386000" />
-      <workItem from="1663429511412" duration="3306000" />
-    </task>
-    <task id="LOCAL-00033" summary="Implementing styled components">
-      <created>1575636354891</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1575636354891</updated>
+      <workItem from="1663429511412" duration="4033000" />
     </task>
     <task id="LOCAL-00034" summary="Recharts styling">
       <created>1575637011087</created>
@@ -564,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663432159344</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Restyle components - Graph container">
+      <created>1663432844975</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1663432844975</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

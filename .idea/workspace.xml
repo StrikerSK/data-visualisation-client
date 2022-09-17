@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Apex charts change">
-      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/component/_Spinner.scss" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Recharts charts change">
+      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoHeatmapContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LinkMenuBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LinkMenuBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OptionComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SimpleMenuList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuListComposition.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DashboardHeader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/DashboardTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DashboardLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/GraphBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/GraphBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,28 +223,7 @@
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
       <workItem from="1663411604475" duration="11386000" />
-      <workItem from="1663429511412" duration="7735000" />
-    </task>
-    <task id="LOCAL-00035" summary="Update styling for recharts components">
-      <created>1575642956000</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1575642956001</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Created dashboard for React">
-      <created>1576013801203</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1576013801203</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Setting up development server">
-      <created>1576020200625</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1576020200625</updated>
+      <workItem from="1663429511412" duration="12668000" />
     </task>
     <task id="LOCAL-00038" summary="Creating shelves and updating part 1">
       <created>1576094876527</created>
@@ -567,7 +547,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663433819239</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Restyle components - Recharts charts change">
+      <created>1663439534266</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1663439534266</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Restyle components - Recharts charts change">
+      <created>1663439604171</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1663439604171</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Restyle components - Recharts charts change">
+      <created>1663439620693</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1663439620694</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Setting up development server" />
     <MESSAGE value="Creating shelves and updating part 1" />
     <MESSAGE value="Creating dashboards and updating part 2" />
     <MESSAGE value="Randomized dashboards" />
@@ -611,7 +611,8 @@
     <MESSAGE value="Restyle components - Graph body a" />
     <MESSAGE value="Restyle components - Graph container" />
     <MESSAGE value="Restyle components - Apex charts change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Apex charts change" />
+    <MESSAGE value="Restyle components - Recharts charts change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Recharts charts change" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

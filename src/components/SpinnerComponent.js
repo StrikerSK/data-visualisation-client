@@ -9,12 +9,10 @@ const override = css`
 	border-color: red;
 `;
 
-export const SpinnerComponent = ({children, isDataLoaded}) => {
-
+export default ({children, isDataLoaded}) => {
 	return (
 		<div className="spinner-container">
 			{isDataLoaded ? (children) : (<ClipLoader css={override} sizeUnit={"px"} size={150} color={"#123abc"}/>)}
 		</div>
 	);
 };
-export default SpinnerComponent;

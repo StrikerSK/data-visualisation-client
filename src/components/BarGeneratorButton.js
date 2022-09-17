@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 const portable = "Prenosné";
 export const defaultBarOrder = dataKeys;
 
-const BarGeneratorButton = () => {
+export default () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
 
@@ -46,5 +46,3 @@ const BarGeneratorButton = () => {
 		<Button variant="contained" onClick={() => shuffle()} color="primary" className={classes.button}>Zmeň poradie</Button>
 	)
 };
-
-export default BarGeneratorButton;

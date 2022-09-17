@@ -80,5 +80,34 @@
   }
 
 }
-
 /* -------------------------- Breadcrumbs links -------------------------- */
+
+/* -------------------------- Link menu links -------------------------- */
+.link-menu-container {
+  width: 50rem;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+
+  .menu-list {
+    width: 100%;
+    height: 100%;
+
+    .menu-list_button {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
+}
+/* -------------------------- Link menu links -------------------------- */
+
+
+/* -------------------------- Modal button -------------------------- */
+.modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* -------------------------- Modal button -------------------------- */

@@ -1,24 +1,8 @@
 .graph-container {
-	display: grid;
-	height: 97vh;
-	width: 97vw;
-
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
-	grid-template-columns: 70% 30%;
-	grid-template-rows: 100px 90%;
-
-	@media screen and (max-width: 770px) {
-		margin-left: 10px;
-		margin-right: 10px;
-
-		width: 95vw;
-		height: 125vh;
-
-		grid-row-gap: 20px;
-		grid-template-columns: 100%;
-		grid-template-rows: 100px 45% 45%;
-	}
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .graph-headline {

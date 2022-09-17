@@ -1,7 +1,7 @@
 import React from "react";
 import NivoBarComponent from "../components/nivo/NivoBarComponent";
 
-import {GraphContainer, OptionComponent} from "../components/LayoutContainers";
+import {OptionComponent} from "../components/LayoutContainers";
 import {
 	ConnectedGroupModeSelect as GroupModeSelect,
 	ConnectedLayoutSelect as LayoutSelect
@@ -12,10 +12,13 @@ import CheckboxValidity from "../components/checkboxes/CheckboxValidity";
 import CheckboxMonths from "../components/checkboxes/CheckboxMonths";
 import CheckboxSellType from "../components/checkboxes/CheckboxSellType";
 import BarGeneratorButton from "../components/BarGeneratorButton";
+import GraphHeader from "../components/layout/GraphHeader";
+import GraphBody from "../components/layout/GraphBody";
 
 export default () => {
 	return (
-		<GraphContainer>
+		<GraphBody>
+			<GraphHeader/>
 			<NivoBarComponent/>
 			<OptionComponent>
 				<ColorSchemeSelector/>
@@ -27,6 +30,6 @@ export default () => {
 				<CheckboxSellType/>
 				<BarGeneratorButton/>
 			</OptionComponent>
-		</GraphContainer>
+		</GraphBody>
 	);
 };

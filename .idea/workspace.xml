@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Recharts charts change">
-      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoHeatmapContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarGeneratorButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayoutContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayoutContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LinkMenuBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LinkMenuBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OptionComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SimpleMenuList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuListComposition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/GraphBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/GraphBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoStreamComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartMonthly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Add eslint">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BreadcrumLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BreadcrumbLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +80,7 @@
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build:dev">
+  <component name="RunManager" selected="npm.eslint">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -115,6 +100,16 @@
       <command value="run" />
       <scripts>
         <script value="build:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eslint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -142,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.eslint" />
         <item itemvalue="npm.build:dev" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start:dev" />
       </list>
@@ -223,21 +218,7 @@
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
       <workItem from="1663411604475" duration="11386000" />
-      <workItem from="1663429511412" duration="12668000" />
-    </task>
-    <task id="LOCAL-00038" summary="Creating shelves and updating part 1">
-      <created>1576094876527</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1576094876527</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Creating dashboards and updating part 2">
-      <created>1576101106222</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1576101106222</updated>
+      <workItem from="1663429511412" duration="13500000" />
     </task>
     <task id="LOCAL-00040" summary="Creating dashboards and updating part 2">
       <created>1576101827126</created>
@@ -568,7 +549,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663439620694</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Restyle components - Additional stuff">
+      <created>1663444660146</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1663444660147</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Add eslint">
+      <created>1663445045857</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1663445045857</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,8 +582,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Creating shelves and updating part 1" />
-    <MESSAGE value="Creating dashboards and updating part 2" />
     <MESSAGE value="Randomized dashboards" />
     <MESSAGE value="Creating dashboards and updating part 3" />
     <MESSAGE value="Update dependencies" />
@@ -612,7 +605,9 @@
     <MESSAGE value="Restyle components - Graph container" />
     <MESSAGE value="Restyle components - Apex charts change" />
     <MESSAGE value="Restyle components - Recharts charts change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Recharts charts change" />
+    <MESSAGE value="Restyle components - Additional stuff" />
+    <MESSAGE value="Add eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add eslint" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

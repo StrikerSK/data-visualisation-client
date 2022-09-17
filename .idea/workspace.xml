@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Repair responsiveness in Waffle component - HOTFIX">
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BreadcrumLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BreadcrumLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/NivoBarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - breadcrumbs">
+      <change beforePath="$PROJECT_DIR$/src/components/MainContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Teh|Striker &lt;kristianhanus@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="implement-navigation" />
@@ -66,30 +53,31 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/striker/WebstormProjects/data-visualisation-client/src",
+    "last_opened_file_path": "/home/striker/WebstormProjects/data-visualisation-client/src/styles/component",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles/component" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\lib" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Container" />
     </key>
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/StrikerSK/FitnessPage.git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles/component" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
       <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\Recharts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build:dev">
@@ -219,49 +207,7 @@
       <workItem from="1663171805298" duration="1037000" />
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
-      <workItem from="1663411604475" duration="1862000" />
-    </task>
-    <task id="LOCAL-00022" summary="Refactoring of code">
-      <created>1573406381358</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1573406381358</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Data sorter by values">
-      <created>1573772032414</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1573772032414</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Data sorter by values">
-      <created>1573772085047</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1573772085047</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Created bar organization and added layout system">
-      <created>1573774625230</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1573774625230</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Code review changes vol.1">
-      <created>1573924204703</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1573924204703</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Updates after rebase">
-      <created>1573991030453</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1573991030453</updated>
+      <workItem from="1663411604475" duration="5745000" />
     </task>
     <task id="LOCAL-00028" summary="Updates recharts graphs to newer version">
       <created>1574003491868</created>
@@ -564,7 +510,49 @@
       <option name="project" value="LOCAL" />
       <updated>1582671545183</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="First attempt to changes">
+      <created>1663413536712</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1663413536713</updated>
+    </task>
+    <task id="LOCAL-00072" summary="First attempt to changes">
+      <created>1663413609516</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1663413609516</updated>
+    </task>
+    <task id="LOCAL-00073" summary="First attempt to changes">
+      <created>1663413619048</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1663413619048</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Restyle components - breadcrumbs">
+      <created>1663415949116</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1663415949116</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Restyle components - breadcrumbs">
+      <created>1663416000450</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1663416000450</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Restyle components - breadcrumbs">
+      <created>1663416020521</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1663416020521</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,8 +570,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init bump chart component" />
-    <MESSAGE value="Implementing styled components" />
     <MESSAGE value="Recharts styling" />
     <MESSAGE value="Update styling for recharts components" />
     <MESSAGE value="Created dashboard" />
@@ -607,7 +593,9 @@
     <MESSAGE value="Repair responsiveness in Waffle component" />
     <MESSAGE value="Repair responsiveness in Waffle component - HOTFIX" />
     <MESSAGE value="Prototype: Graphs from file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prototype: Graphs from file" />
+    <MESSAGE value="First attempt to changes" />
+    <MESSAGE value="Restyle components - breadcrumbs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - breadcrumbs" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

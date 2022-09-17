@@ -1,0 +1,84 @@
+/* -------------------------- Main container -------------------------- */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+/* -------------------------- Main container -------------------------- */
+
+/* -------------------------- Content container -------------------------- */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+
+  h1 {
+    width: 100%;
+  }
+
+  p {
+    width: 100%;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 770px) {
+    width: 100%;
+    height: 100%;
+
+    grid-template-columns: 100%;
+  }
+}
+/* -------------------------- Content container -------------------------- */
+
+/* -------------------------- Breadcrumbs box -------------------------- */
+.breadcrumb-container {
+  width: 100%;
+  height: max-content;
+
+  grid-row: 2;
+  grid-column: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 770px) {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    grid-row-gap: 20px;
+
+    grid-template-columns: 100%;
+  }
+}
+/* -------------------------- Breadcrumbs box -------------------------- */
+
+/* -------------------------- Breadcrumbs links -------------------------- */
+
+.breadcrumb-link-container {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  a {
+    width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  span {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+}
+
+/* -------------------------- Breadcrumbs links -------------------------- */

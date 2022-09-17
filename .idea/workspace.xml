@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Graph container">
-      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexBarChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexHeatmapChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexLineChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexPieChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/apex/ApexRadialChart.js" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Apex charts change">
+      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/component/_Spinner.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_PieChart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexRadialChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DashboardHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/DashboardTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/DashboardLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,9 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="Sass File" />
         <option value="CSS File" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -53,22 +59,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;Project.color&quot;: &quot;52511f&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/striker/WebstormProjects/data-visualisation-client/src/styles/component&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "Project.color": "52511f",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/striker/WebstormProjects/data-visualisation-client/src/styles/component",
+    "list.type.of.created.stylesheet": "SCSS",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/styles/component" />
@@ -81,11 +87,11 @@
       <recent name="https://github.com/StrikerSK/FitnessPage.git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/layout" />
       <recent name="$PROJECT_DIR$/src/container/recharts" />
       <recent name="$PROJECT_DIR$/src/container/nivo" />
       <recent name="$PROJECT_DIR$/src/container/apex" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/styles/component" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build:dev">
@@ -216,14 +222,7 @@
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
       <workItem from="1663411604475" duration="11386000" />
-      <workItem from="1663429511412" duration="4033000" />
-    </task>
-    <task id="LOCAL-00034" summary="Recharts styling">
-      <created>1575637011087</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1575637011087</updated>
+      <workItem from="1663429511412" duration="7735000" />
     </task>
     <task id="LOCAL-00035" summary="Update styling for recharts components">
       <created>1575642956000</created>
@@ -561,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663432844975</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Restyle components - Apex charts change">
+      <created>1663433819239</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1663433819239</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Created dashboard for React" />
     <MESSAGE value="Setting up development server" />
     <MESSAGE value="Creating shelves and updating part 1" />
     <MESSAGE value="Creating dashboards and updating part 2" />
@@ -605,7 +610,8 @@
     <MESSAGE value="Restyle components - Dashboard and header" />
     <MESSAGE value="Restyle components - Graph body a" />
     <MESSAGE value="Restyle components - Graph container" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Graph container" />
+    <MESSAGE value="Restyle components - Apex charts change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Apex charts change" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

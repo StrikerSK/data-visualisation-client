@@ -1,31 +1,21 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import NivoBarContainer from "./container/nivo/NivoBarContainer";
-import NivoLineContainer from "./container/nivo/NivoLineContainer";
-import NivoPieContainer from "./container/nivo/NivoPieContainer";
-import NivoBubbleContainer from "./container/nivo/NivoBubbleContainer";
-import PieChartMonthly from "./components/recharts/PieChartMonthly";
-import {NivoDashboards, NivoDashboardsRandom} from "./container/nivo/NivoDashboards";
-import {RechartsDashboard, RechartsDashboardRandom} from "./container/recharts/RechartsDashboard";
-
-import {
-    RechartsAreaContainer,
-    RechartsBarContainer,
-    RechartsLineContainer,
-    RechartsPieContainer,
-    RechartsStackedContainer
-} from "./container/recharts/RechartsContainers";
-
 import {
     NivoHeatMapContainer,
     NivoRadarContainer,
     NivoStreamContainer,
 } from "./container/nivo/NivoGraphCollection";
+
 import MainPage from "./container/MainPage";
 
-import {ApexDashboards, ApexDashboardsRandom} from "./container/apex/ApexDashboards";
+import NivoBarContainer from "./container/nivo/NivoBarContainer";
+import NivoLineContainer from "./container/nivo/NivoLineContainer";
+import NivoPieContainer from "./container/nivo/NivoPieContainer";
+import NivoBubbleContainer from "./container/nivo/NivoBubbleContainer";
 import NivoWaffleChartContainer from "./container/nivo/NivoWaffleChartContainer";
+import {NivoDashboards, NivoDashboardsRandom} from "./container/nivo/NivoDashboards";
+
 import ApexPieChart from "./container/apex/ApexPieChart";
 import ApexBarChart from "./container/apex/ApexBarChart";
 import ApexLineChart from "./container/apex/ApexLineChart";
@@ -33,6 +23,15 @@ import ApexRadialChart from "./container/apex/ApexRadialChart";
 import ApexHeatmapChart from "./container/apex/ApexHeatmapChart";
 import ApexRadarChart from "./container/apex/ApexRadarChart";
 import ApexAreaChart from "./container/apex/ApexAreaChart";
+import {ApexDashboards, ApexDashboardsRandom} from "./container/apex/ApexDashboards";
+
+import RechartsPieContainer from "./container/recharts/RechartsPieContainer";
+import RechartsStackedContainer from "./container/recharts/RechartsStackedContainer";
+import RechartsLineContainer from "./container/recharts/RechartsLineContainer";
+import RechartsBarContainer from "./container/recharts/RechartsBarContainer";
+import RechartsAreaContainer from "./container/recharts/RechartsAreaContainer";
+import PieChartMonthly from "./components/recharts/PieChartMonthly";
+import {RechartsDashboard, RechartsDashboardRandom} from "./container/recharts/RechartsDashboard";
 
 const App = () => {
     const pathList = [

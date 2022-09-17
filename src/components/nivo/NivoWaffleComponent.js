@@ -43,11 +43,11 @@ const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
 			motionDamping={11}
 			legends={[
 				{
-					anchor: adaptToWidth("top-left", "bottom"),
+					anchor: adaptToWidth("left", "bottom"),
 					direction: adaptToWidth("column", "row"),
 					justify: false,
-					translateX: adaptToWidth(0, 0),
-					translateY: adaptToWidth(0, 30),
+					translateX: adaptToWidth(-100, 0),
+					translateY: adaptToWidth(50, 30),
 					itemsSpacing: adaptToWidth(8, 2),
 					itemWidth: adaptToWidth(100, 65),
 					itemHeight: 20,

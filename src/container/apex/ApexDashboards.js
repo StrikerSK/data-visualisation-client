@@ -1,6 +1,6 @@
 import React from "react";
 
-import DashboardTemplate from "../../components/layout/DashboardTemplate";
+import DashboardLayout from "../../components/layout/DashboardLayout";
 import ApexBarChart from "../../components/apex/ApexBarChart";
 import ApexLineChart from "../../components/apex/ApexLineChart";
 import ApexRadialChart from "../../components/apex/ApexRadialChart";
@@ -23,17 +23,17 @@ const shuffleArray = () => componentArray.sort(() => Math.random() - 0.5);
 
 export const ApexDashboards = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			{componentArray}
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };
 
 export const ApexDashboardsRandom = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			{shuffleArray()}
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };
 

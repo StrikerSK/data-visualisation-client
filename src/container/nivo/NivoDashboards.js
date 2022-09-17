@@ -5,7 +5,7 @@ import NivoBarComponent from "../../components/nivo/NivoBarComponent";
 import NivoLineComponent from "../../components/nivo/NivoLineComponent";
 import NivoBubbleComponent from "../../components/nivo/NivoBubbleComponent";
 
-import DashboardTemplate from "../../components/layout/DashboardTemplate";
+import DashboardLayout from "../../components/layout/DashboardLayout";
 import NivoRadarComponent from "../../components/nivo/NivoRadarComponent";
 import NivoWaffleComponent from "../../components/nivo/NivoWaffleComponent";
 
@@ -22,20 +22,20 @@ const shuffleArray = () => componentArray.sort(() => Math.random() - 0.5);
 
 export const NivoDashboards = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			<NivoLineComponent/>
 			<NivoBarComponent/>
 			<NivoPieComponent/>
 			<NivoBubbleComponent/>
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };
 
 export const NivoDashboardsRandom = () => {
 	return (
-		<DashboardTemplate>
+		<DashboardLayout>
 			{shuffleArray()}
-		</DashboardTemplate>
+		</DashboardLayout>
 	);
 };
 

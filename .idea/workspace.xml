@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - breadcrumbs">
-      <change beforePath="$PROJECT_DIR$/src/components/MainContent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Restyle components - Graph container">
+      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/nivo/NivoWaffleChartContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ApexDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/ApexchartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexchartsContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoGraphCollection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoGraphCollection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/RechartsContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/RechartsDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +26,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="SCSS File" />
         <option value="Sass File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -46,21 +56,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Git.Branch.Popup.ShowAllRemotes": "true",
-    "Project.color": "52511f",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/striker/WebstormProjects/data-visualisation-client/src/styles/component",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;Project.color&quot;: &quot;52511f&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/striker/WebstormProjects/data-visualisation-client/src/styles/component&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/striker/WebstormProjects/data-visualisation-client/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/striker/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4167.31/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/styles/component" />
@@ -73,11 +84,11 @@
       <recent name="https://github.com/StrikerSK/FitnessPage.git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/container/recharts" />
+      <recent name="$PROJECT_DIR$/src/container/nivo" />
+      <recent name="$PROJECT_DIR$/src/container/apex" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/styles/component" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\apex" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\container" />
-      <recent name="C:\Users\kristian.hanus\Programming\React\react-charts\src\components\recharts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build:dev">
@@ -207,42 +218,8 @@
       <workItem from="1663171805298" duration="1037000" />
       <workItem from="1663172848596" duration="669000" />
       <workItem from="1663411510825" duration="88000" />
-      <workItem from="1663411604475" duration="5745000" />
-    </task>
-    <task id="LOCAL-00028" summary="Updates recharts graphs to newer version">
-      <created>1574003491868</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1574003491868</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Init bump chart component">
-      <created>1575632093196</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1575632093196</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Implementing styled components">
-      <created>1575635741695</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1575635741695</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Implementing styled components">
-      <created>1575635835096</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1575635835096</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Implementing styled components">
-      <created>1575636260428</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1575636260428</updated>
+      <workItem from="1663411604475" duration="11386000" />
+      <workItem from="1663429511412" duration="3306000" />
     </task>
     <task id="LOCAL-00033" summary="Implementing styled components">
       <created>1575636354891</created>
@@ -552,7 +529,42 @@
       <option name="project" value="LOCAL" />
       <updated>1663416020521</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Restyle components - breadcrumbs">
+      <created>1663417410757</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1663417410757</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Restyle components - breadcrumbs">
+      <created>1663417779031</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1663417779032</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Restyle components - Dashboard and header">
+      <created>1663421570786</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1663421570786</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Restyle components - Graph container">
+      <created>1663431876037</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1663431876037</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Restyle components - Graph container">
+      <created>1663432159344</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1663432159344</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,9 +582,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Recharts styling" />
-    <MESSAGE value="Update styling for recharts components" />
-    <MESSAGE value="Created dashboard" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Created dashboard for React" />
     <MESSAGE value="Setting up development server" />
     <MESSAGE value="Creating shelves and updating part 1" />
@@ -595,7 +605,10 @@
     <MESSAGE value="Prototype: Graphs from file" />
     <MESSAGE value="First attempt to changes" />
     <MESSAGE value="Restyle components - breadcrumbs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - breadcrumbs" />
+    <MESSAGE value="Restyle components - Dashboard and header" />
+    <MESSAGE value="Restyle components - Graph body a" />
+    <MESSAGE value="Restyle components - Graph container" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restyle components - Graph container" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
 </project>

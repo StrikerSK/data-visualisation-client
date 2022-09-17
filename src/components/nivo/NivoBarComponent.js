@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {ResponsiveBar} from "@nivo/bar";
 import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
@@ -7,9 +7,9 @@ import {accessAll} from "../../lib/ReduceAccessor";
 import {adaptToWidth, isDesktop} from "../../lib/Functions";
 
 const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sellType, color}) => {
-	const [data, setData] = useState([{}]);
-	const [labels, setLabels] = useState([]);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [data, setData] = React.useState([{}]);
+	const [labels, setLabels] = React.useState([]);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
 	const finaliseTransaction = (result) => {
 		setData(result);
@@ -27,7 +27,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		// console.log(box2.offsetWidth);
 		barDataGetter([person, months, sellType, validity], finaliseTransaction);
 	}, [person, months, sellType, validity]);

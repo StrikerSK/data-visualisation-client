@@ -27,37 +27,3 @@
     height: 95%;
   }
 }
-
-.graph-headline {
-  grid-column: 1 / 3;
-  grid-row: 1;
-  place-self: center;
-
-  @media screen and (max-width: 770px) {
-    grid-row: 1;
-  }
-}
-
-.graph-component {
-  grid-column: 1;
-  grid-row: 2;
-  place-self: center;
-
-  @media screen and (max-width: 770px) {
-    grid-row: 2;
-  }
-}
-
-.options-component {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-
-  @media screen and (max-width: 770px) {
-    grid-column: 1;
-    grid-row: 3;
-
-    width: 90%;
-    margin: 0 auto;
-  }
-}

@@ -24,17 +24,15 @@ import {
 } from "./container/nivo/NivoGraphCollection";
 import MainPage from "./container/MainPage";
 
-import {
-    ApexAreaContainer,
-    ApexBarContainer,
-    ApexChartContainers,
-    ApexHeatmapContainer,
-    ApexLineContainer,
-    ApexRadarContainer,
-    ApexRadialContainer
-} from "./container/apex/ApexchartsContainers";
 import {ApexDashboards, ApexDashboardsRandom} from "./container/apex/ApexDashboards";
 import NivoWaffleChartContainer from "./container/nivo/NivoWaffleChartContainer";
+import ApexPieChart from "./container/apex/ApexPieChart";
+import ApexBarChart from "./container/apex/ApexBarChart";
+import ApexLineChart from "./container/apex/ApexLineChart";
+import ApexRadialChart from "./container/apex/ApexRadialChart";
+import ApexHeatmapChart from "./container/apex/ApexHeatmapChart";
+import ApexRadarChart from "./container/apex/ApexRadarChart";
+import ApexAreaChart from "./container/apex/ApexAreaChart";
 
 const App = () => {
     const pathList = [
@@ -59,14 +57,13 @@ const App = () => {
         {path: "/nivo/bubble", component: <NivoBubbleContainer/>},
         {path: "/apex", component: <ApexDashboards/>},
         {path: "/apex/random", component: <ApexDashboardsRandom/>},
-        {path: "/apex/area", component: <ApexAreaContainer/>},
-        {path: "/apex/area", component: <ApexAreaContainer/>},
-        {path: "/apex/pie", component: <ApexChartContainers/>},
-        {path: "/apex/heatmap", component: <ApexHeatmapContainer/>},
-        {path: "/apex/radar", component: <ApexRadarContainer/>},
-        {path: "/apex/line", component: <ApexLineContainer/>},
-        {path: "/apex/bar", component: <ApexBarContainer/>},
-        {path: "/apex/radial", component: <ApexRadialContainer/>}
+        {path: "/apex/area", component: <ApexAreaChart/>},
+        {path: "/apex/pie", component: <ApexPieChart/>},
+        {path: "/apex/heatmap", component: <ApexHeatmapChart/>},
+        {path: "/apex/radar", component: <ApexRadarChart/>},
+        {path: "/apex/line", component: <ApexLineChart/>},
+        {path: "/apex/bar", component: <ApexBarChart/>},
+        {path: "/apex/radial", component: <ApexRadialChart/>}
     ]
 
     return (

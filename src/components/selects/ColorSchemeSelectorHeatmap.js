@@ -30,9 +30,9 @@ export const ColorSchemeSelectorHeatmap = () => {
 
 	return (
 		<FormControl className={classes.formControl}>
-			<InputLabel id="color-selector">Výber farby</InputLabel>
+			<InputLabel id="color-selector_label">Výber farby</InputLabel>
 			<Select
-				labelId="color-selector"
+				labelId="color-selector_label"
 				id="color-selector"
 				value={color}
 				onChange={handleChange}

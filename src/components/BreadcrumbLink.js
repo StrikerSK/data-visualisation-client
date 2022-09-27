@@ -9,7 +9,7 @@ const BreadcrumbLink = ({name, itemList}) => {
 			<span>{name}</span>
 			<Breadcrumbs aria-label="breadcrumb">
 				{itemList.map(({name, link}, index) => {
-					return <Link key={index} color="inherit" href={link}>{name}</Link>
+					return <Link className="breadcrumb-link" key={index} color="inherit" href={link}>{name}</Link>
 				})}
 			</Breadcrumbs>
 		</div>

@@ -40,7 +40,7 @@ const ApexAreaChart = ({months, person, validity, sellType}) => {
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const chart = <ReactApexChart options={options} series={data} type="area" height={"100%"}/>;
+	const chart = <ReactApexChart class={"test"} options={options} series={data} type="area" width='100%' height='100%'/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

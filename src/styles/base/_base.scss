@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
 
+$footer-height: 5%;
+
 * {
   font-size: 62.5%;
   font-family: 'Montserrat', sans-serif !important;
@@ -17,6 +19,10 @@ p, nav, span, a {
 body {
   margin: 0;
   padding: 0;
+
+  height: 100vh;
+  width: 100vw;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -30,10 +36,20 @@ code {
 
 
 #root {
-  height: 100vh;
-  width: 100vw;
+  height: (100% - $footer-height);
+  width: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  height: $footer-height;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1rem;
 }

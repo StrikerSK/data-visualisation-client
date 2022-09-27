@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {ResponsiveHeatMap} from "@nivo/heatmap";
 import SpinnerComponent from "../SpinnerComponent";
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {dataKeys} from "../controlls/checkboxes/CheckboxPerson";
 import {accessAll} from "../../lib/ReduceAccessor";
@@ -11,14 +11,12 @@ const NivoHeatMapComponent = ({validity, sellType, color}) => {
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		changeLoadedState(true);
-	};
-
-	useEffect(() => {
-		barDataGetter([validity, sellType], finaliseTransaction);
-	}, [validity, sellType, color]);
+	React.useEffect(() => {
+		fetchBarData( nivoBarPath, [sellType, validity])
+			.then(({data}) => setData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
+	}, [sellType, validity, color]);
 
 	const graphHeatMap = (
 		<ResponsiveHeatMap

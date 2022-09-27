@@ -1,27 +1,26 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ReactApexChart from 'react-apexcharts'
 
-import {pieDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoPiePath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexPieChart = ({months, person, validity, sellType}) => {
-	const [series, setSeries] = useState([]);
-	const [labels, setLabels] = useState([]);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [series, setSeries] = React.useState([]);
+	const [labels, setLabels] = React.useState([]);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
-	const finaliseTransaction = (result) => {
-		const outData = result.map(({value}) => value);
-		const resultLabels = result.map(({label}) => label);
-
-		setLabels(resultLabels);
-		setSeries(outData);
-		changeLoadedState(true);
+	const processData = (data) => {
+		setLabels(data.map(({label}) => label));
+		setSeries(data.map(({value}) => value));
 	};
 
-	useEffect(() => {
-		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
+	React.useEffect(() => {
+		fetchBarData( nivoPiePath, [months, person, validity, sellType])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
 	}, [months, person, validity, sellType]);
 
 	const options = {

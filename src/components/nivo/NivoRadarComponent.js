@@ -1,22 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {ResponsiveRadar} from "@nivo/radar";
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {dataKeys} from "../controlls/checkboxes/CheckboxPerson";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const NivoRadarComponent = () => {
-	const [data, setData] = useState([{}]);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [data, setData] = React.useState([{}]);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		changeLoadedState(true);
-	};
-
-	useEffect(() => {
-		barDataGetter([], finaliseTransaction)
+	React.useEffect(() => {
+		fetchBarData( nivoBarPath, [])
+			.then(({data}) => setData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
 	}, []);
 
 	const radarGraph = (

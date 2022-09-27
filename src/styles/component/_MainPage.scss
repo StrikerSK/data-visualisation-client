@@ -4,6 +4,7 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 60%;
   height: (100% - $footer-height);
 }
@@ -22,6 +23,7 @@
   p {
     width: 100%;
     text-align: justify;
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 770px) {
@@ -58,11 +60,46 @@
 /* -------------------------- Breadcrumbs links -------------------------- */
 
 .breadcrumb-link-container {
+  $breadcrumb-width: 85%;
+
   width: 80%;
   display: flex;
   justify-self: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+
+  /* Style the list */
+  ul.breadcrumb {
+    width: $breadcrumb-width;
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+  }
+
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: flex;
+    width: 15rem;
+    margin: 0.35rem;
+  }
+
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+  }
+
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #444;
+    text-decoration: none;
+    width: max-content;
+  }
+
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    text-decoration: underline;
+  }
 
   span, a {
     font-size: 1.4rem;
@@ -76,9 +113,10 @@
   }
 
   span {
-    width: 15%;
+    width: (100% - $breadcrumb-width);
     display: flex;
     align-items: center;
+    font-weight: bold;
   }
 
   nav {

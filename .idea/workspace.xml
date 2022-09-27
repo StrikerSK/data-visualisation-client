@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Webpack devServer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Styling changes - Main menu and links">
       <change beforePath="$PROJECT_DIR$/src/components/BreadcrumbLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BreadcrumbLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apex/ApexAreaChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +10,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactor-codebase" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -110,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664221893751</updated>
       <workItem from="1664221898792" duration="8532000" />
-      <workItem from="1664267242553" duration="3299000" />
+      <workItem from="1664267242553" duration="4580000" />
     </task>
     <task id="LOCAL-00002" summary="Webpack devServer">
       <created>1664227126460</created>
@@ -119,7 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664227126460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Styling changes">
+      <created>1664271455955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664271455955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Styling changes - Main menu and links">
+      <created>1664272532236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664272532236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +147,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code changes - Rechars pie graph" />
     <MESSAGE value="Webpack devServer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Webpack devServer" />
+    <MESSAGE value="Styling changes" />
+    <MESSAGE value="Styling changes - Main menu and links" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styling changes - Main menu and links" />
   </component>
 </project>

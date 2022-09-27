@@ -10,7 +10,7 @@ import {adaptToWidth} from "../../lib/Functions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
-		margin: theme.spacing(1),
+		margin: "0.5rem",
 	},
 	formLabel: {
 		minWidth: adaptToWidth('30%', '45%')

@@ -3,11 +3,12 @@ import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {useDispatch} from "react-redux";
 import {updateBarDataKeys} from "../lib/actions";
-import {adults, children, dataKeys, juniors, seniors, students} from "./checkboxes/CheckboxPerson";
+import {adults, children, dataKeys, juniors, seniors, students} from "./controlls/checkboxes/CheckboxPerson";
 
 const useStyles = makeStyles((theme) => ({
 	button: {
 		margin: theme.spacing(1),
+		width: "40%"
 	}
 }));
 

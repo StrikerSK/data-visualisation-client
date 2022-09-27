@@ -1,18 +1,16 @@
 import ApexBarChart from "../../components/apex/ApexBarChart";
-import {
-    ConnectedGroupModeSelect as GroupModeSelect,
-    ConnectedLayoutSelect as LayoutSelect
-} from "../../components/selects/LayoutSelect";
-import CheckboxPerson from "../../components/checkboxes/CheckboxPerson";
-import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
-import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
-import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
+import CheckboxPerson from "../../components/controlls/checkboxes/CheckboxPerson";
+import CheckboxValidity from "../../components/controlls/checkboxes/CheckboxValidity";
+import CheckboxMonths from "../../components/controlls/checkboxes/CheckboxMonths";
+import CheckboxSellType from "../../components/controlls/checkboxes/CheckboxSellType";
 import React from "react";
 import GraphComponent from "../../components/layout/GraphComponent";
+import SelectGroupLayout from "../../components/controlls/selects/SelectGroupLayout";
+import SelectBarLayout from "../../components/controlls/selects/SelectBarLayout";
 
 const configurations = [
-    <GroupModeSelect/>,
-    <LayoutSelect/>,
+    <SelectGroupLayout/>,
+    <SelectBarLayout/>,
     <CheckboxPerson/>,
     <CheckboxValidity/>,
     <CheckboxMonths/>,

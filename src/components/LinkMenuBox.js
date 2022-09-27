@@ -1,5 +1,5 @@
 import React from "react";
-import MenuListComposition from "./MenuListComposition";
+import MenuListComposition from "./modal/MenuListComposition";
 import Button from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
 
@@ -18,7 +18,7 @@ export const nivoItems = [
 	{name: "Línový graf", link: "/nivo/line"},
 	{name: "Bublinový graf", link: "/nivo/bubble"},
 	{name: "Oblátkový graf", link: "/nivo/waffle"},
-	{name: "Stack graf", link: "/nivo/stack"},
+	// {name: "Stack graf", link: "/nivo/stack"},
 	{name: "Dashboard", link: "/nivo"}
 ];
 
@@ -33,7 +33,7 @@ export const apexItems = [
 	{name: "Dashboard", link: "/apex"}
 ];
 
-export const LinkMenuBox = () => {
+export default () => {
 	const history = useHistory();
 
 	const handleClick = () => {
@@ -50,5 +50,4 @@ export const LinkMenuBox = () => {
 			</div>
 		</div>
 	);
-
 };

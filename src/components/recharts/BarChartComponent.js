@@ -19,8 +19,8 @@ const BarChartComponent = ({months, person, validity, sellType}) => {
 		changeLoadedState(true);
 
 		function createBars() {
-			setBars(getLabels(result).map(label => {
-				return <Bar type="monotone" dataKey={label} fill={generateColor()}/>
+			setBars(getLabels(result).map((label, index) => {
+				return <Bar key={index} type="monotone" dataKey={label} fill={generateColor()}/>
 			}))
 		}
 	};

@@ -1,13 +1,13 @@
 import React from "react";
 import NivoRadarComponent from "../../components/nivo/NivoRadarComponent";
-import ColorSchemeSelectorHeatmap from "../../components/selects/ColorSchemeSelectorHeatmap";
-import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
-import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
-import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
+import CheckboxValidity from "../../components/controlls/checkboxes/CheckboxValidity";
+import CheckboxSellType from "../../components/controlls/checkboxes/CheckboxSellType";
+import CheckboxMonths from "../../components/controlls/checkboxes/CheckboxMonths";
 import GraphComponent from "../../components/layout/GraphComponent";
+import SelectColorScheme from "../../components/controlls/selects/SelectColorScheme";
 
 const configurations = [
-    <ColorSchemeSelectorHeatmap/>,
+    <SelectColorScheme isHeatmap={true}/>,
     <CheckboxValidity/>,
     <CheckboxMonths/>,
     <CheckboxSellType/>,

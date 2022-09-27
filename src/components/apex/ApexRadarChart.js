@@ -4,7 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
-import {monthArray} from "../checkboxes/CheckboxMonths";
+import {monthArray} from "../controlls/checkboxes/CheckboxMonths";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexRadarChart = ({months, person, validity, sellType}) => {

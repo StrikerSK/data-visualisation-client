@@ -1,10 +1,12 @@
-import {defaultMonthRequestParams} from "../../components/checkboxes/CheckboxMonths";
-import {defaultPersonRequestParams} from "../../components/checkboxes/CheckboxPerson";
-import {defaultSellTypeRequestParams} from "../../components/checkboxes/CheckboxSellType";
-import {defaultValidityRequestParams} from "../../components/checkboxes/CheckboxValidity";
-import {defaultColorName} from "../../components/selects/ColorSchemeSelector";
-import {defaultGroupingValue, defaultLayoutValue} from "../../components/selects/LayoutSelect";
+import {defaultMonthRequestParams} from "../../components/controlls/checkboxes/CheckboxMonths";
+import {defaultPersonRequestParams} from "../../components/controlls/checkboxes/CheckboxPerson";
+import {defaultSellTypeRequestParams} from "../../components/controlls/checkboxes/CheckboxSellType";
+import {defaultValidityRequestParams} from "../../components/controlls/checkboxes/CheckboxValidity";
 import {defaultBarOrder} from "../../components/BarGeneratorButton";
+
+const defaultLayoutValue = "vertical";
+const defaultGroupingValue = "stacked";
+const defaultColorName = "nivo";
 
 const generalReducer = (data = {}, action) => {
 	if(action.type === 'UPDATE_MONTHS') {

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Styling changes - Graph containers">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxes/CheckboxTemplate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selects/ColorSchemeSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_GraphContainer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_Spinner.scss" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Select template">
+      <change beforePath="$PROJECT_DIR$/src/components/modal/ModalWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/ModalWindow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +41,23 @@
     "dart.analysis.tool.window.visible": "false",
     "javascript.nodejs.core.library.configured.version": "16.14.0",
     "javascript.nodejs.core.library.typings.version": "16.11.59",
+    "last_opened_file_path": "C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects",
     "list.type.of.created.stylesheet": "SCSS",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "C:\\Users\\StrikerSK\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4167.31\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.build:dev">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls\selects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\modal" />
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start:dev">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -94,9 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.build:dev" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.dev-server" />
       </list>
     </recent_temporary>
@@ -116,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664221893751</updated>
       <workItem from="1664221898792" duration="8532000" />
-      <workItem from="1664267242553" duration="5925000" />
+      <workItem from="1664267242553" duration="14055000" />
     </task>
     <task id="LOCAL-00002" summary="Webpack devServer">
       <created>1664227126460</created>
@@ -146,7 +152,70 @@
       <option name="project" value="LOCAL" />
       <updated>1664272561254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Styling changes - Graph containers">
+      <created>1664273938667</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664273938667</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Select template">
+      <created>1664285924692</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664285924692</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Select template">
+      <created>1664286246017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664286246017</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Select template">
+      <created>1664287121678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287121678</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Select template">
+      <created>1664287130749</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287130749</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Select template">
+      <created>1664287287569</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287287569</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Select template">
+      <created>1664287718010</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287718010</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Select template">
+      <created>1664288468162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664288468162</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Select template">
+      <created>1664289514672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664289514672</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +238,7 @@
     <MESSAGE value="Styling changes" />
     <MESSAGE value="Styling changes - Main menu and links" />
     <MESSAGE value="Styling changes - Graph containers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styling changes - Graph containers" />
+    <MESSAGE value="Select template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select template" />
   </component>
 </project>

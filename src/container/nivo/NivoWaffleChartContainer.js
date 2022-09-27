@@ -1,14 +1,14 @@
 import NivoWaffleComponent from "../../components/nivo/NivoWaffleComponent";
-import CheckboxPerson from "../../components/checkboxes/CheckboxPerson";
-import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
-import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
-import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
+import CheckboxPerson from "../../components/controlls/checkboxes/CheckboxPerson";
+import CheckboxValidity from "../../components/controlls/checkboxes/CheckboxValidity";
+import CheckboxMonths from "../../components/controlls/checkboxes/CheckboxMonths";
+import CheckboxSellType from "../../components/controlls/checkboxes/CheckboxSellType";
 import React from "react";
 import GraphComponent from "../../components/layout/GraphComponent";
-import {ColorSchemeSelector} from "../../components/selects/ColorSchemeSelector";
+import SelectColorScheme from "../../components/controlls/selects/SelectColorScheme";
 
 const configurations = [
-    <ColorSchemeSelector/>,
+    <SelectColorScheme/>,
     <CheckboxPerson/>,
     <CheckboxValidity/>,
     <CheckboxMonths/>,

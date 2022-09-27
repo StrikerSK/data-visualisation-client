@@ -3,7 +3,7 @@ import {ResponsiveHeatMap} from "@nivo/heatmap";
 import SpinnerComponent from "../SpinnerComponent";
 import {barDataGetter} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
-import {dataKeys} from "../checkboxes/CheckboxPerson";
+import {dataKeys} from "../controlls/checkboxes/CheckboxPerson";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {isDesktop} from "../../lib/Functions";
 

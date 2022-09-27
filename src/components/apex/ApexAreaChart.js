@@ -3,7 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 
 import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
-import {monthArray} from "../checkboxes/CheckboxMonths";
+import {monthArray} from "../controlls/checkboxes/CheckboxMonths";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 
@@ -40,7 +40,7 @@ const ApexAreaChart = ({months, person, validity, sellType}) => {
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const chart = <ReactApexChart class={"test"} options={options} series={data} type="area" width='100%' height='100%'/>;
+	const chart = <ReactApexChart options={options} series={data} type="area" width='100%' height='100%'/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

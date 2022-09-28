@@ -39,7 +39,7 @@ const ApexPieChart = ({months, person, validity, sellType}) => {
 		}]
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="pie" height={"100%"} width={"100%"}/>;
+	const chart = <ReactApexChart options={options} series={series} type="pie" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

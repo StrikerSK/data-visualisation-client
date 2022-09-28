@@ -62,7 +62,7 @@ export default () => {
 
 	return (
 		<div className="modal-button">
-			<Button variant="contained" onClick={handleOpen} color="primary" className={classes.outerButton}>Filteri</Button>
+			<Button variant="contained" onClick={handleOpen} color="primary" className={classes.outerButton}>Filter</Button>
 
 			<Modal
 				aria-labelledby="simple-modal-title"

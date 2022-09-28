@@ -36,7 +36,7 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 			.catch(console.error);
 	}, [person, months, sellType, validity]);
 
-	const chart = <ReactApexChart options={options} series={series} type="radialBar"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radialBar" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

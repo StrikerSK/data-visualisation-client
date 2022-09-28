@@ -50,7 +50,7 @@ const ApexLineChart = ({months, person, validity, sellType}) => {
 		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
 	}, [months, person, validity, sellType]);
 
-	const chart = <ReactApexChart options={options} series={data} type="line" height={"100%"} width={"100%"}/>;
+	const chart = <ReactApexChart options={options} series={data} type="line" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

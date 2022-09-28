@@ -1,9 +1,9 @@
 import React from "react";
 import {connect} from "react-redux";
-import {updateValidity} from "../../lib/actions";
+import {updateValidity} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
-import {accessValidity} from "../../lib/ReduceAccessor";
-import {validateComponentChecks} from "../../lib/Functions";
+import {accessValidity} from "../../../lib/ReduceAccessor";
+import {validateComponentChecks} from "../../../lib/Functions";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";

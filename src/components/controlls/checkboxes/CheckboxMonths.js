@@ -1,8 +1,8 @@
 import React from 'react';
-import {updateMonths} from "../../lib/actions";
+import {updateMonths} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {connect} from "react-redux";
-import {validateComponentChecks} from "../../lib/Functions";
+import {validateComponentChecks} from "../../../lib/Functions";
 
 export const january = "Január";
 export const february = "Február";

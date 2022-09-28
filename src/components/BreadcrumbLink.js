@@ -1,17 +1,15 @@
 import React from "react";
-import Breadcrumbs from "@material-ui/core/Breadcrumbs";
-import Link from "@material-ui/core/Link"
 import PropTypes from 'prop-types';
 
 const BreadcrumbLink = ({name, itemList}) => {
 	return (
 		<div className="breadcrumb-link-container">
 			<span>{name}</span>
-			<Breadcrumbs aria-label="breadcrumb">
+			<ul className="breadcrumb">
 				{itemList.map(({name, link}, index) => {
-					return <Link key={index} color="inherit" href={link}>{name}</Link>
+					return <li key={index}><a className="breadcrumb-link" key={index} color="inherit" href={link}>{name}</a></li>
 				})}
-			</Breadcrumbs>
+			</ul>
 		</div>
 	)
 };

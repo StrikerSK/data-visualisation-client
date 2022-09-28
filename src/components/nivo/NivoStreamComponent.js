@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {ResponsiveStream} from "@nivo/stream";
 import {streamDataGetter} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
-import {dataKeys} from "../checkboxes/CheckboxPerson";
+import {dataKeys} from "../controlls/checkboxes/CheckboxPerson";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 

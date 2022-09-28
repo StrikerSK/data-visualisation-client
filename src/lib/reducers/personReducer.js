@@ -1,4 +1,4 @@
-import {defaultPersonRequestParams} from "../../components/checkboxes/CheckboxPerson";
+import {defaultPersonRequestParams} from "../../components/controlls/checkboxes/CheckboxPerson";
 
 const personReducer = (persons = {}, action) => {
 	if(action.type === 'UPDATE_PERSON') {

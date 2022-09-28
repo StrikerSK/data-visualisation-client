@@ -1,9 +1,9 @@
 import React from 'react';
-import {updateSellTypes} from "../../lib/actions";
+import {updateSellTypes} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {connect} from "react-redux";
-import {validateComponentChecks} from "../../lib/Functions";
-import {accessSellType} from "../../lib/ReduceAccessor";
+import {validateComponentChecks} from "../../../lib/Functions";
+import {accessSellType} from "../../../lib/ReduceAccessor";
 
 export const card = "Čipová karta";
 export const coupon = "Papierový kupón";

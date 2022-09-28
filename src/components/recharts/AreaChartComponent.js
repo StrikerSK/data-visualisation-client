@@ -1,29 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {connect} from "react-redux";
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor, getLabels} from "../../lib/Functions";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const AreaChartComponent = ({months, person, validity, sellType}) => {
-	const [data, setData] = useState([]);
-	const [line, setLine] = useState([]);
-	const [area, setArea] = useState([]);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [data, setData] = React.useState([]);
+	const [line, setLine] = React.useState([]);
+	const [area, setArea] = React.useState([]);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		createGraphElements();
-		changeLoadedState(true);
-
-		function createGraphElements() {
-			if (area.length !== 0 && line.length !== 0) {
-				setArea([]);
-				setLine([]);
-			}
-
+	const processData = (result) => {
+		const createGraphElements = () => {
 			getLabels(result).forEach(label => {
 				const generatedColor = generateColor();
 				const identification = "color" + label;
@@ -36,15 +27,31 @@ const AreaChartComponent = ({months, person, validity, sellType}) => {
 				);
 
 				setLine(line => [...line,
-					<Area type="monotone" dataKey={label} stroke={generatedColor} fillOpacity={1}
-					      fill={"url(#" + identification + ")"}/>
+					<Area
+						type="monotone"
+						dataKey={label}
+						stroke={generatedColor}
+						fillOpacity={1}
+						fill={"url(#" + identification + ")"}
+					/>
 				]);
 			});
+
+			if (area.length !== 0 && line.length !== 0) {
+				setArea([]);
+				setLine([]);
+			}
 		}
+
+		setData(result);
+		createGraphElements();
 	};
 
-	useEffect(() => {
-		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+	React.useEffect(() => {
+		fetchBarData( nivoBarPath, [person, months, sellType, validity])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
 	}, [person, months, sellType, validity]);
 
 	const areaChart = (

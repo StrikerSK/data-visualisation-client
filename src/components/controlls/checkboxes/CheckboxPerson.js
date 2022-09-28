@@ -1,8 +1,8 @@
 import React from "react";
 import CheckboxTemplate from "./CheckboxTemplate";
-import {updatePersons} from "../../lib/actions";
+import {updatePersons} from "../../../lib/actions";
 import {connect} from "react-redux";
-import {validateComponentChecks} from "../../lib/Functions";
+import {validateComponentChecks} from "../../../lib/Functions";
 
 export const adults = "Dospelý";
 export const juniors = "Juniori";

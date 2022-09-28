@@ -49,9 +49,10 @@ module.exports =  {
             filename: "styles.css",
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve( __dirname, 'public/index.html' ),
+            template: path.resolve( __dirname, 'public/index.html'),
             filename: 'index.html',
-            favicon: path.resolve( __dirname, 'public/favicon.ico' )
+            favicon: path.resolve( __dirname, 'public/favicon.ico'),
+            inject: true
         })
     ]
 };

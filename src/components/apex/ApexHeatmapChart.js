@@ -4,7 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 import {apexDataFetcher} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
-import {monthArray} from "../checkboxes/CheckboxMonths";
+import {monthArray} from "../controlls/checkboxes/CheckboxMonths";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const colors = ["#F3B415", "#F27036", "#663F59", "#6A6E94", "#4E88B4", "#00A7C6", "#18D8D8", '#A9D794', '#46AF78',
@@ -35,7 +35,7 @@ const ApexHeatmapChart = ({months, person, validity, sellType}) => {
 		}
 	};
 
-	const chart = <ReactApexChart options={options} series={series} type="heatmap" height={"100%"}/>;
+	const chart = <ReactApexChart options={options} series={series} type="heatmap" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

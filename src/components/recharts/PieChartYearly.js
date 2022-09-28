@@ -1,25 +1,27 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Pie, PieChart, ResponsiveContainer} from "recharts";
 import {connect} from "react-redux";
 
-import {pieDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoPiePath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor} from "../../lib/Functions";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const PieChartYearly = ({months, person, validity, sellType}) => {
-    const [data, setData] = useState([]);
-    const [color, setColor] = useState("");
-    const [isLoaded, changeLoadedState] = useState(false);
+    const [data, setData] = React.useState([]);
+    const [color, setColor] = React.useState("");
+    const [isLoaded, changeLoadedState] = React.useState(false);
 
     const processData = (result) => {
         setData(result);
-        changeLoadedState(true);
+        setColor(generateColor());
     };
 
-    useEffect(() => {
-        setColor(generateColor());
-        pieDataGetter([months, person, validity, sellType], processData);
+    React.useEffect(() => {
+        fetchBarData( nivoPiePath, [months, person, validity, sellType])
+            .then(({data}) => processData(data))
+            .then(() => changeLoadedState(true))
+            .catch(console.error);
     }, [months, person, validity, sellType]);
 
     const pieChart = (

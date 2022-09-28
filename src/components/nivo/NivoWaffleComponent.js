@@ -1,33 +1,27 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {ResponsiveWaffle} from "@nivo/waffle";
-import {pieDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoPiePath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {connect} from "react-redux";
 import {adaptToWidth} from "../../lib/Functions";
 
 const NivoWaffleComponent = ({months, person, validity, sellType, color}) => {
-	const [data, setData] = useState([{}]);
-	const [maxValue, setMaxValue] = useState(0);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [data, setData] = React.useState([{}]);
+	const [maxValue, setMaxValue] = React.useState(0);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
-	const finaliseTransaction = (result) => {
+	const processData = (result) => {
 		setData(result);
-		countTotal(result);
-		changeLoadedState(true);
+		setMaxValue(result.reduce((acc, {value}) => acc + value, 0));
 	};
 
-	useEffect(() => {
-		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
+	React.useEffect(() => {
+		fetchBarData( nivoPiePath, [months, person, validity, sellType])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
 	}, [months, person, validity, sellType, color]);
-
-	const countTotal = (inputArray) => {
-		let sum = 0;
-		inputArray.forEach(({value}) => {
-			sum += value;
-		});
-		setMaxValue(sum);
-	};
 
 	const waffleGraph = (
 		<ResponsiveWaffle

@@ -10,11 +10,6 @@ const generateParamsQuery = (parametersList) => {
 export const nivoBarPath = "/nivo/bar?"
 export const nivoPiePath = "/nivo/pie?"
 
-export const pieDataGetter = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/nivo/pie?" + generateParamsQuery(parameters))
-		.then(({data}) => callbackFunction(data));
-};
-
 export const fetchBarData = (url, parameters) => {
 	return axios.get(hostUrl + url + generateParamsQuery(parameters));
 };

@@ -14,7 +14,8 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 	const options = {
 		labels: labels,
 		legend: {
-			show: true
+			show: true,
+			position: 'top'
 		}
 	};
 
@@ -27,6 +28,8 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 
 		setLabels(result.map(({label}) => label));
 		setSeries(result.map(({value}) => Math.round(value / getSum() * 100)));
+		console.log("series", result.map(({value}) => Math.round(value / getSum() * 100)))
+		console.log("labels", result.map(({label}) => label))
 	};
 
 	React.useEffect(() => {
@@ -36,7 +39,7 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 			.catch(console.error);
 	}, [person, months, sellType, validity]);
 
-	const chart = <ReactApexChart options={options} series={series} type="radialBar" width="100%" height="100%" className={"apex-chart"}/>;
+	const chart = <ReactApexChart options={options} series={series} type="donut" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

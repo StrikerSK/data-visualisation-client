@@ -4,8 +4,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {connect, useDispatch} from "react-redux";
-import {updateBarGrouping, updateBarLayout} from "../../../lib/actions";
+import {useDispatch} from "react-redux";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {

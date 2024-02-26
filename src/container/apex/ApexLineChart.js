@@ -1,16 +1,6 @@
-import ApexLineChart from "../../components/apex/ApexLineChart";
-import CheckboxPerson from "../../components/controlls/checkboxes/CheckboxPerson";
-import CheckboxValidity from "../../components/controlls/checkboxes/CheckboxValidity";
-import CheckboxMonths from "../../components/controlls/checkboxes/CheckboxMonths";
-import CheckboxSellType from "../../components/controlls/checkboxes/CheckboxSellType";
 import React from "react";
+import ApexLineChart from "../../components/apex/ApexLineChart";
 import GraphComponent from "../../components/layout/GraphComponent";
+import {DefaultConfiguration} from "../AbstractCharts";
 
-const configurations = [
-    <CheckboxPerson/>,
-    <CheckboxValidity/>,
-    <CheckboxMonths/>,
-    <CheckboxSellType/>
-]
-
-export default () => <GraphComponent graph={<ApexLineChart/>} configs={configurations}/>;
+export default () => <GraphComponent graph={<ApexLineChart/>} configs={DefaultConfiguration}/>;

@@ -1,5 +1,6 @@
-@use "base/base";
-@use "component/GraphContainer";
-@use "component/Dashboard";
-@use "component/MainPage";
-@use "component/Spinner";
+@use "./base/base";
+@use "./component/Dashboard";
+@use "./component/GraphContainer";
+@use "./component/MainPage";
+@use "./component/Root";
+@use "./component/Spinner";

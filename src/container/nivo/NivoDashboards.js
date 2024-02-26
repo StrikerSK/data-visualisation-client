@@ -6,7 +6,6 @@ import NivoLineComponent from "../../components/nivo/NivoLineComponent";
 import NivoBubbleComponent from "../../components/nivo/NivoBubbleComponent";
 
 import DashboardLayout from "../../components/layout/DashboardLayout";
-import NivoRadarComponent from "../../components/nivo/NivoRadarComponent";
 import NivoWaffleComponent from "../../components/nivo/NivoWaffleComponent";
 
 const componentArray = [
@@ -14,7 +13,6 @@ const componentArray = [
 	<NivoBarComponent/>,
 	<NivoPieComponent/>,
 	<NivoBubbleComponent/>,
-	<NivoRadarComponent/>,
 	<NivoWaffleComponent/>
 ];
 

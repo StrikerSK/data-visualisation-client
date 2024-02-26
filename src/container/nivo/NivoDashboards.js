@@ -6,14 +6,12 @@ import NivoLineComponent from "../../components/nivo/NivoLineComponent";
 import NivoBubbleComponent from "../../components/nivo/NivoBubbleComponent";
 
 import DashboardLayout from "../../components/layout/DashboardLayout";
-import NivoWaffleComponent from "../../components/nivo/NivoWaffleComponent";
 
 const componentArray = [
 	<NivoLineComponent/>,
 	<NivoBarComponent/>,
 	<NivoPieComponent/>,
 	<NivoBubbleComponent/>,
-	<NivoWaffleComponent/>
 ];
 
 const shuffleArray = () => componentArray.sort(() => Math.random() - 0.5);

@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Cleanup code a little">
-      <change afterPath="$PROJECT_DIR$/src/container/nivo/AbstractNivo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" afterDir="false" />
-    </list>
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo HeatMap" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -310,7 +302,47 @@
       <option name="project" value="LOCAL" />
       <updated>1708980927158</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Abstract Nivo configurations">
+      <option name="closed" value="true" />
+      <created>1708983411603</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983411603</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Remove Nivo Radar">
+      <option name="closed" value="true" />
+      <created>1708983491901</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983491901</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Remove Nivo Radar">
+      <option name="closed" value="true" />
+      <created>1708983503973</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983503973</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Remove Nivo Radar">
+      <option name="closed" value="true" />
+      <created>1708983507199</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983507199</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Remove Nivo HeatMap">
+      <option name="closed" value="true" />
+      <created>1708983621692</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983621692</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +370,9 @@
     <MESSAGE value="Apex charts sizing fix" />
     <MESSAGE value="Make code installable" />
     <MESSAGE value="Cleanup code a little" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup code a little" />
+    <MESSAGE value="Abstract Nivo configurations" />
+    <MESSAGE value="Remove Nivo Radar" />
+    <MESSAGE value="Remove Nivo HeatMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Nivo HeatMap" />
   </component>
 </project>

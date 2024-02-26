@@ -8,7 +8,6 @@ import NivoBarContainer from "./container/nivo/NivoBarContainer";
 import NivoLineContainer from "./container/nivo/NivoLineContainer";
 import NivoPieContainer from "./container/nivo/NivoPieContainer";
 import NivoBubbleContainer from "./container/nivo/NivoBubbleContainer";
-import NivoWaffleChartContainer from "./container/nivo/NivoWaffleChartContainer";
 import NivoStreamContainer from "./container/nivo/NivoStreamContainer";
 import {NivoDashboards, NivoDashboardsRandom} from "./container/nivo/NivoDashboards";
 
@@ -44,7 +43,6 @@ const App = () => {
         {path: "/nivo/bar", component: <NivoBarContainer/>},
         {path: "/nivo/stack", component: <NivoStreamContainer/>},
         {path: "/nivo/pie", component: <NivoPieContainer/>},
-        {path: "/nivo/waffle", component: <NivoWaffleChartContainer/>},
         {path: "/nivo/bubble", component: <NivoBubbleContainer/>},
         {path: "/apex", component: <ApexDashboards/>},
         {path: "/apex/random", component: <ApexDashboardsRandom/>},

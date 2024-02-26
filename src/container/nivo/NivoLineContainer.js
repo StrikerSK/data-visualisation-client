@@ -2,6 +2,6 @@ import React from "react";
 
 import NivoLineComponent from "../../components/nivo/NivoLineComponent";
 import GraphComponent from "../../components/layout/GraphComponent";
-import {DefaultConfiguration} from "./AbstractNivo";
+import {DefaultNivoConfiguration} from "./AbstractNivo";
 
-export default () => <GraphComponent graph={<NivoLineComponent/>} configs={DefaultConfiguration}/>;
+export default () => <GraphComponent graph={<NivoLineComponent/>} configs={DefaultNivoConfiguration}/>;

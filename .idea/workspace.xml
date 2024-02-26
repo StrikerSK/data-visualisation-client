@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo HeatMap" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo Waffle">
+      <change afterPath="$PROJECT_DIR$/src/container/AbstractCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexAreaChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexBarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexBarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexHeatmapChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexHeatmapChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexLineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexLineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexPieChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexPieChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexRadarChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexRadarChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/apex/ApexRadialChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/apex/ApexRadialChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/AbstractNivo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/AbstractNivo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoBubbleContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoDashboards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoLineContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/nivo/NivoStreamContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -342,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708983621692</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Remove Nivo Waffle">
+      <option name="closed" value="true" />
+      <created>1708983756218</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708983756218</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +403,19 @@
     <MESSAGE value="Abstract Nivo configurations" />
     <MESSAGE value="Remove Nivo Radar" />
     <MESSAGE value="Remove Nivo HeatMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove Nivo HeatMap" />
+    <MESSAGE value="Remove Nivo Waffle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Nivo Waffle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/container/nivo/AbstractNivo.js</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

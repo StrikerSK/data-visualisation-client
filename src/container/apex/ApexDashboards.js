@@ -1,5 +1,4 @@
 import React from "react";
-
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import ApexBarChart from "../../components/apex/ApexBarChart";
 import ApexLineChart from "../../components/apex/ApexLineChart";

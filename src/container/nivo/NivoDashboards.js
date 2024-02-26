@@ -34,5 +34,3 @@ export const NivoDashboardsRandom = () => {
 		</DashboardLayout>
 	);
 };
-
-export default {NivoDashboards, NivoDashboardsRandom};

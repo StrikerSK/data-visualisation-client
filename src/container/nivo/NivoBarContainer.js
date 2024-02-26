@@ -3,10 +3,10 @@ import GraphComponent from "../../components/layout/GraphComponent";
 import NivoBarComponent from "../../components/nivo/NivoBarComponent";
 import SelectBarLayout from "../../components/controlls/selects/SelectBarLayout";
 import SelectGroupLayout from "../../components/controlls/selects/SelectGroupLayout";
-import {DefaultConfiguration} from "./AbstractNivo";
+import {DefaultNivoConfiguration} from "./AbstractNivo";
 
 const ComponentConfigurations = [
-    ...DefaultConfiguration,
+    ...DefaultNivoConfiguration,
     <SelectGroupLayout/>,
     <SelectBarLayout/>,
 ]

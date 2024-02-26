@@ -1,7 +1,7 @@
 import axios from "axios"
 
-// const hostUrl = "http://localhost:8080";
-const hostUrl = "https://pid-data-server.herokuapp.com/";
+const hostUrl = "http://localhost:8080";
+//const hostUrl = "https://pid-data-server.herokuapp.com/";
 
 const generateParamsQuery = (parametersList) => {
 	return parametersList.join("&");

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Data fetching adjustment">
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Make code installable">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2FJtD6iRQ8CmxIrbMDYAjl7Xg4m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,14 +55,16 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "responsive-design",
-    "javascript.nodejs.core.library.configured.version": "16.14.0",
-    "javascript.nodejs.core.library.typings.version": "16.11.59",
+    "javascript.nodejs.core.library.configured.version": "20.10.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.8",
     "last_opened_file_path": "C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects",
     "list.type.of.created.stylesheet": "SCSS",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build:dev.executor": "Run",
     "npm.start:dev.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\StrikerSK\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4167.31\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\StrikerSK\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -64,7 +77,7 @@
       <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:dev">
+  <component name="RunManager" selected="npm.build:dev">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -107,8 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.build:dev" />
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.dev-server" />
       </list>
@@ -133,6 +146,7 @@
       <workItem from="1664291333010" duration="6660000" />
       <workItem from="1664367729781" duration="3396000" />
       <workItem from="1664731239993" duration="2449000" />
+      <workItem from="1708980581889" duration="300000" />
     </task>
     <task id="LOCAL-00002" summary="Webpack devServer">
       <created>1664227126460</created>
@@ -281,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1664356601284</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Make code installable">
+      <option name="closed" value="true" />
+      <created>1708880975899</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708880975899</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +329,7 @@
     <MESSAGE value="Select template" />
     <MESSAGE value="Modify axios fetching" />
     <MESSAGE value="Apex charts sizing fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apex charts sizing fix" />
+    <MESSAGE value="Make code installable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make code installable" />
   </component>
 </project>

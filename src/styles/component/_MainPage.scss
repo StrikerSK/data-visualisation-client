@@ -9,7 +9,9 @@
   height: (100% - $footer-height);
 
   @media screen and (max-width: $window-threshold) {
-    width: 80%;
+    width: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 }
 /* -------------------------- Main container -------------------------- */
@@ -50,7 +52,7 @@
   justify-items: center;
   align-items: center;
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: $window-threshold) {
     margin-left: 5px;
     margin-right: 5px;
 

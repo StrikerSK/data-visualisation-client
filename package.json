@@ -26,7 +26,8 @@
 		"react-scripts": "3.3.1",
 		"react-spinners": "0.8.0",
 		"recharts": "1.8.5",
-		"redux": "4.0.5"
+		"redux": "4.0.5",
+		"sass": "^1.71.1"
 	},
 	"scripts": {
 		"build:dev": "webpack --config webpack.dev.js",

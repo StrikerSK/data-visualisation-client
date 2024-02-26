@@ -1,13 +1,12 @@
 import React from "react";
-import {css} from "@emotion/core";
-import {ClipLoader} from "react-spinners";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const override = css`
-    display: flex;
-	justify-content: center;
-	align-items: center;
-	border-color: red;
-`;
+const override = {
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+	borderColor: "red"
+};
 
 export default ({children, isDataLoaded}) => {
 	return (
@@ -16,3 +15,4 @@ export default ({children, isDataLoaded}) => {
 		</div>
 	);
 };
+

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Make code installable">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Cleanup code a little">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_Dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/component/_MainPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SpinnerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SpinnerComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +53,8 @@
     "javascript.nodejs.core.library.typings.version": "20.10.8",
     "last_opened_file_path": "C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects",
     "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.build:dev.executor": "Run",
@@ -77,7 +73,7 @@
       <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build:dev">
+  <component name="RunManager" selected="npm.start:dev">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -120,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build:dev" />
         <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.build:dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.dev-server" />
       </list>
@@ -146,7 +142,7 @@
       <workItem from="1664291333010" duration="6660000" />
       <workItem from="1664367729781" duration="3396000" />
       <workItem from="1664731239993" duration="2449000" />
-      <workItem from="1708980581889" duration="300000" />
+      <workItem from="1708980581889" duration="1371000" />
     </task>
     <task id="LOCAL-00002" summary="Webpack devServer">
       <created>1664227126460</created>
@@ -303,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708880975899</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Cleanup code a little">
+      <option name="closed" value="true" />
+      <created>1708980927158</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708980927158</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +334,7 @@
     <MESSAGE value="Modify axios fetching" />
     <MESSAGE value="Apex charts sizing fix" />
     <MESSAGE value="Make code installable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make code installable" />
+    <MESSAGE value="Cleanup code a little" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup code a little" />
   </component>
 </project>

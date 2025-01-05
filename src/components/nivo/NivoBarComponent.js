@@ -15,7 +15,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 		const  getLabels = (inputObject) => {
 			const obj = {...inputObject[0]};
 			Object.keys(obj).forEach((property) => {
-				if (obj[property] === 0 || property === "month") {
+				if (obj[property] === 0 || property === "label") {
 					delete obj[property]
 				}
 			});
@@ -37,7 +37,7 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 		<ResponsiveBar
 			data={data}
 			keys={labels}
-			indexBy="month"
+			indexBy="label"
 			margin={
 				adaptToWidth(
 					{top: 10, right: 10, bottom: 70, left: 80},

@@ -7,8 +7,8 @@ const generateParamsQuery = (parametersList) => {
 	return parametersList.join("&");
 };
 
-export const nivoBarPath = "/nivo/bar?"
-export const nivoPiePath = "/nivo/pie?"
+export const nivoBarPath = "/nivo/coupon/bar?upperGroup=month&lowerGroup=person&"
+export const nivoPiePath = "/nivo/coupon/pie?group=year&"
 
 export const fetchBarData = (url, parameters) => {
 	return axios.get(hostUrl + url + generateParamsQuery(parameters));

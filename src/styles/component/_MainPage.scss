@@ -1,4 +1,4 @@
-@import "../base/base";
+@use "../base/base";
 
 /* -------------------------- Main container -------------------------- */
 .main-container {
@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   width: 60%;
-  height: (100% - $footer-height);
+  height: (100% - base.$footer-height);
 }
 /* -------------------------- Main container -------------------------- */
 

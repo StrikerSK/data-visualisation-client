@@ -1,4 +1,4 @@
-@import "../base/base";
+@use "../base/base";
 
 $dashboard-height: 85%;
 
@@ -27,7 +27,7 @@ $dashboard-height: 85%;
     place-self: center;
   }
 
-  @media screen and (max-width: $window-threshold) {
+  @media screen and (max-width: base.$window-threshold) {
     flex-direction: column;
     height: 10%;
     margin-bottom: 2.5rem;
@@ -60,7 +60,7 @@ $dashboard-height: 85%;
     height: 45%;
   }
 
-  @media screen and (max-width: $window-threshold) {
+  @media screen and (max-width: base.$window-threshold) {
     width: 95%;
     height: 100%;
 

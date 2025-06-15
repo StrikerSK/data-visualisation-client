@@ -3,6 +3,8 @@
 $footer-height: 5%;
 $responsive-footer-height: 1.5%;
 $window-threshold: 768px;
+$font-color: #444;
+$background-color: #eee;
 
 * {
   font-size: 62.5%;
@@ -19,8 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: #444;
-  background: #eee;
+  color: $font-color;
+  background: $background-color;
 
   @media screen and (max-width: $window-threshold) {
     min-height: max-content;

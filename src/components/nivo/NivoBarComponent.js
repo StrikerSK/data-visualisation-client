@@ -12,15 +12,10 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	const [isLoaded, changeLoadedState] = React.useState(false);
 
 	const processData = (data) => {
-		const  getLabels = (inputObject) => {
-			const obj = {...inputObject[0]};
-			Object.keys(obj).forEach((property) => {
-				if (obj[property] === 0 || property === "label") {
-					delete obj[property]
-				}
-			});
-			return Object.keys(obj);
-		}
+		const getLabels = (input) => {
+			if (!Array.isArray(input) || input.length === 0) return [];
+			return Object.keys(input[0]).filter(key => key !== "label").reverse();
+		};
 
 		setData(data);
 		setLabels(getLabels(data));

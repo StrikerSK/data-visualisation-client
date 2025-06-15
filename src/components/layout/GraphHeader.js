@@ -1,12 +1,11 @@
 import React from "react";
 import GeneralHeader from "./GeneralHeader";
-import LinkMenuBox from "../LinkMenuBox";
+import MenuBar from "../MenuBar";
 
 export default () => {
     return (
         <GeneralHeader>
-            <h1>Predajnosť lístkov PID</h1>
-            <LinkMenuBox/>
+            <MenuBar/>
         </GeneralHeader>
     )
 };

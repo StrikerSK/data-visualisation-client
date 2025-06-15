@@ -32,7 +32,7 @@
     font-size: 1.5rem;
   }
 
-  @media screen and (max-width: $window-threshold) {
+  @media screen and (max-width: base.$window-threshold) {
     width: 100%;
     height: 100%;
 
@@ -52,7 +52,7 @@
   justify-items: center;
   align-items: center;
 
-  @media screen and (max-width: $window-threshold) {
+  @media screen and (max-width: base.$window-threshold) {
     margin-left: 5px;
     margin-right: 5px;
 
@@ -83,7 +83,7 @@
     list-style: none;
     background-color: #eee;
 
-    @media screen and (max-width: $window-threshold) {
+    @media screen and (max-width: base.$window-threshold) {
       width: $breadcrumb-responsive-width;
     }
   }
@@ -129,7 +129,7 @@
     align-items: center;
     font-weight: bold;
 
-    @media screen and (max-width: $window-threshold) {
+    @media screen and (max-width: base.$window-threshold) {
       width: (100% - $breadcrumb-responsive-width);
     }
   }

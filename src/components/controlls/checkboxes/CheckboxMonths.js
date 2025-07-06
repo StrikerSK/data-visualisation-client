@@ -2,7 +2,7 @@ import React from 'react';
 import {updateMonths} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {connect} from "react-redux";
-import {validateComponentChecksImproved} from "../../../lib/Functions";
+import {checkCheckedValues} from "../../../lib/Functions";
 
 export const january = "Január";
 export const february = "Február";
@@ -37,7 +37,7 @@ const CheckboxMonths = ({months: selectedMonths}) => {
 	];
 
 	const filterHeader = "Filter podľa mesiacov";
-	const checkItemsFunc = validateComponentChecksImproved(monthCheckboxes, selectedMonths)
+	const checkItemsFunc = checkCheckedValues(monthCheckboxes, selectedMonths)
 
 	return <CheckboxTemplate checkItems={checkItemsFunc} dispatchFunction={updateMonths} filterHeader={filterHeader}/>
 };

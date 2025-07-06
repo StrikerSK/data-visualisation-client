@@ -2,7 +2,7 @@ import React from "react";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {updatePersons} from "../../../lib/actions";
 import {connect} from "react-redux";
-import {validateComponentChecksImproved} from "../../../lib/Functions";
+import {checkCheckedValues} from "../../../lib/Functions";
 
 export const adults = "Dospelý";
 export const juniors = "Juniori";
@@ -27,7 +27,7 @@ const CheckboxPerson = ({person: selectedPersons}) => {
 	];
 
 	const filterHeader = "Filter podľa typu osoby";
-	const checkItems = validateComponentChecksImproved(personCheckboxes, selectedPersons)
+	const checkItems = checkCheckedValues(personCheckboxes, selectedPersons)
 
 	return <CheckboxTemplate checkItems={checkItems} dispatchFunction={updatePersons} filterHeader={filterHeader}/>
 };

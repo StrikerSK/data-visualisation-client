@@ -24,6 +24,9 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	React.useEffect(() => {
 		const params = {
 			person: person,
+			month: months,
+			validity: validity,
+			type: sellType
 		}
 
 		fetchBarDataV2(nivoBarPath, params)

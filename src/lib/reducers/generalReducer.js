@@ -1,7 +1,7 @@
-import {defaultMonthRequestParams} from "../../components/controlls/checkboxes/CheckboxMonths";
+import {monthArray} from "../../components/controlls/checkboxes/CheckboxMonths";
 import {personValues} from "../../components/controlls/checkboxes/CheckboxPerson";
-import {defaultSellTypeRequestParams} from "../../components/controlls/checkboxes/CheckboxSellType";
-import {defaultValidityRequestParams} from "../../components/controlls/checkboxes/CheckboxValidity";
+import {sellTypeValues} from "../../components/controlls/checkboxes/CheckboxSellType";
+import {validityValues} from "../../components/controlls/checkboxes/CheckboxValidity";
 import {defaultBarOrder} from "../../components/BarGeneratorButton";
 
 const defaultLayoutValue = "vertical";
@@ -50,10 +50,10 @@ const generalReducer = (data = {}, action) => {
 		return data;
 	}
 
-	data.months = defaultMonthRequestParams;
+	data.months = monthArray;
 	data.person = personValues;
-	data.sellType = defaultSellTypeRequestParams;
-	data.validity = defaultValidityRequestParams;
+	data.sellType = sellTypeValues;
+	data.validity = validityValues;
 	data.color = defaultColorName;
 	data.barLayoutValue = defaultLayoutValue;
 	data.barGroupingValue = defaultGroupingValue;

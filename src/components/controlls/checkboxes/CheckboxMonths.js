@@ -2,7 +2,7 @@ import React from 'react';
 import {updateMonths} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {connect} from "react-redux";
-import {validateComponentChecks} from "../../../lib/Functions";
+import {validateComponentChecksImproved} from "../../../lib/Functions";
 
 export const january = "Január";
 export const february = "Február";
@@ -18,11 +18,10 @@ export const november = "November";
 export const december = "December";
 
 export const monthArray = [january, february, march, april, may, june, july, august, september, october, november, december];
-export const defaultMonthRequestParams = "month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December";
 
-const CheckboxMonths = ({months}) => {
+const CheckboxMonths = ({months: selectedMonths}) => {
 
-	const constMonths = [
+	const monthCheckboxes = [
 		{itemName: january, isChecked: true},
 		{itemName: february, isChecked: true},
 		{itemName: march, isChecked: true},
@@ -38,8 +37,9 @@ const CheckboxMonths = ({months}) => {
 	];
 
 	const filterHeader = "Filter podľa mesiacov";
+	const checkItemsFunc = validateComponentChecksImproved(monthCheckboxes, selectedMonths)
 
-	return <CheckboxTemplate checkItems={validateComponentChecks(constMonths, months)} dispatchFunction={updateMonths} context={"month"} filterHeader={filterHeader}/>
+	return <CheckboxTemplate checkItems={checkItemsFunc} dispatchFunction={updateMonths} filterHeader={filterHeader}/>
 };
 
 const mapStateToProps = state => ({

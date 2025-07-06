@@ -15,9 +15,9 @@ export const children = "Deti";
 export const dataKeys = [adults, seniors, juniors, students, portableData, children];
 export const personValues = [adults, seniors, juniors, students, portable, children];
 
-const CheckboxPerson = ({person}) => {
+const CheckboxPerson = ({person: selectedPersons}) => {
 
-	const persons = [
+	const personCheckboxes = [
 		{itemName: adults, isChecked: true},
 		{itemName: juniors, isChecked: true},
 		{itemName: seniors, isChecked: true},
@@ -27,9 +27,9 @@ const CheckboxPerson = ({person}) => {
 	];
 
 	const filterHeader = "Filter podľa typu osoby";
-	const checkItems = validateComponentChecksImproved(persons, person)
+	const checkItems = validateComponentChecksImproved(personCheckboxes, selectedPersons)
 
-	return <CheckboxTemplate checkItems={checkItems} dispatchFunction={updatePersons} context={"person"} filterHeader={filterHeader}/>
+	return <CheckboxTemplate checkItems={checkItems} dispatchFunction={updatePersons} filterHeader={filterHeader}/>
 };
 
 const mapStateToProps = state => ({

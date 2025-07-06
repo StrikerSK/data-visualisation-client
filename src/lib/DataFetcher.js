@@ -10,6 +10,8 @@ const generateParamsQuery = (parametersList) => {
 
 export const nivoBarPath = hostUrl + "/nivo/coupon/bar"
 export const nivoPiePath = hostUrl + "/nivo/coupon/pie"
+export const nivoBubblePath = hostUrl + "/nivo/coupon/bubble"
+export const nivoLinePath = hostUrl + "/nivo/coupon/line"
 
 export const fetchBarData = (url, parameters) => {
 	//return axios.get(hostUrl + url + generateParamsQuery(parameters));
@@ -24,8 +26,8 @@ export const fetchBarData = (url, parameters) => {
 	})
 };
 
-export const fetchBarDataV2 = (url, parameters) => {
-	return axios.get(url, {
+export const fetchNivoBarData = (parameters) => {
+	return axios.get(nivoBarPath, {
 		params: {
 			upperGroup: "month",
 			lowerGroup: "validity",
@@ -37,18 +39,46 @@ export const fetchBarDataV2 = (url, parameters) => {
 	})
 };
 
-export const lineDataGetter = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/nivo/line?" + generateParamsQuery(parameters))
-		.then(({data}) => callbackFunction(data));
+export const fetchNivoPieData = (parameters) => {
+	return axios.get(nivoPiePath, {
+		params: {
+			group: "person",
+			...parameters
+		},
+		paramsSerializer: function (params) {
+			return qs.stringify(params, { arrayFormat: "repeat" });
+		},
+	})
+};
+
+export const fetchNivoBubbleData = (parameters) => {
+	return axios.get(nivoBubblePath, {
+		params: {
+			upperGroup: "month",
+			lowerGroup: "validity",
+			...parameters
+		},
+		paramsSerializer: function (params) {
+			return qs.stringify(params, { arrayFormat: "repeat" });
+		},
+	})
+};
+
+export const fetchNivoLineData = (parameters) => {
+	return axios.get(nivoLinePath, {
+		params: {
+			upperGroup: "person",
+			lowerGroup: "month",
+			...parameters
+		},
+		paramsSerializer: function (params) {
+			return qs.stringify(params, { arrayFormat: "repeat" });
+		},
+	})
 };
 
 export const streamDataGetter = (parameters, callbackFunction) => {
 	axios.get(hostUrl + "/nivo/getTicketData?" + generateParamsQuery(parameters))
-		.then(({data}) => callbackFunction(data));
-};
-
-export const bubbleDataGetter = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/nivo/bubble?" + generateParamsQuery(parameters))
 		.then(({data}) => callbackFunction(data));
 };
 

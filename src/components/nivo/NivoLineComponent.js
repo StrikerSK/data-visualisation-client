@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {ResponsiveLine} from "@nivo/line";
 import SpinnerComponent from "../SpinnerComponent";
-import {lineDataGetter} from "../../lib/DataFetcher";
+import {fetchNivoLineData} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {adaptToWidth} from "../../lib/Functions";
@@ -10,13 +10,19 @@ const NivoLineComponent = ({months, person, validity, sellType, color}) => {
 	const [data, setData] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		changeLoadedState(true);
-	};
-
 	useEffect(() => {
-		lineDataGetter([months, person, validity, sellType], finaliseTransaction);
+		const params = {
+			person: person,
+			month: months,
+			validity: validity,
+			type: sellType
+		}
+
+		fetchNivoLineData(params)
+			.then(({data}) => {
+				setData(data);
+				changeLoadedState(true);
+			});
 	}, [months, person, validity, sellType, color]);
 
 	const LineGraph = (

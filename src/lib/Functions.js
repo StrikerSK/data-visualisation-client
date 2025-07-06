@@ -37,6 +37,20 @@ export const validateComponentChecks = (verifiedArray, inputArray) => {
 	}
 };
 
+export const validateComponentChecksImproved = (verifiedArray, storedValues) => {
+	if(storedValues.length > 0) {
+		return verifiedArray.map(item => {
+			if (storedValues.includes(item.itemName)) {
+				return item;
+			} else {
+				return {...item, isChecked: false}
+			}
+		});
+	} else {
+		return verifiedArray;
+	}
+};
+
 const desktopThreshold = 770;
 
 export const adaptToWidth = (desktopValue, responsiveValue) => {

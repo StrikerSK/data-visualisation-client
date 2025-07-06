@@ -1,5 +1,5 @@
 import {defaultMonthRequestParams} from "../../components/controlls/checkboxes/CheckboxMonths";
-import {defaultPersonRequestParams} from "../../components/controlls/checkboxes/CheckboxPerson";
+import {personValues} from "../../components/controlls/checkboxes/CheckboxPerson";
 import {defaultSellTypeRequestParams} from "../../components/controlls/checkboxes/CheckboxSellType";
 import {defaultValidityRequestParams} from "../../components/controlls/checkboxes/CheckboxValidity";
 import {defaultBarOrder} from "../../components/BarGeneratorButton";
@@ -51,7 +51,7 @@ const generalReducer = (data = {}, action) => {
 	}
 
 	data.months = defaultMonthRequestParams;
-	data.person = defaultPersonRequestParams;
+	data.person = personValues;
 	data.sellType = defaultSellTypeRequestParams;
 	data.validity = defaultValidityRequestParams;
 	data.color = defaultColorName;

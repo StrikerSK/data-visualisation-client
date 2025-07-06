@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-export default ({checkItems: checkedItems, context, dispatchFunction, filterHeader}) => {
+export default ({checkItems: checkedItems, dispatchFunction, filterHeader}) => {
 	const dispatch = useDispatch();
 	const classes = useStyles();
 	const [itemObjects, setItemObjects] = useState(checkedItems);
@@ -28,27 +28,15 @@ export default ({checkItems: checkedItems, context, dispatchFunction, filterHead
 		const outputArrayOne = itemObjects.map((item) => {
 			if (item.itemName === name) {
 				return {...item, isChecked: !item.isChecked};
+			} else {
+				return item;
 			}
-			return item;
 		});
 
 		setItemObjects(outputArrayOne);
 
-		if (context === "person") {
-			const output = outputArrayOne.map(({itemName}) => itemName)
-			dispatch(dispatchFunction(output))
-		} else {
-			generateRequest(outputArrayOne);
-		}
-	};
-
-	const generateRequest = (inputObject) => {
-		const outputArrayTwo = inputObject
-			.filter(item => item.isChecked)
-			.map(({itemName}) => context + "=" + itemName.replace(' ', '%20'))
-			.join("&");
-
-		dispatch(dispatchFunction(outputArrayTwo));
+		const output = outputArrayOne.filter(({isChecked}) => isChecked).map(({itemName}) => itemName)
+		dispatch(dispatchFunction(output))
 	};
 
 	const findIfChecked = (name) => {

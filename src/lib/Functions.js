@@ -39,6 +39,7 @@ export const validateComponentChecks = (verifiedArray, inputArray) => {
 
 export const validateComponentChecksImproved = (verifiedArray, storedValues) => {
 	if(storedValues.length > 0) {
+		verifiedArray.map(itemName => itemName)
 		return verifiedArray.map(item => {
 			if (storedValues.includes(item.itemName)) {
 				return item;

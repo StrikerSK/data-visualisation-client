@@ -1,7 +1,7 @@
 import React from "react";
 import {ResponsivePie} from "@nivo/pie";
 import SpinnerComponent from "../SpinnerComponent";
-import {fetchBarData, nivoPiePath} from "../../lib/DataFetcher";
+import {fetchNivoPieData, nivoPiePath} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {isDesktop} from "../../lib/Functions";
@@ -11,7 +11,14 @@ const NivoPieComponent = ({months, person, validity, sellType, color}) => {
 	const [isLoaded, changeLoadedState] = React.useState(false);
 
 	React.useEffect(() => {
-		fetchBarData( nivoPiePath, [months, person, validity, sellType])
+		const params = {
+			person: person,
+			month: months,
+			validity: validity,
+			type: sellType
+		}
+
+		fetchNivoPieData(params)
 			.then(({data}) => setData(data))
 			.then(() => changeLoadedState(true))
 			.catch(console.error);

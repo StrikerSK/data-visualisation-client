@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {updateValidity} from "../../../lib/actions";
 import CheckboxTemplate from "./CheckboxTemplate";
 import {accessValidity} from "../../../lib/ReduceAccessor";
-import {validateComponentChecksImproved} from "../../../lib/Functions";
+import {checkCheckedValues} from "../../../lib/Functions";
 
 const three_month = "3 Mesačná";
 const month = "Mesačná";
@@ -22,7 +22,7 @@ const CheckboxValidity = ({validity}) => {
 	];
 
 	const filterHeader = "Filter podľa dĺžky platnosti";
-	const checkItemsFunc = validateComponentChecksImproved(validities, validity)
+	const checkItemsFunc = checkCheckedValues(validities, validity)
 
 	return <CheckboxTemplate checkItems={checkItemsFunc} dispatchFunction={updateValidity} filterHeader={filterHeader}/>
 

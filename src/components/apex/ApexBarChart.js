@@ -12,6 +12,15 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout, barGroupin
 	const [data, setData] = useState([{}]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
+	const finaliseTransaction = (result) => {
+		setData(result);
+		changeLoadedState(true);
+	};
+
+	useEffect(() => {
+		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
+	}, [months, person, barLayout, barGrouping, validity, sellType]);
+
 	const options = {
 		chart: {
 			type: 'bar',
@@ -42,15 +51,6 @@ const ApexBarChart = ({months, person, validity, sellType, barLayout, barGroupin
 			offsetX: 30
 		}
 	};
-
-	const finaliseTransaction = (result) => {
-		setData(result);
-		changeLoadedState(true);
-	};
-
-	useEffect(() => {
-		apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
-	}, [months, person, barLayout, barGrouping, validity, sellType]);
 
 	const chart = <ReactApexChart options={options} series={data} type="bar" width="100%" height="100%" className={"apex-chart"}/>;
 

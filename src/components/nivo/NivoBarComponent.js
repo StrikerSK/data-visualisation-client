@@ -1,7 +1,7 @@
 import React from "react";
 import {ResponsiveBar} from "@nivo/bar";
 import SpinnerComponent from "../SpinnerComponent";
-import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
+import {fetchBarData, fetchBarDataV2, nivoBarPath} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {adaptToWidth, isDesktop} from "../../lib/Functions";
@@ -22,7 +22,11 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	}
 
 	React.useEffect(() => {
-		fetchBarData( nivoBarPath, [person, months, sellType, validity])
+		const params = {
+			person: person,
+		}
+
+		fetchBarDataV2(nivoBarPath, params)
 			.then(({data}) => processData(data))
 			.then(() => changeLoadedState(true))
 			.catch(console.error);

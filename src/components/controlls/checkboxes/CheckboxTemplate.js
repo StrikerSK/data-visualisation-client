@@ -33,7 +33,13 @@ export default ({checkItems: checkedItems, context, dispatchFunction, filterHead
 		});
 
 		setItemObjects(outputArrayOne);
-		generateRequest(outputArrayOne);
+
+		if (context === "person") {
+			const output = outputArrayOne.map(({itemName}) => itemName)
+			dispatch(dispatchFunction(output))
+		} else {
+			generateRequest(outputArrayOne);
+		}
 	};
 
 	const generateRequest = (inputObject) => {

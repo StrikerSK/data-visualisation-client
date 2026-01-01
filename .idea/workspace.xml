@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Repair responsiveness in Waffle component - HOTFIX">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Apex charts sizing fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoPieComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nivo/NivoWaffleComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recharts/PieChartYearly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/DataFetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/DataFetcher.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactor-codebase" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -29,20 +37,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.0",
-    "javascript.nodejs.core.library.typings.version": "16.11.59",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\StrikerSK\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4167.31\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.59&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\StrikerSK\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\222.4167.31\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="npm.build:dev">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls\selects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\modal" />
+      <recent name="C:\Users\StrikerSK\Development\JavaScript\React\data-visualisation-client\src\components\controlls" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start:dev">
     <configuration name="build:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -85,9 +105,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.build:dev" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.start:dev" />
         <item itemvalue="npm.dev-server" />
       </list>
     </recent_temporary>
@@ -106,9 +126,158 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664221893751</updated>
-      <workItem from="1664221898792" duration="4959000" />
+      <workItem from="1664221898792" duration="8532000" />
+      <workItem from="1664267242553" duration="15523000" />
+      <workItem from="1664291333010" duration="6660000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Webpack devServer">
+      <created>1664227126460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664227126460</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Styling changes">
+      <created>1664271455955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664271455955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Styling changes - Main menu and links">
+      <created>1664272532236</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664272532236</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Styling changes - Main menu and links">
+      <created>1664272561254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664272561254</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Styling changes - Graph containers">
+      <created>1664273938667</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664273938667</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Select template">
+      <created>1664285924692</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664285924692</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Select template">
+      <created>1664286246017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664286246017</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Select template">
+      <created>1664287121678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287121678</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Select template">
+      <created>1664287130749</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287130749</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Select template">
+      <created>1664287287569</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287287569</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Select template">
+      <created>1664287718010</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287718010</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Select template">
+      <created>1664288468162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664288468162</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Select template">
+      <created>1664289514672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664289514672</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Select template">
+      <created>1664289983831</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664289983831</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Modify axios fetching">
+      <created>1664292621453</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664292621453</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Modify axios fetching">
+      <created>1664293687517</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293687517</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Modify axios fetching">
+      <created>1664293886327</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293886327</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Modify axios fetching">
+      <created>1664293896650</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293896650</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Modify axios fetching">
+      <created>1664294058193</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664294058193</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Apex charts sizing fix">
+      <created>1664354603170</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664354603170</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Apex charts sizing fix">
+      <created>1664356601284</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664356601284</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +296,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code changes - Rechars pie graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code changes - Rechars pie graph" />
+    <MESSAGE value="Webpack devServer" />
+    <MESSAGE value="Styling changes" />
+    <MESSAGE value="Styling changes - Main menu and links" />
+    <MESSAGE value="Styling changes - Graph containers" />
+    <MESSAGE value="Select template" />
+    <MESSAGE value="Modify axios fetching" />
+    <MESSAGE value="Apex charts sizing fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Apex charts sizing fix" />
   </component>
 </project>

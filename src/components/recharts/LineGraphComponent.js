@@ -1,24 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import {connect} from "react-redux";
 
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {generateColor, getLabels} from "../../lib/Functions";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const LineGraphComponent = ({months, person, validity, sellType}) => {
-    const [data, setData] = useState([]);
-    const [line, setLine] = useState([]);
-    const [area, setArea] = useState([]);
-    const [isLoaded, changeLoadedState] = useState(false);
+    const [data, setData] = React.useState([]);
+    const [line, setLine] = React.useState([]);
+    const [area, setArea] = React.useState([]);
+    const [isLoaded, changeLoadedState] = React.useState(false);
 
     const processData = (result) => {
-        setData(result);
-        createGraphElements();
-        changeLoadedState(true);
-
-        function createGraphElements() {
+        const createGraphElements = () => {
             if (area.length !== 0 && line.length !== 0) {
                 setArea([]);
                 setLine([]);
@@ -35,16 +31,22 @@ const LineGraphComponent = ({months, person, validity, sellType}) => {
                     </linearGradient>]
                 );
 
-                setLine(line => [...line,
+                setLine((line) => [...line,
                     <Line type="monotone" dataKey={label} stroke={generatedColor} fillOpacity={1}
                           fill={"url(#" + identification + ")"}/>
                 ]);
             });
         }
+
+        setData(result);
+        createGraphElements();
     };
 
-    useEffect(() => {
-        barDataGetter([months, person, validity, sellType], processData);
+    React.useEffect(() => {
+        fetchBarData( nivoBarPath, [months, person, validity, sellType])
+            .then(({data}) => processData(data))
+            .then(() => changeLoadedState(true))
+            .catch(console.error);
     }, [months, person, validity, sellType]);
 
     const lineGraph = (

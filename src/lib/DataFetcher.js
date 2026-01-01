@@ -7,14 +7,11 @@ const generateParamsQuery = (parametersList) => {
 	return parametersList.join("&");
 };
 
-export const pieDataGetter = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/nivo/pie?" + generateParamsQuery(parameters))
-		.then(({data}) => callbackFunction(data));
-};
+export const nivoBarPath = "/nivo/bar?"
+export const nivoPiePath = "/nivo/pie?"
 
-export const barDataGetter = (parameters, callbackFunction) => {
-	axios.get(hostUrl + "/nivo/bar?" + generateParamsQuery(parameters))
-		.then(({data}) => callbackFunction(data));
+export const fetchBarData = (url, parameters) => {
+	return axios.get(hostUrl + url + generateParamsQuery(parameters));
 };
 
 export const lineDataGetter = (parameters, callbackFunction) => {

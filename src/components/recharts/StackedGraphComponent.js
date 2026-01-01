@@ -1,7 +1,7 @@
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import React, {useEffect, useState} from "react";
 
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {generateColor, getLabels} from "../../lib/Functions";
@@ -13,22 +13,20 @@ const StackedGraphComponent = ({person, months, sellType, validity}) => {
 	const [area, setArea] = useState([]);
 	const [isLoaded, changeLoadedState] = useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		createBars();
-		changeLoadedState(true);
-
-		function createBars() {
-			setArea(getLabels(result).map(label => {
-				const generatedColor = generateColor();
-				return <Area type="monotone" dataKey={label} stackId="1" stroke={generatedColor} fill={generatedColor}/>
-			}))
-		}
+	const processData = (data) => {
+		setData(data);
+		setArea(getLabels(data).map(label => {
+			const generatedColor = generateColor();
+			return <Area type="monotone" dataKey={label} stackId="1" stroke={generatedColor} fill={generatedColor}/>
+		}));
 	};
 
 	useEffect(() => {
-		barDataGetter([person, months, sellType, validity], finaliseTransaction);
-	}, [person, months, sellType, validity]);
+		fetchBarData( nivoBarPath, [months, person, validity, sellType])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
+	}, [months, person, validity, sellType]);
 
 	const stackedGraph = (
 		<ResponsiveContainer width="100%" height="100%">

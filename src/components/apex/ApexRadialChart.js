@@ -1,15 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ReactApexChart from 'react-apexcharts';
 
-import {pieDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoPiePath} from "../../lib/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 
 const ApexRadialChart = ({months, person, validity, sellType}) => {
-	const [series, setSeries] = useState([]);
-	const [labels, setLabels] = useState([]);
-	const [isLoaded, changeLoadedState] = useState(false);
+	const [series, setSeries] = React.useState([]);
+	const [labels, setLabels] = React.useState([]);
+	const [isLoaded, changeLoadedState] = React.useState(false);
 
 	const options = {
 		labels: labels,
@@ -18,26 +18,25 @@ const ApexRadialChart = ({months, person, validity, sellType}) => {
 		}
 	};
 
-	const finaliseTransaction = (result) => {
-		const outData = result.map(({value}) => Math.round(value / getSum() * 100));
-		const resultLabels = result.map(({label}) => label);
-
-		setLabels(resultLabels);
-		setSeries(outData);
-		changeLoadedState(true);
-
-		function getSum() {
+	const processData = (result) => {
+		const getSum = () => {
 			return result
 				.map(({value}) => value)
 				.reduce((total, sum) => total + sum);
 		}
+
+		setLabels(result.map(({label}) => label));
+		setSeries(result.map(({value}) => Math.round(value / getSum() * 100)));
 	};
 
-	useEffect(() => {
-		pieDataGetter([months, person, validity, sellType], finaliseTransaction);
-	}, [months, person, validity, sellType]);
+	React.useEffect(() => {
+		fetchBarData( nivoPiePath, [person, months, sellType, validity])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
+	}, [person, months, sellType, validity]);
 
-	const chart = <ReactApexChart options={options} series={series} type="radialBar"/>;
+	const chart = <ReactApexChart options={options} series={series} type="radialBar" width="100%" height="100%" className={"apex-chart"}/>;
 
 	return (
 		<SpinnerComponent children={chart} isDataLoaded={isLoaded}/>

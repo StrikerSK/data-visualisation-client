@@ -1,81 +1,76 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import {GlobalStyles} from "./components/StyledComponents";
-import NivoBarContainer from "./container/NivoBarContainer";
-import NivoLineContainer from "./container/NivoLineContainer";
-import NivoPieContainer from "./container/NivoPieContainer";
-import NivoBubbleContainer from "./container/NivoBubbleContainer";
-import PieChartMonthly from "./components/recharts/PieChartMonthly";
-import {NivoDashboards, NivoDashboardsRandom} from "./container/NivoDashboards";
-import {RechartsDashboard, RechartsDashboardRandom} from "./container/RechartsDashboard";
-
-import {
-	RechartsAreaContainer,
-	RechartsBarContainer,
-	RechartsLineContainer,
-	RechartsPieContainer,
-	RechartsStackedContainer
-} from "./container/RechartsContainers";
-
-import {
-	NivoHeatMapContainer,
-	NivoRadarContainer,
-	NivoStreamContainer,
-	NivoWaffleContainer
-} from "./container/NivoGraphCollection";
 import MainPage from "./container/MainPage";
 
-import {
-	ApexAreaContainer,
-	ApexBarContainer,
-	ApexChartContainers,
-	ApexHeatmapContainer,
-	ApexLineContainer,
-	ApexRadarContainer,
-	ApexRadialContainer
-} from "./container/ApexchartsContainers";
-import {ApexDashboards, ApexDashboardsRandom} from "./container/ApexDashboards";
+import NivoBarContainer from "./container/nivo/NivoBarContainer";
+import NivoLineContainer from "./container/nivo/NivoLineContainer";
+import NivoPieContainer from "./container/nivo/NivoPieContainer";
+import NivoBubbleContainer from "./container/nivo/NivoBubbleContainer";
+import NivoWaffleChartContainer from "./container/nivo/NivoWaffleChartContainer";
+import NivoStreamContainer from "./container/nivo/NivoStreamContainer";
+import NivoHeatmapContainer from "./container/nivo/NivoHeatmapContainer";
+import NivoRadarContainer from "./container/nivo/NivoRadarContainer";
+import {NivoDashboards, NivoDashboardsRandom} from "./container/nivo/NivoDashboards";
 
-class App extends Component {
-	render() {
-		return (
-			<BrowserRouter>
-				<GlobalStyles/>
-				<Switch>
-					<Route exact strict path="/" render={() => <MainPage/>}/>
-					<Route exact strict path="/recharts" render={() => <RechartsDashboard/>}/>
-					<Route exact strict path="/recharts/random" render={() => <RechartsDashboardRandom/>}/>
-					<Route exact strict path="/recharts/line" render={() => <RechartsLineContainer/>}/>
-					<Route exact strict path="/recharts/area" render={() => <RechartsAreaContainer/>}/>
-					<Route exact strict path="/recharts/bar" render={() => <RechartsBarContainer/>}/>
-					<Route exact strict path="/recharts/stacked" render={() => <RechartsStackedContainer/>}/>
-					<Route exact strict path="/recharts/pie" render={() => <RechartsPieContainer/>}/>
-					<Route exact strict path="/recharts/pie/collection" render={() => <PieChartMonthly/>}/>
-					<Route exact strict path="/nivo" render={() => <NivoDashboards/>}/>
-					<Route exact strict path="/nivo/random" render={() => <NivoDashboardsRandom/>}/>
-					<Route exact strict path="/nivo/line" render={() => <NivoLineContainer/>}/>
-					<Route exact strict path="/nivo/bar" render={() => <NivoBarContainer/>}/>
-					<Route exact strict path="/nivo/stack" render={() => <NivoStreamContainer/>}/>
-					<Route exact strict path="/nivo/pie" render={() => <NivoPieContainer/>}/>
-					<Route exact strict path="/nivo/waffle" render={() => <NivoWaffleContainer/>}/>
-					<Route exact strict path="/nivo/heatmap" render={() => <NivoHeatMapContainer/>}/>
-					<Route exact strict path="/nivo/radar" render={() => <NivoRadarContainer/>}/>
-					<Route exact strict path="/nivo/bubble" render={() => <NivoBubbleContainer/>}/>
-					<Route exact strict path="/apex" render={() => <ApexDashboards/>}/>
-					<Route exact strict path="/apex/random" render={() => <ApexDashboardsRandom/>}/>
-					<Route exact strict path="/apex/area" render={() => <ApexAreaContainer/>}/>
-					<Route exact strict path="/apex/area" render={() => <ApexAreaContainer/>}/>
-					<Route exact strict path="/apex/pie" render={() => <ApexChartContainers/>}/>
-					<Route exact strict path="/apex/heatmap" render={() => <ApexHeatmapContainer/>}/>
-					<Route exact strict path="/apex/radar" render={() => <ApexRadarContainer/>}/>
-					<Route exact strict path="/apex/line" render={() => <ApexLineContainer/>}/>
-					<Route exact strict path="/apex/bar" render={() => <ApexBarContainer/>}/>
-					<Route exact strict path="/apex/radial" render={() => <ApexRadialContainer/>}/>
-				</Switch>
-			</BrowserRouter>
-		);
-	}
+import ApexPieChart from "./container/apex/ApexPieChart";
+import ApexBarChart from "./container/apex/ApexBarChart";
+import ApexLineChart from "./container/apex/ApexLineChart";
+import ApexRadialChart from "./container/apex/ApexRadialChart";
+import ApexHeatmapChart from "./container/apex/ApexHeatmapChart";
+import ApexRadarChart from "./container/apex/ApexRadarChart";
+import ApexAreaChart from "./container/apex/ApexAreaChart";
+import {ApexDashboards, ApexDashboardsRandom} from "./container/apex/ApexDashboards";
+
+import RechartsPieContainer from "./container/recharts/RechartsPieContainer";
+import RechartsStackedContainer from "./container/recharts/RechartsStackedContainer";
+import RechartsLineContainer from "./container/recharts/RechartsLineContainer";
+import RechartsBarContainer from "./container/recharts/RechartsBarContainer";
+import RechartsAreaContainer from "./container/recharts/RechartsAreaContainer";
+import PieChartMonthly from "./components/recharts/PieChartMonthly";
+import {RechartsDashboard, RechartsDashboardRandom} from "./container/recharts/RechartsDashboard";
+
+const App = () => {
+    const pathList = [
+        {path: "/", component: <MainPage/>},
+        {path: "/recharts", component: <RechartsDashboard/>},
+        {path: "/recharts/random", component: <RechartsDashboardRandom/>},
+        {path: "/recharts/line", component: <RechartsLineContainer/>},
+        {path: "/recharts/area", component: <RechartsAreaContainer/>},
+        {path: "/recharts/bar", component: <RechartsBarContainer/>},
+        {path: "/recharts/stacked", component: <RechartsStackedContainer/>},
+        {path: "/recharts/pie", component: <RechartsPieContainer/>},
+        {path: "/recharts/pie/collection", component: <PieChartMonthly/>},
+        {path: "/nivo", component: <NivoDashboards/>},
+        {path: "/nivo/random", component: <NivoDashboardsRandom/>},
+        {path: "/nivo/line", component: <NivoLineContainer/>},
+        {path: "/nivo/bar", component: <NivoBarContainer/>},
+        {path: "/nivo/stack", component: <NivoStreamContainer/>},
+        {path: "/nivo/pie", component: <NivoPieContainer/>},
+        {path: "/nivo/waffle", component: <NivoWaffleChartContainer/>},
+        {path: "/nivo/heatmap", component: <NivoHeatmapContainer/>},
+        {path: "/nivo/radar", component: <NivoRadarContainer/>},
+        {path: "/nivo/bubble", component: <NivoBubbleContainer/>},
+        {path: "/apex", component: <ApexDashboards/>},
+        {path: "/apex/random", component: <ApexDashboardsRandom/>},
+        {path: "/apex/area", component: <ApexAreaChart/>},
+        {path: "/apex/pie", component: <ApexPieChart/>},
+        {path: "/apex/heatmap", component: <ApexHeatmapChart/>},
+        {path: "/apex/radar", component: <ApexRadarChart/>},
+        {path: "/apex/line", component: <ApexLineChart/>},
+        {path: "/apex/bar", component: <ApexBarChart/>},
+        {path: "/apex/radial", component: <ApexRadialChart/>}
+    ]
+
+    return (
+        <BrowserRouter>
+            <Switch>
+                {pathList.map(({path, component}, index) => {
+                    return <Route key={index} exact strict path={path} render={() => component}/>
+                })}
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

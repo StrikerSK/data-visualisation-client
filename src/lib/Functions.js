@@ -16,14 +16,9 @@ export const generateColorArray = (colorNumber) => {
 };
 
 //Get labels for received data
-export const getLabels = (inputObject) => {
-	const obj = inputObject[0];
-	Object.keys(obj).forEach((property) => {
-		if (obj[property] === 0 || property === "month") {
-			delete obj[property]
-		}
-	});
-	return Object.keys(obj);
+export const getLabels = (input) => {
+	if (!Array.isArray(input) || input.length === 0) return [];
+	return Object.keys(input[0]).filter(key => key !== "label").reverse();
 };
 
 //Validates if current verifiedArray is checked

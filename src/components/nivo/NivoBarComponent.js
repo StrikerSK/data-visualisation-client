@@ -1,7 +1,7 @@
 import React from "react";
 import {ResponsiveBar} from "@nivo/bar";
 import SpinnerComponent from "../SpinnerComponent";
-import {barDataGetter} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
 import {connect} from "react-redux";
 import {accessAll} from "../../lib/ReduceAccessor";
 import {adaptToWidth, isDesktop} from "../../lib/Functions";
@@ -11,32 +11,28 @@ const NivoBarComponent = ({barGrouping, barLayout, months, person, validity, sel
 	const [labels, setLabels] = React.useState([]);
 	const [isLoaded, changeLoadedState] = React.useState(false);
 
-	const finaliseTransaction = (result) => {
-		setData(result);
-		setLabels(getLabels(result));
-		changeLoadedState(true);
+	const processData = (data) => {
+		const getLabels = (input) => {
+			if (!Array.isArray(input) || input.length === 0) return [];
+			return Object.keys(input[0]).filter(key => key !== "label").reverse();
+		};
 
-		function getLabels(inputObject) {
-			const obj = {...inputObject[0]};
-			Object.keys(obj).forEach((property) => {
-				if (obj[property] === 0 || property === "month") {
-					delete obj[property]
-				}
-			});
-			return Object.keys(obj);
-		}
-	};
+		setData(data);
+		setLabels(getLabels(data));
+	}
 
 	React.useEffect(() => {
-		// console.log(box2.offsetWidth);
-		barDataGetter([person, months, sellType, validity], finaliseTransaction);
+		fetchBarData( nivoBarPath, [person, months, sellType, validity])
+			.then(({data}) => processData(data))
+			.then(() => changeLoadedState(true))
+			.catch(console.error);
 	}, [person, months, sellType, validity]);
 
 	const barGraph = (
 		<ResponsiveBar
 			data={data}
 			keys={labels}
-			indexBy="month"
+			indexBy="label"
 			margin={
 				adaptToWidth(
 					{top: 10, right: 10, bottom: 70, left: 80},

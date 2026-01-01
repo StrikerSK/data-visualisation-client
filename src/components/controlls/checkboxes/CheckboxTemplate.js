@@ -6,22 +6,22 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControl from "@material-ui/core/FormControl";
 import {useDispatch} from "react-redux";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import {adaptToWidth} from "../../lib/Functions";
+import {adaptToWidth} from "../../../lib/Functions";
 
 const useStyles = makeStyles(theme => ({
 	formControl: {
-		margin: theme.spacing(1),
-		minWidth: '100%',
+		margin: "0.5rem",
+		width: "95%"
 	},
 	formLabel: {
-		minWidth: adaptToWidth('30%', '45%')
+		width: adaptToWidth('30%', '45%')
 	}
 }));
 
-export default ({checkItems, context, dispatchFunction, filterHeader}) => {
+export default ({checkItems: checkedItems, context, dispatchFunction, filterHeader}) => {
 	const dispatch = useDispatch();
 	const classes = useStyles();
-	const [itemObjects, setItemObjects] = useState(checkItems);
+	const [itemObjects, setItemObjects] = useState(checkedItems);
 
 	const checkboxHandler = ({target}) => {
 		const {name} = target;
@@ -60,7 +60,7 @@ export default ({checkItems, context, dispatchFunction, filterHeader}) => {
 		<FormControl component={"fieldset"} className={classes.formControl}>
 			<FormLabel component="legend">{filterHeader}</FormLabel>
 			<FormGroup row>
-				{checkItems.map(({itemName}) => {
+				{checkedItems.map(({itemName}) => {
 					return <FormControlLabel key={itemName} control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
 				})}
 			</FormGroup>

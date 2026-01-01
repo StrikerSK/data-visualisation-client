@@ -14,6 +14,10 @@ export const accessValidity = (state) => {
 	return state.generalReducer.validity;
 };
 
+export const accessColor = (state) => {
+	return state.generalReducer.color;
+};
+
 export const accessAll = (state) => {
 	return {
 		months: state.generalReducer.months,

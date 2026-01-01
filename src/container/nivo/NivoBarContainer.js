@@ -1,26 +1,14 @@
 import React from "react";
 import GraphComponent from "../../components/layout/GraphComponent";
 import NivoBarComponent from "../../components/nivo/NivoBarComponent";
-import {ColorSchemeSelector} from "../../components/selects/ColorSchemeSelector";
-import {
-    ConnectedGroupModeSelect as GroupModeSelect,
-    ConnectedLayoutSelect as LayoutSelect
-} from "../../components/selects/LayoutSelect";
-import CheckboxPerson from "../../components/checkboxes/CheckboxPerson";
-import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
-import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
-import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
-import BarGeneratorButton from "../../components/BarGeneratorButton";
+import SelectBarLayout from "../../components/controlls/selects/SelectBarLayout";
+import SelectGroupLayout from "../../components/controlls/selects/SelectGroupLayout";
+import {DefaultNivoConfiguration} from "./AbstractNivo";
 
-const configurations = [
-    <ColorSchemeSelector/>,
-    <GroupModeSelect/>,
-    <LayoutSelect/>,
-    <CheckboxPerson/>,
-    <CheckboxValidity/>,
-    <CheckboxMonths/>,
-    <CheckboxSellType/>,
-    <BarGeneratorButton/>
+const ComponentConfigurations = [
+    ...DefaultNivoConfiguration,
+    <SelectGroupLayout/>,
+    <SelectBarLayout/>,
 ]
 
-export default () => <GraphComponent graph={<NivoBarComponent/>} configs={configurations}/>;
+export default () => <GraphComponent graph={<NivoBarComponent/>} configs={ComponentConfigurations}/>;

@@ -1,22 +1,14 @@
-import ApexBarChart from "../../components/apex/ApexBarChart";
-import {
-    ConnectedGroupModeSelect as GroupModeSelect,
-    ConnectedLayoutSelect as LayoutSelect
-} from "../../components/selects/LayoutSelect";
-import CheckboxPerson from "../../components/checkboxes/CheckboxPerson";
-import CheckboxValidity from "../../components/checkboxes/CheckboxValidity";
-import CheckboxMonths from "../../components/checkboxes/CheckboxMonths";
-import CheckboxSellType from "../../components/checkboxes/CheckboxSellType";
 import React from "react";
+import ApexBarChart from "../../components/apex/ApexBarChart";
 import GraphComponent from "../../components/layout/GraphComponent";
+import SelectGroupLayout from "../../components/controlls/selects/SelectGroupLayout";
+import SelectBarLayout from "../../components/controlls/selects/SelectBarLayout";
+import {DefaultConfiguration} from "../AbstractCharts";
 
-const configurations = [
-    <GroupModeSelect/>,
-    <LayoutSelect/>,
-    <CheckboxPerson/>,
-    <CheckboxValidity/>,
-    <CheckboxMonths/>,
-    <CheckboxSellType/>
+const BarConfigurations = [
+    ...DefaultConfiguration,
+    <SelectGroupLayout/>,
+    <SelectBarLayout/>
 ]
 
-export default () => <GraphComponent graph={<ApexBarChart/>} configs={configurations}/>;
+export default () => <GraphComponent graph={<ApexBarChart/>} configs={BarConfigurations}/>;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import './styles/styles.scss';
 
 import MainPage from "./container/MainPage";
 
@@ -7,10 +8,7 @@ import NivoBarContainer from "./container/nivo/NivoBarContainer";
 import NivoLineContainer from "./container/nivo/NivoLineContainer";
 import NivoPieContainer from "./container/nivo/NivoPieContainer";
 import NivoBubbleContainer from "./container/nivo/NivoBubbleContainer";
-import NivoWaffleChartContainer from "./container/nivo/NivoWaffleChartContainer";
 import NivoStreamContainer from "./container/nivo/NivoStreamContainer";
-import NivoHeatmapContainer from "./container/nivo/NivoHeatmapContainer";
-import NivoRadarContainer from "./container/nivo/NivoRadarContainer";
 import {NivoDashboards, NivoDashboardsRandom} from "./container/nivo/NivoDashboards";
 
 import ApexPieChart from "./container/apex/ApexPieChart";
@@ -27,7 +25,6 @@ import RechartsStackedContainer from "./container/recharts/RechartsStackedContai
 import RechartsLineContainer from "./container/recharts/RechartsLineContainer";
 import RechartsBarContainer from "./container/recharts/RechartsBarContainer";
 import RechartsAreaContainer from "./container/recharts/RechartsAreaContainer";
-import PieChartMonthly from "./components/recharts/PieChartMonthly";
 import {RechartsDashboard, RechartsDashboardRandom} from "./container/recharts/RechartsDashboard";
 
 const App = () => {
@@ -40,16 +37,12 @@ const App = () => {
         {path: "/recharts/bar", component: <RechartsBarContainer/>},
         {path: "/recharts/stacked", component: <RechartsStackedContainer/>},
         {path: "/recharts/pie", component: <RechartsPieContainer/>},
-        {path: "/recharts/pie/collection", component: <PieChartMonthly/>},
         {path: "/nivo", component: <NivoDashboards/>},
         {path: "/nivo/random", component: <NivoDashboardsRandom/>},
         {path: "/nivo/line", component: <NivoLineContainer/>},
         {path: "/nivo/bar", component: <NivoBarContainer/>},
         {path: "/nivo/stack", component: <NivoStreamContainer/>},
         {path: "/nivo/pie", component: <NivoPieContainer/>},
-        {path: "/nivo/waffle", component: <NivoWaffleChartContainer/>},
-        {path: "/nivo/heatmap", component: <NivoHeatmapContainer/>},
-        {path: "/nivo/radar", component: <NivoRadarContainer/>},
         {path: "/nivo/bubble", component: <NivoBubbleContainer/>},
         {path: "/apex", component: <ApexDashboards/>},
         {path: "/apex/random", component: <ApexDashboardsRandom/>},

@@ -1,6 +1,6 @@
 import React from "react";
 import GeneralHeader from "./GeneralHeader";
-import {LinkMenuBox} from "../LinkMenuBox";
+import LinkMenuBox from "../LinkMenuBox";
 
 export default () => {
     return (

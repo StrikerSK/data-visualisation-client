@@ -1,5 +1,5 @@
-@import "./base/base";
-@import "./component/GraphContainer";
-@import "./component/Dashboard";
-@import "./component/MainPage";
-@import "./component/Spinner";
+@use "./base/base";
+@use "./component/Dashboard";
+@use "./component/GraphContainer";
+@use "./component/MainPage";
+@use "./component/Spinner";

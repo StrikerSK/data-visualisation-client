@@ -1,7 +1,7 @@
 import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import React, {useEffect, useState} from "react";
 
-import {fetchBarData, nivoBarPath} from "../../lib/DataFetcher";
+import {fetchBarData, nivoBarPath} from "../../lib/fetchers/DataFetcher";
 import SpinnerComponent from "../SpinnerComponent";
 import {connect} from "react-redux";
 import {generateColor, getLabels} from "../../lib/Functions";

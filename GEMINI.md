@@ -76,3 +76,9 @@ npm run lint:fix
 ### Visualization Libraries
 - When adding a new chart, choose the library that best fits the requirement (Nivo for complex d3-based charts, ApexCharts for polished SVG charts, or Recharts for simpler React-native SVG charts).
 - Ensure consistent styling by wrapping charts in the `GraphComponent` or similar layout components found in `src/components/layout/`.
+
+---
+
+## Roadmap & Planning
+
+For details on the project's modernization strategy, dependency upgrades, and architectural improvements, please refer to [PROJECT_PLAN.md](./PROJECT_PLAN.md).

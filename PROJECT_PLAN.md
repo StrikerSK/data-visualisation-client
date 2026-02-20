@@ -62,9 +62,9 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - [x] Migrate layout components (`components/layout/`).
     - [x] Migrate control components (`components/controlls/`).
     - [x] Migrate chart components (`components/recharts/`, `components/apex/`, `components/nivo/`).
-    - [ ] Systematic migration of all other components.
-    - [x] Add strict typing for Redux state.
+    - [x] Migrate container components (`src/container/`).
     - [ ] Add strict typing for API responses.
+    - [x] Add strict typing for Redux state.
 
 ## 🎨 Phase 4: UI/UX & Quality
 *Goal: Make it look good and accessible.*

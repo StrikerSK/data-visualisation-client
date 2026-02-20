@@ -20,8 +20,8 @@ This document outlines the strategic roadmap for improving the PID Graphs client
         - **E2E:** Basic smoke tests for navigation and chart rendering.
     - [x] Install and configure Jest & RTL.
     - [x] Create initial unit and component tests.
-    - [ ] Setup MSW for API mocking.
-    - [ ] Install and configure Playwright for E2E.
+    - [x] Setup MSW for API mocking.
+    - [x] Install and configure Playwright for E2E.
 
 ## 🚀 Phase 2: Dependency Upgrades (The "Big Lift")
 *Goal: Bring libraries up to current standards to unlock performance and security benefits.*

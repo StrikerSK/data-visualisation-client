@@ -61,6 +61,7 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - [x] Migrate application entry points (`index.tsx`, `App.tsx`).
     - [x] Migrate layout components (`components/layout/`).
     - [x] Migrate control components (`components/controlls/`).
+    - [x] Migrate chart components (`components/recharts/`, `components/apex/`, `components/nivo/`).
     - [ ] Systematic migration of all other components.
     - [x] Add strict typing for Redux state.
     - [ ] Add strict typing for API responses.

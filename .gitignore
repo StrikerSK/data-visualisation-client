@@ -27,3 +27,5 @@ yarn-error.log*
 
 src/styles/*.css
 src/styles/*.css.map
+playwright-report/
+test-results/

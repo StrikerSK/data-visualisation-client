@@ -4,17 +4,26 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import PropTypes from 'prop-types';
 
-const MenuListComposition = ({ name, items }) => {
+interface MenuItem {
+  name: string;
+  link: string;
+}
+
+interface MenuListCompositionProps {
+  name: string;
+  items: MenuItem[];
+}
+
+const MenuListComposition: React.FC<MenuListCompositionProps> = ({ name, items }) => {
   const navigate = useNavigate();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleLinkClick = (linkTo) => {
+  const handleLinkClick = (linkTo: string) => {
     navigate(linkTo);
     setAnchorEl(null);
   };
@@ -59,16 +68,6 @@ const MenuListComposition = ({ name, items }) => {
       </Menu>
     </div>
   );
-};
-
-MenuListComposition.propTypes = {
-  name: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default MenuListComposition;

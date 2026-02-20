@@ -14,10 +14,10 @@ import {
 const portable = 'Prenosné';
 export const defaultBarOrder = dataKeys;
 
-const BarGeneratorButton = () => {
+const BarGeneratorButton: React.FC = () => {
   const dispatch = useDispatch();
 
-  const generateBarOrder = () => {
+  const generateBarOrder = (): string[] => {
     const array = [adults, students, seniors, juniors, portable, children];
     let counter = array.length;
 

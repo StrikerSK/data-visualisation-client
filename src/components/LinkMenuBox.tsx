@@ -3,7 +3,12 @@ import MenuListComposition from './modal/MenuListComposition';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
-export const rechartsItems = [
+export interface MenuItem {
+  name: string;
+  link: string;
+}
+
+export const rechartsItems: MenuItem[] = [
   { name: 'Stĺpcový graf', link: '/recharts/bar' },
   { name: 'Koláčový graf', link: '/recharts/pie' },
   // {name: "Koláčové grafy", link: "/recharts/pie/collection"},
@@ -12,7 +17,7 @@ export const rechartsItems = [
   { name: 'Dashboard', link: '/recharts' },
 ];
 
-export const nivoItems = [
+export const nivoItems: MenuItem[] = [
   { name: 'Stĺpcový graf', link: '/nivo/bar' },
   { name: 'Koláčový graf', link: '/nivo/pie' },
   { name: 'Línový graf', link: '/nivo/line' },
@@ -22,7 +27,7 @@ export const nivoItems = [
   { name: 'Dashboard', link: '/nivo' },
 ];
 
-export const apexItems = [
+export const apexItems: MenuItem[] = [
   { name: 'Stĺpcový graf', link: '/apex/bar' },
   { name: 'Koláčový graf', link: '/apex/pie' },
   { name: 'Línový graf', link: '/apex/line' },
@@ -33,7 +38,7 @@ export const apexItems = [
   { name: 'Dashboard', link: '/apex' },
 ];
 
-const LinkMenuBox = () => {
+const LinkMenuBox: React.FC = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {

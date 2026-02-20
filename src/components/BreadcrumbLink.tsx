@@ -1,7 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const BreadcrumbLink = ({ name, itemList }) => {
+interface BreadcrumbItem {
+  name: string;
+  link: string;
+}
+
+interface BreadcrumbLinkProps {
+  name: string;
+  itemList: BreadcrumbItem[];
+}
+
+const BreadcrumbLink: React.FC<BreadcrumbLinkProps> = ({ name, itemList }) => {
   return (
     <div className="breadcrumb-link-container">
       <span>{name}</span>
@@ -9,7 +18,7 @@ const BreadcrumbLink = ({ name, itemList }) => {
         {itemList.map(({ name, link }, index) => {
           return (
             <li key={index}>
-              <a className="breadcrumb-link" key={index} color="inherit" href={link}>
+              <a className="breadcrumb-link" color="inherit" href={link}>
                 {name}
               </a>
             </li>
@@ -18,11 +27,6 @@ const BreadcrumbLink = ({ name, itemList }) => {
       </ul>
     </div>
   );
-};
-
-BreadcrumbLink.propTypes = {
-  name: PropTypes.string,
-  itemList: PropTypes.array,
 };
 
 export default BreadcrumbLink;

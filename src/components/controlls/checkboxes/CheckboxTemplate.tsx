@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import FormLabel from '@mui/material/FormLabel';
@@ -6,19 +6,30 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControl from '@mui/material/FormControl';
 import { useDispatch } from 'react-redux';
 import { adaptToWidth } from '../../../lib/Functions';
-import PropTypes from 'prop-types';
 
-const CheckboxTemplate = ({
+interface CheckItem {
+  itemName: string;
+  isChecked: boolean;
+}
+
+interface CheckboxTemplateProps {
+  checkItems: CheckItem[];
+  context: string;
+  dispatchFunction: (payload: string) => any;
+  filterHeader: string;
+}
+
+const CheckboxTemplate: React.FC<CheckboxTemplateProps> = ({
   checkItems: checkedItems,
   context,
   dispatchFunction,
   filterHeader,
 }) => {
   const dispatch = useDispatch();
-  const [itemObjects, setItemObjects] = useState(checkedItems);
+  const [itemObjects, setItemObjects] = useState<CheckItem[]>(checkedItems);
 
-  const checkboxHandler = ({ target }) => {
-    const { name } = target;
+  const checkboxHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name } = event.target;
     const outputArrayOne = itemObjects.map((item) => {
       if (item.itemName === name) {
         return { ...item, isChecked: !item.isChecked };
@@ -30,7 +41,7 @@ const CheckboxTemplate = ({
     generateRequest(outputArrayOne);
   };
 
-  const generateRequest = (inputObject) => {
+  const generateRequest = (inputObject: CheckItem[]) => {
     const outputArrayTwo = inputObject
       .filter((item) => item.isChecked)
       .map(({ itemName }) => context + '=' + itemName.replace(' ', '%20'))
@@ -39,15 +50,16 @@ const CheckboxTemplate = ({
     dispatch(dispatchFunction(outputArrayTwo));
   };
 
-  const findIfChecked = (name) => {
-    return itemObjects.find(({ itemName }) => {
+  const findIfChecked = (name: string): boolean => {
+    const item = itemObjects.find(({ itemName }) => {
       return itemName === name;
-    }).isChecked;
+    });
+    return item ? item.isChecked : false;
   };
 
-  const getCheckbox = (month) => {
-    const isChecked = findIfChecked(month);
-    return <Checkbox name={month} checked={isChecked} onChange={checkboxHandler} />;
+  const getCheckbox = (itemName: string) => {
+    const isChecked = findIfChecked(itemName);
+    return <Checkbox name={itemName} checked={isChecked} onChange={checkboxHandler} />;
   };
 
   return (
@@ -75,18 +87,6 @@ const CheckboxTemplate = ({
       </FormGroup>
     </FormControl>
   );
-};
-
-CheckboxTemplate.propTypes = {
-  checkItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      itemName: PropTypes.string.isRequired,
-      isChecked: PropTypes.bool.isRequired,
-    })
-  ).isRequired,
-  context: PropTypes.string.isRequired,
-  dispatchFunction: PropTypes.func.isRequired,
-  filterHeader: PropTypes.string.isRequired,
 };
 
 export default CheckboxTemplate;

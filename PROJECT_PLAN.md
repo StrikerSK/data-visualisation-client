@@ -53,7 +53,7 @@ This document outlines the strategic roadmap for improving the PID Graphs client
 - [ ] **Folder Structure:** 
     - Move from "Library-based" grouping (e.g., `components/nivo/`) to "Feature-based" grouping (e.g., `features/dashboard/`, `features/analytics/`).
     - Colocate styles and tests with components.
-- [ ] **TypeScript Migration:**
+- [x] **TypeScript Migration:**
     - [x] Initial setup (tsconfig, Babel, Webpack).
     - [x] Migrate core utilities (`lib/Functions.ts`).
     - [x] Migrate atomic components (`SpinnerComponent.tsx`).
@@ -63,8 +63,8 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - [x] Migrate control components (`components/controlls/`).
     - [x] Migrate chart components (`components/recharts/`, `components/apex/`, `components/nivo/`).
     - [x] Migrate container components (`src/container/`).
-    - [ ] Add strict typing for API responses.
     - [x] Add strict typing for Redux state.
+    - [x] Migrate actions, data fetchers, tests, and mocks.
 
 ## 🎨 Phase 4: UI/UX & Quality
 *Goal: Make it look good and accessible.*

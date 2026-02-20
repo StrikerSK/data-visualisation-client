@@ -30,8 +30,13 @@ import {
   RechartsDashboardRandom,
 } from './container/recharts/RechartsDashboard';
 
-const App = () => {
-  const pathList = [
+interface PathRoute {
+  path: string;
+  component: React.ReactElement;
+}
+
+const App: React.FC = () => {
+  const pathList: PathRoute[] = [
     { path: '/', component: <MainPage /> },
     { path: '/recharts', component: <RechartsDashboard /> },
     { path: '/recharts/random', component: <RechartsDashboardRandom /> },

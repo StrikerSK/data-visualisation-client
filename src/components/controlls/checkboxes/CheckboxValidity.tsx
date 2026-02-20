@@ -4,6 +4,7 @@ import { updateValidity } from '../../../lib/actions';
 import CheckboxTemplate from './CheckboxTemplate';
 import { accessValidity } from '../../../lib/ReduceAccessor';
 import { validateComponentChecks } from '../../../lib/Functions';
+import { RootState } from '../../../types';
 
 const three_month = '3 Mesačná';
 const month = 'Mesačná';
@@ -37,7 +38,7 @@ const CheckboxValidity: React.FC<CheckboxValidityProps> = ({ validity }) => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: RootState) => ({
   validity: accessValidity(state),
 });
 

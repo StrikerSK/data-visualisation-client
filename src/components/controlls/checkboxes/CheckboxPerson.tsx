@@ -3,6 +3,7 @@ import CheckboxTemplate from './CheckboxTemplate';
 import { updatePersons } from '../../../lib/actions';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';
+import { RootState } from '../../../types';
 
 export const adults = 'Dospelý';
 export const juniors = 'Juniori';
@@ -42,7 +43,7 @@ const CheckboxPerson: React.FC<CheckboxPersonProps> = ({ person }) => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: RootState) => ({
   person: state.generalReducer.person,
 });
 

@@ -4,6 +4,7 @@ import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';
 import { accessSellType } from '../../../lib/ReduceAccessor';
+import { RootState } from '../../../types';
 
 export const card = 'Čipová karta';
 export const coupon = 'Papierový kupón';
@@ -35,7 +36,7 @@ const CheckboxSellType: React.FC<CheckboxSellTypeProps> = ({ sellType }) => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: RootState) => ({
   sellType: accessSellType(state),
 });
 

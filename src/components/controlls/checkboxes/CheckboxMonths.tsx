@@ -3,6 +3,7 @@ import { updateMonths } from '../../../lib/actions';
 import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';
+import { RootState } from '../../../types';
 
 export const january = 'Január';
 export const february = 'Február';
@@ -66,7 +67,7 @@ const CheckboxMonths: React.FC<CheckboxMonthsProps> = ({ months }) => {
   );
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: RootState) => ({
   months: state.generalReducer.months,
 });
 

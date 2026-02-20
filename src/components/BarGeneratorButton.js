@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import { updateBarDataKeys } from '../lib/actions';
 import {
@@ -12,18 +11,10 @@ import {
   students,
 } from './controlls/checkboxes/CheckboxPerson';
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-    width: '40%',
-  },
-}));
-
 const portable = 'Prenosné';
 export const defaultBarOrder = dataKeys;
 
-export default () => {
-  const classes = useStyles();
+const BarGeneratorButton = () => {
   const dispatch = useDispatch();
 
   const generateBarOrder = () => {
@@ -55,9 +46,14 @@ export default () => {
       variant="contained"
       onClick={() => shuffle()}
       color="primary"
-      className={classes.button}
+      sx={{
+        margin: 1,
+        width: '40%',
+      }}
     >
       Zmeň poradie
     </Button>
   );
 };
+
+export default BarGeneratorButton;

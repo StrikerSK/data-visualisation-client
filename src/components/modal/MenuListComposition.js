@@ -1,25 +1,13 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import { makeStyles } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 import PropTypes from 'prop-types';
-
-const useStyles = makeStyles(() => ({
-  button: {
-    width: '100%',
-    height: '100%',
-
-    display: 'flex',
-    justifySelf: 'center',
-  },
-}));
 
 const MenuListComposition = ({ name, items }) => {
   const navigate = useNavigate();
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -41,7 +29,12 @@ const MenuListComposition = ({ name, items }) => {
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
-        classes={{ root: classes.button }}
+        sx={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          justifySelf: 'center',
+        }}
       >
         {name}
       </Button>

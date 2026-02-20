@@ -1,43 +1,52 @@
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import {useDispatch} from "react-redux";
+import React from 'react';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const useStyles = makeStyles(theme => ({
-	formControl: {
-		margin: theme.spacing(1),
-		width: "30%",
-	},
-	selectEmpty: {
-		marginTop: theme.spacing(2),
-	},
-}));
+const SelectTemplate = ({ propValue, selectName, selectOptions, dispatchCallback }) => {
+  const dispatch = useDispatch();
 
-export default ({propValue, selectName, selectOptions, dispatchCallback}) => {
-	const dispatch = useDispatch();
+  const handleChange = (event) => {
+    const { value } = event.target;
+    dispatch(dispatchCallback(value));
+  };
 
-	const handleChange = event => {
-		const {value} = event.target;
-		dispatch(dispatchCallback(value));
-	};
-
-	return (
-		<FormControl className={useStyles().formControl}>
-			<InputLabel id="color-selector">{selectName}</InputLabel>
-			<Select
-				labelId="color-selector"
-				id="color-selector"
-				value={propValue}
-				onChange={handleChange}
-				autoWidth
-			>
-				{selectOptions.map(item => {
-					return <MenuItem value={item.value} defaultChecked={item.value === propValue}>{item.name}</MenuItem>
-				})}
-			</Select>
-		</FormControl>
-	);
+  return (
+    <FormControl sx={{ m: 1, minWidth: '30%' }}>
+      <InputLabel id="color-selector">{selectName}</InputLabel>
+      <Select
+        labelId="color-selector"
+        id="color-selector"
+        value={propValue}
+        onChange={handleChange}
+        autoWidth
+        label={selectName}
+      >
+        {selectOptions.map((item, index) => {
+          return (
+            <MenuItem key={index} value={item.value}>
+              {item.name}
+            </MenuItem>
+          );
+        })}
+      </Select>
+    </FormControl>
+  );
 };
+
+SelectTemplate.propTypes = {
+  propValue: PropTypes.any,
+  selectName: PropTypes.string.isRequired,
+  selectOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      value: PropTypes.any.isRequired,
+    })
+  ).isRequired,
+  dispatchCallback: PropTypes.func.isRequired,
+};
+
+export default SelectTemplate;

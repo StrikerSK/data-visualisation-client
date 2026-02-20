@@ -35,7 +35,10 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Upgraded to `react-router-dom` v6.
     - Refactored `App.js` to use `Routes` and `element`.
     - Replaced `useHistory` with `useNavigate`.
-- [ ] **UI Library Upgrade:** Upgrade `@material-ui/core` (v4) to `@mui/material` (v5).
+- [x] **UI Library Upgrade:** 
+    - Upgraded `@material-ui/core` (v4) to `@mui/material` (v5).
+    - Migrated from JSS (`makeStyles`) to the `sx` prop and Emotion.
+    - Updated all MUI imports across the codebase.
 - [ ] **Chart Library Consolidation:** 
     - We currently use **Nivo**, **ApexCharts**, and **Recharts**.
     - **Strategy:** Analyze bundle size and usage. Pick 1 primary library (e.g., Nivo or Recharts) and 1 secondary if absolutely needed. Remove the unused ones to significantly reduce bundle size.

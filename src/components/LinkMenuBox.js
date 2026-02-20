@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuListComposition from './modal/MenuListComposition';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
 export const rechartsItems = [

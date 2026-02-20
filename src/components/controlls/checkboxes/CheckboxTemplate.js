@@ -1,69 +1,92 @@
-import React, {useState} from 'react';
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControl from "@material-ui/core/FormControl";
-import {useDispatch} from "react-redux";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import {adaptToWidth} from "../../../lib/Functions";
+import React, { useState } from 'react';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import FormLabel from '@mui/material/FormLabel';
+import FormGroup from '@mui/material/FormGroup';
+import FormControl from '@mui/material/FormControl';
+import { useDispatch } from 'react-redux';
+import { adaptToWidth } from '../../../lib/Functions';
+import PropTypes from 'prop-types';
 
-const useStyles = makeStyles(theme => ({
-	formControl: {
-		margin: "0.5rem",
-		width: "95%"
-	},
-	formLabel: {
-		width: adaptToWidth('30%', '45%')
-	}
-}));
+const CheckboxTemplate = ({
+  checkItems: checkedItems,
+  context,
+  dispatchFunction,
+  filterHeader,
+}) => {
+  const dispatch = useDispatch();
+  const [itemObjects, setItemObjects] = useState(checkedItems);
 
-export default ({checkItems: checkedItems, context, dispatchFunction, filterHeader}) => {
-	const dispatch = useDispatch();
-	const classes = useStyles();
-	const [itemObjects, setItemObjects] = useState(checkedItems);
+  const checkboxHandler = ({ target }) => {
+    const { name } = target;
+    const outputArrayOne = itemObjects.map((item) => {
+      if (item.itemName === name) {
+        return { ...item, isChecked: !item.isChecked };
+      }
+      return item;
+    });
 
-	const checkboxHandler = ({target}) => {
-		const {name} = target;
-		const outputArrayOne = itemObjects.map((item) => {
-			if (item.itemName === name) {
-				return {...item, isChecked: !item.isChecked};
-			}
-			return item;
-		});
+    setItemObjects(outputArrayOne);
+    generateRequest(outputArrayOne);
+  };
 
-		setItemObjects(outputArrayOne);
-		generateRequest(outputArrayOne);
-	};
+  const generateRequest = (inputObject) => {
+    const outputArrayTwo = inputObject
+      .filter((item) => item.isChecked)
+      .map(({ itemName }) => context + '=' + itemName.replace(' ', '%20'))
+      .join('&');
 
-	const generateRequest = (inputObject) => {
-		const outputArrayTwo = inputObject
-			.filter(item => item.isChecked)
-			.map(({itemName}) => context + "=" + itemName.replace(' ', '%20'))
-			.join("&");
+    dispatch(dispatchFunction(outputArrayTwo));
+  };
 
-		dispatch(dispatchFunction(outputArrayTwo));
-	};
+  const findIfChecked = (name) => {
+    return itemObjects.find(({ itemName }) => {
+      return itemName === name;
+    }).isChecked;
+  };
 
-	const findIfChecked = (name) => {
-		return itemObjects.find(({itemName}) => {
-			return itemName === name
-		}).isChecked;
-	};
+  const getCheckbox = (month) => {
+    const isChecked = findIfChecked(month);
+    return <Checkbox name={month} checked={isChecked} onChange={checkboxHandler} />;
+  };
 
-	const getCheckbox = (month) => {
-		const isChecked = findIfChecked(month);
-		return <Checkbox name={month} checked={isChecked} onChange={checkboxHandler}/>
-	};
-
-	return (
-		<FormControl component={"fieldset"} className={classes.formControl}>
-			<FormLabel component="legend">{filterHeader}</FormLabel>
-			<FormGroup row>
-				{checkedItems.map(({itemName}) => {
-					return <FormControlLabel key={itemName} control={getCheckbox(itemName)} label={itemName} className={classes.formLabel}/>
-				})}
-			</FormGroup>
-		</FormControl>
-	)
+  return (
+    <FormControl
+      component={'fieldset'}
+      sx={{
+        m: '0.5rem',
+        width: '95%',
+      }}
+    >
+      <FormLabel component="legend">{filterHeader}</FormLabel>
+      <FormGroup row>
+        {checkedItems.map(({ itemName }) => {
+          return (
+            <FormControlLabel
+              key={itemName}
+              control={getCheckbox(itemName)}
+              label={itemName}
+              sx={{
+                width: adaptToWidth('30%', '45%'),
+              }}
+            />
+          );
+        })}
+      </FormGroup>
+    </FormControl>
+  );
 };
+
+CheckboxTemplate.propTypes = {
+  checkItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      itemName: PropTypes.string.isRequired,
+      isChecked: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+  context: PropTypes.string.isRequired,
+  dispatchFunction: PropTypes.func.isRequired,
+  filterHeader: PropTypes.string.isRequired,
+};
+
+export default CheckboxTemplate;

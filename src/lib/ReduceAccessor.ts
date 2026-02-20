@@ -1,24 +1,24 @@
-export const accessSellType = (state) => {
+export const accessSellType = (state: any) => {
   return state.generalReducer.sellType;
 };
 
-export const accessMonths = (state) => {
+export const accessMonths = (state: any) => {
   return state.generalReducer.months;
 };
 
-export const accessPersons = (state) => {
+export const accessPersons = (state: any) => {
   return state.generalReducer.person;
 };
 
-export const accessValidity = (state) => {
+export const accessValidity = (state: any) => {
   return state.generalReducer.validity;
 };
 
-export const accessColor = (state) => {
+export const accessColor = (state: any) => {
   return state.generalReducer.color;
 };
 
-export const accessAll = (state) => {
+export const accessAll = (state: any) => {
   return {
     months: state.generalReducer.months,
     person: state.generalReducer.person,

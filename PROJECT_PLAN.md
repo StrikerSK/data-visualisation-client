@@ -31,7 +31,10 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Switched to `createRoot` API in `src/index.js`.
     - Updated `@testing-library/react` to v13.
 
-- [ ] **Router Migration:** Upgrade `react-router-dom` v5 to v6 (Major breaking changes, requires refactoring routing logic).
+- [x] **Router Migration:** 
+    - Upgraded to `react-router-dom` v6.
+    - Refactored `App.js` to use `Routes` and `element`.
+    - Replaced `useHistory` with `useNavigate`.
 - [ ] **UI Library Upgrade:** Upgrade `@material-ui/core` (v4) to `@mui/material` (v5).
 - [ ] **Chart Library Consolidation:** 
     - We currently use **Nivo**, **ApexCharts**, and **Recharts**.

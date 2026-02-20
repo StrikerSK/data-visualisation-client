@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuListComposition from './modal/MenuListComposition';
 import Button from '@material-ui/core/Button';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const rechartsItems = [
   { name: 'Stĺpcový graf', link: '/recharts/bar' },
@@ -33,11 +33,11 @@ export const apexItems = [
   { name: 'Dashboard', link: '/apex' },
 ];
 
-export default () => {
-  const history = useHistory();
+const LinkMenuBox = () => {
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    history.push('/');
+    navigate('/');
   };
 
   return (
@@ -58,3 +58,5 @@ export default () => {
     </div>
   );
 };
+
+export default LinkMenuBox;

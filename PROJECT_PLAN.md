@@ -59,6 +59,8 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - [x] Migrate atomic components (`SpinnerComponent.tsx`).
     - [x] Migrate Redux reducers and state accessors (`lib/reducers/`, `lib/ReduceAccessor.ts`).
     - [x] Migrate application entry points (`index.tsx`, `App.tsx`).
+    - [x] Migrate layout components (`components/layout/`).
+    - [x] Migrate control components (`components/controlls/`).
     - [ ] Systematic migration of all other components.
     - [x] Add strict typing for Redux state.
     - [ ] Add strict typing for API responses.

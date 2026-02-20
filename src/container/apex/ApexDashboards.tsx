@@ -19,7 +19,12 @@ const componentArray: ReactNode[] = [
 ];
 
 export const ApexDashboards: React.FC = () => {
-  const displayComponents = componentArray.slice(0, 4) as [ReactNode, ReactNode, ReactNode, ReactNode];
+  const displayComponents = componentArray.slice(0, 4) as [
+    ReactNode,
+    ReactNode,
+    ReactNode,
+    ReactNode,
+  ];
   return <DashboardLayout>{displayComponents}</DashboardLayout>;
 };
 

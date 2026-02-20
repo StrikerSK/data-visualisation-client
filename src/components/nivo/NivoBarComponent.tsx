@@ -103,7 +103,7 @@ const NivoBarComponent: React.FC<NivoBarComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded} children={barGraph} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{barGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

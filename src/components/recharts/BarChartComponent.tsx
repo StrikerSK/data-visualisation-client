@@ -54,7 +54,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent children={barChart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{barChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -1,5 +1,13 @@
 import React, { useState, useEffect, ReactNode } from 'react';
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
 import { connect } from 'react-redux';
 
 import { fetchBarData, nivoBarPath } from '../../lib/DataFetcher';
@@ -78,7 +86,7 @@ const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent children={lineGraph} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{lineGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

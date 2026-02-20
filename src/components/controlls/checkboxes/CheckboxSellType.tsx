@@ -10,8 +10,7 @@ export const card = 'Čipová karta';
 export const coupon = 'Papierový kupón';
 export const eshop = 'EShop';
 
-export const defaultSellTypeRequestParams =
-  'type=Čipová%20karta&type=Papierový%20kupón&type=EShop';
+export const defaultSellTypeRequestParams = 'type=Čipová%20karta&type=Papierový%20kupón&type=EShop';
 
 interface CheckboxSellTypeProps {
   sellType: string;

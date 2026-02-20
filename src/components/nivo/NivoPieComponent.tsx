@@ -78,7 +78,7 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent children={pieChart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{pieChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

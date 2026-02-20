@@ -86,7 +86,7 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent children={LineGraph} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{LineGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -16,7 +16,12 @@ const componentsArray: ReactNode[] = [
 
 export const RechartsDashboard: React.FC = () => {
   // DashboardLayout expects exactly 4 children in its type definition
-  const displayComponents = componentsArray.slice(0, 4) as [ReactNode, ReactNode, ReactNode, ReactNode];
+  const displayComponents = componentsArray.slice(0, 4) as [
+    ReactNode,
+    ReactNode,
+    ReactNode,
+    ReactNode,
+  ];
   return <DashboardLayout>{displayComponents}</DashboardLayout>;
 };
 

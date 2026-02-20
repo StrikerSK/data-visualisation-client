@@ -74,7 +74,7 @@ const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
     />
   );
 
-  return <SpinnerComponent children={chart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

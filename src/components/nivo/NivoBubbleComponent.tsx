@@ -48,7 +48,7 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded} children={bubbleGraph} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{bubbleGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

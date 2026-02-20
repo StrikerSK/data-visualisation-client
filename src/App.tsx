@@ -25,10 +25,7 @@ import RechartsStackedContainer from './container/recharts/RechartsStackedContai
 import RechartsLineContainer from './container/recharts/RechartsLineContainer';
 import RechartsBarContainer from './container/recharts/RechartsBarContainer';
 import RechartsAreaContainer from './container/recharts/RechartsAreaContainer';
-import {
-  RechartsDashboard,
-  RechartsDashboardRandom,
-} from './container/recharts/RechartsDashboard';
+import { RechartsDashboard, RechartsDashboardRandom } from './container/recharts/RechartsDashboard';
 
 interface PathRoute {
   path: string;

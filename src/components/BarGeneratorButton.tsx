@@ -28,7 +28,7 @@ const BarGeneratorButton: React.FC = () => {
       counter--;
 
       // And swap the last element with it
-      let temp = array[counter];
+      const temp = array[counter];
       array[counter] = array[index];
       array[index] = temp;
     }

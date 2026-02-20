@@ -59,7 +59,12 @@ const ModalWindow: React.FC = () => {
           <CheckboxValidity />
           <CheckboxMonths />
           <CheckboxSellType />
-          <Button variant="contained" onClick={handleClose} color="primary" sx={{ m: 1, width: '30%' }}>
+          <Button
+            variant="contained"
+            onClick={handleClose}
+            color="primary"
+            sx={{ m: 1, width: '30%' }}
+          >
             Zavri okno
           </Button>
         </Box>

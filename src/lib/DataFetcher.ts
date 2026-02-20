@@ -13,7 +13,10 @@ export const fetchBarData = (url: string, parameters: string[]): Promise<AxiosRe
   return axios.get(hostUrl + url + generateParamsQuery(parameters));
 };
 
-export const lineDataGetter = (parameters: string[], callbackFunction: (data: any) => void): void => {
+export const lineDataGetter = (
+  parameters: string[],
+  callbackFunction: (data: any) => void
+): void => {
   axios
     .get(hostUrl + '/nivo/line?' + generateParamsQuery(parameters))
     .then(({ data }) => callbackFunction(data));

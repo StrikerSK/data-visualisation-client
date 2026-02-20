@@ -87,7 +87,7 @@ const NivoStreamComponent: React.FC<NivoStreamComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent children={streamGraph} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{streamGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -1,6 +1,14 @@
 import React, { useState, useEffect, ReactNode } from 'react';
 import { connect } from 'react-redux';
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
 import { fetchBarData, nivoBarPath } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
@@ -78,7 +86,7 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent children={areaChart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{areaChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

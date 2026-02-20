@@ -71,7 +71,7 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent children={stackedGraph} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{stackedGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

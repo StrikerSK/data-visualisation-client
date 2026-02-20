@@ -15,7 +15,12 @@ interface ApexRadialChartProps {
   sellType: string;
 }
 
-const ApexRadialChart: React.FC<ApexRadialChartProps> = ({ months, person, validity, sellType }) => {
+const ApexRadialChart: React.FC<ApexRadialChartProps> = ({
+  months,
+  person,
+  validity,
+  sellType,
+}) => {
   const [series, setSeries] = useState<number[]>([]);
   const [labels, setLabels] = useState<string[]>([]);
   const [isLoaded, changeLoadedState] = useState(false);
@@ -57,7 +62,7 @@ const ApexRadialChart: React.FC<ApexRadialChartProps> = ({ months, person, valid
     />
   );
 
-  return <SpinnerComponent children={chart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

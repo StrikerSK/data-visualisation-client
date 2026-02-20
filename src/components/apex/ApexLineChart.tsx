@@ -69,7 +69,7 @@ const ApexLineChart: React.FC<ApexLineChartProps> = ({ months, person, validity,
     />
   );
 
-  return <SpinnerComponent children={chart} isDataLoaded={isLoaded} />;
+  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

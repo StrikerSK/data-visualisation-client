@@ -57,8 +57,11 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - [x] Initial setup (tsconfig, Babel, Webpack).
     - [x] Migrate core utilities (`lib/Functions.ts`).
     - [x] Migrate atomic components (`SpinnerComponent.tsx`).
+    - [x] Migrate Redux reducers and state accessors (`lib/reducers/`, `lib/ReduceAccessor.ts`).
+    - [x] Migrate application entry points (`index.tsx`, `App.tsx`).
     - [ ] Systematic migration of all other components.
-    - [ ] Add strict typing for Redux state and API responses.
+    - [x] Add strict typing for Redux state.
+    - [ ] Add strict typing for API responses.
 
 ## 🎨 Phase 4: UI/UX & Quality
 *Goal: Make it look good and accessible.*

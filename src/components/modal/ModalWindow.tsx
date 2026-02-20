@@ -11,7 +11,7 @@ import SelectGroupLayout from '../controlls/selects/SelectGroupLayout';
 import SelectBarLayout from '../controlls/selects/SelectBarLayout';
 
 const modalStyle = {
-  position: 'absolute',
+  position: 'absolute' as const,
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -27,7 +27,7 @@ const modalStyle = {
   overflowY: 'auto',
 };
 
-const ModalWindow = () => {
+const ModalWindow: React.FC = () => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {

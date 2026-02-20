@@ -1,7 +1,8 @@
 import React from 'react';
 import { apexItems, nivoItems, rechartsItems } from '../components/LinkMenuBox';
 import BreadcrumbLink from '../components/BreadcrumbLink';
-export default () => {
+
+const MainPage: React.FC = () => {
   return (
     <div className="main-container">
       <div className="content-container">
@@ -24,3 +25,5 @@ export default () => {
     </div>
   );
 };
+
+export default MainPage;

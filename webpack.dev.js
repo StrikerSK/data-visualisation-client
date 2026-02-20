@@ -4,17 +4,41 @@ const { merge } = require('webpack-merge');
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'inline-source-map',
-    devServer: {
-        static: [
+    devtool: 'eval-cheap-module-source-map',
+    module: {
+        rules: [
             {
-                directory: path.join(__dirname, 'dist'),
-            },
-        ],
-        historyApiFallback: {
-            index: 'index.html'
+                test: /\.s?css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                            api: "modern",
+                            sassOptions: {
+                                silenceDeprecations: ['legacy-js-api'],
+                            },
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
         },
+        historyApiFallback: true,
         compress: true,
-        hot: true
+        hot: true,
+        open: true,
+        port: 3000
     }
 });

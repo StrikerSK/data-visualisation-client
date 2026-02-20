@@ -1,12 +1,11 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports =  {
     context: __dirname,
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: "/",
         clean: true,
@@ -22,37 +21,9 @@ module.exports =  {
                         presets: ["@babel/preset-env", "@babel/preset-react"]
                     }
                 }
-            },
-            {
-                test: /\.s?css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true,
-                            api: "modern",
-                            sassOptions: {
-                                silenceDeprecations: ['legacy-js-api'],
-                            },
-                        }
-
-                    }
-                ]
             }]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: "styles.css",
-        }),
         new HtmlWebpackPlugin({
             template: path.resolve( __dirname, 'public/index.html'),
             filename: 'index.html',

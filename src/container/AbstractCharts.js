@@ -5,8 +5,8 @@ import CheckboxSellType from '../components/controlls/checkboxes/CheckboxSellTyp
 import React from 'react';
 
 export const DefaultConfiguration = [
-  <CheckboxPerson />,
-  <CheckboxValidity />,
-  <CheckboxMonths />,
-  <CheckboxSellType />,
+  <CheckboxPerson key="person" />,
+  <CheckboxValidity key="validity" />,
+  <CheckboxMonths key="months" />,
+  <CheckboxSellType key="sellType" />,
 ];

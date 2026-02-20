@@ -1,4 +1,4 @@
-export const generateColor = () => {
+export const generateColor = (): string => {
   const letters = '0123456789ABCDEF';
   let returnColor = '#';
   for (let i = 0; i < 6; i++) {
@@ -7,8 +7,8 @@ export const generateColor = () => {
   return returnColor;
 };
 
-export const generateColorArray = (colorNumber) => {
-  const colorArray = [];
+export const generateColorArray = (colorNumber: number): string[] => {
+  const colorArray: string[] = [];
   for (let i = 0; i <= colorNumber; i++) {
     colorArray.push(generateColor());
   }
@@ -16,15 +16,23 @@ export const generateColorArray = (colorNumber) => {
 };
 
 //Get labels for received data
-export const getLabels = (input) => {
+export const getLabels = (input: any[]): string[] => {
   if (!Array.isArray(input) || input.length === 0) return [];
   return Object.keys(input[0])
     .filter((key) => key !== 'label')
     .reverse();
 };
 
+interface CheckItem {
+  itemName: string;
+  isChecked: boolean;
+}
+
 //Validates if current verifiedArray is checked
-export const validateComponentChecks = (verifiedArray, inputArray) => {
+export const validateComponentChecks = (
+  verifiedArray: CheckItem[],
+  inputArray: string
+): CheckItem[] => {
   if (inputArray.length > 0) {
     const storedMonths = inputArray
       .split('&')
@@ -43,7 +51,7 @@ export const validateComponentChecks = (verifiedArray, inputArray) => {
 
 const desktopThreshold = 770;
 
-export const adaptToWidth = (desktopValue, responsiveValue) => {
+export const adaptToWidth = (desktopValue: any, responsiveValue: any): any => {
   if (window.innerWidth > desktopThreshold) {
     return desktopValue;
   } else {
@@ -51,6 +59,6 @@ export const adaptToWidth = (desktopValue, responsiveValue) => {
   }
 };
 
-export const isDesktop = () => {
+export const isDesktop = (): boolean => {
   return window.innerWidth > desktopThreshold;
 };

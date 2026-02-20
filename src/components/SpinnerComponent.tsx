@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import ClipLoader from 'react-spinners/ClipLoader';
-import PropTypes from 'prop-types';
 
-const override = {
+interface SpinnerProps {
+  children?: ReactNode;
+  isDataLoaded: boolean;
+}
+
+const override: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   borderColor: 'red',
 };
 
-const SpinnerComponent = ({ children, isDataLoaded }) => {
+const SpinnerComponent: React.FC<SpinnerProps> = ({ children, isDataLoaded }) => {
   return (
     <div className="spinner-container">
       {isDataLoaded ? (
@@ -19,11 +23,6 @@ const SpinnerComponent = ({ children, isDataLoaded }) => {
       )}
     </div>
   );
-};
-
-SpinnerComponent.propTypes = {
-  children: PropTypes.node,
-  isDataLoaded: PropTypes.bool.isRequired,
 };
 
 export default SpinnerComponent;

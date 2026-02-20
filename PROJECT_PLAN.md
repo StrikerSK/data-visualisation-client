@@ -54,8 +54,11 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Move from "Library-based" grouping (e.g., `components/nivo/`) to "Feature-based" grouping (e.g., `features/dashboard/`, `features/analytics/`).
     - Colocate styles and tests with components.
 - [ ] **TypeScript Migration:**
-    - Incremental migration. Rename `.js` to `.tsx`.
-    - Add strict typing for API responses and Props.
+    - [x] Initial setup (tsconfig, Babel, Webpack).
+    - [x] Migrate core utilities (`lib/Functions.ts`).
+    - [x] Migrate atomic components (`SpinnerComponent.tsx`).
+    - [ ] Systematic migration of all other components.
+    - [ ] Add strict typing for Redux state and API responses.
 
 ## 🎨 Phase 4: UI/UX & Quality
 *Goal: Make it look good and accessible.*

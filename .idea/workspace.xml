@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo Waffle" />
+    <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo Waffle">
+      <change beforePath="$PROJECT_DIR$/src/container/AbstractCharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +69,7 @@
     "npm.test.executor": "Run",
     "npm.test:e2e.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\StrikerSK\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "/Users/kristianhanus/WebstormProjects/data-visualisation-client/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

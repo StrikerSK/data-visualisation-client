@@ -16,8 +16,8 @@ describe('Utility Functions', () => {
 
   describe('getLabels', () => {
     it('should return empty array if input is not an array', () => {
-      expect(getLabels(null)).toEqual([]);
-      expect(getLabels({})).toEqual([]);
+      expect(getLabels(null as any)).toEqual([]);
+      expect(getLabels({} as any)).toEqual([]);
     });
 
     it('should return empty array if input array is empty', () => {

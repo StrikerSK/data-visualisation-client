@@ -26,9 +26,11 @@ This document outlines the strategic roadmap for improving the PID Graphs client
 ## 🚀 Phase 2: Dependency Upgrades (The "Big Lift")
 *Goal: Bring libraries up to current standards to unlock performance and security benefits.*
 
-- [ ] **React Upgrade (16 -> 17 -> 18):**
-    - Step 1: Upgrade to React 17 to smooth the transition.
-    - Step 2: Upgrade to React 18 (Enable Concurrent features).
+- [x] **React Upgrade (16 -> 17 -> 18):** 
+    - Upgraded to React 18.2.0.
+    - Switched to `createRoot` API in `src/index.js`.
+    - Updated `@testing-library/react` to v13.
+
 - [ ] **Router Migration:** Upgrade `react-router-dom` v5 to v6 (Major breaking changes, requires refactoring routing logic).
 - [ ] **UI Library Upgrade:** Upgrade `@material-ui/core` (v4) to `@mui/material` (v5).
 - [ ] **Chart Library Consolidation:** 

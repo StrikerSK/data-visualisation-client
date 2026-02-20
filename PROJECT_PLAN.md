@@ -8,9 +8,10 @@ This document outlines the strategic roadmap for improving the PID Graphs client
 - [x] **Webpack Cleanup:** Modernize Webpack 5 config, split into dev/prod.
 - [x] **Script Rework:** Standardize `npm run dev/build`.
 - [x] **File Cleanup:** Remove unused assets and legacy config files.
-- [ ] **Linting & Formatting:** 
-    - Ensure `Prettier` is correctly integrated with ESLint.
-    - specific formatting rules to avoid "style wars".
+- [x] **Linting & Formatting:** 
+    - Integrated Prettier with ESLint.
+    - Standardized formatting rules in `.prettierrc.js`.
+    - Applied formatting across the `src/` directory.
 - [ ] **Testing Infrastructure:** 
     - Install `Jest` and `React Testing Library`.
     - Create a "Smoke Test" to verify the app mounts and renders without crashing.

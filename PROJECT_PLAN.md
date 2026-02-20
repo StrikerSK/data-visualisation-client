@@ -13,9 +13,15 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Standardized formatting rules in `.prettierrc.js`.
     - Applied formatting across the `src/` directory.
 - [ ] **Testing Infrastructure:** 
-    - Install `Jest` and `React Testing Library`.
-    - Create a "Smoke Test" to verify the app mounts and renders without crashing.
-    - **Why:** We need tests to ensure subsequent upgrades don't break functionality.
+    - **Frameworks:** Jest + React Testing Library (Unit/Integration), Playwright (E2E), MSW (API Mocking).
+    - **Scope:**
+        - **Unit:** Utility functions (`lib/Functions.js`) and atomic components (`SpinnerComponent`).
+        - **Integration:** Data fetching containers (e.g., `NivoBarContainer`) mocking the API with MSW.
+        - **E2E:** Basic smoke tests for navigation and chart rendering.
+    - [x] Install and configure Jest & RTL.
+    - [x] Create initial unit and component tests.
+    - [ ] Setup MSW for API mocking.
+    - [ ] Install and configure Playwright for E2E.
 
 ## 🚀 Phase 2: Dependency Upgrades (The "Big Lift")
 *Goal: Bring libraries up to current standards to unlock performance and security benefits.*

@@ -31,7 +31,7 @@
 		"start": "node server/server.js",
 		"lint": "eslint ./src/**/*.js",
 		"lint:fix": "eslint ./src/**/*.js --fix",
-		"test": "jest",
+		"test": "jest --testPathIgnorePatterns=e2e",
 		"test:e2e": "playwright test",
 		"heroku-postbuild": "npm run build"
 	},

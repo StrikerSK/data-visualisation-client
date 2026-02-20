@@ -30,14 +30,14 @@ This project is a React-based data visualization client that provides various in
 ### Development
 To start the application in development mode with hot module replacement:
 ```bash
-npm run start:dev
+npm run dev
 ```
 This runs the Webpack Dev Server on `localhost:3000`.
 
 ### Production Build
 To create a production-ready bundle in the `dist/` directory:
 ```bash
-npm run build:prod
+npm run build
 ```
 
 ### Running the Production Server
@@ -50,7 +50,11 @@ By default, the server runs on port `3000`.
 ### Linting
 To run ESLint across the source files:
 ```bash
-npm run eslint
+npm run lint
+```
+Or to automatically fix issues:
+```bash
+npm run lint:fix
 ```
 
 ---

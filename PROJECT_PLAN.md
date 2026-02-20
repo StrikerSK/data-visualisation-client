@@ -39,9 +39,10 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Upgraded `@material-ui/core` (v4) to `@mui/material` (v5).
     - Migrated from JSS (`makeStyles`) to the `sx` prop and Emotion.
     - Updated all MUI imports across the codebase.
-- [ ] **Chart Library Consolidation:** 
-    - We currently use **Nivo**, **ApexCharts**, and **Recharts**.
-    - **Strategy:** Analyze bundle size and usage. Pick 1 primary library (e.g., Nivo or Recharts) and 1 secondary if absolutely needed. Remove the unused ones to significantly reduce bundle size.
+- [x] **Chart Library Consolidation & Modernization:** 
+    - Decided to keep Nivo, ApexCharts, and Recharts as a showcase.
+    - Upgraded all three libraries to their latest versions (React 18 compatible).
+    - Verified compatibility with existing functional component patterns.
 
 ## 🏗️ Phase 3: Architectural Refactoring
 *Goal: Improve maintainability and developer experience.*

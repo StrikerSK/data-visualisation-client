@@ -8,7 +8,7 @@ import { accessAll } from '../../../../shared/utils/ReduceAccessor';
 import { RootState } from '../../../../shared/types';
 
 const NivoStreamContainer: React.FC = () => {
-  const { months, person, validity, sellType, color } = useSelector((state: RootState) =>
+  const { months, person, validity, sellType } = useSelector((state: RootState) =>
     accessAll(state)
   );
   const { isPending, data, isError } = useStreamData({
@@ -16,7 +16,6 @@ const NivoStreamContainer: React.FC = () => {
     person,
     validity,
     type: sellType,
-    color,
   });
 
   return (

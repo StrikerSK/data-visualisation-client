@@ -16,14 +16,18 @@ export const nivoBarPath = ENDPOINTS.NIVO_BAR;
 export const nivoPiePath = ENDPOINTS.NIVO_PIE;
 
 export const useBarData = (url: string, params: ChartParams) => {
+  // Destructure to exclude color from queryKey and request params
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['barData', url, params],
+    queryKey: ['barData', url, fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(url, {
         params: {
           upperGroup: 'month',
           lowerGroup: 'validity',
-          ...params,
+          ...fetchParams,
         },
       });
       return data;
@@ -32,13 +36,16 @@ export const useBarData = (url: string, params: ChartParams) => {
 };
 
 export const usePieData = (url: string, params: ChartParams) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['pieData', url, params],
+    queryKey: ['pieData', url, fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(url, {
         params: {
           group: 'person',
-          ...params,
+          ...fetchParams,
         },
       });
       return data;
@@ -47,14 +54,17 @@ export const usePieData = (url: string, params: ChartParams) => {
 };
 
 export const useLineData = (params: ChartParams) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['lineData', params],
+    queryKey: ['lineData', fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(ENDPOINTS.NIVO_LINE, {
         params: {
           upperGroup: 'person',
           lowerGroup: 'month',
-          ...params,
+          ...fetchParams,
         },
       });
       return data;
@@ -63,14 +73,17 @@ export const useLineData = (params: ChartParams) => {
 };
 
 export const useBubbleData = (params: ChartParams) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['bubbleData', params],
+    queryKey: ['bubbleData', fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(ENDPOINTS.NIVO_BUBBLE, {
         params: {
           upperGroup: 'month',
           lowerGroup: 'validity',
-          ...params,
+          ...fetchParams,
         },
       });
       return data;
@@ -79,11 +92,14 @@ export const useBubbleData = (params: ChartParams) => {
 };
 
 export const useStreamData = (params: ChartParams) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['streamData', params],
+    queryKey: ['streamData', fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(ENDPOINTS.NIVO_TICKET, {
-        params,
+        params: fetchParams,
       });
       return data;
     },
@@ -91,14 +107,17 @@ export const useStreamData = (params: ChartParams) => {
 };
 
 export const useApexData = (params: ChartParams) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { color, ...fetchParams } = params;
+
   return useQuery({
-    queryKey: ['apexData', params],
+    queryKey: ['apexData', fetchParams],
     queryFn: async () => {
       const { data } = await apiClient.get(ENDPOINTS.APEX_COUPON, {
         params: {
           upperGroup: 'year',
           lowerGroup: 'month',
-          ...params,
+          ...fetchParams,
         },
       });
       return data;

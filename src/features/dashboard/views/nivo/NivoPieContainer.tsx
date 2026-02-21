@@ -16,7 +16,6 @@ const NivoPieContainer: React.FC = () => {
     person,
     validity,
     type: sellType,
-    color,
   });
 
   return (

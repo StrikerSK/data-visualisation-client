@@ -16,7 +16,6 @@ const NivoBubbleContainer: React.FC = () => {
     person,
     validity,
     type: sellType,
-    color,
   });
 
   return (

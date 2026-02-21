@@ -1,11 +1,11 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { adaptToWidth } from '../../lib/Functions';
-import { RootState } from '../../types';
-import { useLineData } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { adaptToWidth } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
+import { useLineData } from '../../../shared/hooks/useChartsData';
 
 interface NivoLineComponentProps {
   months: string;

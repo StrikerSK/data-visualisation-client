@@ -19,7 +19,7 @@ const SpinnerComponent: React.FC<SpinnerProps> = ({ children, isDataLoaded }) =>
       {isDataLoaded ? (
         children
       ) : (
-        <ClipLoader css={override} sizeUnit={'px'} size={150} color={'#123abc'} />
+        <ClipLoader cssOverride={override} size={150} color={'#123abc'} />
       )}
     </div>
   );

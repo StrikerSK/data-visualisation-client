@@ -9,12 +9,12 @@ import {
 } from 'recharts';
 import React, { ReactNode } from 'react';
 
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { generateColor, getLabels } from '../../lib/Functions';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
+import { generateColor, getLabels } from '../../../shared/utils/Functions';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface StackedGraphComponentProps {
   person: string;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { updateSellTypes } from '../../../lib/features/generalSlice';
+import { updateSellTypes } from '../generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
-import { validateComponentChecks } from '../../../lib/Functions';
-import { accessSellType } from '../../../lib/ReduceAccessor';
-import { RootState } from '../../../types';
+import { validateComponentChecks } from '../../../shared/utils/Functions';
+import { accessSellType } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
 
 export const card = 'Čipová karta';
 export const coupon = 'Papierový kupón';

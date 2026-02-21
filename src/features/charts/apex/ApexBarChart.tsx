@@ -2,13 +2,13 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import SpinnerComponent from '../SpinnerComponent';
-import { monthArray } from '../controlls/checkboxes/CheckboxMonths';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
+import { monthArray } from '../../filters/components/CheckboxMonths';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { isDesktop } from '../../lib/Functions';
-import { RootState } from '../../types';
-import { useApexData } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { isDesktop } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
+import { useApexData } from '../../../shared/hooks/useChartsData';
 
 interface ApexBarChartProps {
   months: string;

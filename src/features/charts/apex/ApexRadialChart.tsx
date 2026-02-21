@@ -2,11 +2,11 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { usePieData, nivoPiePath } from '../../../shared/hooks/useChartsData';
 
 interface ApexRadialChartProps {
   months: string;

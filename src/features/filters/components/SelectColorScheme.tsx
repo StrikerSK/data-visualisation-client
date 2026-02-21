@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateColor } from '../../../lib/features/generalSlice';
+import { updateColor } from '../generalSlice';
 import SelectTemplate from './SelectTemplate';
-import { RootState } from '../../../types';
+import { RootState } from '../../../shared/types';
 
 interface ColorSchemeProps {
   color: string;

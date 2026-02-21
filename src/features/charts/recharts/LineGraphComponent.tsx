@@ -2,11 +2,11 @@ import React, { ReactNode } from 'react';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { connect } from 'react-redux';
 
-import SpinnerComponent from '../SpinnerComponent';
-import { generateColor, getLabels } from '../../lib/Functions';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
+import { generateColor, getLabels } from '../../../shared/utils/Functions';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface LineGraphComponentProps {
   months: string;

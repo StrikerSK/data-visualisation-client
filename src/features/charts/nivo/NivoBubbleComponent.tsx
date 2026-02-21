@@ -1,10 +1,10 @@
 import React from 'react';
 import { ResponsiveCirclePacking } from '@nivo/circle-packing';
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useBubbleData } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useBubbleData } from '../../../shared/hooks/useChartsData';
 
 interface NivoBubbleComponentProps {
   months: string;

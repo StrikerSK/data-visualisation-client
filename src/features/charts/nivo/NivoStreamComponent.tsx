@@ -1,11 +1,11 @@
 import React from 'react';
 import { ResponsiveStream } from '@nivo/stream';
-import SpinnerComponent from '../SpinnerComponent';
-import { dataKeys } from '../controlls/checkboxes/CheckboxPerson';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
+import { dataKeys } from '../../filters/components/CheckboxPerson';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useStreamData } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useStreamData } from '../../../shared/hooks/useChartsData';
 
 interface NivoStreamComponentProps {
   months: string;

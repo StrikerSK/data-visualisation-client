@@ -1,11 +1,11 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { isDesktop } from '../../lib/Functions';
-import { RootState } from '../../types';
-import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { isDesktop } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
+import { usePieData, nivoPiePath } from '../../../shared/hooks/useChartsData';
 
 interface NivoPieComponentProps {
   months: string;

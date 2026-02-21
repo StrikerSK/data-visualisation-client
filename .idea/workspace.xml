@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo Waffle">
-      <change beforePath="$PROJECT_DIR$/src/container/AbstractCharts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROJECT_PLAN.md" beforeDir="false" afterPath="$PROJECT_DIR$/PROJECT_PLAN.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,33 +39,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gemini-dependencies-update&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.10.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.10.8&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build:dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start:dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/kristianhanus/WebstormProjects/data-visualisation-client/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "gemini-redux",
+    "javascript.nodejs.core.library.configured.version": "20.10.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.8",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/StrikerSK/Development/JavaScript/React/data-visualisation-client/src/components/controlls/selects",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build:dev.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint:fix.executor": "Run",
+    "npm.start:dev.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:e2e.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/kristianhanus/WebstormProjects/data-visualisation-client/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>

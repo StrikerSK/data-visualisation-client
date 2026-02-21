@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
-import { updateBarDataKeys } from '../lib/features/generalSlice';
+import { updateBarDataKeys } from '../../features/filters/generalSlice';
 import {
   adults,
   children,
@@ -9,7 +9,7 @@ import {
   juniors,
   seniors,
   students,
-} from './controlls/checkboxes/CheckboxPerson';
+} from '../../features/filters/components/CheckboxPerson';
 
 const portable = 'Prenosné';
 export const defaultBarOrder = dataKeys;

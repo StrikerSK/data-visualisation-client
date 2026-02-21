@@ -1,8 +1,8 @@
 import React from 'react';
-import { updateBarLayout } from '../../../lib/features/generalSlice';
+import { updateBarLayout } from '../generalSlice';
 import SelectTemplate from './SelectTemplate';
 import { connect } from 'react-redux';
-import { RootState } from '../../../types';
+import { RootState } from '../../../shared/types';
 
 interface BarLayoutProps {
   layout: string;

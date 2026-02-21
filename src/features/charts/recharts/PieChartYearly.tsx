@@ -2,11 +2,11 @@ import React, { useMemo } from 'react';
 import { Pie, PieChart, ResponsiveContainer } from 'recharts';
 import { connect } from 'react-redux';
 
-import SpinnerComponent from '../SpinnerComponent';
-import { generateColor } from '../../lib/Functions';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
+import { generateColor } from '../../../shared/utils/Functions';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { usePieData, nivoPiePath } from '../../../shared/hooks/useChartsData';
 
 interface PieChartYearlyProps {
   months: string;
@@ -32,6 +32,7 @@ const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validit
             cy="50%"
             fill={color}
             label={({ cx, cy, midAngle, innerRadius, outerRadius, value, index }) => {
+              if (midAngle === undefined) return null;
               const RADIAN = Math.PI / 180;
               const radius = 25 + innerRadius + (outerRadius - innerRadius);
               const x = cx + radius * Math.cos(-midAngle * RADIAN);

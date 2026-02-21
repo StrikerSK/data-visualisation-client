@@ -2,12 +2,12 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import SpinnerComponent from '../SpinnerComponent';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { connect } from 'react-redux';
-import { monthArray } from '../controlls/checkboxes/CheckboxMonths';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useApexData } from '../../lib/hooks/useChartsData';
+import { monthArray } from '../../filters/components/CheckboxMonths';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useApexData } from '../../../shared/hooks/useChartsData';
 
 const colors = [
   '#F3B415',

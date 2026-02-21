@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateValidity } from '../../../lib/features/generalSlice';
+import { updateValidity } from '../generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
-import { accessValidity } from '../../../lib/ReduceAccessor';
-import { validateComponentChecks } from '../../../lib/Functions';
-import { RootState } from '../../../types';
+import { accessValidity } from '../../../shared/utils/ReduceAccessor';
+import { validateComponentChecks } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
 
 const three_month = '3 Mesačná';
 const month = 'Mesačná';

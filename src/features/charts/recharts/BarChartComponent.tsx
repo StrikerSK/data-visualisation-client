@@ -2,18 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-import SpinnerComponent from '../SpinnerComponent';
-import { generateColor, getLabels } from '../../lib/Functions';
-import { accessAll } from '../../lib/ReduceAccessor';
-import { RootState } from '../../types';
-import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
+import SpinnerComponent from '../../../shared/components/SpinnerComponent';
+import { generateColor, getLabels } from '../../../shared/utils/Functions';
+import { accessAll } from '../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../shared/types';
+import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface BarChartComponentProps {
   months: string;
   person: string;
   validity: string;
   sellType: string;
-  layout: string;
+  layout?: string;
 }
 
 const BarChartComponent: React.FC<BarChartComponentProps> = ({

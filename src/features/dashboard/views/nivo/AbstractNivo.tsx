@@ -1,4 +1,4 @@
-import SelectColorScheme from '../../filters/components/SelectColorScheme';
+import SelectColorScheme from '../../../filters/components/SelectColorScheme';
 import React, { ReactNode } from 'react';
 import { DefaultConfiguration } from '../AbstractCharts';
 

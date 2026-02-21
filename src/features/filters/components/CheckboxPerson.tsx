@@ -1,9 +1,9 @@
 import React from 'react';
 import CheckboxTemplate from './CheckboxTemplate';
-import { updatePersons } from '../../../lib/features/generalSlice';
+import { updatePersons } from '../generalSlice';
 import { connect } from 'react-redux';
-import { validateComponentChecks } from '../../../lib/Functions';
-import { RootState } from '../../../types';
+import { validateComponentChecks } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
 
 export const adults = 'Dospelý';
 export const juniors = 'Juniori';

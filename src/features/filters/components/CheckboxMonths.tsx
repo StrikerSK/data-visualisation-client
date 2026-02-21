@@ -1,9 +1,9 @@
 import React from 'react';
-import { updateMonths } from '../../../lib/features/generalSlice';
+import { updateMonths } from '../generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
-import { validateComponentChecks } from '../../../lib/Functions';
-import { RootState } from '../../../types';
+import { validateComponentChecks } from '../../../shared/utils/Functions';
+import { RootState } from '../../../shared/types';
 
 export const january = 'Január';
 export const february = 'Február';

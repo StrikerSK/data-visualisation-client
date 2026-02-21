@@ -2,30 +2,39 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/styles.scss';
 
-import MainPage from './container/MainPage';
+import MainPage from './features/dashboard/views/MainPage';
 
-import NivoBarContainer from './container/nivo/NivoBarContainer';
-import NivoLineContainer from './container/nivo/NivoLineContainer';
-import NivoPieContainer from './container/nivo/NivoPieContainer';
-import NivoBubbleContainer from './container/nivo/NivoBubbleContainer';
-import NivoStreamContainer from './container/nivo/NivoStreamContainer';
-import { NivoDashboards, NivoDashboardsRandom } from './container/nivo/NivoDashboards';
+import NivoBarContainer from './features/dashboard/views/nivo/NivoBarContainer';
+import NivoLineContainer from './features/dashboard/views/nivo/NivoLineContainer';
+import NivoPieContainer from './features/dashboard/views/nivo/NivoPieContainer';
+import NivoBubbleContainer from './features/dashboard/views/nivo/NivoBubbleContainer';
+import NivoStreamContainer from './features/dashboard/views/nivo/NivoStreamContainer';
+import {
+  NivoDashboards,
+  NivoDashboardsRandom,
+} from './features/dashboard/views/nivo/NivoDashboards';
 
-import ApexPieChart from './container/apex/ApexPieChart';
-import ApexBarChart from './container/apex/ApexBarChart';
-import ApexLineChart from './container/apex/ApexLineChart';
-import ApexRadialChart from './container/apex/ApexRadialChart';
-import ApexHeatmapChart from './container/apex/ApexHeatmapChart';
-import ApexRadarChart from './container/apex/ApexRadarChart';
-import ApexAreaChart from './container/apex/ApexAreaChart';
-import { ApexDashboards, ApexDashboardsRandom } from './container/apex/ApexDashboards';
+import ApexPieChart from './features/dashboard/views/apex/ApexPieChart';
+import ApexBarChart from './features/dashboard/views/apex/ApexBarChart';
+import ApexLineChart from './features/dashboard/views/apex/ApexLineChart';
+import ApexRadialChart from './features/dashboard/views/apex/ApexRadialChart';
+import ApexHeatmapChart from './features/dashboard/views/apex/ApexHeatmapChart';
+import ApexRadarChart from './features/dashboard/views/apex/ApexRadarChart';
+import ApexAreaChart from './features/dashboard/views/apex/ApexAreaChart';
+import {
+  ApexDashboards,
+  ApexDashboardsRandom,
+} from './features/dashboard/views/apex/ApexDashboards';
 
-import RechartsPieContainer from './container/recharts/RechartsPieContainer';
-import RechartsStackedContainer from './container/recharts/RechartsStackedContainer';
-import RechartsLineContainer from './container/recharts/RechartsLineContainer';
-import RechartsBarContainer from './container/recharts/RechartsBarContainer';
-import RechartsAreaContainer from './container/recharts/RechartsAreaContainer';
-import { RechartsDashboard, RechartsDashboardRandom } from './container/recharts/RechartsDashboard';
+import RechartsPieContainer from './features/dashboard/views/recharts/RechartsPieContainer';
+import RechartsStackedContainer from './features/dashboard/views/recharts/RechartsStackedContainer';
+import RechartsLineContainer from './features/dashboard/views/recharts/RechartsLineContainer';
+import RechartsBarContainer from './features/dashboard/views/recharts/RechartsBarContainer';
+import RechartsAreaContainer from './features/dashboard/views/recharts/RechartsAreaContainer';
+import {
+  RechartsDashboard,
+  RechartsDashboardRandom,
+} from './features/dashboard/views/recharts/RechartsDashboard';
 
 interface PathRoute {
   path: string;

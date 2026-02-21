@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateBarLayout } from '../../../lib/actions';
+import { updateBarLayout } from '../../../lib/features/generalSlice';
 import SelectTemplate from './SelectTemplate';
 import { connect } from 'react-redux';
 import { RootState } from '../../../types';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateColor } from '../../../lib/actions';
+import { updateColor } from '../../../lib/features/generalSlice';
 import SelectTemplate from './SelectTemplate';
 import { RootState } from '../../../types';
 

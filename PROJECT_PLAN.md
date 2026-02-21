@@ -47,8 +47,11 @@ This document outlines the strategic roadmap for improving the PID Graphs client
 ## 🏗️ Phase 3: Architectural Refactoring
 *Goal: Improve maintainability and developer experience.*
 
-- [ ] **State Management:**
-    - Replace verbose legacy Redux (actions/reducers/types) with **Redux Toolkit (RTK)**.
+- [x] **State Management:**
+    - Replaced verbose legacy Redux (actions/reducers/types) with **Redux Toolkit (RTK)**.
+    - Implemented `generalSlice` for dashboard filters and configurations.
+    - Centralized store configuration in `src/lib/store.ts`.
+    - Removed legacy Redux boilerplate.
     - Evaluate **React Query (TanStack Query)** for server state (replacing `DataFetcher.js` + Redux thunks). This is the modern standard for data fetching.
 - [ ] **Folder Structure:** 
     - Move from "Library-based" grouping (e.g., `components/nivo/`) to "Feature-based" grouping (e.g., `features/dashboard/`, `features/analytics/`).

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateValidity } from '../../../lib/actions';
+import { updateValidity } from '../../../lib/features/generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
 import { accessValidity } from '../../../lib/ReduceAccessor';
 import { validateComponentChecks } from '../../../lib/Functions';

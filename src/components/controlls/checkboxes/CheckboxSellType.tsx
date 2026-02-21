@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateSellTypes } from '../../../lib/actions';
+import { updateSellTypes } from '../../../lib/features/generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';

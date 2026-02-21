@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateMonths } from '../../../lib/actions';
+import { updateMonths } from '../../../lib/features/generalSlice';
 import CheckboxTemplate from './CheckboxTemplate';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';

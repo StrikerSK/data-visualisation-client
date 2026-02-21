@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
-import { updateBarDataKeys } from '../lib/actions';
+import { updateBarDataKeys } from '../lib/features/generalSlice';
 import {
   adults,
   children,

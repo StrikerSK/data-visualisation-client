@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckboxTemplate from './CheckboxTemplate';
-import { updatePersons } from '../../../lib/actions';
+import { updatePersons } from '../../../lib/features/generalSlice';
 import { connect } from 'react-redux';
 import { validateComponentChecks } from '../../../lib/Functions';
 import { RootState } from '../../../types';

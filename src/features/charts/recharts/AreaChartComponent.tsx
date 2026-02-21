@@ -21,7 +21,7 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
   validity,
   sellType,
 }) => {
-  const { data, isLoading } = useBarData(nivoBarPath, [person, months, sellType, validity]);
+  const { data, isPending, isError } = useBarData(nivoBarPath, [person, months, sellType, validity]);
 
   const areas: ReactNode[] = [];
   const lines: ReactNode[] = [];
@@ -64,7 +64,11 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{areaChart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {areaChart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

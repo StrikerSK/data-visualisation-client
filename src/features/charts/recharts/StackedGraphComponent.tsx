@@ -29,7 +29,7 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
   sellType,
   validity,
 }) => {
-  const { data, isLoading } = useBarData(nivoBarPath, [months, person, validity, sellType]);
+  const { data, isPending, isError } = useBarData(nivoBarPath, [months, person, validity, sellType]);
 
   const areas: ReactNode[] = data
     ? getLabels(data).map((label) => {
@@ -59,7 +59,11 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{stackedGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {stackedGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -21,7 +21,7 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
   sellType,
   color,
 }) => {
-  const { data, isLoading } = useBubbleData([months, person, validity, sellType, color]);
+  const { data, isPending, isError } = useBubbleData([months, person, validity, sellType, color]);
 
   const bubbleGraph = (
     <ResponsiveCirclePacking
@@ -38,7 +38,11 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{bubbleGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {bubbleGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

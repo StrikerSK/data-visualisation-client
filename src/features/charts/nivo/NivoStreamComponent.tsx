@@ -22,7 +22,7 @@ const NivoStreamComponent: React.FC<NivoStreamComponentProps> = ({
   sellType,
   color,
 }) => {
-  const { data, isLoading } = useStreamData([months, person, validity, sellType, color]);
+  const { data, isPending, isError } = useStreamData([months, person, validity, sellType, color]);
 
   const streamGraph = (
     <ResponsiveStream
@@ -77,7 +77,11 @@ const NivoStreamComponent: React.FC<NivoStreamComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{streamGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {streamGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

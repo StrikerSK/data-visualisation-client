@@ -22,7 +22,7 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
   sellType,
   color,
 }) => {
-  const { data, isLoading } = useLineData([months, person, validity, sellType]);
+  const { data, isPending, isError } = useLineData([months, person, validity, sellType]);
 
   const LineGraph = (
     <ResponsiveLine
@@ -76,7 +76,11 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{LineGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {LineGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

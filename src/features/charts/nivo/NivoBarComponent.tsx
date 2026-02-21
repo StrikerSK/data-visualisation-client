@@ -26,7 +26,7 @@ const NivoBarComponent: React.FC<NivoBarComponentProps> = ({
   sellType,
   color,
 }) => {
-  const { data, isLoading } = useBarData(nivoBarPath, [person, months, sellType, validity]);
+  const { data, isPending, isError } = useBarData(nivoBarPath, [person, months, sellType, validity]);
 
   const getLabels = (input: any[]) => {
     if (!Array.isArray(input) || input.length === 0) return [];
@@ -91,7 +91,11 @@ const NivoBarComponent: React.FC<NivoBarComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{barGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {barGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

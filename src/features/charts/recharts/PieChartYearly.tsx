@@ -16,7 +16,12 @@ interface PieChartYearlyProps {
 }
 
 const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validity, sellType }) => {
-  const { data, isLoading } = usePieData(nivoPiePath, [months, person, validity, sellType]);
+  const { data, isPending, isError } = usePieData(nivoPiePath, [
+    months,
+    person,
+    validity,
+    sellType,
+  ]);
 
   const color = useMemo(() => generateColor(), [data]);
 
@@ -56,7 +61,11 @@ const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validit
     </div>
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{pieChart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {pieChart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

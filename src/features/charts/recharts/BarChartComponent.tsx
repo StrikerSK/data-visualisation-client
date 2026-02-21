@@ -22,7 +22,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
   validity,
   sellType,
 }) => {
-  const { data, isLoading } = useBarData(nivoBarPath, [person, months, sellType, validity]);
+  const { data, isPending, isError } = useBarData(nivoBarPath, [person, months, sellType, validity]);
 
   const bars = data
     ? getLabels(data).map((label, index) => {
@@ -42,7 +42,11 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{barChart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {barChart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

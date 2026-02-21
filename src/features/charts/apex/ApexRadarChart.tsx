@@ -17,7 +17,7 @@ interface ApexRadarChartProps {
 }
 
 const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isLoading } = useApexData([months, person, validity, sellType]);
+  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
 
   const options: ApexOptions = {
     legend: {
@@ -51,7 +51,11 @@ const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validit
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {chart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

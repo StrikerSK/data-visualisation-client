@@ -40,7 +40,7 @@ const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
   validity,
   sellType,
 }) => {
-  const { data, isLoading } = useApexData([months, person, validity, sellType]);
+  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
 
   const options: ApexOptions = {
     dataLabels: {
@@ -64,7 +64,11 @@ const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {chart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

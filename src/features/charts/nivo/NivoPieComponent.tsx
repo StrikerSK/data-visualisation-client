@@ -22,7 +22,13 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
   sellType,
   color,
 }) => {
-  const { data, isLoading } = usePieData(nivoPiePath, [months, person, validity, sellType, color]);
+  const { data, isPending, isError } = usePieData(nivoPiePath, [
+    months,
+    person,
+    validity,
+    sellType,
+    color,
+  ]);
 
   const pieChart = (
     <ResponsivePie
@@ -70,7 +76,11 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{pieChart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {pieChart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

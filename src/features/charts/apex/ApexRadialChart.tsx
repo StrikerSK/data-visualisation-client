@@ -16,7 +16,12 @@ interface ApexRadialChartProps {
 }
 
 const ApexRadialChart: React.FC<ApexRadialChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isLoading } = usePieData(nivoPiePath, [person, months, sellType, validity]);
+  const { data, isPending, isError } = usePieData(nivoPiePath, [
+    person,
+    months,
+    sellType,
+    validity,
+  ]);
 
   const labels = data ? data.map((item: any) => item.label) : [];
   const values = data ? data.map((item: any) => item.value) : [];
@@ -42,7 +47,11 @@ const ApexRadialChart: React.FC<ApexRadialChartProps> = ({ months, person, valid
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {chart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

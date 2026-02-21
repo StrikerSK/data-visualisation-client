@@ -21,7 +21,7 @@ const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
   validity,
   sellType,
 }) => {
-  const { data, isLoading } = useBarData(nivoBarPath, [months, person, validity, sellType]);
+  const { data, isPending, isError } = useBarData(nivoBarPath, [months, person, validity, sellType]);
 
   const areas: ReactNode[] = [];
   const lines: ReactNode[] = [];
@@ -64,7 +64,11 @@ const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{lineGraph}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {lineGraph}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

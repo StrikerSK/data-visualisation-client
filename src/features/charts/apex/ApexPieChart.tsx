@@ -16,7 +16,12 @@ interface ApexPieChartProps {
 }
 
 const ApexPieChart: React.FC<ApexPieChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isLoading } = usePieData(nivoPiePath, [months, person, validity, sellType]);
+  const { data, isPending, isError } = usePieData(nivoPiePath, [
+    months,
+    person,
+    validity,
+    sellType,
+  ]);
 
   const labels = data ? data.map((item: any) => item.label) : [];
   const series = data ? data.map((item: any) => item.value) : [];
@@ -51,7 +56,11 @@ const ApexPieChart: React.FC<ApexPieChartProps> = ({ months, person, validity, s
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {chart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

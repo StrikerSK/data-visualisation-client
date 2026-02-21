@@ -17,7 +17,7 @@ interface ApexLineChartProps {
 }
 
 const ApexLineChart: React.FC<ApexLineChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isLoading } = useApexData([months, person, validity, sellType]);
+  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
 
   const options: ApexOptions = {
     chart: {
@@ -59,7 +59,11 @@ const ApexLineChart: React.FC<ApexLineChartProps> = ({ months, person, validity,
     />
   );
 
-  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
+  return (
+    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
+      {chart}
+    </SpinnerComponent>
+  );
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -1,36 +1,14 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
 import { isDesktop } from '../../../shared/utils/Functions';
-import { RootState } from '../../../shared/types';
-import { usePieData, nivoPiePath } from '../../../shared/hooks/useChartsData';
 
 interface NivoPieComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
   color: string;
 }
 
-const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-  color,
-}) => {
-  const { data, isPending, isError } = usePieData(nivoPiePath, [
-    months,
-    person,
-    validity,
-    sellType,
-    color,
-  ]);
-
-  const pieChart = (
+const NivoPieComponent: React.FC<NivoPieComponentProps> = ({ data, color }) => {
+  return (
     <ResponsivePie
       data={data || []}
       margin={{ top: 20, right: 40, bottom: 70, left: 40 }}
@@ -75,14 +53,6 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
       ]}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {pieChart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(NivoPieComponent);
+export default NivoPieComponent;

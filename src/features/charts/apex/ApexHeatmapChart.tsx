@@ -1,13 +1,7 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
 import { monthArray } from '../../filters/components/CheckboxMonths';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useApexData } from '../../../shared/hooks/useChartsData';
 
 const colors = [
   '#F3B415',
@@ -28,20 +22,10 @@ const colors = [
 ];
 
 interface ApexHeatmapChartProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
 }
 
-const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-}) => {
-  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
-
+const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({ data }) => {
   const options: ApexOptions = {
     dataLabels: {
       enabled: false,
@@ -53,7 +37,7 @@ const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
     },
   };
 
-  const chart = (
+  return (
     <ReactApexChart
       options={options}
       series={data || []}
@@ -63,14 +47,6 @@ const ApexHeatmapChart: React.FC<ApexHeatmapChartProps> = ({
       className={'apex-chart'}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {chart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(ApexHeatmapChart);
+export default ApexHeatmapChart;

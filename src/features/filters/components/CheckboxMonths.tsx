@@ -32,28 +32,15 @@ export const monthArray = [
   november,
   december,
 ];
-export const defaultMonthRequestParams =
-  'month=Január&month=Február&month=Marec&month=Apríl&month=Máj&month=Jún&month=Júl&month=August&month=September&month=Október&month=November&month=December';
+
+export const defaultMonths = monthArray;
 
 interface CheckboxMonthsProps {
-  months: string;
+  months: string[];
 }
 
 const CheckboxMonths: React.FC<CheckboxMonthsProps> = ({ months }) => {
-  const constMonths = [
-    { itemName: january, isChecked: true },
-    { itemName: february, isChecked: true },
-    { itemName: march, isChecked: true },
-    { itemName: april, isChecked: true },
-    { itemName: may, isChecked: true },
-    { itemName: june, isChecked: true },
-    { itemName: july, isChecked: true },
-    { itemName: august, isChecked: true },
-    { itemName: september, isChecked: true },
-    { itemName: october, isChecked: true },
-    { itemName: november, isChecked: true },
-    { itemName: december, isChecked: true },
-  ];
+  const constMonths = monthArray.map((m) => ({ itemName: m, isChecked: true }));
 
   const filterHeader = 'Filter podľa mesiacov';
 

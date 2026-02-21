@@ -1,8 +1,8 @@
 export interface GeneralState {
-  months: string;
-  person: string;
-  sellType: string;
-  validity: string;
+  months: string[];
+  person: string[];
+  sellType: string[];
+  validity: string[];
   color: string;
   barLayoutValue: 'vertical' | 'horizontal';
   barGroupingValue: 'stacked' | 'grouped';
@@ -11,9 +11,6 @@ export interface GeneralState {
 
 export interface RootState {
   generalReducer: GeneralState;
-  personReducer: string;
-  sellTypeReducer: string;
-  validityReducer: string;
 }
 
 export type ActionType =

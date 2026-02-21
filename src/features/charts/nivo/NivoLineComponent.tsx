@@ -1,30 +1,14 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
 import { adaptToWidth } from '../../../shared/utils/Functions';
-import { RootState } from '../../../shared/types';
-import { useLineData } from '../../../shared/hooks/useChartsData';
 
 interface NivoLineComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
   color: string;
 }
 
-const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-  color,
-}) => {
-  const { data, isPending, isError } = useLineData([months, person, validity, sellType]);
-
-  const LineGraph = (
+const NivoLineComponent: React.FC<NivoLineComponentProps> = ({ data, color }) => {
+  return (
     <ResponsiveLine
       data={data || []}
       margin={adaptToWidth(
@@ -75,14 +59,6 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
       ]}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {LineGraph}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(NivoLineComponent);
+export default NivoLineComponent;

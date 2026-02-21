@@ -1,16 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { defaultMonthRequestParams } from './components/CheckboxMonths';
-import { defaultPersonRequestParams } from './components/CheckboxPerson';
-import { defaultSellTypeRequestParams } from './components/CheckboxSellType';
-import { defaultValidityRequestParams } from './components/CheckboxValidity';
+import { defaultMonths } from './components/CheckboxMonths';
+import { defaultPersons } from './components/CheckboxPerson';
+import { defaultSellTypes } from './components/CheckboxSellType';
+import { defaultValidities } from './components/CheckboxValidity';
 import { defaultBarOrder } from '../../shared/components/BarGeneratorButton';
 import { GeneralState } from '../../shared/types';
 
 const initialState: GeneralState = {
-  months: defaultMonthRequestParams,
-  person: defaultPersonRequestParams,
-  sellType: defaultSellTypeRequestParams,
-  validity: defaultValidityRequestParams,
+  months: defaultMonths,
+  person: defaultPersons,
+  sellType: defaultSellTypes,
+  validity: defaultValidities,
   color: 'nivo',
   barLayoutValue: 'vertical',
   barGroupingValue: 'stacked',
@@ -21,16 +21,16 @@ export const generalSlice = createSlice({
   name: 'general',
   initialState,
   reducers: {
-    updateMonths: (state, action: PayloadAction<string>) => {
+    updateMonths: (state, action: PayloadAction<string[]>) => {
       state.months = action.payload;
     },
-    updatePersons: (state, action: PayloadAction<string>) => {
+    updatePersons: (state, action: PayloadAction<string[]>) => {
       state.person = action.payload;
     },
-    updateSellTypes: (state, action: PayloadAction<string>) => {
+    updateSellTypes: (state, action: PayloadAction<string[]>) => {
       state.sellType = action.payload;
     },
-    updateValidity: (state, action: PayloadAction<string>) => {
+    updateValidity: (state, action: PayloadAction<string[]>) => {
       state.validity = action.payload;
     },
     updateColor: (state, action: PayloadAction<string>) => {

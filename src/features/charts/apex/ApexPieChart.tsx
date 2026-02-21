@@ -2,27 +2,11 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { usePieData, nivoPiePath } from '../../../shared/hooks/useChartsData';
-
 interface ApexPieChartProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
 }
 
-const ApexPieChart: React.FC<ApexPieChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isPending, isError } = usePieData(nivoPiePath, [
-    months,
-    person,
-    validity,
-    sellType,
-  ]);
-
+const ApexPieChart: React.FC<ApexPieChartProps> = ({ data }) => {
   const labels = data ? data.map((item: any) => item.label) : [];
   const series = data ? data.map((item: any) => item.value) : [];
 
@@ -45,7 +29,7 @@ const ApexPieChart: React.FC<ApexPieChartProps> = ({ months, person, validity, s
     ],
   };
 
-  const chart = (
+  return (
     <ReactApexChart
       options={options}
       series={series}
@@ -55,14 +39,6 @@ const ApexPieChart: React.FC<ApexPieChartProps> = ({ months, person, validity, s
       className={'apex-chart'}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {chart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(ApexPieChart);
+export default ApexPieChart;

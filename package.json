@@ -72,7 +72,7 @@
 		"prettier": "^3.8.1",
 		"prop-types": "^15.8.1",
 		"react-refresh": "^0.18.0",
-		"sass": "^1.89.2",
+		"sass": "^1.97.3",
 		"sass-loader": "^13.3.3",
 		"style-loader": "^3.3.4",
 		"typescript": "^5.9.3",

@@ -1,24 +1,13 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
 import { monthArray } from '../../filters/components/CheckboxMonths';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useApexData } from '../../../shared/hooks/useChartsData';
 
 interface ApexRadarChartProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
 }
 
-const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validity, sellType }) => {
-  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
-
+const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ data }) => {
   const options: ApexOptions = {
     legend: {
       position: 'top',
@@ -40,7 +29,7 @@ const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validit
     labels: monthArray,
   };
 
-  const chart = (
+  return (
     <ReactApexChart
       options={options}
       series={data || []}
@@ -50,14 +39,6 @@ const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validit
       className={'apex-chart'}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {chart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(ApexRadarChart);
+export default ApexRadarChart;

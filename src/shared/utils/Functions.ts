@@ -31,19 +31,18 @@ interface CheckItem {
 //Validates if current verifiedArray is checked
 export const validateComponentChecks = (
   verifiedArray: CheckItem[],
-  inputArray: string
+  inputArray: string[]
 ): CheckItem[] => {
-  if (inputArray.length > 0) {
-    const storedMonths = inputArray
-      .split('&')
-      .map((item) => item.split('=')[1].replace('%20', ' '));
+  if (Array.isArray(inputArray) && inputArray.length > 0) {
     return verifiedArray.map((item) => {
-      if (storedMonths.includes(item.itemName)) {
-        return item;
+      if (inputArray.includes(item.itemName)) {
+        return { ...item, isChecked: true };
       } else {
         return { ...item, isChecked: false };
       }
     });
+  } else if (Array.isArray(inputArray) && inputArray.length === 0) {
+    return verifiedArray.map((item) => ({ ...item, isChecked: false }));
   } else {
     return verifiedArray;
   }

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
+import { Container, Grid, Box } from '@mui/material';
 import ModalWindow from '../../filters/components/ModalWindow';
-import LinkMenuBox from '../../filters/components/LinkMenuBox';
-import GeneralHeader from './GeneralHeader';
+import MainNavigationHeader from './MainNavigationHeader';
 
 interface DashboardLayoutProps {
   children: [ReactNode, ReactNode, ReactNode, ReactNode];
@@ -9,20 +9,34 @@ interface DashboardLayoutProps {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   return (
-    <div className="dashboard-component">
-      <GeneralHeader>
-        <h1>Predajnosť lístkov PID</h1>
-        <ModalWindow />
-        <LinkMenuBox />
-      </GeneralHeader>
+    <Box
+      component="main"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+        bgcolor: 'background.default',
+      }}
+    >
+      <MainNavigationHeader actions={<ModalWindow />} />
 
-      <div className="dashboard-container">
-        <div className="dashboard-element">{children[0]}</div>
-        <div className="dashboard-element">{children[1]}</div>
-        <div className="dashboard-element">{children[2]}</div>
-        <div className="dashboard-element">{children[3]}</div>
-      </div>
-    </div>
+      <Container maxWidth="xl" sx={{ py: 4, flexGrow: 1 }}>
+        <Grid container spacing={3} sx={{ width: '100%', m: 0 }}>
+          {children.map((child, index) => (
+            <Grid
+              key={index}
+              size={{ xs: 12, lg: 6 }}
+              component="section"
+              aria-label={`Dashboard widget ${index + 1}`}
+            >
+              <Box sx={{ height: 400, bgcolor: 'background.paper', borderRadius: 2, p: 2 }}>
+                {child}
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

@@ -1,29 +1,13 @@
 import React from 'react';
 import { ResponsiveCirclePacking } from '@nivo/circle-packing';
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useBubbleData } from '../../../shared/hooks/useChartsData';
 
 interface NivoBubbleComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any;
   color: string;
 }
 
-const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-  color,
-}) => {
-  const { data, isPending, isError } = useBubbleData([months, person, validity, sellType, color]);
-
-  const bubbleGraph = (
+const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({ data, color }) => {
+  return (
     <ResponsiveCirclePacking
       data={data || { name: 'root', children: [] }}
       margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
@@ -37,14 +21,6 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
       animate={true}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {bubbleGraph}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(NivoBubbleComponent);
+export default NivoBubbleComponent;

@@ -1,72 +1,106 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import { apiClient, ENDPOINTS } from '../utils/apiClient';
 
-const hostUrl = 'http://localhost:8080';
+export interface ChartParams {
+  month?: string[];
+  person?: string[];
+  type?: string[];
+  validity?: string[];
+  color?: string;
+  upperGroup?: string;
+  lowerGroup?: string;
+  group?: string;
+}
 
-const generateParamsQuery = (parametersList: string[]): string => {
-  return parametersList.join('&');
-};
+export const nivoBarPath = ENDPOINTS.NIVO_BAR;
+export const nivoPiePath = ENDPOINTS.NIVO_PIE;
 
-export const nivoBarPath = '/nivo/coupon/bar?upperGroup=month&lowerGroup=person&';
-export const nivoPiePath = '/nivo/coupon/pie?group=year&';
-
-export const useBarData = (url: string, parameters: string[]) => {
+export const useBarData = (url: string, params: ChartParams) => {
   return useQuery({
-    queryKey: ['barData', url, ...parameters],
+    queryKey: ['barData', url, params],
     queryFn: async () => {
-      const { data } = await axios.get(hostUrl + url + generateParamsQuery(parameters));
+      const { data } = await apiClient.get(url, {
+        params: {
+          upperGroup: 'month',
+          lowerGroup: 'validity',
+          ...params,
+        },
+      });
       return data;
     },
   });
 };
 
-export const usePieData = (url: string, parameters: string[]) => {
+export const usePieData = (url: string, params: ChartParams) => {
   return useQuery({
-    queryKey: ['pieData', url, ...parameters],
+    queryKey: ['pieData', url, params],
     queryFn: async () => {
-      const { data } = await axios.get(hostUrl + url + generateParamsQuery(parameters));
+      const { data } = await apiClient.get(url, {
+        params: {
+          group: 'person',
+          ...params,
+        },
+      });
       return data;
     },
   });
 };
 
-export const useLineData = (parameters: string[]) => {
+export const useLineData = (params: ChartParams) => {
   return useQuery({
-    queryKey: ['lineData', ...parameters],
+    queryKey: ['lineData', params],
     queryFn: async () => {
-      const { data } = await axios.get(hostUrl + '/nivo/line?' + generateParamsQuery(parameters));
+      const { data } = await apiClient.get(ENDPOINTS.NIVO_LINE, {
+        params: {
+          upperGroup: 'person',
+          lowerGroup: 'month',
+          ...params,
+        },
+      });
       return data;
     },
   });
 };
 
-export const useBubbleData = (parameters: string[]) => {
+export const useBubbleData = (params: ChartParams) => {
   return useQuery({
-    queryKey: ['bubbleData', ...parameters],
+    queryKey: ['bubbleData', params],
     queryFn: async () => {
-      const { data } = await axios.get(hostUrl + '/nivo/bubble?' + generateParamsQuery(parameters));
+      const { data } = await apiClient.get(ENDPOINTS.NIVO_BUBBLE, {
+        params: {
+          upperGroup: 'month',
+          lowerGroup: 'validity',
+          ...params,
+        },
+      });
       return data;
     },
   });
 };
 
-export const useStreamData = (parameters: string[]) => {
+export const useStreamData = (params: ChartParams) => {
   return useQuery({
-    queryKey: ['streamData', ...parameters],
+    queryKey: ['streamData', params],
     queryFn: async () => {
-      const { data } = await axios.get(
-        hostUrl + '/nivo/getTicketData?' + generateParamsQuery(parameters)
-      );
+      const { data } = await apiClient.get(ENDPOINTS.NIVO_TICKET, {
+        params,
+      });
       return data;
     },
   });
 };
 
-export const useApexData = (parameters: string[]) => {
+export const useApexData = (params: ChartParams) => {
   return useQuery({
-    queryKey: ['apexData', ...parameters],
+    queryKey: ['apexData', params],
     queryFn: async () => {
-      const { data } = await axios.get(hostUrl + '/apex/data?' + generateParamsQuery(parameters));
+      const { data } = await apiClient.get(ENDPOINTS.APEX_COUPON, {
+        params: {
+          upperGroup: 'year',
+          lowerGroup: 'month',
+          ...params,
+        },
+      });
       return data;
     },
   });

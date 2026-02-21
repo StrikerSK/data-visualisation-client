@@ -8,29 +8,13 @@ import {
   YAxis,
 } from 'recharts';
 import React, { ReactNode } from 'react';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
-import { connect } from 'react-redux';
 import { generateColor, getLabels } from '../../../shared/utils/Functions';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface StackedGraphComponentProps {
-  person: string;
-  months: string;
-  sellType: string;
-  validity: string;
+  data: any[];
 }
 
-const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
-  person,
-  months,
-  sellType,
-  validity,
-}) => {
-  const { data, isPending, isError } = useBarData(nivoBarPath, [months, person, validity, sellType]);
-
+const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({ data }) => {
   const areas: ReactNode[] = data
     ? getLabels(data).map((label) => {
         const generatedColor = generateColor();
@@ -47,7 +31,7 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
       })
     : [];
 
-  const stackedGraph = (
+  return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" />
@@ -58,14 +42,6 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
       </AreaChart>
     </ResponsiveContainer>
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {stackedGraph}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(StackedGraphComponent);
+export default StackedGraphComponent;

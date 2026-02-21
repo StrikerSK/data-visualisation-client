@@ -1,28 +1,12 @@
 import React, { ReactNode } from 'react';
-import { connect } from 'react-redux';
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { generateColor, getLabels } from '../../../shared/utils/Functions';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface AreaChartComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
 }
 
-const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-}) => {
-  const { data, isPending, isError } = useBarData(nivoBarPath, [person, months, sellType, validity]);
-
+const AreaChartComponent: React.FC<AreaChartComponentProps> = ({ data }) => {
   const areas: ReactNode[] = [];
   const lines: ReactNode[] = [];
 
@@ -51,7 +35,7 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
     });
   }
 
-  const areaChart = (
+  return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
         <defs>{areas}</defs>
@@ -63,14 +47,6 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
       </AreaChart>
     </ResponsiveContainer>
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {areaChart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(AreaChartComponent);
+export default AreaChartComponent;

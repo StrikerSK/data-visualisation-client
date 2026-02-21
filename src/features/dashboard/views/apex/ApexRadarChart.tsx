@@ -2,9 +2,27 @@ import React from 'react';
 import ApexRadarChart from '../../../charts/apex/ApexRadarChart';
 import GraphComponent from '../../components/GraphComponent';
 import { DefaultConfiguration } from '../AbstractCharts';
+import { useApexData } from '../../../../shared/hooks/useChartsData';
+import { useSelector } from 'react-redux';
+import { accessAll } from '../../../../shared/utils/ReduceAccessor';
+import { RootState } from '../../../../shared/types';
 
-const ApexRadarContainer: React.FC = () => (
-  <GraphComponent graph={<ApexRadarChart />} configs={DefaultConfiguration} />
-);
+const ApexRadarContainer: React.FC = () => {
+  const { months, person, validity, sellType } = useSelector((state: RootState) => accessAll(state));
+  const { isPending, data, isError } = useApexData({
+    person,
+    month: months,
+    type: sellType,
+    validity,
+  });
+
+  return (
+    <GraphComponent
+      graph={<ApexRadarChart data={data || []} />}
+      configs={DefaultConfiguration}
+      isLoaded={!isPending && !isError && !!data}
+    />
+  );
+};
 
 export default ApexRadarContainer;

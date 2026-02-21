@@ -1,28 +1,12 @@
 import React, { ReactNode } from 'react';
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { connect } from 'react-redux';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { generateColor, getLabels } from '../../../shared/utils/Functions';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface LineGraphComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
 }
 
-const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-}) => {
-  const { data, isPending, isError } = useBarData(nivoBarPath, [months, person, validity, sellType]);
-
+const LineGraphComponent: React.FC<LineGraphComponentProps> = ({ data }) => {
   const areas: ReactNode[] = [];
   const lines: ReactNode[] = [];
 
@@ -51,7 +35,7 @@ const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
     });
   }
 
-  const lineGraph = (
+  return (
     <ResponsiveContainer>
       <LineChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
         <defs>{areas}</defs>
@@ -63,14 +47,6 @@ const LineGraphComponent: React.FC<LineGraphComponentProps> = ({
       </LineChart>
     </ResponsiveContainer>
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {lineGraph}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(LineGraphComponent);
+export default LineGraphComponent;

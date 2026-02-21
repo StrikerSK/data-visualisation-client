@@ -13,23 +13,16 @@ export const portable = 'Prenosná';
 export const portableData = 'Prenosné';
 export const children = 'Deti';
 
+export const personArray = [adults, seniors, juniors, students, portable, children];
 export const dataKeys = [adults, seniors, juniors, students, portableData, children];
-export const defaultPersonRequestParams =
-  'person=Dospelý&person=Dôchodcovia&person=Študenti&person=Prenosná&person=Juniori&person=Deti';
+export const defaultPersons = personArray;
 
 interface CheckboxPersonProps {
-  person: string;
+  person: string[];
 }
 
 const CheckboxPerson: React.FC<CheckboxPersonProps> = ({ person }) => {
-  const persons = [
-    { itemName: adults, isChecked: true },
-    { itemName: juniors, isChecked: true },
-    { itemName: seniors, isChecked: true },
-    { itemName: students, isChecked: true },
-    { itemName: portable, isChecked: true },
-    { itemName: children, isChecked: true },
-  ];
+  const persons = personArray.map((p) => ({ itemName: p, isChecked: true }));
 
   const filterHeader = 'Filter podľa typu osoby';
 

@@ -1,36 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { generateColor, getLabels } from '../../../shared/utils/Functions';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
-import { RootState } from '../../../shared/types';
-import { useBarData, nivoBarPath } from '../../../shared/hooks/useChartsData';
 
 interface BarChartComponentProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
-  layout?: string;
+  data: any[];
 }
 
-const BarChartComponent: React.FC<BarChartComponentProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-}) => {
-  const { data, isPending, isError } = useBarData(nivoBarPath, [person, months, sellType, validity]);
-
+const BarChartComponent: React.FC<BarChartComponentProps> = ({ data }) => {
   const bars = data
     ? getLabels(data).map((label, index) => {
         return <Bar key={index} type="monotone" dataKey={label} fill={generateColor()} />;
       })
     : [];
 
-  const barChart = (
+  return (
     <ResponsiveContainer>
       <BarChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
         <XAxis dataKey="month" />
@@ -41,14 +24,6 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
       </BarChart>
     </ResponsiveContainer>
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {barChart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(BarChartComponent);
+export default BarChartComponent;

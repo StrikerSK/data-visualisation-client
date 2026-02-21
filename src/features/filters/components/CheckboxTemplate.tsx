@@ -15,13 +15,12 @@ interface CheckItem {
 interface CheckboxTemplateProps {
   checkItems: CheckItem[];
   context: string;
-  dispatchFunction: (payload: string) => any;
+  dispatchFunction: (payload: string[]) => any;
   filterHeader: string;
 }
 
 const CheckboxTemplate: React.FC<CheckboxTemplateProps> = ({
   checkItems: checkedItems,
-  context,
   dispatchFunction,
   filterHeader,
 }) => {
@@ -30,24 +29,20 @@ const CheckboxTemplate: React.FC<CheckboxTemplateProps> = ({
 
   const checkboxHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const { name } = event.target;
-    const outputArrayOne = itemObjects.map((item) => {
+    const updatedItems = itemObjects.map((item) => {
       if (item.itemName === name) {
         return { ...item, isChecked: !item.isChecked };
       }
       return item;
     });
 
-    setItemObjects(outputArrayOne);
-    generateRequest(outputArrayOne);
-  };
+    setItemObjects(updatedItems);
 
-  const generateRequest = (inputObject: CheckItem[]) => {
-    const outputArrayTwo = inputObject
+    const selectedNames = updatedItems
       .filter((item) => item.isChecked)
-      .map(({ itemName }) => context + '=' + itemName.replace(' ', '%20'))
-      .join('&');
+      .map(({ itemName }) => itemName);
 
-    dispatch(dispatchFunction(outputArrayTwo));
+    dispatch(dispatchFunction(selectedNames));
   };
 
   const findIfChecked = (name: string): boolean => {

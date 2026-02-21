@@ -1,34 +1,16 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
-
-import SpinnerComponent from '../../../shared/components/SpinnerComponent';
 import { monthArray } from '../../filters/components/CheckboxMonths';
-import { connect } from 'react-redux';
-import { accessAll } from '../../../shared/utils/ReduceAccessor';
 import { isDesktop } from '../../../shared/utils/Functions';
-import { RootState } from '../../../shared/types';
-import { useApexData } from '../../../shared/hooks/useChartsData';
 
 interface ApexBarChartProps {
-  months: string;
-  person: string;
-  validity: string;
-  sellType: string;
+  data: any[];
   barLayout: 'vertical' | 'horizontal';
   barGrouping: 'stacked' | 'grouped';
 }
 
-const ApexBarChart: React.FC<ApexBarChartProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-  barLayout,
-  barGrouping,
-}) => {
-  const { data, isPending, isError } = useApexData([months, person, validity, sellType]);
-
+const ApexBarChart: React.FC<ApexBarChartProps> = ({ data, barLayout, barGrouping }) => {
   const options: ApexOptions = {
     chart: {
       type: 'bar',
@@ -59,7 +41,7 @@ const ApexBarChart: React.FC<ApexBarChartProps> = ({
     },
   };
 
-  const chart = (
+  return (
     <ReactApexChart
       options={options}
       series={data || []}
@@ -69,14 +51,6 @@ const ApexBarChart: React.FC<ApexBarChartProps> = ({
       className={'apex-chart'}
     />
   );
-
-  return (
-    <SpinnerComponent isDataLoaded={!isPending && !isError && !!data}>
-      {chart}
-    </SpinnerComponent>
-  );
 };
 
-const mapStateToProps = (state: RootState) => accessAll(state);
-
-export default connect(mapStateToProps)(ApexBarChart);
+export default ApexBarChart;

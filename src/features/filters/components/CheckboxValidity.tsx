@@ -6,25 +6,20 @@ import { accessValidity } from '../../../shared/utils/ReduceAccessor';
 import { validateComponentChecks } from '../../../shared/utils/Functions';
 import { RootState } from '../../../shared/types';
 
-const three_month = '3 Mesačná';
 const month = 'Mesačná';
+const three_month = '3 Mesačná';
 const five_month = '5 Mesačná';
 const yearly = 'Ročná';
 
-export const defaultValidityRequestParams =
-  'validity=Mesačná&validity=3%20Mesačná&validity=5%20Mesačná&validity=Ročná';
+export const validityArray = [month, three_month, five_month, yearly];
+export const defaultValidities = validityArray;
 
 interface CheckboxValidityProps {
-  validity: string;
+  validity: string[];
 }
 
 const CheckboxValidity: React.FC<CheckboxValidityProps> = ({ validity }) => {
-  const validities = [
-    { itemName: month, isChecked: true },
-    { itemName: three_month, isChecked: true },
-    { itemName: five_month, isChecked: true },
-    { itemName: yearly, isChecked: true },
-  ];
+  const validities = validityArray.map((v) => ({ itemName: v, isChecked: true }));
 
   const filterHeader = 'Filter podľa dĺžky platnosti';
 

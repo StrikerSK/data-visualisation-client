@@ -27,7 +27,8 @@
 		"react-router-dom": "^6.30.3",
 		"react-spinners": "^0.17.0",
 		"recharts": "^3.7.0",
-		"redux": "^4.0.5"
+		"redux": "^4.0.5",
+		"redux-persist": "^6.0.0"
 	},
 	"scripts": {
 		"dev": "webpack serve --config webpack.dev.js",

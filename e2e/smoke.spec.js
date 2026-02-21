@@ -6,10 +6,10 @@ test('should load the main page and navigate', async ({ page }) => {
   // Check title
   await expect(page).toHaveTitle(/PID Graphs/);
 
-  // Example: Navigation to Recharts
-  const rechartsLink = page.locator('text=Recharts').first();
-  if (await rechartsLink.isVisible()) {
-    await rechartsLink.click();
-    await expect(page).toHaveURL(/.*recharts/);
-  }
+  // Navigate to Recharts Dashboard specifically
+  // We locate the container that contains 'Recharts:' and find its own 'Dashboard' link
+  const rechartsContainer = page.locator('.breadcrumb-link-container').filter({ hasText: 'Recharts:' });
+  await rechartsContainer.getByRole('link', { name: 'Dashboard' }).click();
+
+  await expect(page).toHaveURL(/.*recharts/);
 });

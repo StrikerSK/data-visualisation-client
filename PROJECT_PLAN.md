@@ -12,7 +12,7 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Integrated Prettier with ESLint.
     - Standardized formatting rules in `.prettierrc.js`.
     - Applied formatting across the `src/` directory.
-- [ ] **Testing Infrastructure:** 
+- [x] **Testing Infrastructure:** 
     - **Frameworks:** Jest + React Testing Library (Unit/Integration), Playwright (E2E), MSW (API Mocking).
     - **Scope:**
         - **Unit:** Utility functions (`lib/Functions.js`) and atomic components (`SpinnerComponent`).
@@ -47,12 +47,18 @@ This document outlines the strategic roadmap for improving the PID Graphs client
 ## 🏗️ Phase 3: Architectural Refactoring
 *Goal: Improve maintainability and developer experience.*
 
-- [ ] **State Management:**
-    - Replace verbose legacy Redux (actions/reducers/types) with **Redux Toolkit (RTK)**.
-    - Evaluate **React Query (TanStack Query)** for server state (replacing `DataFetcher.js` + Redux thunks). This is the modern standard for data fetching.
-- [ ] **Folder Structure:** 
-    - Move from "Library-based" grouping (e.g., `components/nivo/`) to "Feature-based" grouping (e.g., `features/dashboard/`, `features/analytics/`).
-    - Colocate styles and tests with components.
+- [x] **State Management:**
+    - Replaced verbose legacy Redux (actions/reducers/types) with **Redux Toolkit (RTK)**.
+    - Implemented `generalSlice` for dashboard filters and configurations.
+    - Centralized store configuration in `src/lib/store.ts`.
+    - Removed legacy Redux boilerplate.
+    - **React Query (TanStack Query)** implemented for server state.
+    - Replaced manual `DataFetcher.ts` and `useEffect` fetching with custom hooks in `src/lib/hooks/useChartsData.ts`.
+- [x] **Folder Structure:** 
+    - Moved from "Library-based" grouping to **Feature-based** grouping.
+    - Organized code into `src/features/` (charts, filters, dashboard) and `src/shared/` (common logic).
+    - Colocated tests within their respective feature/shared directories.
+    - Simplified imports by flattening filter components.
 - [x] **TypeScript Migration:**
     - [x] Initial setup (tsconfig, Babel, Webpack).
     - [x] Migrate core utilities (`lib/Functions.ts`).

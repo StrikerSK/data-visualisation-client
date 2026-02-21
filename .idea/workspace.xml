@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0cb03c-c3d2-43e6-b1cb-f1a47aff774c" name="Default Changelist" comment="Remove Nivo Waffle">
-      <change beforePath="$PROJECT_DIR$/src/container/AbstractCharts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/MainPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsAreaContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsBarContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsLineContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsPieContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/recharts/RechartsStackedContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROJECT_PLAN.md" beforeDir="false" afterPath="$PROJECT_DIR$/PROJECT_PLAN.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "gemini-dependencies-update",
+    "git-widget-placeholder": "gemini-redux",
     "javascript.nodejs.core.library.configured.version": "20.10.0",
     "javascript.nodejs.core.library.typings.version": "20.10.8",
     "javascript.preferred.runtime.type.id": "node",

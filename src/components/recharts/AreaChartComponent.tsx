@@ -1,20 +1,12 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { connect } from 'react-redux';
-import {
-  Area,
-  AreaChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-import { fetchBarData, nivoBarPath } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { generateColor, getLabels } from '../../lib/Functions';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
 
 interface AreaChartComponentProps {
   months: string;
@@ -29,16 +21,13 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
   validity,
   sellType,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [line, setLine] = useState<ReactNode[]>([]);
-  const [area, setArea] = useState<ReactNode[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
+  const { data, isLoading } = useBarData(nivoBarPath, [person, months, sellType, validity]);
 
-  const processData = (result: any[]) => {
-    const lines: ReactNode[] = [];
-    const areas: ReactNode[] = [];
+  const areas: ReactNode[] = [];
+  const lines: ReactNode[] = [];
 
-    getLabels(result).forEach((label) => {
+  if (data) {
+    getLabels(data).forEach((label) => {
       const generatedColor = generateColor();
       const identification = 'color' + label;
 
@@ -60,33 +49,22 @@ const AreaChartComponent: React.FC<AreaChartComponentProps> = ({
         />
       );
     });
-
-    setData(result);
-    setArea(areas);
-    setLine(lines);
-  };
-
-  useEffect(() => {
-    fetchBarData(nivoBarPath, [person, months, sellType, validity])
-      .then(({ data }) => processData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [person, months, sellType, validity]);
+  }
 
   const areaChart = (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
-        <defs>{area}</defs>
+      <AreaChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
+        <defs>{areas}</defs>
         <XAxis dataKey="name" />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
-        {line}
+        {lines}
       </AreaChart>
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{areaChart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{areaChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { Pie, PieChart, ResponsiveContainer } from 'recharts';
 import { connect } from 'react-redux';
 
-import { fetchBarData, nivoPiePath } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { generateColor } from '../../lib/Functions';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
 
 interface PieChartYearlyProps {
   months: string;
@@ -16,28 +16,16 @@ interface PieChartYearlyProps {
 }
 
 const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validity, sellType }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [color, setColor] = useState('');
-  const [isLoaded, changeLoadedState] = useState(false);
+  const { data, isLoading } = usePieData(nivoPiePath, [months, person, validity, sellType]);
 
-  const processData = (result: any[]) => {
-    setData(result);
-    setColor(generateColor());
-  };
-
-  useEffect(() => {
-    fetchBarData(nivoPiePath, [months, person, validity, sellType])
-      .then(({ data }) => processData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [months, person, validity, sellType]);
+  const color = useMemo(() => generateColor(), [data]);
 
   const pieChart = (
     <div className="recharts-pie-graph">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
-            data={data}
+            data={data || []}
             dataKey="value"
             nameKey="label"
             cx="50%"
@@ -57,7 +45,7 @@ const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validit
                   textAnchor={x > cx ? 'start' : 'end'}
                   dominantBaseline="central"
                 >
-                  {data[index].id} ({value})
+                  {data ? data[index].id : ''} ({value})
                 </text>
               );
             }}
@@ -67,7 +55,7 @@ const PieChartYearly: React.FC<PieChartYearlyProps> = ({ months, person, validit
     </div>
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{pieChart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{pieChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

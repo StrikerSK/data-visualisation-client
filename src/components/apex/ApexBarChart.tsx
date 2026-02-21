@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import { apexDataFetcher } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { monthArray } from '../controlls/checkboxes/CheckboxMonths';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { isDesktop } from '../../lib/Functions';
 import { RootState } from '../../types';
+import { useApexData } from '../../lib/hooks/useChartsData';
 
 interface ApexBarChartProps {
   months: string;
@@ -27,8 +27,7 @@ const ApexBarChart: React.FC<ApexBarChartProps> = ({
   barLayout,
   barGrouping,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
+  const { data, isLoading } = useApexData([months, person, validity, sellType]);
 
   const options: ApexOptions = {
     chart: {
@@ -60,19 +59,10 @@ const ApexBarChart: React.FC<ApexBarChartProps> = ({
     },
   };
 
-  const finaliseTransaction = (result: any[]) => {
-    setData(result);
-    changeLoadedState(true);
-  };
-
-  useEffect(() => {
-    apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
-  }, [months, person, barLayout, barGrouping, validity, sellType]);
-
   const chart = (
     <ReactApexChart
       options={options}
-      series={data}
+      series={data || []}
       type="bar"
       width="100%"
       height="100%"
@@ -80,7 +70,7 @@ const ApexBarChart: React.FC<ApexBarChartProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

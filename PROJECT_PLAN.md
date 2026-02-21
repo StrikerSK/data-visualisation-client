@@ -52,7 +52,8 @@ This document outlines the strategic roadmap for improving the PID Graphs client
     - Implemented `generalSlice` for dashboard filters and configurations.
     - Centralized store configuration in `src/lib/store.ts`.
     - Removed legacy Redux boilerplate.
-    - Evaluate **React Query (TanStack Query)** for server state (replacing `DataFetcher.js` + Redux thunks). This is the modern standard for data fetching.
+    - **React Query (TanStack Query)** implemented for server state.
+    - Replaced manual `DataFetcher.ts` and `useEffect` fetching with custom hooks in `src/lib/hooks/useChartsData.ts`.
 - [ ] **Folder Structure:** 
     - Move from "Library-based" grouping (e.g., `components/nivo/`) to "Feature-based" grouping (e.g., `features/dashboard/`, `features/analytics/`).
     - Colocate styles and tests with components.

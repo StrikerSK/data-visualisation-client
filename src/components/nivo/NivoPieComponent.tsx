@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
 import SpinnerComponent from '../SpinnerComponent';
-import { fetchBarData, nivoPiePath } from '../../lib/DataFetcher';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { isDesktop } from '../../lib/Functions';
 import { RootState } from '../../types';
+import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
 
 interface NivoPieComponentProps {
   months: string;
@@ -22,19 +22,11 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
   sellType,
   color,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
-
-  useEffect(() => {
-    fetchBarData(nivoPiePath, [months, person, validity, sellType])
-      .then(({ data }) => setData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [months, person, validity, sellType, color]);
+  const { data, isLoading } = usePieData(nivoPiePath, [months, person, validity, sellType, color]);
 
   const pieChart = (
     <ResponsivePie
-      data={data}
+      data={data || []}
       margin={{ top: 20, right: 40, bottom: 70, left: 40 }}
       innerRadius={0.5}
       padAngle={0.7}
@@ -78,7 +70,7 @@ const NivoPieComponent: React.FC<NivoPieComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{pieChart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{pieChart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import { fetchBarData, nivoPiePath } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { usePieData, nivoPiePath } from '../../lib/hooks/useChartsData';
 
 interface ApexRadialChartProps {
   months: string;
@@ -15,15 +15,13 @@ interface ApexRadialChartProps {
   sellType: string;
 }
 
-const ApexRadialChart: React.FC<ApexRadialChartProps> = ({
-  months,
-  person,
-  validity,
-  sellType,
-}) => {
-  const [series, setSeries] = useState<number[]>([]);
-  const [labels, setLabels] = useState<string[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
+const ApexRadialChart: React.FC<ApexRadialChartProps> = ({ months, person, validity, sellType }) => {
+  const { data, isLoading } = usePieData(nivoPiePath, [person, months, sellType, validity]);
+
+  const labels = data ? data.map((item: any) => item.label) : [];
+  const values = data ? data.map((item: any) => item.value) : [];
+  const sum = values.reduce((total: number, val: number) => total + val, 0);
+  const series = values.map((val: number) => Math.round((val / (sum || 1)) * 100));
 
   const options: ApexOptions = {
     labels: labels,
@@ -32,24 +30,6 @@ const ApexRadialChart: React.FC<ApexRadialChartProps> = ({
       position: 'top',
     },
   };
-
-  const processData = (result: any[]) => {
-    const values = result.map(({ value }) => value);
-    const getSum = () => {
-      return values.reduce((total, sum) => total + sum, 0);
-    };
-
-    const sum = getSum();
-    setLabels(result.map(({ label }) => label));
-    setSeries(result.map(({ value }) => Math.round((value / sum) * 100)));
-  };
-
-  useEffect(() => {
-    fetchBarData(nivoPiePath, [person, months, sellType, validity])
-      .then(({ data }) => processData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [person, months, sellType, validity]);
 
   const chart = (
     <ReactApexChart
@@ -62,7 +42,7 @@ const ApexRadialChart: React.FC<ApexRadialChartProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

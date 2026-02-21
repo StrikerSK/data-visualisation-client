@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ResponsiveCirclePacking } from '@nivo/circle-packing';
 import SpinnerComponent from '../SpinnerComponent';
-import { bubbleDataGetter } from '../../lib/DataFetcher';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { useBubbleData } from '../../lib/hooks/useChartsData';
 
 interface NivoBubbleComponentProps {
   months: string;
@@ -21,21 +21,11 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
   sellType,
   color,
 }) => {
-  const [data, setData] = useState<any>({});
-  const [isLoaded, changeLoadedState] = useState(false);
-
-  const finaliseTransaction = (result: any) => {
-    setData(result);
-    changeLoadedState(true);
-  };
-
-  useEffect(() => {
-    bubbleDataGetter([months, person, validity, sellType, color], finaliseTransaction);
-  }, [months, person, validity, sellType, color]);
+  const { data, isLoading } = useBubbleData([months, person, validity, sellType, color]);
 
   const bubbleGraph = (
     <ResponsiveCirclePacking
-      data={data}
+      data={data || { name: 'root', children: [] }}
       margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       id="name"
       value="value"
@@ -48,7 +38,7 @@ const NivoBubbleComponent: React.FC<NivoBubbleComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{bubbleGraph}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{bubbleGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

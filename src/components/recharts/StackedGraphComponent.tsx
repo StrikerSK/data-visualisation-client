@@ -7,14 +7,14 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
-import { fetchBarData, nivoBarPath } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { connect } from 'react-redux';
 import { generateColor, getLabels } from '../../lib/Functions';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
 
 interface StackedGraphComponentProps {
   person: string;
@@ -29,14 +29,10 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
   sellType,
   validity,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [area, setArea] = useState<ReactNode[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
+  const { data, isLoading } = useBarData(nivoBarPath, [months, person, validity, sellType]);
 
-  const processData = (data: any[]) => {
-    setData(data);
-    setArea(
-      getLabels(data).map((label) => {
+  const areas: ReactNode[] = data
+    ? getLabels(data).map((label) => {
         const generatedColor = generateColor();
         return (
           <Area
@@ -49,29 +45,21 @@ const StackedGraphComponent: React.FC<StackedGraphComponentProps> = ({
           />
         );
       })
-    );
-  };
-
-  useEffect(() => {
-    fetchBarData(nivoBarPath, [months, person, validity, sellType])
-      .then(({ data }) => processData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [months, person, validity, sellType]);
+    : [];
 
   const stackedGraph = (
     <ResponsiveContainer width="100%" height="100%">
-      <AreaChart data={data} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
+      <AreaChart data={data || []} margin={{ top: 0, right: 5, left: 10, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="mesiac" />
         <YAxis />
         <Tooltip />
-        {area}
+        {areas}
       </AreaChart>
     </ResponsiveContainer>
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{stackedGraph}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{stackedGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

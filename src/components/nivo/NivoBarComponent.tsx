@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 import SpinnerComponent from '../SpinnerComponent';
-import { fetchBarData, nivoBarPath } from '../../lib/DataFetcher';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { adaptToWidth, isDesktop } from '../../lib/Functions';
 import { RootState } from '../../types';
+import { useBarData, nivoBarPath } from '../../lib/hooks/useChartsData';
 
 interface NivoBarComponentProps {
   barGrouping: 'stacked' | 'grouped';
@@ -26,32 +26,20 @@ const NivoBarComponent: React.FC<NivoBarComponentProps> = ({
   sellType,
   color,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [labels, setLabels] = useState<string[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
+  const { data, isLoading } = useBarData(nivoBarPath, [person, months, sellType, validity]);
 
-  const processData = (data: any[]) => {
-    const getLabels = (input: any[]) => {
-      if (!Array.isArray(input) || input.length === 0) return [];
-      return Object.keys(input[0])
-        .filter((key) => key !== 'label')
-        .reverse();
-    };
-
-    setData(data);
-    setLabels(getLabels(data));
+  const getLabels = (input: any[]) => {
+    if (!Array.isArray(input) || input.length === 0) return [];
+    return Object.keys(input[0])
+      .filter((key) => key !== 'label')
+      .reverse();
   };
 
-  useEffect(() => {
-    fetchBarData(nivoBarPath, [person, months, sellType, validity])
-      .then(({ data }) => processData(data))
-      .then(() => changeLoadedState(true))
-      .catch(console.error);
-  }, [person, months, sellType, validity]);
+  const labels = data ? getLabels(data) : [];
 
   const barGraph = (
     <ResponsiveBar
-      data={data}
+      data={data || []}
       keys={labels}
       indexBy="label"
       margin={adaptToWidth(
@@ -103,7 +91,7 @@ const NivoBarComponent: React.FC<NivoBarComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{barGraph}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{barGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

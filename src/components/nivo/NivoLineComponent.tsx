@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ResponsiveLine } from '@nivo/line';
 import SpinnerComponent from '../SpinnerComponent';
-import { lineDataGetter } from '../../lib/DataFetcher';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { adaptToWidth } from '../../lib/Functions';
 import { RootState } from '../../types';
+import { useLineData } from '../../lib/hooks/useChartsData';
 
 interface NivoLineComponentProps {
   months: string;
@@ -22,21 +22,11 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
   sellType,
   color,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
-
-  const finaliseTransaction = (result: any[]) => {
-    setData(result);
-    changeLoadedState(true);
-  };
-
-  useEffect(() => {
-    lineDataGetter([months, person, validity, sellType], finaliseTransaction);
-  }, [months, person, validity, sellType, color]);
+  const { data, isLoading } = useLineData([months, person, validity, sellType]);
 
   const LineGraph = (
     <ResponsiveLine
-      data={data}
+      data={data || []}
       margin={adaptToWidth(
         { top: 5, right: 15, bottom: 80, left: 65 },
         { top: 5, right: 5, bottom: 85, left: 65 }
@@ -86,7 +76,7 @@ const NivoLineComponent: React.FC<NivoLineComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{LineGraph}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{LineGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

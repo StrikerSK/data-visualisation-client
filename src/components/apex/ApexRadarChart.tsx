@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
-import { apexDataFetcher } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { connect } from 'react-redux';
 import { monthArray } from '../controlls/checkboxes/CheckboxMonths';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { useApexData } from '../../lib/hooks/useChartsData';
 
 interface ApexRadarChartProps {
   months: string;
@@ -17,17 +17,7 @@ interface ApexRadarChartProps {
 }
 
 const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validity, sellType }) => {
-  const [series, setSeries] = useState<any[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
-
-  const finaliseTransaction = (result: any[]) => {
-    setSeries(result);
-    changeLoadedState(true);
-  };
-
-  useEffect(() => {
-    apexDataFetcher([months, person, validity, sellType], finaliseTransaction);
-  }, [months, person, validity, sellType]);
+  const { data, isLoading } = useApexData([months, person, validity, sellType]);
 
   const options: ApexOptions = {
     legend: {
@@ -53,7 +43,7 @@ const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validit
   const chart = (
     <ReactApexChart
       options={options}
-      series={series}
+      series={data || []}
       type="radar"
       width="100%"
       height="100%"
@@ -61,7 +51,7 @@ const ApexRadarChart: React.FC<ApexRadarChartProps> = ({ months, person, validit
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{chart}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{chart}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

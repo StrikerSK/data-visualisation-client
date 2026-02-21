@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ResponsiveStream } from '@nivo/stream';
-import { streamDataGetter } from '../../lib/DataFetcher';
 import SpinnerComponent from '../SpinnerComponent';
 import { dataKeys } from '../controlls/checkboxes/CheckboxPerson';
 import { connect } from 'react-redux';
 import { accessAll } from '../../lib/ReduceAccessor';
 import { RootState } from '../../types';
+import { useStreamData } from '../../lib/hooks/useChartsData';
 
 interface NivoStreamComponentProps {
   months: string;
@@ -22,21 +22,11 @@ const NivoStreamComponent: React.FC<NivoStreamComponentProps> = ({
   sellType,
   color,
 }) => {
-  const [data, setData] = useState<any[]>([]);
-  const [isLoaded, changeLoadedState] = useState(false);
-
-  const finaliseTransaction = (result: any[]) => {
-    setData(result);
-    changeLoadedState(true);
-  };
-
-  useEffect(() => {
-    streamDataGetter([months, person, validity, sellType, color], finaliseTransaction);
-  }, [months, person, validity, sellType, color]);
+  const { data, isLoading } = useStreamData([months, person, validity, sellType, color]);
 
   const streamGraph = (
     <ResponsiveStream
-      data={data}
+      data={data || []}
       keys={dataKeys}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       axisRight={null}
@@ -87,7 +77,7 @@ const NivoStreamComponent: React.FC<NivoStreamComponentProps> = ({
     />
   );
 
-  return <SpinnerComponent isDataLoaded={isLoaded}>{streamGraph}</SpinnerComponent>;
+  return <SpinnerComponent isDataLoaded={!isLoading}>{streamGraph}</SpinnerComponent>;
 };
 
 const mapStateToProps = (state: RootState) => accessAll(state);

@@ -7,6 +7,7 @@ export interface GeneralState {
   barLayoutValue: 'vertical' | 'horizontal';
   barGroupingValue: 'stacked' | 'grouped';
   barDataKeys: string[];
+  serverUrl: string;
 }
 
 export interface RootState {
@@ -21,7 +22,8 @@ export type ActionType =
   | 'UPDATE_COLOR'
   | 'UPDATE_BAR_LAYOUT'
   | 'UPDATE_BAR_GROUPING'
-  | 'UPDATE_BAR_DATA_KEYS';
+  | 'UPDATE_BAR_DATA_KEYS'
+  | 'UPDATE_SERVER_URL';
 
 export interface Action {
   type: ActionType;

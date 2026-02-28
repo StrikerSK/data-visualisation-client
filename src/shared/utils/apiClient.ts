@@ -1,16 +1,22 @@
 import axios from 'axios';
 import qs from 'qs';
+import { store } from '../store';
 
-// Safely access environment variables
-const HOST_URL = (typeof process !== 'undefined' && process.env && process.env.REACT_APP_API_URL) 
-  || 'http://localhost:8080';
-
-// Create a configured axios instance
+// Create a configured axios instance without a fixed baseURL
 export const apiClient = axios.create({
-  baseURL: HOST_URL,
   paramsSerializer: (params) => {
     return qs.stringify(params, { arrayFormat: 'repeat', skipNulls: true });
   },
+});
+
+// Add a request interceptor to dynamically set the baseURL from Redux
+apiClient.interceptors.request.use((config) => {
+  const state = store.getState();
+  // Support both persisted and non-persisted state structures
+  const serverUrl = state.generalReducer?.serverUrl || 'http://localhost:8081';
+  
+  config.baseURL = serverUrl;
+  return config;
 });
 
 // API endpoints
@@ -23,3 +29,5 @@ export const ENDPOINTS = {
   RECHARTS_BAR: '/recharts/bar',
   APEX_COUPON: '/apex/coupon',
 };
+
+export default apiClient;

@@ -15,6 +15,7 @@ const initialState: GeneralState = {
   barLayoutValue: 'vertical',
   barGroupingValue: 'stacked',
   barDataKeys: defaultBarOrder,
+  serverUrl: process.env.REACT_APP_API_URL || 'http://localhost:8081',
 };
 
 export const generalSlice = createSlice({
@@ -45,6 +46,9 @@ export const generalSlice = createSlice({
     updateBarDataKeys: (state, action: PayloadAction<string[]>) => {
       state.barDataKeys = action.payload;
     },
+    updateServerUrl: (state, action: PayloadAction<string>) => {
+      state.serverUrl = action.payload;
+    },
   },
 });
 
@@ -57,6 +61,7 @@ export const {
   updateBarLayout,
   updateBarGrouping,
   updateBarDataKeys,
+  updateServerUrl,
 } = generalSlice.actions;
 
 export default generalSlice.reducer;
